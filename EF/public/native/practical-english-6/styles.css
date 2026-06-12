@@ -1,0 +1,474 @@
+@import url("../practical-english-5/styles.css?v=20260612-pe5b");
+
+:root {
+  --gold: #b99630;
+  --gold-dark: #856617;
+  --gold-soft: #fff8df;
+  --line: #ded3ad;
+  --road: #d9bf68;
+  --road-soft: #f5eccb;
+  --red: #e51619;
+}
+
+.pe6-header .heading h1 {
+  font-size: 45px;
+}
+
+.pe6-header .heading h1 span {
+  color: rgba(137, 111, 48, .56);
+}
+
+.pe6-first {
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr);
+}
+
+.pe6-second {
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+}
+
+.subhead {
+  margin: -10px 0 18px 46px;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+.prep-grid,
+.turn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+
+.prep-grid figure,
+.turn-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.place-diagram,
+.turn-icon {
+  position: relative;
+  height: 112px;
+  background: #fbf2cf;
+}
+
+.place-diagram::before,
+.place-diagram::after,
+.turn-icon::before,
+.turn-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--road);
+}
+
+.place-diagram::before,
+.turn-icon::before {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 20px;
+  transform: translateY(-50%);
+}
+
+.place-diagram::after,
+.turn-icon::after {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 20px;
+  transform: translateX(-50%);
+}
+
+.place-diagram i,
+.place-diagram b,
+.place-diagram em {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 4px solid #e9ddb0;
+  background: var(--red);
+  box-shadow: 0 5px 0 rgba(126, 62, 25, .18);
+}
+
+.place-diagram i { background: transparent; }
+.next-to i { left: 34%; top: 26%; }
+.next-to b { left: 51%; top: 26%; }
+.opposite i { left: 27%; top: 34%; }
+.opposite b { left: 58%; top: 34%; }
+.between i { left: 31%; top: 27%; }
+.between b { left: 50%; top: 27%; }
+.between em { left: 69%; top: 27%; background: transparent; }
+.corner::before { top: 72%; }
+.corner::after { left: 31%; }
+.corner b { left: 27%; top: 15%; }
+.left::after { left: 58%; }
+.left b { left: 31%; top: 38%; }
+.right::after { left: 44%; }
+.right b { left: 58%; top: 38%; }
+
+.prep-grid figcaption,
+.turn-grid figcaption {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 9px 10px;
+  border-top: 1px solid var(--line);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.prep-grid figcaption b,
+.turn-grid figcaption b {
+  color: var(--gold-dark);
+  font-size: 22px;
+}
+
+.map-card {
+  position: relative;
+  overflow: hidden;
+  margin: 12px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.map-card img,
+.bank-map img,
+.phone-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.city-map-card .map-field {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 4px;
+  align-items: center;
+  width: 31%;
+}
+
+.city-map-card .map-field span {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.city-map-card .map-field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 28px;
+  border: 2px solid rgba(133, 102, 23, .18);
+  border-bottom: 2px solid #9b884b;
+  background: rgba(255, 255, 255, .95);
+  font-size: 13px;
+  padding: 2px 5px;
+}
+
+.city-map-card .map-a { left: 55.5%; top: 6.4%; }
+.city-map-card .map-b { left: 35.1%; top: 46.6%; }
+.city-map-card .map-c { left: 61.4%; top: 54.3%; }
+.city-map-card .map-d { left: 50.5%; top: 82.6%; }
+
+.rhythm-task {
+  margin-top: 84px;
+}
+
+.directions-mini {
+  font-size: 22px;
+}
+
+.directions-mini b {
+  width: 36px;
+  color: #3f3314;
+}
+
+.directions-mini strong {
+  font-weight: 950;
+}
+
+.practice-card,
+.communication-card,
+.select-line,
+.hotel-note {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.practice-card {
+  margin-top: 34px;
+  padding: 13px 14px;
+}
+
+.speech-pair {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.speech-pair p {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: #f2e5b2;
+  color: #6d5420;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 750;
+}
+
+.speech-pair p:last-child {
+  justify-self: end;
+  background: #fff6cf;
+}
+
+.line-answer {
+  display: grid;
+  gap: 8px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.line-answer input {
+  width: 100%;
+}
+
+.word-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 8px 0 10px;
+  font-size: 20px;
+}
+
+.turn-icon span {
+  position: absolute;
+  z-index: 2;
+  width: 34px;
+  height: 78px;
+  left: 50%;
+  bottom: 17px;
+  border-radius: 4px 4px 0 0;
+  background: var(--red);
+  transform: translateX(-50%);
+}
+
+.turn-icon span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -34px;
+  border-left: 34px solid transparent;
+  border-right: 34px solid transparent;
+  border-bottom: 38px solid var(--red);
+  transform: translateX(-50%);
+}
+
+.turn-right span::after,
+.turn-left span::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  width: 58px;
+  height: 30px;
+  background: var(--red);
+}
+
+.turn-right span::after {
+  left: 14px;
+}
+
+.turn-left span::after {
+  right: 14px;
+}
+
+.turn-right span::before {
+  left: 80px;
+  top: -22px;
+  border-top: 31px solid transparent;
+  border-bottom: 31px solid transparent;
+  border-left: 38px solid var(--red);
+  border-right: 0;
+}
+
+.turn-left span::before {
+  left: -46px;
+  top: -22px;
+  border-top: 31px solid transparent;
+  border-bottom: 31px solid transparent;
+  border-right: 38px solid var(--red);
+  border-left: 0;
+}
+
+.turn-grid figcaption {
+  justify-content: space-between;
+}
+
+.select-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  gap: 12px;
+  align-items: center;
+  margin: 14px 0;
+  padding: 11px 12px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.bank-map {
+  padding: 0;
+  background: #fff;
+}
+
+.bank-dialogue {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.bank-dialogue b {
+  width: 84px;
+}
+
+.communication-card {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  color: #5e6125;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.communication-card textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.phone-photo {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 8px solid var(--gold);
+}
+
+.open-question {
+  margin-bottom: 16px;
+}
+
+.open-question textarea {
+  min-height: 72px;
+}
+
+.hotel-note {
+  padding: 17px 18px;
+  background: #fff4d5;
+  box-shadow: 8px 8px 0 rgba(134, 107, 42, .16);
+  color: #39352d;
+}
+
+.hotel-note p {
+  margin: 0 0 22px;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 23px;
+  line-height: 1.72;
+}
+
+.hotel-note p:last-child {
+  margin-bottom: 0;
+}
+
+.hotel-note label {
+  display: inline-flex;
+  gap: 3px;
+  align-items: baseline;
+}
+
+.hotel-note .n {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.hotel-note .answer {
+  min-height: 31px;
+  padding: 1px 6px 2px;
+  border-radius: 4px 4px 0 0;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.hotel-word {
+  width: 142px;
+}
+
+.small-word {
+  width: 94px;
+}
+
+.useful-pe6 {
+  background: #fff4d5;
+  font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+  .pe6-first,
+  .pe6-second {
+    grid-template-columns: 1fr;
+  }
+
+  .rhythm-task {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .prep-grid,
+  .turn-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .city-map-card .map-field {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .city-map-card .map-field span {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .city-map-card .map-field input {
+    width: 116px;
+    font-size: 13px;
+  }
+
+  .hotel-note p {
+    font-size: 19px;
+  }
+
+  .select-line {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .prep-grid,
+  .turn-grid {
+    grid-template-columns: 1fr;
+  }
+}

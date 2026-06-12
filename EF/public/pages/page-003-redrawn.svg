@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4608" height="5805" viewBox="0 0 4608 5805" role="img" aria-labelledby="title desc" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" color-rendering="optimizeQuality">
+  <title id="title">Contents, units 1 to 6</title>
+  <desc id="desc">A redrawn vector contents page for the first half of the beginner student book.</desc>
+  <defs>
+    <style>
+      .page { fill: #fffdf9; }
+      .ink { fill: #1d2938; }
+      .muted { fill: #657386; }
+      .heading { font: 800 78px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .title { font: 800 178px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .subhead { font: 700 54px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .unit-number { font: 800 74px Arial, Helvetica, sans-serif; fill: #fff; }
+      .lesson { font: 800 57px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .row { font: 500 49px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .small { font: 500 43px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .tiny { font: 700 34px Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      .line { stroke: #d9e0e7; stroke-width: 4; }
+      .soft { fill: #f6f8fb; }
+      .pe { fill: #fff0d2; }
+      .revise { fill: #dbeef8; }
+      .u1 { fill: #7a1b87; }
+      .u2 { fill: #61b045; }
+      .u3 { fill: #e33d3a; }
+      .u4 { fill: #0098a9; }
+      .u5 { fill: #7d2188; }
+      .u6 { fill: #6abd45; }
+      .c1 { fill: #7a1b87; }
+      .c2 { fill: #61a343; }
+      .c3 { fill: #dd3d73; }
+      .c4 { fill: #008898; }
+      .white { fill: #fff; }
+      text { paint-order: stroke fill; stroke: transparent; stroke-width: 0; text-rendering: geometricPrecision; }
+    </style>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#17202c" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <rect class="page" width="4608" height="5805"/>
+
+  <g>
+    <path class="u1" d="M0 0h4608v528H0z"/>
+    <path fill="#5b176d" opacity=".7" d="M0 0h1230c-140 246-330 430-570 552H0z"/>
+    <path fill="#0b8793" opacity=".35" d="M612 0c190 132 352 303 484 514C793 571 512 551 260 454 351 242 468 91 612 0z"/>
+    <path fill="#f1b434" opacity=".8" d="M3962 0h646v528h-910c110-86 198-168 264-246 64-76 64-170 0-282z"/>
+    <text x="286" y="328" class="title white">Contents</text>
+    <text x="3060" y="256" class="subhead white">Units 1-6</text>
+    <text x="3060" y="334" class="small white">grammar, vocabulary, pronunciation</text>
+  </g>
+
+  <g transform="translate(286 700)">
+    <rect x="0" y="0" width="4036" height="4380" rx="36" fill="#ffffff" filter="url(#softShadow)"/>
+
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="4036" height="150" rx="36" fill="#f6f8fb"/>
+      <text x="1330" y="96" class="heading" fill="#244766">GRAMMAR</text>
+      <text x="2410" y="96" class="heading" fill="#19765e">VOCABULARY</text>
+      <text x="3300" y="96" class="heading" fill="#c43672">PRONUNCIATION</text>
+    </g>
+
+    <g transform="translate(0 205)">
+      <rect x="0" y="0" width="1215" height="118" class="u1"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u1"/>
+      <rect x="2335" y="0" width="870" height="118" class="u1"/>
+      <rect x="3245" y="0" width="791" height="118" class="u1"/>
+      <text x="68" y="80" class="unit-number">1</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="pe"/>
+      <text x="76" y="235" class="muted small">6</text>
+      <text x="198" y="235" class="lesson c1">A  A cappuccino, please</text>
+      <text x="1266" y="222" class="row ink">verb be (singular): I and you</text>
+      <text x="2350" y="205" class="row ink">numbers 0-10, days of the</text>
+      <text x="2350" y="260" class="row ink">week, saying goodbye</text>
+      <text x="3262" y="222" class="row" fill="#c43672">/h/, /ai/, and /i/</text>
+
+      <text x="76" y="426" class="muted small">8</text>
+      <text x="198" y="426" class="lesson c1">B  World music</text>
+      <text x="1266" y="426" class="row ink">verb be (singular): he, she, it</text>
+      <text x="2350" y="426" class="row ink">countries</text>
+      <text x="3262" y="426" class="row" fill="#c43672">/l/, /au/, /s/, and /j/</text>
+
+      <text x="76" y="596" class="muted small">10</text>
+      <text x="198" y="596" class="lesson ink">Practical English Episode 1</text>
+      <text x="1266" y="596" class="row ink">checking into a hotel, booking a table</text>
+      <text x="2350" y="596" class="row ink">the classroom</text>
+      <text x="3262" y="596" class="row ink">the alphabet</text>
+    </g>
+
+    <g transform="translate(0 920)">
+      <rect x="0" y="0" width="1215" height="118" class="u2"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u2"/>
+      <rect x="2335" y="0" width="870" height="118" class="u2"/>
+      <rect x="3245" y="0" width="791" height="118" class="u2"/>
+      <text x="68" y="80" class="unit-number">2</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="revise"/>
+      <text x="76" y="235" class="muted small">12</text>
+      <text x="198" y="235" class="lesson c2">A  Are you on holiday?</text>
+      <text x="1266" y="235" class="row ink">verb be (plural): we, you, they</text>
+      <text x="2350" y="235" class="row ink">nationalities</text>
+      <text x="3262" y="235" class="row" fill="#c43672">/d3/, /tf/, and /f/</text>
+
+      <text x="76" y="426" class="muted small">14</text>
+      <text x="198" y="426" class="lesson c2">B  That's my bus!</text>
+      <text x="1266" y="426" class="row ink">Wh- and How questions with be</text>
+      <text x="2350" y="405" class="row ink">phone numbers, numbers</text>
+      <text x="2350" y="460" class="row ink">11-100</text>
+      <text x="3262" y="405" class="row ink">understanding</text>
+      <text x="3262" y="460" class="row ink">numbers</text>
+
+      <text x="198" y="596" class="lesson ink">Revise and Check</text>
+      <text x="702" y="596" class="row ink">1&amp;2</text>
+    </g>
+
+    <g transform="translate(0 1635)">
+      <rect x="0" y="0" width="1215" height="118" class="u3"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u3"/>
+      <rect x="2335" y="0" width="870" height="118" class="u3"/>
+      <rect x="3245" y="0" width="791" height="118" class="u3"/>
+      <text x="68" y="80" class="unit-number">3</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="pe"/>
+      <text x="76" y="235" class="muted small">18</text>
+      <text x="198" y="235" class="lesson" fill="#d33939">A  Where are my keys?</text>
+      <text x="1266" y="214" class="row ink">singular and plural nouns, a / an</text>
+      <text x="2350" y="235" class="row ink">small things</text>
+      <text x="3262" y="214" class="row" fill="#c43672">/z/ and /s/, plural</text>
+      <text x="3262" y="269" class="row ink">endings</text>
+
+      <text x="76" y="426" class="muted small">20</text>
+      <text x="198" y="426" class="lesson" fill="#d33939">B  Souvenirs</text>
+      <text x="1266" y="426" class="row ink">this / that / these / those</text>
+      <text x="2350" y="426" class="row ink">souvenirs</text>
+      <text x="3262" y="426" class="row" fill="#c43672">/th/, sentence rhythm</text>
+
+      <text x="76" y="596" class="muted small">22</text>
+      <text x="198" y="596" class="lesson ink">Practical English Episode 2</text>
+      <text x="1266" y="596" class="row ink">understanding prices, buying lunch</text>
+      <text x="2350" y="596" class="row ink">prices</text>
+      <text x="3262" y="596" class="row" fill="#c43672">/ua/, /s/, and /k/</text>
+    </g>
+
+    <g transform="translate(0 2350)">
+      <rect x="0" y="0" width="1215" height="118" class="u4"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u4"/>
+      <rect x="2335" y="0" width="870" height="118" class="u4"/>
+      <rect x="3245" y="0" width="791" height="118" class="u4"/>
+      <text x="68" y="80" class="unit-number">4</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="revise"/>
+      <text x="76" y="235" class="muted small">24</text>
+      <text x="198" y="235" class="lesson c4">A  Meet the family</text>
+      <text x="1266" y="214" class="row ink">possessive adjectives,</text>
+      <text x="1266" y="269" class="row ink">possessive 's</text>
+      <text x="2350" y="235" class="row ink">people and family</text>
+      <text x="3262" y="235" class="row" fill="#c43672">/v/, /ae/, and /uh/</text>
+
+      <text x="76" y="426" class="muted small">26</text>
+      <text x="198" y="426" class="lesson c4">B  The perfect car</text>
+      <text x="1266" y="426" class="row ink">adjectives</text>
+      <text x="2350" y="405" class="row ink">colours and common</text>
+      <text x="2350" y="460" class="row ink">adjectives</text>
+      <text x="3262" y="426" class="row" fill="#c43672">/a:/ and /o:/, linking</text>
+
+      <text x="198" y="596" class="lesson ink">Revise and Check</text>
+      <text x="702" y="596" class="row ink">3&amp;4</text>
+    </g>
+
+    <g transform="translate(0 3065)">
+      <rect x="0" y="0" width="1215" height="118" class="u5"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u5"/>
+      <rect x="2335" y="0" width="870" height="118" class="u5"/>
+      <rect x="3245" y="0" width="791" height="118" class="u5"/>
+      <text x="68" y="80" class="unit-number">5</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="pe"/>
+      <text x="76" y="235" class="muted small">30</text>
+      <text x="198" y="235" class="lesson c1">A  A big breakfast?</text>
+      <text x="1266" y="194" class="row ink">present simple + and -:</text>
+      <text x="1266" y="249" class="row ink">I, you, we, they</text>
+      <text x="2350" y="235" class="row ink">food and drink</text>
+      <text x="3262" y="235" class="row" fill="#c43672">/d3/ and /g/</text>
+
+      <text x="76" y="426" class="muted small">32</text>
+      <text x="198" y="426" class="lesson c1">B  A very long flight</text>
+      <text x="1266" y="405" class="row ink">present simple ?: I, you,</text>
+      <text x="1266" y="460" class="row ink">we, they</text>
+      <text x="2350" y="426" class="row ink">common verb phrases 1</text>
+      <text x="3262" y="405" class="row" fill="#c43672">/w/ and /v/, sentence</text>
+      <text x="3262" y="460" class="row ink">rhythm and linking</text>
+
+      <text x="76" y="596" class="muted small">34</text>
+      <text x="198" y="596" class="lesson ink">Practical English Episode 3</text>
+      <text x="1266" y="596" class="row ink">telling the time</text>
+      <text x="2350" y="596" class="row ink">the time, saying how you feel</text>
+      <text x="3262" y="596" class="row ink">silent consonants</text>
+    </g>
+
+    <g transform="translate(0 3780)">
+      <rect x="0" y="0" width="1215" height="118" class="u6"/>
+      <rect x="1255" y="0" width="1040" height="118" class="u6"/>
+      <rect x="2335" y="0" width="870" height="118" class="u6"/>
+      <rect x="3245" y="0" width="791" height="118" class="u6"/>
+      <text x="68" y="80" class="unit-number">6</text>
+
+      <line x1="0" y1="312" x2="4036" y2="312" class="line"/>
+      <line x1="0" y1="503" x2="4036" y2="503" class="line"/>
+      <rect x="180" y="504" width="3856" height="144" class="revise"/>
+      <text x="76" y="235" class="muted small">36</text>
+      <text x="198" y="235" class="lesson c2">A  A school reunion</text>
+      <text x="1266" y="235" class="row ink">present simple: he, she, it</text>
+      <text x="2350" y="235" class="row ink">jobs and places of work</text>
+      <text x="3262" y="214" class="row ink">third person -es,</text>
+      <text x="3262" y="269" class="row ink">sentence rhythm</text>
+
+      <text x="76" y="426" class="muted small">38</text>
+      <text x="198" y="426" class="lesson c2">B  Good morning, goodnight</text>
+      <text x="1266" y="426" class="row ink">adverbs of frequency</text>
+      <text x="2350" y="426" class="row ink">a typical day</text>
+      <text x="3262" y="405" class="row" fill="#c43672">/j/ and /ju:/, sentence</text>
+      <text x="3262" y="460" class="row ink">rhythm</text>
+
+      <text x="198" y="596" class="lesson ink">Revise and Check</text>
+      <text x="702" y="596" class="row ink">5&amp;6</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="0" y="5605" width="210" height="92" class="u1"/>
+    <text x="93" y="5668" class="subhead white" text-anchor="middle">2</text>
+  </g>
+</svg>

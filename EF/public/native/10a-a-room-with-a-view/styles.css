@@ -1,0 +1,404 @@
+@import url("../9b-working-undercover/styles.css?v=20260612-9b2");
+
+:root {
+  --green: #5aae38;
+  --green-deep: #188047;
+  --green-dark: #11663a;
+  --green-soft: #e7f5df;
+  --blue: #1260a8;
+  --pink: #cc1882;
+  --teal: #0b8f86;
+  --teal-dark: #08746f;
+}
+
+.loch-header {
+  border-bottom-color: var(--green);
+  grid-template-columns: 245px minmax(0, 1fr) 310px;
+}
+
+.unit-ribbon {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.18) 0 22%, transparent 23% 100%),
+    linear-gradient(145deg, #66b739 0%, #20904c 55%, #0f6f3d 100%);
+}
+
+.heading h2 {
+  color: var(--green);
+}
+
+.speech span {
+  background: #b8df94;
+  color: #163d22;
+}
+
+.speech b {
+  background: #4fc4c7;
+  color: #082f35;
+}
+
+.tag.grammar { background: var(--blue); }
+.tag.vocab { background: var(--green-dark); }
+.tag.pron { background: var(--pink); }
+
+.first-spread {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+}
+
+.second-spread {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+}
+
+.brochure,
+.facility-card,
+.grammar-rules,
+.school-card,
+.word-match,
+.sound-model,
+.pron-note,
+.sound-sort,
+.sentence-card,
+.prep-answer-row,
+.remote-grid {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.brochure {
+  background: #f8faf8;
+}
+
+.brochure figure,
+.photo-panel {
+  margin: 0;
+}
+
+.brochure img,
+.reception-photo img,
+.prep-pictures img,
+.remote-pictures img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brochure > p {
+  margin: 0;
+  padding: 12px 16px;
+  background: #eef3f6;
+  font-size: 17px;
+  line-height: 1.34;
+}
+
+.loch-box,
+.accommodation {
+  display: grid;
+  gap: 12px;
+  padding: 13px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.loch-box {
+  grid-template-columns: minmax(0, 1fr) 170px;
+  background: #eef3f6;
+}
+
+.accommodation {
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: start;
+}
+
+.loch-box h4,
+.accommodation h4,
+.school-card h4 {
+  margin: 0 0 8px;
+  color: var(--teal);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.accommodation h4 {
+  font-size: 21px;
+}
+
+.loch-box p,
+.accommodation p {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.32;
+}
+
+.accommodation > div img {
+  overflow: hidden;
+  border: 1px solid #c9d7d0;
+  border-radius: 6px;
+}
+
+.word-match {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+.word-match label {
+  display: grid;
+  gap: 6px;
+  padding: 9px 8px;
+  border-left: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.word-match label:first-child {
+  border-left: 0;
+}
+
+.facility-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.facility-card label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.facility-card label:nth-child(-n+2) {
+  border-top: 0;
+}
+
+.facility-card label:nth-child(2n+1) {
+  border-left: 0;
+}
+
+.grammar-rules {
+  display: grid;
+}
+
+.grammar-rules label {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 58px;
+  gap: 6px 8px;
+  align-items: center;
+  min-height: 54px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.grammar-rules label:first-child {
+  border-top: 0;
+}
+
+.grammar-rules label span:last-child {
+  grid-column: 2 / -1;
+  color: #39464a;
+}
+
+.school-card {
+  margin-top: 10px;
+  padding: 14px;
+  background: #def2dc;
+}
+
+.school-card h4 {
+  color: var(--green);
+  font-size: 31px;
+}
+
+.school-card p {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.reception-photo {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.hotel-dialogue {
+  margin-top: 14px;
+  background: #f1f3f2;
+}
+
+.hotel-dialogue p {
+  grid-template-columns: 96px minmax(0, 1fr);
+  margin-bottom: 5px;
+  font-size: 15.5px;
+}
+
+.hotel-dialogue mark {
+  background: #eef39a;
+}
+
+.sound-model {
+  display: grid;
+}
+
+.sound-model div {
+  display: grid;
+  grid-template-columns: 120px repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  font-size: 19px;
+}
+
+.sound-model div:first-child {
+  border-top: 0;
+}
+
+.sound-model b {
+  color: var(--pink);
+  font-size: 22px;
+}
+
+.pron-note {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-color: #8fc38f;
+  background: #fbfffb;
+  font-size: 16px;
+  line-height: 1.34;
+}
+
+.pron-note b {
+  color: var(--green);
+  font-size: 18px;
+}
+
+.pron-note p {
+  margin: 6px 0 0;
+}
+
+.word-bank {
+  border-color: var(--line);
+}
+
+.sound-sort {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sound-sort label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 8px;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.sound-sort label:nth-child(1),
+.sound-sort label:nth-child(2) {
+  border-top: 0;
+}
+
+.sound-sort label:nth-child(2n+1) {
+  border-left: 0;
+}
+
+.sentence-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  padding: 12px 14px;
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.sentence-card b {
+  color: var(--pink);
+}
+
+.prep-pictures,
+.remote-pictures {
+  padding: 0;
+  background: #fff;
+}
+
+.prep-answer-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 8px;
+}
+
+.prep-answer-row label,
+.remote-grid label {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-left: 1px solid var(--line);
+}
+
+.prep-answer-row label:first-child,
+.remote-grid label:first-child {
+  border-left: 0;
+}
+
+.remote-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 8px;
+}
+
+.remote-grid select,
+.prep-answer-row select {
+  width: 100%;
+}
+
+.example {
+  color: var(--green);
+  font-style: italic;
+}
+
+.communication-line {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.communication-line input {
+  width: 100%;
+}
+
+@media (max-width: 1020px) {
+  .first-spread,
+  .second-spread,
+  .loch-box,
+  .accommodation,
+  .grammar-rules label {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-card,
+  .word-match,
+  .sound-sort,
+  .sentence-card {
+    grid-template-columns: 1fr;
+  }
+
+  .remote-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #102033;
+  --muted: #5e6d7e;
+  --paper: #ffffff;
+  --surface: #e8f0f7;
+  --line: #c9d8e6;
+  --accent: #1d67a8;
+  --accent-dark: #114f88;
+  --ok: #167a3a;
+  --bad: #b42318;
+  --warn: #a15c00;
+  --shadow: 0 20px 52px rgba(16, 47, 78, .14);
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grammar-shell {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 20px 18px 34px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(17, 79, 136, .14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: var(--shadow);
+}
+
+.title strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.title span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn,
+.jump {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #f1f6fb;
+  color: #153b5f;
+  font: 800 15px Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jump {
+  min-width: 42px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.btn.primary {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.btn.danger {
+  background: #fff1f2;
+  color: #9f1239;
+}
+
+.progress-panel {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) repeat(4, minmax(84px, 112px));
+  gap: 8px;
+  align-items: stretch;
+  margin: 12px 0 20px;
+}
+
+.progress-main,
+.stat,
+.result {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .92);
+  padding: 10px 12px;
+}
+
+.progress-main {
+  display: grid;
+  gap: 8px;
+}
+
+.progress-main span,
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.progress-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.progress {
+  flex: 1;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #d7e4ef;
+}
+
+.progress i {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-dark), #1d8fb8);
+}
+
+.stat b {
+  display: block;
+  font-size: 22px;
+}
+
+.result {
+  grid-column: 1 / -1;
+  min-height: 42px;
+  color: #405266;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.page-strip {
+  display: grid;
+  gap: 26px;
+}
+
+.grammar-page {
+  position: relative;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.grammar-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-field {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  width: calc(var(--w) * 1%);
+  height: calc(var(--h) * 1%);
+  min-width: 0;
+  border: 2px solid rgba(17, 79, 136, .72);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .9);
+  color: #111827;
+  font: 800 12px/1.1 Arial, Helvetica, sans-serif;
+  padding: 1px 4px;
+  box-shadow: 0 1px 8px rgba(16, 47, 78, .12);
+}
+
+.overlay-field.short {
+  text-align: center;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.overlay-field.long {
+  font-size: 10px;
+}
+
+.state-ok {
+  border-color: rgba(22, 122, 58, .9) !important;
+  background: rgba(225, 248, 232, .95) !important;
+}
+
+.state-bad {
+  border-color: rgba(180, 35, 24, .9) !important;
+  background: rgba(255, 235, 232, .96) !important;
+}
+
+.state-empty {
+  border-color: rgba(161, 92, 0, .9) !important;
+  background: rgba(255, 248, 225, .96) !important;
+}
+
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  transform: translateY(18px);
+  opacity: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .grammar-shell {
+    padding: 14px 10px 24px;
+  }
+
+  .topbar,
+  .progress-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    justify-content: flex-start;
+  }
+
+  .overlay-field {
+    border-width: 1px;
+    font-size: 9px;
+  }
+
+  .overlay-field.long {
+    font-size: 8px;
+  }
+}

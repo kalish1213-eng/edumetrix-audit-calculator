@@ -1,0 +1,1028 @@
+window.LESSON_DATA = {
+  "schema_version": "2.0",
+  "lesson_id": "english-file-beginner-workbook-unit-1b-world-music-page-6-native-inline",
+  "course_id": "ulc-english-beginner",
+  "unit": "1B",
+  "title": "World music",
+  "source_page": 6,
+  "language": "en",
+  "render_mode": "native_inline_no_overlap",
+  "visual_strategy": "Text, pictures, blanks and crossword are rebuilt as native HTML elements. Inputs are inline or inside their own cells, so typed answers never cover the printed text.",
+  "student_experience": {
+    "visual_replacement_for_pdf": true,
+    "answers_autosave": true,
+    "can_check_answers": true,
+    "teacher_can_show_answers": true,
+    "no_absolute_overlay_inputs": true,
+    "mobile_responsive": true
+  },
+  "exercises": [
+    {
+      "id": "vocab_crossword_1a",
+      "section": "1 VOCABULARY countries",
+      "instruction": "Complete the crossword.",
+      "type": "crossword",
+      "skills": [
+        "countries",
+        "spelling"
+      ],
+      "scoring": "per_cell"
+    },
+    {
+      "id": "countries_sentences_1b",
+      "section": "1 VOCABULARY countries",
+      "instruction": "Complete the sentences with a country.",
+      "type": "fill_blank",
+      "skills": [
+        "countries"
+      ],
+      "scoring": "per_blank"
+    },
+    {
+      "id": "grammar_be_2a",
+      "section": "2 GRAMMAR verb be (singular): he, she, it",
+      "instruction": "Complete the sentences with He’s, She’s, or It’s.",
+      "type": "fill_blank",
+      "skills": [
+        "verb be",
+        "pronouns",
+        "he she it"
+      ],
+      "scoring": "per_blank"
+    }
+  ],
+  "fields": [
+    {
+      "id": "b2_france",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.2 France",
+      "answers": [
+        "France"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b3_italy",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.3 Italy",
+      "answers": [
+        "Italy"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b4_the",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.4 the",
+      "answers": [
+        "the"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b4_united",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.4 United",
+      "answers": [
+        "United"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b4_states",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.4 States",
+      "answers": [
+        "States"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b5_russia",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.5 Russia",
+      "answers": [
+        "Russia"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b6_turkey",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.6 Turkey",
+      "answers": [
+        "Turkey"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b7_poland",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.7 Poland",
+      "answers": [
+        "Poland"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b8_egypt",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.8 Egypt",
+      "answers": [
+        "Egypt"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "b9_germany",
+      "exercise_id": "countries_sentences_1b",
+      "kind": "text",
+      "label": "1b.9 Germany",
+      "answers": [
+        "Germany"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 18,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g1_shes",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.1 She’s",
+      "answers": [
+        "She's",
+        "She is"
+      ],
+      "readonly": true,
+      "initial_value": "She’s",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g2_its",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.2 It’s",
+      "answers": [
+        "It's",
+        "It is"
+      ],
+      "readonly": true,
+      "initial_value": "It’s",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g3_shes",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.3 She’s",
+      "answers": [
+        "She's",
+        "She iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g4_hes",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.4 He’s",
+      "answers": [
+        "He's",
+        "He iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g5_its",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.5 It’s",
+      "answers": [
+        "It's",
+        "It iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g6_shes",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.6 She’s",
+      "answers": [
+        "She's",
+        "She iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g7_hes",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.7 He’s",
+      "answers": [
+        "He's",
+        "He iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "g8_its",
+      "exercise_id": "grammar_be_2a",
+      "kind": "text",
+      "label": "2a.8 It’s",
+      "answers": [
+        "It's",
+        "It iss"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 8,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_1",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 1",
+      "answers": [
+        "M"
+      ],
+      "readonly": true,
+      "initial_value": "M",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 2",
+      "answers": [
+        "E"
+      ],
+      "readonly": true,
+      "initial_value": "E",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 3",
+      "answers": [
+        "X"
+      ],
+      "readonly": true,
+      "initial_value": "X",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 4",
+      "answers": [
+        "I"
+      ],
+      "readonly": true,
+      "initial_value": "I",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 5",
+      "answers": [
+        "C"
+      ],
+      "readonly": true,
+      "initial_value": "C",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_mexico_6",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a.1 Mexico letter 6",
+      "answers": [
+        "O"
+      ],
+      "readonly": true,
+      "initial_value": "O",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 2",
+      "answers": [
+        "N"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 3",
+      "answers": [
+        "G"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 4",
+      "answers": [
+        "L"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 5",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_6",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 6",
+      "answers": [
+        "N"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_england_7",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a england letter 7",
+      "answers": [
+        "D"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_china_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a china letter 2",
+      "answers": [
+        "H"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_china_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a china letter 3",
+      "answers": [
+        "I"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_china_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a china letter 4",
+      "answers": [
+        "N"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_china_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a china letter 5",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_spain_1",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a spain letter 1",
+      "answers": [
+        "S"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_spain_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a spain letter 2",
+      "answers": [
+        "P"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_spain_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a spain letter 3",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_spain_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a spain letter 4",
+      "answers": [
+        "I"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_spain_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a spain letter 5",
+      "answers": [
+        "N"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_1",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 1",
+      "answers": [
+        "B"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 2",
+      "answers": [
+        "R"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 3",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 4",
+      "answers": [
+        "Z"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 5",
+      "answers": [
+        "I"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_brazil_6",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a brazil letter 6",
+      "answers": [
+        "L"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_japan_1",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a japan letter 1",
+      "answers": [
+        "J"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_japan_2",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a japan letter 2",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_japan_3",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a japan letter 3",
+      "answers": [
+        "P"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_japan_4",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a japan letter 4",
+      "answers": [
+        "A"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    },
+    {
+      "id": "cw_japan_5",
+      "exercise_id": "vocab_crossword_1a",
+      "kind": "crossword_cell",
+      "label": "1a japan letter 5",
+      "answers": [
+        "N"
+      ],
+      "readonly": false,
+      "initial_value": "",
+      "max_length": 1,
+      "accept": {
+        "trim": true,
+        "ignore_case": true,
+        "ignore_punctuation": true,
+        "accept_apostrophe_variants": true,
+        "collapse_spaces": true
+      }
+    }
+  ],
+  "api_contract": {
+    "save_answer": "POST /api/lms/attempts/answers",
+    "load_attempt": "GET /api/lms/attempts/{lesson_id}?student_id={student_id}",
+    "submit_attempt": "POST /api/lms/attempts/submit",
+    "reset_attempt": "POST /api/lms/attempts/reset",
+    "payload_keys": [
+      "lesson_id",
+      "student_id",
+      "field_id",
+      "exercise_id",
+      "answer",
+      "timestamp"
+    ]
+  }
+};

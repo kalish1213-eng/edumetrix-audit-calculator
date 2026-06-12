@@ -1,0 +1,225 @@
+@import url("../revise-check-5-6/styles.css?v=20260612-revise56d");
+
+:root {
+  --blue: #8bb9cc;
+  --blue-dark: #2c7898;
+  --blue-soft: #e7f3f8;
+}
+
+.review-header {
+  background: #9fc6d5;
+}
+
+.review-ribbon {
+  font-size: 72px;
+}
+
+.gap {
+  margin-top: 26px;
+}
+
+.verb-review {
+  display: grid;
+  gap: 0;
+  padding: 0 12px 12px;
+}
+
+.verb-review p {
+  margin: 0 -12px 8px;
+  padding: 10px 12px;
+  color: #56666e;
+  background: #f7fbfd;
+  font-size: 15px;
+}
+
+.verb-review label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 7px;
+  align-items: baseline;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.verb-review label:first-of-type {
+  border-top: 0;
+}
+
+.next-words,
+.activity-grid,
+.compact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 8px 10px;
+}
+
+.next-words label,
+.activity-grid label,
+.compact-grid label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding: 7px 6px;
+  border-top: 1px solid var(--line);
+}
+
+.next-words label:nth-child(-n+2),
+.activity-grid label:nth-child(-n+2),
+.compact-grid label:nth-child(-n+2) {
+  border-top: 0;
+}
+
+.activity-image,
+.sound-image {
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.activity-image img,
+.sound-image img,
+.belfast-photo img,
+.people-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sound-image {
+  border-color: transparent;
+}
+
+.compact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.compact-grid label:nth-child(-n+3) {
+  border-top: 0;
+}
+
+.sound-bank img {
+  width: min(260px, 70%);
+  margin-left: 34px;
+}
+
+.belfast-photo {
+  padding: 0;
+  background: #d5e4ea;
+}
+
+.belfast-text {
+  background: #d9e9ef;
+  border-color: #b9ccd5;
+}
+
+.belfast-text h3 {
+  display: block;
+  margin: 0 0 10px;
+  background: transparent;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+  font-size: 32px;
+}
+
+.belfast-text > label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0 8px;
+  padding: 6px 8px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.belfast-text .long {
+  flex: 1 1 260px;
+}
+
+.info-list {
+  display: grid;
+  gap: 0;
+  padding: 8px 10px;
+}
+
+.info-list label,
+.people-list label {
+  display: grid;
+  grid-template-columns: 24px 72px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  padding: 8px 4px;
+  border-top: 1px solid var(--line);
+}
+
+.info-list label:first-child,
+.people-list label:first-child {
+  border-top: 0;
+}
+
+.info-list .yesno {
+  min-width: 72px;
+  width: 72px;
+}
+
+.people-photo {
+  padding: 0;
+}
+
+.people-list {
+  padding: 8px 10px;
+}
+
+.people-list label {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.people-list select {
+  width: 100%;
+}
+
+.answer.compact {
+  width: 78px;
+}
+
+.answer.medium {
+  min-width: 112px;
+  width: 136px;
+}
+
+.listening-list select.answer {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .next-words,
+  .activity-grid,
+  .compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .next-words label,
+  .activity-grid label,
+  .compact-grid label,
+  .next-words label:nth-child(-n+2),
+  .activity-grid label:nth-child(-n+2),
+  .compact-grid label:nth-child(-n+3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .next-words label:first-child,
+  .activity-grid label:first-child,
+  .compact-grid label:first-child {
+    border-top: 0;
+  }
+
+  .info-list label {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .info-list select {
+    grid-column: 2;
+  }
+}

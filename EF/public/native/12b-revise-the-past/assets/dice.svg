@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dice">
+  <defs>
+    <linearGradient id="face" x1="92" y1="72" x2="420" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.56" stop-color="#f4f6f7"/>
+      <stop offset="1" stop-color="#dfe6e8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0a4f5a" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)" transform="rotate(9 256 256)">
+    <rect x="78" y="78" width="356" height="356" rx="70" fill="url(#face)" stroke="#cfd8db" stroke-width="8"/>
+    <circle cx="170" cy="170" r="28" fill="#222"/>
+    <circle cx="256" cy="256" r="28" fill="#222"/>
+    <circle cx="342" cy="342" r="28" fill="#222"/>
+    <circle cx="342" cy="170" r="28" fill="#222"/>
+    <circle cx="170" cy="342" r="28" fill="#222"/>
+  </g>
+</svg>

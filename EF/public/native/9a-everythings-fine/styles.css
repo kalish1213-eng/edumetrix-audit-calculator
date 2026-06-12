@@ -1,0 +1,399 @@
+@import url("../8b-i-love-cooking/styles.css?v=20260612-8b2");
+
+:root {
+  --purple: #7f1d87;
+  --purple-deep: #5d1578;
+  --pink: #d41478;
+  --magenta: #d41478;
+  --magenta-soft: #f9d9ea;
+  --blue: #146eae;
+  --green: #24814b;
+  --teal: #168aa0;
+  --teal-dark: #167084;
+}
+
+.unit-header {
+  grid-template-columns: 245px minmax(0, 1fr) 285px;
+  border-bottom-color: var(--magenta);
+}
+
+.unit-ribbon {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.16) 0 23%, transparent 24% 100%),
+    linear-gradient(145deg, #b71989 0%, #7d218e 52%, #4e1674 100%);
+}
+
+.heading h2 {
+  color: var(--magenta);
+  margin-bottom: 18px;
+  font-size: 42px;
+}
+
+.tag {
+  padding: 4px 7px;
+  font-size: 13.5px;
+}
+
+.speech {
+  padding-top: 16px;
+}
+
+.speech span {
+  width: 116px;
+  height: 116px;
+  background: #d87ac1;
+  color: #3b153a;
+}
+
+.speech b {
+  width: 128px;
+  height: 128px;
+  background: #ed83b4;
+  color: #351528;
+}
+
+.grammar-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.dialogue-card,
+.true-list,
+.rule-card,
+.answer-list,
+.free-lines,
+.picture-answer-grid,
+.travel-card,
+.choice-list,
+.messages-card,
+.reply-bank,
+.word-list {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.dialogue-card {
+  padding: 13px 14px;
+  background: #f3f7fa;
+}
+
+.dialogue-card p {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 8px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.34;
+}
+
+.dialogue-card b {
+  color: #5a646b;
+}
+
+.dialogue-card span {
+  min-width: 0;
+}
+
+mark {
+  padding: 0 2px;
+  background: #fff28c;
+}
+
+.true-list {
+  display: grid;
+  margin-top: 12px;
+}
+
+.true-list label {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 43px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.true-list label:first-child {
+  border-top: 0;
+}
+
+.true-list input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--magenta);
+}
+
+.rule-card {
+  padding: 14px;
+  background: #e6f5fb;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.rule-card p {
+  margin: 0 0 10px;
+}
+
+.rule-card label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.home-scene {
+  margin: 24px 0 0;
+  overflow: hidden;
+  border: 1px solid #d7dce1;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.home-scene img,
+.action-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.answer-list {
+  display: grid;
+}
+
+.answer-list label,
+.travel-card label,
+.choice-list label,
+.word-list label {
+  display: grid;
+  gap: 8px;
+  align-items: center;
+  min-height: 45px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.answer-list label {
+  grid-template-columns: 24px minmax(0, 1fr);
+}
+
+.answer-list.compact label {
+  grid-template-columns: 24px auto minmax(130px, 1fr);
+}
+
+.answer-list label:first-child,
+.travel-card label:first-child,
+.choice-list label:first-child,
+.word-list label:first-child {
+  border-top: 0;
+}
+
+.wide {
+  width: 100%;
+}
+
+.free-lines {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.free-lines input {
+  width: 100%;
+}
+
+.rhythm-text-card,
+.action-panel {
+  border-color: #eee3ee;
+}
+
+.rhythm-text-card {
+  overflow: hidden;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f2f4f5;
+  color: #5b646c;
+  font-size: 18px;
+  line-height: 1.32;
+}
+
+.rhythm-text-card p {
+  margin: 0;
+}
+
+.rhythm-text-card b {
+  margin-right: 8px;
+  color: #4e5961;
+}
+
+.rhythm-text-card u {
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.action-panel {
+  padding: 0;
+}
+
+.picture-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.picture-answer-grid label {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.picture-answer-grid label:nth-child(1),
+.picture-answer-grid label:nth-child(2) {
+  border-top: 0;
+}
+
+.picture-answer-grid label:nth-child(odd) {
+  border-left: 0;
+}
+
+.travel-card label {
+  grid-template-columns: 24px auto 110px minmax(0, 1fr);
+}
+
+.stem {
+  width: 110px;
+}
+
+.choice-list label {
+  grid-template-columns: 24px repeat(6, auto);
+  justify-content: start;
+}
+
+.choice-list select {
+  min-width: 86px;
+}
+
+.messages-card {
+  display: grid;
+  gap: 0;
+  background: #fff4fa;
+}
+
+.message {
+  display: grid;
+  grid-template-columns: 28px 58px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 9px 10px;
+  border-top: 1px solid #e9bed4;
+  font-size: 16px;
+}
+
+.message:first-child {
+  border-top: 0;
+}
+
+.message > span:last-child {
+  position: relative;
+  padding: 9px 12px;
+  border: 1px solid #e8b3cb;
+  border-radius: 8px;
+  background: #f8dbe8;
+}
+
+.letter-select {
+  width: 54px;
+  min-width: 54px;
+}
+
+.reply-bank {
+  display: grid;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 12px;
+  background: #fff;
+}
+
+.reply-bank p {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #e1c1e5;
+  border-radius: 8px;
+  background: #f3d9f0;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.reply-bank b {
+  color: var(--purple);
+}
+
+.word-list {
+  display: grid;
+}
+
+.word-list label {
+  grid-template-columns: 24px minmax(0, 1fr) minmax(100px, 150px);
+}
+
+.word-list label:last-child {
+  grid-template-columns: 24px minmax(0, 1fr) 110px auto;
+}
+
+.small-word {
+  width: 110px;
+}
+
+.communication {
+  padding: 13px 14px;
+  border: 1px solid #d7d9a8;
+  border-radius: 8px;
+  background: #fbfbe7;
+}
+
+.words {
+  color: #111827;
+}
+
+.n {
+  color: var(--teal-dark);
+  font-weight: 950;
+}
+
+.audio {
+  color: var(--magenta);
+  font-weight: 950;
+}
+
+@media (max-width: 980px) {
+  .grammar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-list label,
+  .travel-card label,
+  .answer-list.compact label,
+  .word-list label,
+  .word-list label:last-child {
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .choice-list select,
+  .travel-card input,
+  .word-list input {
+    width: 100%;
+  }
+}

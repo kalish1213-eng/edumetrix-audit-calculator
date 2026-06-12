@@ -1,0 +1,338 @@
+@import url("../11a-a-new-life-in-the-usa/styles.css?v=20260612-11a4");
+
+.day-header {
+  border-bottom-color: var(--red);
+  grid-template-columns: 245px minmax(0, 1fr) 310px;
+}
+
+.day-header .speech span,
+.day-header .speech b {
+  width: 132px;
+  height: 126px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.first-spread {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+}
+
+.second-spread {
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+}
+
+.phrase-bank {
+  border-color: var(--line);
+}
+
+.verb-map,
+.place-grid,
+.noise-card,
+.irregular-table,
+.home-photo,
+.day-dialogue,
+.rhythm-card,
+.intro-question,
+.life-photo,
+.caption-card,
+.reading-free,
+.life-article,
+.past-grid,
+.sentence-fill,
+.writing-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.verb-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  background: #fff7f5;
+}
+
+.map-card {
+  display: grid;
+  gap: 7px;
+  align-content: start;
+  min-height: 178px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fde8e5;
+}
+
+.map-card b {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 4px;
+  border-radius: 50%;
+  background: #f2d6d4;
+  font-size: 21px;
+}
+
+.map-card span,
+.map-card input {
+  width: 100%;
+}
+
+.map-card span {
+  padding: 5px 7px;
+  border-bottom: 1px solid #dfb8b6;
+  color: #5b3b39;
+  font-size: 16px;
+}
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 8px 10px;
+}
+
+.place-grid label {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.place-grid label:nth-child(-n+2) {
+  border-top: 0;
+}
+
+.place-grid label:nth-child(2n+1) {
+  border-left: 0;
+}
+
+.noise-card,
+.intro-question {
+  padding: 10px;
+}
+
+.noise-card textarea,
+.intro-question textarea,
+.reading-free textarea,
+.writing-card textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.irregular-table {
+  display: grid;
+  grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+  background: #eef8fd;
+}
+
+.irregular-table h4 {
+  margin: 0;
+  padding: 9px 12px;
+  background: #acd9ed;
+  font-size: 18px;
+}
+
+.irregular-table > span,
+.irregular-table label {
+  min-height: 42px;
+  padding: 8px 10px;
+  border-top: 1px solid #c4dce7;
+}
+
+.irregular-table label {
+  border-left: 1px solid #c4dce7;
+}
+
+.irregular-table input {
+  width: 90px;
+  margin: 0 2px;
+}
+
+.home-photo,
+.life-photo {
+  padding: 0;
+  background: #fff;
+}
+
+.home-photo img,
+.life-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.day-dialogue {
+  margin-top: 12px;
+  background: #f2f3f5;
+}
+
+.day-dialogue p {
+  grid-template-columns: 28px minmax(0, 1fr);
+  margin-bottom: 4px;
+  font-size: 15.5px;
+  line-height: 1.3;
+}
+
+.word {
+  width: 100px;
+}
+
+.rhythm-card {
+  padding: 14px;
+  background: #fde8e5;
+}
+
+.rhythm-card p {
+  margin: 0 0 5px;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.rhythm-card b {
+  margin-right: 8px;
+  color: #5f6067;
+}
+
+.caption-card {
+  display: grid;
+  margin-top: 10px;
+}
+
+.caption-card label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: baseline;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.caption-card label:first-child {
+  border-top: 0;
+}
+
+.small {
+  width: 88px;
+}
+
+.medium {
+  width: 150px;
+}
+
+.reading-free {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.reading-free label,
+.writing-card {
+  display: grid;
+  gap: 7px;
+}
+
+.life-article {
+  background: #e9eef2;
+}
+
+.black-head {
+  padding: 14px 18px;
+  background: #191919;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 850;
+  line-height: 1.28;
+}
+
+.life-article p {
+  margin: 0;
+  padding: 13px 16px 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.life-article p:last-child {
+  padding-bottom: 15px;
+}
+
+.past-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 8px 10px;
+}
+
+.past-grid label {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 7px 6px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.past-grid label:nth-child(-n+2) {
+  border-top: 0;
+}
+
+.past-grid label:nth-child(2n+1) {
+  border-left: 0;
+}
+
+.sentence-fill {
+  display: grid;
+  padding: 4px 12px 12px;
+}
+
+.sentence-fill label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.32;
+}
+
+.sentence-fill label:first-child {
+  border-top: 0;
+}
+
+.writing-card {
+  padding: 12px;
+}
+
+@media (max-width: 1020px) {
+  .first-spread,
+  .second-spread,
+  .verb-map,
+  .place-grid,
+  .irregular-table,
+  .past-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .place-grid label,
+  .past-grid label,
+  .place-grid label:nth-child(-n+2),
+  .past-grid label:nth-child(-n+2) {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .place-grid label:first-child,
+  .past-grid label:first-child {
+    border-top: 0;
+  }
+}

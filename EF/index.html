@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English File Beginner - Interactive Book</title>
+    <link rel="stylesheet" href="styles.css?v=20260612-fieldreveal2" />
+  </head>
+  <body>
+    <header class="toolbar" aria-label="Панель учебника">
+      <div class="brand">
+        <span class="series">English File Beginner</span>
+        <h1>Interactive Student's Book</h1>
+      </div>
+
+      <nav class="controls" aria-label="Навигация по страницам">
+        <button id="prevPage" type="button" title="Предыдущая страница">Назад</button>
+        <label class="page-jump">
+          <span>Стр.</span>
+          <input id="pageInput" type="number" min="1" value="1" />
+          <span id="pageTotal">/ 137</span>
+        </label>
+        <button id="nextPage" type="button" title="Следующая страница">Вперед</button>
+        <label>
+          <span>Урок</span>
+          <select id="lessonSelect"></select>
+        </label>
+      </nav>
+
+      <div class="controls secondary-controls">
+        <label>
+          <span>Масштаб</span>
+          <select id="zoomSelect">
+            <option value="fit">По ширине</option>
+            <option value="0.35">35%</option>
+            <option value="0.5">50%</option>
+            <option value="0.75">75%</option>
+            <option value="1">100%</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input id="spreadMode" type="checkbox" />
+          <span>Разворот</span>
+        </label>
+      </div>
+
+      <div class="controls answer-controls">
+        <label>
+          <span>Тип поля</span>
+          <select id="fieldType">
+            <option value="text">Короткий ответ</option>
+            <option value="textarea">Развернутый ответ</option>
+          </select>
+        </label>
+        <button id="addField" type="button">Добавить поле</button>
+        <label>
+          <span>Шаблон</span>
+          <select id="templateSelect">
+            <option value="short5">5 коротких</option>
+            <option value="short10">10 коротких</option>
+            <option value="twoColumn10">2 колонки</option>
+            <option value="writing">Письмо</option>
+            <option value="checks6">6 галочек</option>
+          </select>
+        </label>
+        <button id="addTemplate" type="button">Добавить набор</button>
+        <button id="editFields" type="button">Править поля</button>
+        <button id="checkPage" type="button" class="primary">Проверить</button>
+        <button id="showAnswers" type="button">Ответы</button>
+        <button id="clearPage" type="button">Очистить</button>
+        <button id="importAnswers" type="button">Загрузить ответы</button>
+        <button id="exportAnswers" type="button">Скачать ответы</button>
+        <input id="importFile" class="visually-hidden" type="file" accept="application/json" />
+      </div>
+    </header>
+
+    <main class="reader" aria-label="Интерактивный учебник">
+      <div id="statusLine" class="status-line">Загрузка учебника...</div>
+      <section id="pagesHost" class="pages-host" aria-live="polite"></section>
+    </main>
+
+    <template id="pageTemplate">
+      <article class="page-card">
+        <div class="page-label"></div>
+        <div class="page-surface">
+          <img class="page-image" alt="" />
+          <div class="answer-layer"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js?v=20260612-fieldreveal2"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing</title>
+  <link rel="stylesheet" href="styles.css?v=20260612-writing1" />
+</head>
+<body>
+<script id="lesson-json" type="application/json">
+{
+  "schema_version": "2.0",
+  "lesson_id": "english-file-beginner-student-book-writing-native",
+  "course_id": "ulc-english-beginner",
+  "unit": "Writing",
+  "title": "Writing",
+  "source_pages": [87, 88],
+  "render_mode": "native_image_overlay_no_pdf",
+  "fields": [
+    { "id": "p87-form-match-a", "kind": "select", "answers": ["3"] },
+    { "id": "p87-form-match-b", "kind": "select", "answers": ["7"] },
+    { "id": "p87-form-match-c", "kind": "select", "answers": ["5"] },
+    { "id": "p87-form-match-d", "kind": "select", "answers": ["2"] },
+    { "id": "p87-form-match-e", "kind": "select", "answers": ["6"] },
+    { "id": "p87-form-match-f", "kind": "select", "answers": ["1"] },
+    { "id": "p87-form-match-g", "kind": "select", "answers": ["8"] },
+    { "id": "p87-form-match-h", "kind": "select", "answers": ["4"] },
+    { "id": "p87-my-first", "kind": "text", "free": true },
+    { "id": "p87-my-surname", "kind": "text", "free": true },
+    { "id": "p87-my-title", "kind": "select", "free": true },
+    { "id": "p87-my-age", "kind": "text", "free": true },
+    { "id": "p87-my-status", "kind": "select", "free": true },
+    { "id": "p87-my-address", "kind": "text", "free": true },
+    { "id": "p87-my-postcode", "kind": "text", "free": true },
+    { "id": "p87-my-email", "kind": "text", "free": true },
+    { "id": "p87-my-home", "kind": "text", "free": true },
+    { "id": "p87-my-mobile", "kind": "text", "free": true },
+    { "id": "p87-photo-a", "kind": "select", "answers": ["2"] },
+    { "id": "p87-photo-b", "kind": "select", "answers": ["3"] },
+    { "id": "p87-photo-c", "kind": "select", "answers": ["4"] },
+    { "id": "p87-photo-d", "kind": "select", "answers": ["5"] },
+    { "id": "p87-photo-f", "kind": "select", "answers": ["6"] },
+    { "id": "p87-family-post", "kind": "textarea", "free": true },
+    { "id": "p87-connector-1", "kind": "select", "answers": ["but"] },
+    { "id": "p87-connector-2", "kind": "select", "answers": ["or"] },
+    { "id": "p87-connector-3", "kind": "select", "answers": ["and"] },
+    { "id": "p87-breakfast-comment", "kind": "textarea", "free": true },
+    { "id": "p88-invite", "kind": "text", "answers": ["dinner", "to dinner"] },
+    { "id": "p88-email-phrase-1", "kind": "select", "answers": ["I'm sorry, but I can't come"] },
+    { "id": "p88-email-phrase-2", "kind": "select", "answers": ["Maybe see you at the weekend?"] },
+    { "id": "p88-blog-order-1", "kind": "select", "answers": ["3"] },
+    { "id": "p88-blog-order-2", "kind": "select", "answers": ["7"] },
+    { "id": "p88-blog-order-3", "kind": "select", "answers": ["5"] },
+    { "id": "p88-blog-order-4", "kind": "select", "answers": ["6"] },
+    { "id": "p88-blog-order-5", "kind": "select", "answers": ["2"] },
+    { "id": "p88-blog-order-6", "kind": "select", "answers": ["4"] },
+    { "id": "p88-email-draft", "kind": "textarea", "free": true },
+    { "id": "p88-blog-draft", "kind": "textarea", "free": true }
+  ]
+}
+</script>
+
+<div class="writing-shell" id="lesson-top">
+  <div class="topbar">
+    <div class="title">
+      <strong>Writing</strong>
+      <span>Forms, posts, emails, comments, and blog writing practice with answers in the exercises.</span>
+    </div>
+    <div class="controls">
+      <button class="btn primary" id="checkBtn" type="button">Check</button>
+      <button class="btn" id="answersBtn" type="button">Show answers</button>
+      <button class="btn danger" id="resetBtn" type="button">Reset</button>
+      <button class="btn" id="exportBtn" type="button">Export</button>
+    </div>
+  </div>
+
+  <div class="progress-panel">
+    <div class="progress-main">
+      <span>Progress</span>
+      <div class="progress-row"><span class="progress"><i id="progressBar"></i></span><b id="progressText">0%</b></div>
+    </div>
+    <div class="stat"><b id="filledStat">0</b><span>filled</span></div>
+    <div class="stat"><b id="totalStat">39</b><span>fields</span></div>
+    <div class="stat"><b id="scoreStat">-</b><span>correct</span></div>
+    <div class="stat"><b id="percentStat">-</b><span>score</span></div>
+    <div class="result" id="resultBox">Writing fields save locally in this browser. Longer writing tasks are below the page they belong to.</div>
+  </div>
+
+  <div class="page-strip" aria-label="Interactive Writing pages">
+    <section class="writing-page" aria-label="Writing page 86">
+      <img src="../../pages/page-087.jpg?v=20260612-writing1" alt="Writing page 86" />
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-a" style="--x:10.7;--y:21.0;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-b" style="--x:10.7;--y:22.8;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-c" style="--x:10.7;--y:24.6;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-d" style="--x:10.7;--y:26.4;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-e" style="--x:10.7;--y:28.2;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-f" style="--x:10.7;--y:30.0;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-g" style="--x:10.7;--y:31.8;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-form-match-h" style="--x:10.7;--y:33.6;--w:3.2;--h:1.8"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+
+      <input class="answer overlay-field" data-field-id="p87-my-first" style="--x:18.0;--y:41.0;--w:20.8;--h:2.0" />
+      <input class="answer overlay-field" data-field-id="p87-my-surname" style="--x:18.0;--y:44.6;--w:20.8;--h:2.0" />
+      <select class="answer overlay-field" data-field-id="p87-my-title" style="--x:18.1;--y:49.0;--w:13.2;--h:2.0"><option value=""></option><option>Mr</option><option>Ms</option><option>Mrs</option></select>
+      <input class="answer overlay-field" data-field-id="p87-my-age" style="--x:18.0;--y:52.4;--w:20.8;--h:2.0" />
+      <select class="answer overlay-field" data-field-id="p87-my-status" style="--x:18.0;--y:55.8;--w:17.5;--h:2.0"><option value=""></option><option>Married</option><option>Single</option><option>Divorced / Separated</option></select>
+      <input class="answer overlay-field" data-field-id="p87-my-address" style="--x:18.0;--y:59.8;--w:20.8;--h:2.0" />
+      <input class="answer overlay-field" data-field-id="p87-my-postcode" style="--x:18.0;--y:64.0;--w:20.8;--h:2.0" />
+      <input class="answer overlay-field" data-field-id="p87-my-email" style="--x:18.0;--y:68.0;--w:20.8;--h:2.0" />
+      <input class="answer overlay-field" data-field-id="p87-my-home" style="--x:22.1;--y:72.2;--w:16.7;--h:2.0" />
+      <input class="answer overlay-field" data-field-id="p87-my-mobile" style="--x:22.1;--y:75.6;--w:16.7;--h:2.0" />
+
+      <select class="answer overlay-field mini" data-field-id="p87-photo-a" style="--x:73.4;--y:18.6;--w:3.2;--h:2.0"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-photo-b" style="--x:91.7;--y:13.1;--w:3.2;--h:2.0"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-photo-c" style="--x:75.8;--y:29.9;--w:3.2;--h:2.0"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-photo-d" style="--x:86.5;--y:31.0;--w:3.2;--h:2.0"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      <select class="answer overlay-field mini" data-field-id="p87-photo-f" style="--x:76.0;--y:44.0;--w:3.2;--h:2.0"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+
+      <select class="answer overlay-field" data-field-id="p87-connector-1" style="--x:69.6;--y:88.8;--w:6.4;--h:1.8"><option value=""></option><option>and</option><option>or</option><option>but</option></select>
+      <select class="answer overlay-field" data-field-id="p87-connector-2" style="--x:72.0;--y:91.9;--w:6.4;--h:1.8"><option value=""></option><option>and</option><option>or</option><option>but</option></select>
+      <select class="answer overlay-field" data-field-id="p87-connector-3" style="--x:69.7;--y:94.9;--w:6.4;--h:1.8"><option value=""></option><option>and</option><option>or</option><option>but</option></select>
+    </section>
+
+    <div class="writing-pad" aria-label="Writing page 86 text work">
+      <label>2c Post about your family<textarea class="answer" data-field-id="p87-family-post"></textarea></label>
+      <label>3c Comment about your breakfast<textarea class="answer" data-field-id="p87-breakfast-comment"></textarea></label>
+    </div>
+
+    <section class="writing-page" aria-label="Writing page 87">
+      <img src="../../pages/page-088.jpg?v=20260612-writing1" alt="Writing page 87" />
+      <input class="answer overlay-field" data-field-id="p88-invite" style="--x:33.0;--y:8.3;--w:10.0;--h:2.0" />
+      <select class="answer overlay-field long-select" data-field-id="p88-email-phrase-1" style="--x:8.3;--y:43.7;--w:29.5;--h:2.0"><option value=""></option><option>I'd love to come</option><option>I'm sorry, but I can't come</option></select>
+      <select class="answer overlay-field long-select" data-field-id="p88-email-phrase-2" style="--x:8.3;--y:50.1;--w:31.0;--h:2.0"><option value=""></option><option>See you on Thursday.</option><option>Maybe see you at the weekend?</option></select>
+
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-1" style="--x:61.3;--y:27.0;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-2" style="--x:61.3;--y:31.8;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-3" style="--x:61.3;--y:43.1;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-4" style="--x:61.3;--y:55.1;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-5" style="--x:61.3;--y:66.1;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+      <select class="answer overlay-field mini" data-field-id="p88-blog-order-6" style="--x:61.3;--y:78.0;--w:3.0;--h:1.9"><option value=""></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+    </section>
+
+    <div class="writing-pad" aria-label="Writing page 87 text work">
+      <label>4d Write an email invitation<textarea class="answer" data-field-id="p88-email-draft"></textarea></label>
+      <label>5c Blog about your day<textarea class="answer" data-field-id="p88-blog-draft"></textarea></label>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" aria-live="polite"></div>
+<script src="../1a-cappuccino-please/app.js?v=20260612-fieldreveal2"></script>
+</body>
+</html>

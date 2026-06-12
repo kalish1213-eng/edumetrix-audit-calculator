@@ -1,0 +1,260 @@
+@import url("../revise-check-7-8/styles.css?v=20260612-revise78a");
+
+:root {
+  --blue: #8bb9cc;
+  --blue-dark: #2c7898;
+  --blue-soft: #e7f3f8;
+  --green: #1d8a50;
+  --pink: #d41478;
+  --tweet: #e7eef2;
+}
+
+.review-header {
+  background: #9fc6d5;
+}
+
+.review-ribbon {
+  font-size: 68px;
+}
+
+.second-page {
+  align-items: start;
+}
+
+.word-bank {
+  border-color: var(--line);
+}
+
+.clothes-image,
+.room-image,
+.sound-image,
+.barcelona-image,
+.people-photo {
+  padding: 0;
+}
+
+.clothes-image img,
+.room-image img,
+.sound-image img,
+.barcelona-image img,
+.people-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.clothes-grid,
+.sound-grid,
+.photo-match {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 8px 10px;
+}
+
+.clothes-grid label,
+.sound-grid label,
+.photo-match label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  padding: 7px 6px;
+  border-top: 1px solid var(--line);
+}
+
+.clothes-grid label:nth-child(-n+2),
+.sound-grid label:nth-child(-n+2),
+.photo-match label:nth-child(-n+2) {
+  border-top: 0;
+}
+
+.hotel-words,
+.prep-list,
+.at-list {
+  display: grid;
+  gap: 0;
+  padding: 0 12px 12px;
+}
+
+.hotel-words p,
+.prep-list p,
+.at-list p {
+  margin: 0 -12px 8px;
+  padding: 10px 12px;
+  background: #f7fbfd;
+  color: #56666e;
+  font-size: 15px;
+}
+
+.hotel-words label,
+.prep-list label,
+.at-list label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 7px;
+  align-items: baseline;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.32;
+}
+
+.hotel-words label:first-of-type,
+.prep-list label:first-of-type,
+.at-list label:first-of-type {
+  border-top: 0;
+}
+
+.prep {
+  width: 82px;
+}
+
+.sound-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sound-grid label:nth-child(-n+3) {
+  border-top: 0;
+}
+
+.sound-grid select.medium {
+  width: 130px;
+}
+
+.sound-bank {
+  margin: 13px 0 16px;
+}
+
+.sound-bank img {
+  display: block;
+  width: min(300px, 75%);
+  margin: 7px 0 8px 34px;
+}
+
+.sound-bank p {
+  margin: 0 0 0 34px;
+  font-size: 16px;
+}
+
+.stress-words {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stress-words .stress-example {
+  grid-column: 1 / -1;
+}
+
+.stress-words label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+
+.stress-words .answer.medium {
+  min-width: 0;
+  width: 100%;
+}
+
+.tweet-list {
+  display: grid;
+  gap: 9px;
+  margin: 10px 0 14px;
+}
+
+.tweet {
+  display: grid;
+  grid-template-columns: 34px 58px 48px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #c4d0d8;
+  border-radius: 8px;
+  background: var(--tweet);
+  box-shadow: 2px 3px 0 rgba(42, 62, 73, .18);
+  font-size: 15.5px;
+  line-height: 1.26;
+}
+
+.tweet-letter {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #c8dce8;
+  color: #49616f;
+  font-weight: 900;
+}
+
+.tweet-order {
+  width: 54px;
+}
+
+.tweet img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tweet mark {
+  padding: 0 2px;
+  background: #fff191;
+}
+
+.mood {
+  color: #e2af00;
+  font-weight: 900;
+}
+
+.mood.sun {
+  color: #f5bb1f;
+}
+
+.photo-match {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.photo-match select {
+  flex: 1 1 210px;
+  width: 100%;
+}
+
+.can-card input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--blue-dark);
+}
+
+@media (max-width: 760px) {
+  .clothes-grid,
+  .sound-grid,
+  .photo-match,
+  .stress-words {
+    grid-template-columns: 1fr;
+  }
+
+  .clothes-grid label,
+  .sound-grid label,
+  .photo-match label,
+  .clothes-grid label:nth-child(-n+2),
+  .sound-grid label:nth-child(-n+3),
+  .photo-match label:nth-child(-n+2) {
+    border-top: 1px solid var(--line);
+  }
+
+  .clothes-grid label:first-child,
+  .sound-grid label:first-child,
+  .photo-match label:first-child {
+    border-top: 0;
+  }
+
+  .tweet {
+    grid-template-columns: 34px 58px minmax(0, 1fr);
+  }
+
+  .tweet img {
+    display: none;
+  }
+}

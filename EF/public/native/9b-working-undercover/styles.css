@@ -1,0 +1,346 @@
+@import url("../9a-everythings-fine/styles.css?v=20260612-9a3");
+
+:root {
+  --purple: #7f1d87;
+  --purple-deep: #5d1578;
+  --pink: #d41478;
+  --blue: #146eae;
+  --blue-soft: #d7e8f7;
+  --green: #23834c;
+  --teal: #168aa0;
+  --teal-dark: #167084;
+}
+
+.heading h2 {
+  color: var(--purple);
+  font-size: 42px;
+}
+
+.speech b {
+  font-size: 13px;
+}
+
+.reading-spread {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+}
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 10px;
+  align-items: stretch;
+  margin: 12px 0 16px;
+}
+
+.photo-pair img,
+.photo-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-pair img {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.open-question {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 8px;
+  margin: 13px 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.open-question > b {
+  color: var(--teal-dark);
+}
+
+.open-question > input,
+.open-question > select {
+  grid-column: 2;
+  width: 100%;
+}
+
+.open-question > select {
+  max-width: 190px;
+}
+
+.tf-card,
+.grammar-card,
+.rules-card,
+.clothes-photo-grid,
+.sound-grid,
+.qa-card,
+.speaking-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.tf-card {
+  display: grid;
+}
+
+.tf-card label {
+  display: grid;
+  grid-template-columns: 22px 58px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 45px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.tf-card label:first-child {
+  border-top: 0;
+}
+
+.undercover-card {
+  overflow: hidden;
+  border: 1px solid #0d5e9f;
+  border-radius: 8px;
+  background: var(--blue-soft);
+}
+
+.undercover-card h3 {
+  margin: 0;
+  padding: 16px 18px;
+  background: #0b6aaa;
+  color: #fff;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.undercover-card p {
+  margin: 0;
+  padding: 14px 18px 17px;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.episode-card {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 4px solid #1d2830;
+  border-radius: 6px;
+  background: #cfe0f4;
+}
+
+.episode-card h3 {
+  margin: 0;
+  padding: 13px 16px;
+  background: #d9e8fa;
+  font-size: 33px;
+  font-weight: 520;
+}
+
+.episode-card p {
+  margin: 0;
+  padding: 11px 14px;
+  border-top: 3px solid #1d2830;
+  font-size: 17px;
+  line-height: 1.33;
+}
+
+.episode-card div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 10px;
+  align-items: start;
+  border-top: 3px solid #1d2830;
+  padding: 11px 14px;
+}
+
+.episode-card div p {
+  border-top: 0;
+  padding: 0;
+}
+
+.episode-card img {
+  width: 100%;
+  border: 3px solid #1d2830;
+}
+
+.episode-card b {
+  color: #0f75ad;
+}
+
+.grammar-card,
+.rules-card {
+  display: grid;
+}
+
+.grammar-card p,
+.rules-card label {
+  margin: 0;
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.grammar-card p:first-child,
+.rules-card label:first-child {
+  border-top: 0;
+}
+
+.grammar-card label {
+  display: inline-flex;
+  gap: 4px;
+  align-items: baseline;
+}
+
+.inline {
+  width: 130px;
+  min-height: 30px;
+}
+
+.rules-card label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 10px;
+  align-items: center;
+}
+
+.clothes-panel {
+  padding: 0;
+}
+
+.clothes-panel img,
+.sound-row img,
+.sandra-panel img {
+  height: auto;
+  object-fit: contain;
+}
+
+.clothes-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+.clothes-photo-grid label {
+  display: grid;
+  gap: 6px;
+  padding: 9px 7px;
+  border-left: 1px solid var(--line);
+}
+
+.clothes-photo-grid label:first-child {
+  border-left: 0;
+}
+
+.sound-example,
+.word-bank {
+  margin: 10px 0 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 17px;
+}
+
+.sound-example {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.sound-example b {
+  color: var(--pink);
+}
+
+.sound-row {
+  padding: 0;
+}
+
+.sound-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sound-grid label {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.sound-grid label:nth-child(1),
+.sound-grid label:nth-child(2),
+.sound-grid label:nth-child(3) {
+  border-top: 0;
+}
+
+.sound-grid label:nth-child(3n + 1) {
+  border-left: 0;
+}
+
+.sound-grid b {
+  color: var(--pink);
+}
+
+.sandra-panel {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.intro-note {
+  margin: 0 0 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f6ddec;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.qa-card,
+.speaking-card {
+  display: grid;
+}
+
+.qa-card label,
+.speaking-card label {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 7px 8px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 15.5px;
+  line-height: 1.25;
+}
+
+.qa-card label:first-child,
+.speaking-card label:first-child {
+  border-top: 0;
+}
+
+.qa-card input,
+.speaking-card input {
+  grid-column: 2;
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .reading-spread,
+  .photo-pair,
+  .episode-card div,
+  .rules-card label {
+    grid-template-columns: 1fr;
+  }
+
+  .clothes-photo-grid,
+  .sound-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
