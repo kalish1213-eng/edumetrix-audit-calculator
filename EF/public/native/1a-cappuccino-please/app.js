@@ -154,6 +154,43 @@
         margin: 0;
         transform: translate(4px, -2px);
       }
+      .native-zoomable-image {
+        cursor: zoom-in;
+      }
+      .native-image-zoom {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        border: 0;
+        background: rgba(12, 17, 28, .86);
+        cursor: zoom-out;
+      }
+      .native-image-zoom img {
+        display: block;
+        max-width: 96vw;
+        max-height: 92vh;
+        width: auto;
+        height: auto;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 28px 80px rgba(0, 0, 0, .42);
+      }
+      .native-image-zoom button {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid rgba(255, 255, 255, .42);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .94);
+        color: #172033;
+        font: 900 22px/1 Arial, Helvetica, sans-serif;
+        cursor: pointer;
+      }
       .answer.state-ok + .native-answer-hint,
       .answer:focus + .native-answer-hint {
         display: none;
@@ -257,6 +294,45 @@
 
   function initAnswerReveals() {
     scorable().forEach(showAnswerReveal);
+  }
+
+  function closeImageZoom() {
+    document.querySelector(".native-image-zoom")?.remove();
+  }
+
+  function openImageZoom(image) {
+    closeImageZoom();
+    const overlay = document.createElement("div");
+    overlay.className = "native-image-zoom";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Enlarged exercise image");
+
+    const zoomed = document.createElement("img");
+    zoomed.src = image.currentSrc || image.src;
+    zoomed.alt = image.alt || "";
+
+    const close = document.createElement("button");
+    close.type = "button";
+    close.setAttribute("aria-label", "Close image");
+    close.textContent = "x";
+
+    overlay.append(zoomed, close);
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay || event.target === close) closeImageZoom();
+    });
+    document.body.appendChild(overlay);
+    close.focus();
+  }
+
+  function initImageZoom() {
+    document.querySelectorAll(".dialogue-card img, .grammar-photo img, .photo-option img, .goodbye-card img").forEach((image) => {
+      if (image.dataset.nativeZoomReady === "true") return;
+      image.dataset.nativeZoomReady = "true";
+      image.classList.add("native-zoomable-image");
+      image.setAttribute("title", "Click to enlarge");
+      image.addEventListener("click", () => openImageZoom(image));
+    });
   }
 
   function clearState(control) {
@@ -387,12 +463,16 @@
 
     installInlineAnswerStyles();
     initAnswerReveals();
+    initImageZoom();
     loadValues();
     updateProgress();
     document.getElementById("checkBtn").addEventListener("click", check);
     document.getElementById("answersBtn").addEventListener("click", showAnswers);
     document.getElementById("resetBtn").addEventListener("click", reset);
     document.getElementById("exportBtn").addEventListener("click", exportAttempt);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeImageZoom();
+    });
   }
 
   function resetLessonScroll() {
