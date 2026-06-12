@@ -1,0 +1,41 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1755" height="1365" viewBox="0 0 1755 1365" role="img" aria-labelledby="title desc">
+  <title id="title">Cafe dialogue 2</title>
+  <desc id="desc">Barista 2 checks the name and gives Helen her cappuccino.</desc>
+  <rect width="1755" height="1365" fill="#fff"/>
+  <rect x="36" y="32" width="1683" height="1333" rx="28" fill="#fff" stroke="#dde3ea" stroke-width="10"/>
+  <rect x="58" y="56" width="1639" height="850" rx="18" fill="#f5f3ec"/>
+  <rect x="895" y="70" width="760" height="430" rx="16" fill="#252c2c"/>
+  <text x="940" y="145" fill="#f6f8f8" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="900">MENU</text>
+  <text x="940" y="215" fill="#e5ecec" font-family="Arial, Helvetica, sans-serif" font-size="34">coffee  tea  juice</text>
+  <text x="940" y="280" fill="#e5ecec" font-family="Arial, Helvetica, sans-serif" font-size="34">cappuccino  espresso</text>
+  <rect x="58" y="772" width="1639" height="134" fill="#bd8950"/>
+  <circle cx="286" cy="142" r="61" fill="#efc6e6"/>
+  <text x="266" y="164" fill="#141827" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900">2</text>
+  <g>
+    <ellipse cx="500" cy="382" rx="105" ry="132" fill="#efc0a8"/>
+    <path d="M365 365c18-150 174-230 272-118 53 61 44 148 10 234-52-69-136-92-282-116z" fill="#d8bd77"/>
+    <path d="M308 496h306c62 0 112 50 112 112v282H196V608c0-62 50-112 112-112z" fill="#ed9b85"/>
+  </g>
+  <g>
+    <ellipse cx="1306" cy="330" rx="105" ry="124" fill="#efb99c"/>
+    <path d="M1194 252c62-86 193-73 239 17 18 36 17 82 4 126-74-38-153-41-260-6-12-55-6-101 17-137z" fill="#8a4c2d"/>
+    <path d="M1172 466h270c64 0 116 52 116 116v309h-502V582c0-64 52-116 116-116z" fill="#2062b8"/>
+    <path d="M1130 540h460v350h-460z" fill="#141821" opacity=".9"/>
+    <rect x="1208" y="602" width="110" height="160" rx="18" fill="#e74f38"/>
+    <ellipse cx="1263" cy="602" rx="55" ry="20" fill="#fff"/>
+    <rect x="1390" y="630" width="106" height="150" rx="20" fill="#fff3e7"/>
+  </g>
+  <rect x="58" y="906" width="1639" height="424" fill="#fff"/>
+  <line x1="395" y1="946" x2="395" y2="1300" stroke="#edf0f4" stroke-width="8"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#4c535c">
+    <text x="104" y="1017" font-size="66" font-weight="900">Barista 2</text>
+    <text x="450" y="1017" font-size="66">Are you Diana?</text>
+    <text x="104" y="1118" font-size="66" font-weight="900">Helen</text>
+    <text x="450" y="1118" font-size="66">No, I&apos;m not. I&apos;m Helen.</text>
+    <text x="104" y="1219" font-size="66" font-weight="900">Barista 2</text>
+    <text x="450" y="1219" font-size="66">Sorry.</text>
+    <text x="104" y="1320" font-size="66" font-weight="900">Barista 2</text>
+    <text x="450" y="1320" font-size="66">Here you are.</text>
+  </g>
+</svg>
+

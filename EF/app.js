@@ -109,7 +109,7 @@ const nativeLessons = [
     startPage: 7,
     endPage: 8,
     title: "1A A cappuccino, please",
-    url: "public/native/1a-cappuccino-please/index.html?v=20260612-p7fix1"
+    url: "public/native/1a-cappuccino-please/index.html?v=20260612-p7vector1"
   },
   {
     startPage: 9,

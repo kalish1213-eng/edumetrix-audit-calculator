@@ -1,0 +1,43 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1755" height="1365" viewBox="0 0 1755 1365" role="img" aria-labelledby="title desc">
+  <title id="title">Cafe dialogue 4</title>
+  <desc id="desc">Tom orders tea and gives his name to Barista 1.</desc>
+  <rect width="1755" height="1365" fill="#fff"/>
+  <rect x="36" y="32" width="1683" height="1333" rx="28" fill="#fff" stroke="#dde3ea" stroke-width="10"/>
+  <rect x="58" y="56" width="1639" height="850" rx="18" fill="#f3efe6"/>
+  <rect x="760" y="90" width="370" height="410" rx="16" fill="#e4e0d4"/>
+  <rect x="58" y="760" width="1639" height="146" fill="#b5814b"/>
+  <circle cx="286" cy="142" r="61" fill="#efc6e6"/>
+  <text x="266" y="164" fill="#141827" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900">4</text>
+  <g opacity=".7">
+    <circle cx="1120" cy="410" r="72" fill="#a87559"/>
+    <rect x="1010" y="500" width="214" height="250" rx="50" fill="#2f2f34"/>
+    <circle cx="1295" cy="398" r="74" fill="#e7b091"/>
+    <rect x="1190" y="496" width="210" height="260" rx="48" fill="#80515b"/>
+  </g>
+  <g>
+    <ellipse cx="515" cy="365" rx="104" ry="124" fill="#efbda0"/>
+    <path d="M380 350c-14-126 64-202 148-202 102 0 156 82 142 197-77-41-169-44-290 5z" fill="#a65e2c"/>
+    <path d="M340 506h288c62 0 112 50 112 112v273H228V618c0-62 50-112 112-112z" fill="#2465be"/>
+    <path d="M282 598h398v294H282z" fill="#151821" opacity=".88"/>
+    <rect x="682" y="632" width="104" height="142" rx="16" fill="#ee654f"/>
+    <ellipse cx="734" cy="632" rx="52" ry="18" fill="#fff"/>
+  </g>
+  <g>
+    <ellipse cx="1455" cy="364" rx="104" ry="124" fill="#efb99d"/>
+    <path d="M1342 292c63-88 194-73 242 20 20 38 18 86 3 134-74-43-158-48-265-9-12-58-5-105 20-145z" fill="#694226"/>
+    <path d="M1322 500h282c62 0 112 50 112 112v278h-506V612c0-62 50-112 112-112z" fill="#29384f"/>
+  </g>
+  <rect x="58" y="906" width="1639" height="424" fill="#fff"/>
+  <line x1="395" y1="946" x2="395" y2="1300" stroke="#edf0f4" stroke-width="8"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#4c535c">
+    <text x="104" y="1017" font-size="66" font-weight="900">Tom</text>
+    <text x="450" y="1017" font-size="66">Hi. A tea, please.</text>
+    <text x="104" y="1118" font-size="66" font-weight="900">Barista 1</text>
+    <text x="450" y="1118" font-size="66">OK. What&apos;s your name?</text>
+    <text x="104" y="1219" font-size="66" font-weight="900">Tom</text>
+    <text x="450" y="1219" font-size="66">Tom.</text>
+    <text x="104" y="1320" font-size="66" font-weight="900">Barista 1</text>
+    <text x="450" y="1320" font-size="66">Dom?</text>
+  </g>
+</svg>
+

@@ -1,0 +1,66 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1755" height="1365" viewBox="0 0 1755 1365" role="img" aria-labelledby="title desc">
+  <title id="title">Cafe dialogue 1</title>
+  <desc id="desc">Helen orders a cappuccino and gives her name to Barista 1.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6f3ea"/>
+      <stop offset="1" stop-color="#e8eef0"/>
+    </linearGradient>
+    <linearGradient id="counter" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d3b079"/>
+      <stop offset="1" stop-color="#a97943"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#243040" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1755" height="1365" fill="#fff"/>
+  <rect x="36" y="32" width="1683" height="1333" rx="28" fill="#fff" stroke="#dde3ea" stroke-width="10"/>
+  <g>
+    <rect x="58" y="56" width="1639" height="850" rx="18" fill="url(#wall)"/>
+    <rect x="110" y="90" width="820" height="360" rx="16" fill="#222a2b"/>
+    <text x="146" y="160" fill="#f9fbfb" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800">COFFEE</text>
+    <text x="146" y="235" fill="#f9fbfb" font-family="Arial, Helvetica, sans-serif" font-size="34">cappuccino / espresso / tea</text>
+    <text x="146" y="295" fill="#d7dde0" font-family="Arial, Helvetica, sans-serif" font-size="30">Good morning. What&apos;s your name?</text>
+    <text x="600" y="160" fill="#f9fbfb" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">02:05</text>
+    <rect x="58" y="770" width="1639" height="136" fill="url(#counter)"/>
+    <rect x="96" y="620" width="128" height="170" rx="18" fill="#f3f7f8" stroke="#d5dde3" stroke-width="8"/>
+    <rect x="262" y="620" width="88" height="190" rx="28" fill="#dce7e8" stroke="#c7d2d6" stroke-width="7"/>
+    <rect x="1180" y="88" width="268" height="660" rx="12" fill="#f2f2eb" stroke="#d8d5c7" stroke-width="8"/>
+    <line x1="1220" y1="155" x2="1410" y2="155" stroke="#c6c2b4" stroke-width="8"/>
+    <line x1="1220" y1="215" x2="1410" y2="215" stroke="#c6c2b4" stroke-width="8"/>
+    <line x1="1220" y1="275" x2="1410" y2="275" stroke="#c6c2b4" stroke-width="8"/>
+  </g>
+  <g filter="url(#soft)">
+    <circle cx="111" cy="142" r="61" fill="#efc6e6"/>
+    <text x="91" y="164" fill="#141827" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900">1</text>
+  </g>
+  <g>
+    <ellipse cx="655" cy="346" rx="122" ry="136" fill="#f0bea4"/>
+    <path d="M520 345c-12-118 62-194 145-194 104 0 154 86 137 212-66-41-136-65-282-18z" fill="#9b4e24"/>
+    <path d="M510 476h278c70 0 124 58 124 129v256H386V605c0-71 54-129 124-129z" fill="#2465be"/>
+    <path d="M464 582h366v286H464z" fill="#151821" opacity=".88"/>
+    <rect x="736" y="610" width="92" height="142" rx="16" fill="#e64735"/>
+    <ellipse cx="782" cy="610" rx="46" ry="18" fill="#fff"/>
+    <path d="M742 624h80v102h-80z" fill="#f26f55"/>
+  </g>
+  <g>
+    <ellipse cx="1458" cy="366" rx="96" ry="116" fill="#efc1a8"/>
+    <path d="M1368 295c82-86 210-28 215 70-68-28-121-12-210 41-10-33-12-74-5-111z" fill="#d8bd89"/>
+    <path d="M1353 496h250c58 0 105 47 105 105v285h-460V601c0-58 47-105 105-105z" fill="#ec927f"/>
+    <path d="M1550 525c56 106 52 216 2 342" stroke="#bd5a61" stroke-width="18" fill="none" opacity=".5"/>
+  </g>
+  <rect x="58" y="906" width="1639" height="424" fill="#fff"/>
+  <line x1="395" y1="946" x2="395" y2="1300" stroke="#edf0f4" stroke-width="8"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#4c535c">
+    <text x="104" y="1017" font-size="66" font-weight="900">Helen</text>
+    <text x="450" y="1017" font-size="66">A cappuccino, please.</text>
+    <text x="104" y="1118" font-size="66" font-weight="900">Barista 1</text>
+    <text x="450" y="1118" font-size="66">What&apos;s your name?</text>
+    <text x="104" y="1219" font-size="66" font-weight="900">Helen</text>
+    <text x="450" y="1219" font-size="66">Helen.</text>
+    <text x="104" y="1320" font-size="66" font-weight="900">Barista 1</text>
+    <text x="450" y="1320" font-size="66">Ellen?</text>
+  </g>
+</svg>
+

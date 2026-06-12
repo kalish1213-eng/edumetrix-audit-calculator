@@ -278,6 +278,11 @@ textarea {
   overflow: visible;
 }
 
+.dialogue-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .dialogue-card img,
 .photo-option img,
 .goodbye-card img {
@@ -287,10 +292,15 @@ textarea {
 }
 
 .dialogue-card img {
+  flex: 0 0 auto;
   border-radius: 8px 8px 0 0;
+  background: #fff;
 }
 
 .card-task {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: minmax(128px, max-content) minmax(210px, 1fr) auto;
   gap: 8px 10px;

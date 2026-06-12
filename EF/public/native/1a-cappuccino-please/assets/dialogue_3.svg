@@ -1,0 +1,45 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1755" height="1365" viewBox="0 0 1755 1365" role="img" aria-labelledby="title desc">
+  <title id="title">Cafe dialogue 3</title>
+  <desc id="desc">Tom meets Helen in the cafe.</desc>
+  <rect width="1755" height="1365" fill="#fff"/>
+  <rect x="36" y="32" width="1683" height="1333" rx="28" fill="#fff" stroke="#dde3ea" stroke-width="10"/>
+  <rect x="58" y="56" width="1639" height="850" rx="18" fill="#f1efe7"/>
+  <rect x="58" y="762" width="1639" height="144" fill="#c79a62"/>
+  <rect x="480" y="96" width="760" height="320" rx="16" fill="#252c2c"/>
+  <text x="520" y="165" fill="#f8fbfb" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="900">COFFEE</text>
+  <text x="520" y="235" fill="#e0e8e8" font-family="Arial, Helvetica, sans-serif" font-size="32">good morning / nice to meet you</text>
+  <circle cx="111" cy="142" r="61" fill="#efc6e6"/>
+  <text x="91" y="164" fill="#141827" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="900">3</text>
+  <g opacity=".78">
+    <circle cx="880" cy="438" r="86" fill="#d8a27f"/>
+    <rect x="768" y="522" width="230" height="282" rx="48" fill="#733044"/>
+    <rect x="1040" y="498" width="178" height="294" rx="40" fill="#c9b28f"/>
+    <rect x="1236" y="490" width="158" height="304" rx="40" fill="#111827"/>
+  </g>
+  <g>
+    <ellipse cx="405" cy="350" rx="104" ry="122" fill="#efbda0"/>
+    <path d="M306 279c61-84 180-70 225 17 19 36 18 83 4 130-75-41-147-44-249-12-11-54-5-99 20-135z" fill="#70412b"/>
+    <path d="M256 482h278c64 0 116 52 116 116v293H140V598c0-64 52-116 116-116z" fill="#1b2d4c"/>
+    <rect x="185" y="500" width="94" height="350" rx="38" fill="#101722" opacity=".9"/>
+    <path d="M575 734c150 76 262 75 400-4" stroke="#d9a082" stroke-width="30" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <ellipse cx="1420" cy="364" rx="100" ry="122" fill="#efbea4"/>
+    <path d="M1300 342c-8-115 72-184 151-178 90 7 140 90 126 190-92-36-175-32-277-12z" fill="#d7bf82"/>
+    <path d="M1280 500h270c62 0 112 50 112 112v278h-494V612c0-62 50-112 112-112z" fill="#f2f4f5"/>
+    <path d="M1050 736c126 60 240 53 334-14" stroke="#e7b092" stroke-width="30" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="58" y="906" width="1639" height="424" fill="#fff"/>
+  <line x1="395" y1="946" x2="395" y2="1300" stroke="#edf0f4" stroke-width="8"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#4c535c">
+    <text x="104" y="1017" font-size="66" font-weight="900">Tom</text>
+    <text x="450" y="1017" font-size="66">Hello. Are you Helen?</text>
+    <text x="104" y="1118" font-size="66" font-weight="900">Helen</text>
+    <text x="450" y="1118" font-size="66">Yes, I am. Are you Tom?</text>
+    <text x="104" y="1219" font-size="66" font-weight="900">Tom</text>
+    <text x="450" y="1219" font-size="66">Yes. Nice to meet you.</text>
+    <text x="104" y="1320" font-size="66" font-weight="900">Helen</text>
+    <text x="450" y="1320" font-size="66">Nice to meet you.</text>
+  </g>
+</svg>
+
