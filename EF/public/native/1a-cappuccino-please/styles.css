@@ -417,17 +417,12 @@ textarea.answer {
 
 .photo-option {
   display: grid;
-  grid-template-columns: 42px 1fr;
+  grid-template-columns: 1fr;
   align-items: stretch;
 }
 
 .photo-option .choice {
-  display: grid;
-  place-items: center;
-  background: #f6dced;
-  color: var(--magenta);
-  font-size: 20px;
-  font-weight: 950;
+  display: none;
 }
 
 .number-table {
