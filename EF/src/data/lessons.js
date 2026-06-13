@@ -91,7 +91,7 @@ export const nativeLessons = [
     startPage: 13,
     endPage: 14,
     title: "2A Are you on holiday?",
-    url: "public/native/2a-are-you-on-holiday/index.html?v=20260614-neutralbrand1"
+    url: "public/native/2a-are-you-on-holiday/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 15,
@@ -109,13 +109,13 @@ export const nativeLessons = [
     startPage: 19,
     endPage: 20,
     title: "3A Where are my keys?",
-    url: "public/native/3a-where-are-my-keys/index.html?v=20260614-neutralbrand1"
+    url: "public/native/3a-where-are-my-keys/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 21,
     endPage: 22,
     title: "3B Souvenirs",
-    url: "public/native/3b-souvenirs/index.html?v=20260614-neutralbrand1"
+    url: "public/native/3b-souvenirs/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 23,
@@ -133,7 +133,7 @@ export const nativeLessons = [
     startPage: 27,
     endPage: 28,
     title: "4B The perfect car",
-    url: "public/native/4b-the-perfect-car/index.html?v=20260614-neutralbrand1"
+    url: "public/native/4b-the-perfect-car/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 29,
@@ -151,13 +151,13 @@ export const nativeLessons = [
     startPage: 33,
     endPage: 34,
     title: "5B A very long flight",
-    url: "public/native/5b-a-very-long-flight/index.html?v=20260614-neutralbrand1"
+    url: "public/native/5b-a-very-long-flight/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 35,
     endPage: 36,
     title: "Practical English 3",
-    url: "public/native/practical-english-3/index.html?v=20260614-neutralbrand1"
+    url: "public/native/practical-english-3/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 37,
@@ -175,7 +175,7 @@ export const nativeLessons = [
     startPage: 41,
     endPage: 42,
     title: "Revise and Check 5&6",
-    url: "public/native/revise-check-5-6/index.html?v=20260614-neutralbrand1"
+    url: "public/native/revise-check-5-6/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 43,
@@ -193,13 +193,13 @@ export const nativeLessons = [
     startPage: 47,
     endPage: 48,
     title: "Practical English 4",
-    url: "public/native/practical-english-4/index.html?v=20260614-neutralbrand1"
+    url: "public/native/practical-english-4/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 49,
     endPage: 50,
     title: "8A Can I park here?",
-    url: "public/native/8a-can-i-park-here/index.html?v=20260614-neutralbrand1"
+    url: "public/native/8a-can-i-park-here/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 51,
@@ -223,13 +223,13 @@ export const nativeLessons = [
     startPage: 57,
     endPage: 58,
     title: "9B Working undercover",
-    url: "public/native/9b-working-undercover/index.html?v=20260614-neutralbrand1"
+    url: "public/native/9b-working-undercover/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 59,
     endPage: 60,
     title: "Practical English 5",
-    url: "public/native/practical-english-5/index.html?v=20260614-neutralbrand1"
+    url: "public/native/practical-english-5/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 61,
@@ -265,7 +265,7 @@ export const nativeLessons = [
     startPage: 71,
     endPage: 72,
     title: "Practical English 6",
-    url: "public/native/practical-english-6/index.html?v=20260614-neutralbrand1"
+    url: "public/native/practical-english-6/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 73,
@@ -313,7 +313,7 @@ export const nativeLessons = [
     startPage: 95,
     endPage: 96,
     title: "Grammar Bank 2A-2B",
-    url: "public/native/grammar-bank-2/index.html?v=20260614-neutralbrand1"
+    url: "public/native/grammar-bank-2/index.html?v=20260614-cnyphoto1"
   },
   {
     startPage: 97,

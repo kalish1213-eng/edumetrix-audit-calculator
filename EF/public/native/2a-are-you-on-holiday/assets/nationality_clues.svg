@@ -9,21 +9,25 @@
       <stop stop-color="#0f172a" stop-opacity=".82"/>
       <stop offset="1" stop-color="#0f172a" stop-opacity=".48"/>
     </linearGradient>
+    <clipPath id="chinese-new-year-card">
+      <rect x="110" y="1572" width="1860" height="1380" rx="58"/>
+    </clipPath>
   </defs>
   <rect width="4096" height="3072" fill="#f6f2ec"/>
   <image href="nationality_clues_photo.webp" x="70" y="70" width="3956" height="2932" preserveAspectRatio="xMidYMid slice" filter="url(#shadow)"/>
+  <image href="nationality_chinese_new_year_photo.webp" x="110" y="1572" width="1860" height="1380" preserveAspectRatio="xMidYMid slice" clip-path="url(#chinese-new-year-card)"/>
   <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
     <g transform="translate(110 110)">
       <circle cx="88" cy="88" r="58" fill="#c81f32"/>
       <text x="88" y="118" text-anchor="middle" font-size="82" fill="#fff">1</text>
-      <rect x="0" y="2320" width="1860" height="260" rx="56" fill="url(#label)"/>
-      <text x="930" y="2490" text-anchor="middle" font-size="138" fill="#fff">TURKISH DELIGHT</text>
+      <rect x="0" y="1120" width="1860" height="260" rx="56" fill="url(#label)"/>
+      <text x="930" y="1290" text-anchor="middle" font-size="138" fill="#fff">TURKISH DELIGHT</text>
     </g>
     <g transform="translate(2110 110)">
       <circle cx="88" cy="88" r="58" fill="#1f5aa8"/>
       <text x="88" y="118" text-anchor="middle" font-size="82" fill="#fff">2</text>
-      <rect x="0" y="2320" width="1860" height="260" rx="56" fill="url(#label)"/>
-      <text x="930" y="2490" text-anchor="middle" font-size="132" fill="#fff">AMERICAN POSTCARD</text>
+      <rect x="0" y="1120" width="1860" height="260" rx="56" fill="url(#label)"/>
+      <text x="930" y="1290" text-anchor="middle" font-size="132" fill="#fff">AMERICAN POSTCARD</text>
     </g>
     <g transform="translate(110 1572)">
       <circle cx="88" cy="88" r="58" fill="#b81924"/>
