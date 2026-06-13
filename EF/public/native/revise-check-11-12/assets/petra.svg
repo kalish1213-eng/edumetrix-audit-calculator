@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="6007" viewBox="0 0 4096 6007" role="img" aria-labelledby="title desc">
+  <title id="title">The ancient city of Petra</title>
+  <desc id="desc">A sharp vector view of Petra's red sandstone facade with a caption label.</desc>
+  <defs>
+    <linearGradient id="stone" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#9e392c"/><stop offset=".5" stop-color="#d88a66"/><stop offset="1" stop-color="#7a2d23"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="10" dy="15" stdDeviation="14" flood-color="#27120d" flood-opacity=".25"/></filter>
+    <style>
+      .cut{fill:#552019;opacity:.7}.line{stroke:#5f2119;stroke-width:22;stroke-linecap:round;stroke-linejoin:round}
+      .cap{font-family:Arial,Helvetica,sans-serif;font-size:185px;font-weight:900;fill:#252a2f}
+    </style>
+  </defs>
+  <rect width="4096" height="6007" fill="#fff"/>
+  <rect x="86" y="0" width="3924" height="2460" fill="url(#stone)"/>
+  <g opacity=".42" fill="#6f261d"><path d="M0 0h1040L620 2460H0z"/><path d="M3300 0h796v2460h-1120z"/><path d="M1250 0h250l-150 2460h-320z"/></g>
+  <g transform="translate(1080 310)" filter="url(#shadow)">
+    <path d="M0 1700h1980v220H0z" fill="#b9664d"/>
+    <rect x="180" y="900" width="1620" height="800" fill="#ce7c5c" stroke="#6a281f" stroke-width="22"/>
+    <path d="M180 900 990 350l810 550z" fill="#e3a07d" stroke="#6a281f" stroke-width="22"/>
+    <rect x="420" y="1040" width="220" height="620" class="cut"/><rect x="880" y="1035" width="240" height="665" fill="#1f1717"/><rect x="1360" y="1040" width="220" height="620" class="cut"/>
+    <path d="M990 350v510M520 900v800M1460 900v800" class="line"/>
+    <rect x="260" y="650" width="1460" height="180" fill="#c96e50" stroke="#6a281f" stroke-width="18"/>
+    <g fill="#8f3828"><rect x="360" y="680" width="130" height="120"/><rect x="650" y="680" width="130" height="120"/><rect x="940" y="680" width="130" height="120"/><rect x="1230" y="680" width="130" height="120"/><rect x="1520" y="680" width="130" height="120"/></g>
+  </g>
+  <rect x="1220" y="2015" width="2710" height="330" fill="#f7fbfd" opacity=".94"/>
+  <text class="cap" x="1320" y="2248">The ancient city of Petra</text>
+</svg>

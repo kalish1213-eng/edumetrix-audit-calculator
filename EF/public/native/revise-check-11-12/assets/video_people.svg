@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1098" viewBox="0 0 4096 1098" role="img" aria-labelledby="title desc">
+  <title id="title">Sophie, Jayna, Rozie, Chimi, and Susan</title>
+  <desc id="desc">Five sharp vector portrait cards labelled Sophie, Jayna, Rozie, Chimi, and Susan.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="6" dy="10" stdDeviation="8" flood-color="#12313a" flood-opacity=".22"/></filter>
+    <style>
+      .frame{fill:#fff;stroke:#9fcbd4;stroke-width:12}.bar{fill:#5d99aa}.num{fill:#eaf4f7;stroke:#bcd3da;stroke-width:8}
+      .numtext{font-family:Arial,Helvetica,sans-serif;font-size:90px;font-weight:900;fill:#252b31}
+      .name{font-family:Arial,Helvetica,sans-serif;font-size:100px;fill:#9aa4a9}
+      .skin{fill:#efbd96}.skin2{fill:#d79b76}.skin3{fill:#f2c9a9}
+    </style>
+  </defs>
+  <rect width="4096" height="1098" fill="#fff"/>
+  <g transform="translate(20 0)" filter="url(#shadow)">
+    <g transform="translate(0 0)">
+      <rect class="frame" x="0" y="0" width="760" height="690" rx="18"/><rect x="18" y="18" width="724" height="620" fill="#d9e5da"/>
+      <circle class="skin" cx="380" cy="250" r="160"/><path d="M220 220c60-190 330-215 480-50-185-55-340-44-480 50z" fill="#b86542"/>
+      <rect x="210" y="430" width="340" height="250" rx="120" fill="#b9d2e1"/><rect class="bar" x="0" y="620" width="760" height="70"/>
+      <circle class="num" cx="70" cy="672" r="70"/><text class="numtext" x="45" y="703">1</text><text class="name" x="180" y="910">Sophie</text>
+    </g>
+    <g transform="translate(820 0)">
+      <rect class="frame" x="0" y="0" width="760" height="690" rx="18"/><rect x="18" y="18" width="724" height="620" fill="#e6d6a9"/>
+      <circle class="skin3" cx="380" cy="250" r="160"/><path d="M220 225c72-220 330-240 500-48-185-62-360-48-500 48z" fill="#e6c271"/>
+      <rect x="200" y="430" width="360" height="250" rx="120" fill="#e9edf1"/><rect class="bar" x="0" y="620" width="760" height="70"/>
+      <circle class="num" cx="70" cy="672" r="70"/><text class="numtext" x="45" y="703">2</text><text class="name" x="195" y="910">Jayna</text>
+    </g>
+    <g transform="translate(1640 0)">
+      <rect class="frame" x="0" y="0" width="760" height="690" rx="18"/><rect x="18" y="18" width="724" height="620" fill="#c8e4ca"/>
+      <circle class="skin" cx="380" cy="250" r="160"/><path d="M230 220c58-185 310-210 450-48-170-50-315-42-450 48z" fill="#9e5b3f"/>
+      <rect x="195" y="430" width="370" height="250" rx="120" fill="#dbb3c8"/><rect class="bar" x="0" y="620" width="760" height="70"/>
+      <circle class="num" cx="70" cy="672" r="70"/><text class="numtext" x="45" y="703">3</text><text class="name" x="205" y="910">Rozie</text>
+    </g>
+    <g transform="translate(2460 0)">
+      <rect class="frame" x="0" y="0" width="760" height="690" rx="18"/><rect x="18" y="18" width="724" height="620" fill="#d0e4ef"/>
+      <circle class="skin2" cx="380" cy="250" r="160"/><path d="M218 220c55-190 330-215 480-45-180-58-340-48-480 45z" fill="#15191e"/>
+      <rect x="190" y="430" width="380" height="250" rx="120" fill="#396d82"/><rect class="bar" x="0" y="620" width="760" height="70"/>
+      <circle class="num" cx="70" cy="672" r="70"/><text class="numtext" x="45" y="703">4</text><text class="name" x="195" y="910">Chimi</text>
+    </g>
+    <g transform="translate(3280 0)">
+      <rect class="frame" x="0" y="0" width="760" height="690" rx="18"/><rect x="18" y="18" width="724" height="620" fill="#e5c9aa"/>
+      <circle class="skin3" cx="380" cy="250" r="160"/><path d="M235 218c58-170 300-200 440-52-165-48-300-40-440 52z" fill="#e9d7bb"/>
+      <rect x="190" y="430" width="380" height="250" rx="120" fill="#81a886"/><rect class="bar" x="0" y="620" width="760" height="70"/>
+      <circle class="num" cx="70" cy="672" r="70"/><text class="numtext" x="45" y="703">5</text><text class="name" x="190" y="910">Susan</text>
+    </g>
+  </g>
+</svg>
