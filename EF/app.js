@@ -235,7 +235,7 @@ const nativeLessons = [
     startPage: 49,
     endPage: 50,
     title: "8A Can I park here?",
-    url: "public/native/8a-can-i-park-here/index.html?v=20260613-8aphoto1"
+    url: "public/native/8a-can-i-park-here/index.html?v=20260613-8aphoto2"
   },
   {
     startPage: 51,
