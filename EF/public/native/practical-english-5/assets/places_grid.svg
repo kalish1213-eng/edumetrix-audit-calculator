@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1485 1035" width="1485" height="1035" role="img" aria-labelledby="title desc">
+  <title id="title">Places to go</title>
+  <desc id="desc">Four invitations: a party, a restaurant, a football match, and a concert.</desc>
+  <rect width="1485" height="1035" fill="#fff"/>
+  <g stroke="#fff" stroke-width="14"><path d="M742 0v1035M0 518h1485"/></g>
+  <g transform="translate(0 0)">
+    <rect width="742" height="518" fill="#ca2440"/>
+    <circle cx="170" cy="250" r="58" fill="#f6c448"/><circle cx="360" cy="210" r="54" fill="#57b8d9"/><circle cx="545" cy="270" r="60" fill="#8bc34a"/>
+    <path d="M160 315l-50 130m260-175l40 155m130-95l-48 112" stroke="#fff" stroke-width="14"/>
+    <g fill="#fff7d8"><path d="M92 95l28 35-42 11 42 14-29 34 49-12 11 45 20-43 40 25-20-43 41-20-45-7 6-47-33 35z"/><path d="M480 70l22 28-35 8 34 12-24 30 40-10 11 37 15-36 35 20-18-36 35-17-38-6 6-39-29 29z"/></g>
+    <text x="371" y="470" font-family="Arial" font-size="62" font-weight="700" text-anchor="middle" fill="#fff">a party</text>
+  </g>
+  <g transform="translate(742 0)">
+    <rect width="743" height="518" fill="#8b4f2d"/>
+    <ellipse cx="355" cy="270" rx="225" ry="120" fill="#f9f3e7"/>
+    <ellipse cx="355" cy="265" rx="180" ry="92" fill="#f0c36a"/>
+    <g fill="#c53b30"><circle cx="280" cy="225" r="18"/><circle cx="390" cy="250" r="18"/><circle cx="335" cy="305" r="17"/></g>
+    <g fill="#5b9b43"><ellipse cx="320" cy="245" rx="34" ry="18" transform="rotate(-25 320 245)"/><ellipse cx="430" cy="286" rx="35" ry="18" transform="rotate(20 430 286)"/></g>
+    <path d="M110 120l96 260M610 112l-94 268" stroke="#d8d8d8" stroke-width="18"/>
+    <circle cx="160" cy="150" r="62" fill="#f9f3e7"/><circle cx="560" cy="150" r="62" fill="#f9f3e7"/>
+    <text x="371" y="470" font-family="Arial" font-size="62" font-weight="700" text-anchor="middle" fill="#fff">a restaurant</text>
+  </g>
+  <g transform="translate(0 518)">
+    <rect width="742" height="517" fill="#3e7db5"/>
+    <rect y="260" width="742" height="257" fill="#3c9f4f"/>
+    <g fill="#78acd4" opacity=".85">
+      <rect x="0" y="60" width="742" height="120"/>
+      <path d="M0 120h742M0 165h742M0 210h742" stroke="#a7c9e1" stroke-width="10"/>
+    </g>
+    <g transform="translate(250 205)">
+      <circle cx="80" cy="55" r="42" fill="#f2c19c"/><path d="M20 120l120-20 42 220H-15z" fill="#d6272f"/>
+      <path d="M88 120l30 135" stroke="#fff" stroke-width="18"/>
+      <circle cx="300" cy="55" r="42" fill="#d8a27d"/><path d="M232 118l135-25 45 230H220z" fill="#101820"/>
+      <circle cx="205" cy="270" r="34" fill="#fff" stroke="#222" stroke-width="6"/><path d="M178 270h54m-27-27v54" stroke="#222" stroke-width="6"/>
+    </g>
+    <text x="371" y="470" font-family="Arial" font-size="62" font-weight="700" text-anchor="middle" fill="#fff">a football match</text>
+  </g>
+  <g transform="translate(742 518)">
+    <rect width="743" height="517" fill="#1e2740"/>
+    <path d="M0 310c140-78 290-118 450-120 112-1 210 23 293 72v255H0z" fill="#151927"/>
+    <g fill="#23314f"><circle cx="80" cy="390" r="42"/><circle cx="155" cy="365" r="48"/><circle cx="250" cy="390" r="44"/><circle cx="365" cy="360" r="50"/><circle cx="505" cy="388" r="44"/><circle cx="620" cy="370" r="48"/></g>
+    <path d="M65 95h625v205H65z" fill="#eaf4ff" opacity=".18"/>
+    <g fill="#f0f6ff">
+      <path d="M180 95h70v260h-70z"/><circle cx="215" cy="68" r="34"/>
+      <path d="M340 130h75v225h-75z"/><circle cx="378" cy="102" r="34"/>
+      <path d="M500 110h70v245h-70z"/><circle cx="535" cy="82" r="34"/>
+    </g>
+    <g stroke="#8dc4ff" stroke-width="10" opacity=".8"><path d="M120 55L40 300M622 55l82 245M370 40v280"/></g>
+    <text x="371" y="470" font-family="Arial" font-size="62" font-weight="700" text-anchor="middle" fill="#fff">a concert</text>
+  </g>
+</svg>

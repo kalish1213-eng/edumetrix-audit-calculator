@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1925 1315" width="1925" height="1315" role="img" aria-labelledby="title desc">
+  <title id="title">Office invitation</title>
+  <desc id="desc">Two colleagues talking across desks in an open-plan office.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#d3ae4b"/><stop offset="1" stop-color="#8c6c23"/></linearGradient>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f2c19c"/><stop offset="1" stop-color="#b9785d"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1925" height="1315" fill="#fff"/>
+  <rect x="32" y="34" width="1860" height="1245" rx="24" fill="none" stroke="url(#gold)" stroke-width="16"/>
+  <rect x="55" y="58" width="1815" height="1195" fill="#eef3f5"/>
+  <rect x="55" y="825" width="1815" height="428" fill="#dce8ee"/>
+  <rect x="95" y="105" width="380" height="590" fill="#f5f5ef"/>
+  <rect x="88" y="88" width="96" height="96" rx="48" fill="#fbf3d5" stroke="#d1be77" stroke-width="6"/>
+  <text x="136" y="157" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" text-anchor="middle" fill="#222">B</text>
+  <g opacity=".7">
+    <rect x="585" y="190" width="560" height="270" rx="20" fill="#d6e3e8"/>
+    <rect x="1250" y="175" width="520" height="280" rx="18" fill="#d5e5dc"/>
+    <circle cx="1420" cy="198" r="80" fill="#2e573e"/><circle cx="1510" cy="225" r="70" fill="#3f704e"/><circle cx="1360" cy="280" r="64" fill="#446f4c"/>
+  </g>
+  <g fill="#20242b">
+    <rect x="310" y="610" width="360" height="230" rx="12"/>
+    <rect x="705" y="690" width="330" height="230" rx="12"/>
+    <rect x="1130" y="615" width="390" height="260" rx="12"/>
+    <rect x="1520" y="625" width="300" height="250" rx="12"/>
+  </g>
+  <g fill="#f9fbfc" stroke="#cdd7dc" stroke-width="10">
+    <path d="M170 865h650l-88 368H92z"/>
+    <path d="M825 878h760l-96 355H730z"/>
+  </g>
+  <g stroke="#9bc3d6" stroke-width="16">
+    <path d="M155 1085h600M810 1110h690"/>
+    <path d="M248 910l88 310m690-306l-70 305"/>
+  </g>
+  <g filter="url(#shadow)">
+    <g transform="translate(225 580)">
+      <path d="M-90 650c18-148 75-260 173-330 86 66 178 67 270 0 92 67 150 180 173 330z" fill="#cad3df"/>
+      <path d="M73 52c67-61 172-61 239 0 78 72 76 199-1 273-69 66-173 66-243-1-81-77-80-200 5-272z" fill="url(#skin)"/>
+      <path d="M70 110c68-76 160-96 268-34-4-73-90-116-178-105-78 10-109 60-90 139z" fill="#5b3a28"/>
+      <ellipse cx="151" cy="190" rx="17" ry="13" fill="#211712"/><ellipse cx="266" cy="190" rx="17" ry="13" fill="#211712"/>
+      <path d="M125 170h76m47 0h76" stroke="#1e252d" stroke-width="16" stroke-linecap="round"/>
+      <path d="M160 292c52 38 105 39 160 0" stroke="#7d3e34" stroke-width="14" stroke-linecap="round" fill="none"/>
+    </g>
+    <g transform="translate(1280 530)">
+      <path d="M-120 710c19-166 89-289 208-358 94 74 200 75 312 2 118 75 190 197 215 356z" fill="#2d8bd4"/>
+      <path d="M70 80c78-76 204-79 284-5 94 87 90 235-2 324-82 79-206 78-288-2-95-92-91-234 6-317z" fill="url(#skin)"/>
+      <path d="M69 135c72-87 181-116 315-56-5-77-103-130-203-117-88 11-134 70-112 173z" fill="#5b3827"/>
+      <ellipse cx="160" cy="225" rx="19" ry="14" fill="#211712"/><ellipse cx="300" cy="225" rx="19" ry="14" fill="#211712"/>
+      <path d="M177 334c61 45 126 45 194 0" stroke="#7d3e34" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <path d="M-45 470c180 48 352 54 516 16" stroke="#e7eff4" stroke-width="20"/>
+    </g>
+  </g>
+</svg>

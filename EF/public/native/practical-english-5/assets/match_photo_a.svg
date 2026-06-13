@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1925 1310" width="1925" height="1310" role="img" aria-labelledby="title desc">
+  <title id="title">Friends at the station</title>
+  <desc id="desc">Three young men waiting by a Tube station entrance before a football match.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d7d0bf"/><stop offset="1" stop-color="#9d927f"/></linearGradient>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f2c19c"/><stop offset="1" stop-color="#b9785d"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#d3ae4b"/><stop offset="1" stop-color="#8c6c23"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1925" height="1310" fill="#fff"/>
+  <rect x="32" y="34" width="1860" height="1240" rx="24" fill="none" stroke="url(#gold)" stroke-width="16"/>
+  <rect x="55" y="58" width="1815" height="1195" fill="url(#wall)"/>
+  <rect x="0" y="1140" width="1925" height="170" fill="#64605a"/>
+  <rect x="1360" y="330" width="360" height="725" rx="14" fill="#08658e"/>
+  <rect x="1418" y="440" width="242" height="210" fill="#164b66"/>
+  <path d="M210 100h990" stroke="#aaa396" stroke-width="56"/>
+  <path d="M1040 82h480" stroke="#b81e2b" stroke-width="22"/>
+  <rect x="96" y="90" width="96" height="96" rx="48" fill="#fbf3d5" stroke="#d1be77" stroke-width="6"/>
+  <text x="144" y="159" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" text-anchor="middle" fill="#222">A</text>
+  <g opacity=".4" stroke="#ffffff" stroke-width="9">
+    <path d="M82 360h480M80 540h510M78 720h520M76 900h520"/>
+    <path d="M88 270v710M264 242v760M442 240v780"/>
+  </g>
+  <g filter="url(#shadow)">
+    <g transform="translate(390 270)">
+      <path d="M-135 964c20-190 91-334 210-407 103 78 215 78 326 0 112 78 183 220 207 407z" fill="#151b21"/>
+      <path d="M95 537c93 100 207 101 302 0l-58 427H145z" fill="#0b1017"/>
+      <path d="M116 120c79-84 219-88 303-7 98 94 91 265-4 365-88 94-226 92-314-2-94-99-91-262 15-356z" fill="url(#skin)"/>
+      <path d="M92 184c69-95 182-130 322-73 13-76-85-124-191-110-91 12-152 77-131 183z" fill="#583a27"/>
+      <ellipse cx="183" cy="292" rx="21" ry="16" fill="#1f1612"/><ellipse cx="331" cy="292" rx="21" ry="16" fill="#1f1612"/>
+      <path d="M159 254c39-22 77-23 114 0m54 0c37-22 76-21 116 0" stroke="#4a2d1e" stroke-width="13" stroke-linecap="round" fill="none"/>
+      <path d="M196 409c72 54 144 55 217 1" stroke="#7d3e34" stroke-width="18" stroke-linecap="round" fill="none"/>
+      <circle cx="256" cy="760" r="140" fill="none" stroke="#d9e1e8" stroke-width="25"/>
+      <text x="256" y="780" font-family="Arial" font-size="66" font-weight="700" text-anchor="middle" fill="#d9e1e8">MATCH</text>
+    </g>
+    <g transform="translate(930 358)">
+      <path d="M-76 870c25-172 89-289 194-352 87 70 180 67 265-3 110 71 176 190 203 355z" fill="#f8f8f6"/>
+      <path d="M95 113c77-75 206-77 283-5 92 86 87 239-4 330-83 83-208 83-292-2-89-90-85-238 13-323z" fill="url(#skin)"/>
+      <path d="M90 173c72-91 180-120 300-57 11-92-137-145-244-88-61 33-85 86-56 145z" fill="#6d4b31"/>
+      <ellipse cx="169" cy="280" rx="18" ry="14" fill="#211712"/><ellipse cx="302" cy="280" rx="18" ry="14" fill="#211712"/>
+      <path d="M165 394c59 45 122 45 190 1" stroke="#7d3e34" stroke-width="15" stroke-linecap="round" fill="none"/>
+      <path d="M88 552h286l94 190H4z" fill="#1c65bd"/>
+      <text x="230" y="690" font-family="Arial" font-size="68" font-weight="700" text-anchor="middle" fill="#fff">FOOTBALL</text>
+      <rect x="-25" y="650" width="480" height="280" fill="#f8f8f6"/>
+      <path d="M90 710h250M70 780h300M105 850h218" stroke="#1c65bd" stroke-width="28"/>
+    </g>
+    <g transform="translate(750 395)" opacity=".92">
+      <path d="M-80 820c18-150 80-260 186-319 82 56 163 57 241 0 98 62 157 172 176 319z" fill="#8c1e30"/>
+      <path d="M74 100c70-62 176-58 241 4 78 75 77 204 0 280-69 69-176 70-247 1-82-79-80-214 6-285z" fill="url(#skin)"/>
+      <path d="M68 135c67-77 156-98 262-45-7-72-89-107-170-96-76 10-108 61-92 141z" fill="#2e2622"/>
+      <rect x="105" y="-15" width="200" height="62" rx="31" fill="#254e9b"/>
+      <rect x="156" y="510" width="110" height="210" fill="#186fc1"/>
+    </g>
+  </g>
+</svg>

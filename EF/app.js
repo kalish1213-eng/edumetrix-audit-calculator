@@ -265,7 +265,7 @@ const nativeLessons = [
     startPage: 59,
     endPage: 60,
     title: "Practical English 5",
-    url: "public/native/practical-english-5/index.html?v=20260612-pe5b"
+    url: "public/native/practical-english-5/index.html?v=20260613-pe5photo1"
   },
   {
     startPage: 61,

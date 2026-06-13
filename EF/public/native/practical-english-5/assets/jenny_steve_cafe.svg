@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1518 1080" width="1518" height="1080" role="img" aria-labelledby="title desc">
+  <title id="title">Old friends in a cafe</title>
+  <desc id="desc">A man and a woman talking over coffee in a warm cafe.</desc>
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f2c19c"/><stop offset="1" stop-color="#b9785d"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#d3ae4b"/><stop offset="1" stop-color="#8c6c23"/></linearGradient>
+    <linearGradient id="hair" x1="0" x2="1"><stop stop-color="#f0c66f"/><stop offset=".55" stop-color="#c48a3d"/><stop offset="1" stop-color="#7e4d25"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1518" height="1080" fill="#fff"/>
+  <rect x="10" y="20" width="1498" height="1040" fill="none" stroke="url(#gold)" stroke-width="14"/>
+  <rect x="26" y="42" width="1466" height="1000" fill="#241914"/>
+  <rect x="0" y="690" width="1518" height="390" fill="#4a3226"/>
+  <g opacity=".8">
+    <circle cx="105" cy="160" r="38" fill="#ffc65c"/><circle cx="430" cy="86" r="34" fill="#ffc65c"/><circle cx="930" cy="82" r="36" fill="#ffc65c"/><circle cx="1090" cy="170" r="30" fill="#ffc65c"/>
+    <path d="M105 0v160M430 0v86M930 0v82M1090 0v170" stroke="#6b3b22" stroke-width="12"/>
+  </g>
+  <rect x="420" y="802" width="825" height="185" rx="16" fill="#9b552a"/>
+  <rect x="420" y="783" width="825" height="64" rx="14" fill="#c77937"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(95 210)">
+      <path d="M-108 830c18-202 88-345 210-429 94 74 192 75 294 0 111 85 180 229 204 429z" fill="#cbd8e5"/>
+      <path d="M85 82c75-72 194-74 270-3 91 84 88 224-1 310-79 76-194 76-275-1-94-89-91-222 6-306z" fill="url(#skin)"/>
+      <path d="M76 145c70-84 176-111 302-51-8-79-103-122-199-109-84 12-126 68-103 160z" fill="#5b3927"/>
+      <ellipse cx="158" cy="230" rx="18" ry="14" fill="#211712"/><ellipse cx="292" cy="230" rx="18" ry="14" fill="#211712"/>
+      <path d="M166 340c58 42 119 42 183 0" stroke="#7d3e34" stroke-width="15" stroke-linecap="round" fill="none"/>
+      <path d="M225 500l-45 178M284 500l34 178" stroke="#eff5fb" stroke-width="18"/>
+    </g>
+    <g transform="translate(1035 215)">
+      <path d="M-210 830c27-207 106-356 237-437 113 82 235 84 365 5 129 88 203 233 230 432z" fill="#f0d9e8"/>
+      <path d="M55 86c82-80 214-82 298-4 99 92 95 249-1 343-87 84-214 84-302-1-101-96-97-249 5-338z" fill="url(#skin)"/>
+      <path d="M15 134c99-110 235-139 392-53 16 124-20 254-70 377 76-136 104-280 26-394C278-58 53-13 15 134z" fill="url(#hair)"/>
+      <path d="M40 140c96-84 206-108 328-72-65-91-283-101-328 72z" fill="#f0c66f"/>
+      <ellipse cx="150" cy="238" rx="18" ry="14" fill="#211712"/><ellipse cx="290" cy="238" rx="18" ry="14" fill="#211712"/>
+      <path d="M166 350c61 43 127 44 196 0" stroke="#7d3e34" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <path d="M-30 610c135 52 285 48 450-14" stroke="#fff3fa" stroke-width="20"/>
+    </g>
+  </g>
+  <g>
+    <ellipse cx="650" cy="890" rx="105" ry="28" fill="#e7dfd5"/>
+    <path d="M585 785h130l-18 92c-10 49-91 49-101 0z" fill="#f7f6f4"/>
+    <ellipse cx="650" cy="785" rx="66" ry="20" fill="#fff"/>
+    <ellipse cx="650" cy="788" rx="48" ry="12" fill="#6b3c20"/>
+    <ellipse cx="1020" cy="884" rx="105" ry="28" fill="#e7dfd5"/>
+    <path d="M958 785h124l-18 90c-10 47-83 47-92 0z" fill="#f7f6f4"/>
+    <ellipse cx="1020" cy="785" rx="62" ry="19" fill="#fff"/>
+    <ellipse cx="1020" cy="788" rx="45" ry="12" fill="#6b3c20"/>
+    <rect x="760" y="842" width="90" height="130" rx="10" fill="#ff4da3"/>
+    <g stroke="#fff" stroke-width="8"><path d="M780 842v-58M804 842v-70M828 842v-52"/></g>
+    <rect x="1010" y="915" width="150" height="36" rx="10" fill="#5f4b55"/>
+  </g>
+</svg>
