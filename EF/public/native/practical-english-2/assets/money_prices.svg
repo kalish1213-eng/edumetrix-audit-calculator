@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Money and prices</title>
+  <desc id="desc">Pounds, euros, dollars, pence and cents for price practice.</desc>
+  <rect width="1600" height="980" rx="34" fill="#f8f4ea"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="800" y="105" font-size="72" fill="#8f7127" text-anchor="middle">Prices</text>
+    <g transform="translate(90 170)">
+      <rect width="430" height="290" rx="28" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="215" y="118" font-size="88" fill="#8f7127" text-anchor="middle">£12.75</text>
+      <text x="215" y="216" font-size="42" fill="#302815" text-anchor="middle">twelve pounds</text>
+      <text x="215" y="265" font-size="42" fill="#302815" text-anchor="middle">seventy-five</text>
+    </g>
+    <g transform="translate(585 170)">
+      <rect width="430" height="290" rx="28" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="215" y="118" font-size="88" fill="#2378a5" text-anchor="middle">€15.99</text>
+      <text x="215" y="216" font-size="42" fill="#302815" text-anchor="middle">fifteen euros</text>
+      <text x="215" y="265" font-size="42" fill="#302815" text-anchor="middle">ninety-nine</text>
+    </g>
+    <g transform="translate(1080 170)">
+      <rect width="430" height="290" rx="28" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="215" y="118" font-size="88" fill="#23824b" text-anchor="middle">$50.19</text>
+      <text x="215" y="216" font-size="42" fill="#302815" text-anchor="middle">fifty dollars</text>
+      <text x="215" y="265" font-size="42" fill="#302815" text-anchor="middle">nineteen</text>
+    </g>
+    <g transform="translate(90 540)">
+      <rect width="305" height="250" rx="26" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="152" y="108" font-size="70" fill="#8f7127" text-anchor="middle">60p</text>
+      <text x="152" y="188" font-size="38" fill="#302815" text-anchor="middle">sixty pence</text>
+    </g>
+    <g transform="translate(455 540)">
+      <rect width="305" height="250" rx="26" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="152" y="108" font-size="70" fill="#23824b" text-anchor="middle">$0.80</text>
+      <text x="152" y="188" font-size="38" fill="#302815" text-anchor="middle">eighty cents</text>
+    </g>
+    <g transform="translate(820 540)">
+      <rect width="305" height="250" rx="26" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="152" y="108" font-size="70" fill="#2378a5" text-anchor="middle">€0.25</text>
+      <text x="152" y="188" font-size="38" fill="#302815" text-anchor="middle">twenty-five cents</text>
+    </g>
+    <g transform="translate(1185 540)">
+      <rect width="305" height="250" rx="26" fill="#fff" stroke="#d8c79a" stroke-width="8"/>
+      <text x="152" y="108" font-size="70" fill="#8f7127" text-anchor="middle">£1.50</text>
+      <text x="152" y="188" font-size="38" fill="#302815" text-anchor="middle">one pound fifty</text>
+    </g>
+  </g>
+</svg>

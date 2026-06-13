@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1300" viewBox="0 0 1800 1300" role="img" aria-labelledby="title desc">
+  <title id="title">The Three Kings menu board</title>
+  <desc id="desc">A pub menu board with food, drinks, and prices.</desc>
+  <rect width="1800" height="1300" rx="40" fill="#f0e4c8"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="120" y="90" width="1560" height="1120" rx="36" fill="#202326" stroke="#8f7127" stroke-width="24"/>
+    <text x="900" y="210" font-size="86" font-weight="900" fill="#f4d47b" text-anchor="middle">THE THREE KINGS</text>
+    <line x1="220" y1="260" x2="1580" y2="260" stroke="#f4d47b" stroke-width="8"/>
+    <g font-size="54" fill="#fff" font-weight="800">
+      <text x="250" y="370">Cheese sandwich</text><text x="1450" y="370" text-anchor="end">£3.95</text>
+      <text x="250" y="465">Tuna sandwich</text><text x="1450" y="465" text-anchor="end">£4.15</text>
+      <text x="250" y="560">Chicken sandwich</text><text x="1450" y="560" text-anchor="end">£4.95</text>
+      <text x="250" y="655">Burger</text><text x="1450" y="655" text-anchor="end">£6.50</text>
+      <text x="250" y="750">Chips</text><text x="1450" y="750" text-anchor="end">£2.80</text>
+    </g>
+    <line x1="220" y1="815" x2="1580" y2="815" stroke="#f4d47b" stroke-width="6"/>
+    <g font-size="54" fill="#fff" font-weight="800">
+      <text x="250" y="920">Coffee</text><text x="1450" y="920" text-anchor="end">£2.40</text>
+      <text x="250" y="1015">Tea</text><text x="1450" y="1015" text-anchor="end">£2.10</text>
+      <text x="250" y="1110">Coke</text><text x="1450" y="1110" text-anchor="end">£2.60</text>
+    </g>
+  </g>
+</svg>
