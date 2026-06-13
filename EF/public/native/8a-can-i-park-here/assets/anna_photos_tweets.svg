@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2360" height="2360" viewBox="0 0 2360 2360" role="img" aria-label="Anna's driving photos and tweets">
+  <defs>
+    <style>.title{font:700 76px Arial,Helvetica,sans-serif;fill:#222}.num{font:900 70px Arial;fill:#111}.tweetName{font:800 52px Arial;fill:#222}.tweet{font:500 50px Arial;fill:#3b3b3b}.muted{fill:#9ba6aa}.bubble{fill:#eaf1f4;stroke:#d7e0e4;stroke-width:6}.photoN{fill:#e8fbff;stroke:#fff;stroke-width:10}</style>
+  </defs>
+  <rect width="2360" height="2360" fill="#fff"/>
+  <text x="50" y="74" class="title">a</text><text x="188" y="74" class="title">Anna wants to learn to drive. Match her tweets to photos 1-3.</text>
+  <g transform="translate(64 150)">
+    <rect width="1332" height="1040" fill="#f1f0e8"/>
+    <rect x="0" y="0" width="1332" height="1040" fill="#f4dfc4"/>
+    <rect x="0" y="0" width="1332" height="1040" fill="#fff" opacity=".18"/>
+    <rect x="84" y="128" width="1164" height="360" rx="20" fill="#f9f0df"/>
+    <rect x="160" y="164" width="240" height="182" fill="#c9d6d0"/><rect x="474" y="164" width="240" height="182" fill="#b8d4c7"/><rect x="788" y="164" width="240" height="182" fill="#d6d0b5"/>
+    <path d="M210 720q180-180 456-120t420 260v180H210z" fill="#d75a45"/>
+    <circle cx="372" cy="470" r="135" fill="#e9b38f"/><path d="M230 435q74-150 240-120 110 20 160 116-130-52-260-12z" fill="#4a2e24"/>
+    <rect x="742" y="606" width="330" height="240" rx="14" fill="#ced7dc" stroke="#777" stroke-width="12"/><rect x="782" y="642" width="250" height="150" fill="#ecf8fb"/><path d="M800 824h230" stroke="#666" stroke-width="14"/>
+    <circle cx="70" cy="70" r="58" class="photoN"/><text x="50" y="94" class="num">1</text>
+  </g>
+  <g transform="translate(1422 150)">
+    <rect width="874" height="452" fill="#d7e2e6"/>
+    <path d="M0 305h874v147H0z" fill="#8c9499"/><path d="M206 96h430q100 0 170 150l-100 90H120z" fill="#9fb2bd"/><rect x="260" y="146" width="210" height="104" fill="#cee6f0"/><path d="M106 336h660" stroke="#253039" stroke-width="40"/><circle cx="260" cy="350" r="62" fill="#1d252c"/><circle cx="640" cy="350" r="62" fill="#1d252c"/><path d="M520 126l180-96" stroke="#111" stroke-width="20"/><circle cx="70" cy="70" r="58" class="photoN"/><text x="50" y="94" class="num">2</text>
+  </g>
+  <g transform="translate(1422 630)">
+    <rect width="874" height="560" fill="#d8e5d2"/><rect y="356" width="874" height="204" fill="#8c8d83"/><path d="M160 240h540q86 0 130 140v80H86v-96q0-90 74-124z" fill="#f0a82f"/><rect x="266" y="174" width="286" height="110" fill="#dff2fa"/><circle cx="242" cy="460" r="68" fill="#1c2328"/><circle cx="670" cy="460" r="68" fill="#1c2328"/><rect x="344" y="80" width="210" height="70" fill="#fff"/><text x="370" y="132" font-family="Arial" font-size="46" font-weight="900" fill="#222">DRIVE</text><circle cx="70" cy="70" r="58" class="photoN"/><text x="50" y="94" class="num">3</text>
+  </g>
+  <g transform="translate(210 1260)">
+    <rect x="0" y="0" width="2086" height="260" rx="10" class="bubble"/><circle cx="88" cy="74" r="54" fill="#cceef4"/><text x="58" y="100" font-family="Arial" font-size="70" fill="#11343d">A</text><circle cx="230" cy="105" r="58" fill="#e9b38f"/><path d="M178 92q42-74 116-30 36 22 44 70-80-38-160-4z" fill="#4a2e24"/><text x="340" y="88" class="tweetName">Anna Jones <tspan class="muted">@annaj • Jul 19</tspan></text><text x="340" y="166" class="tweet">Dad's a terrible teacher. I need some practical lessons</text><text x="340" y="226" class="tweet">with a GOOD driving instructor! Friends, can you help?</text>
+  </g>
+  <g transform="translate(210 1590)">
+    <rect x="0" y="0" width="2086" height="300" rx="10" class="bubble"/><circle cx="88" cy="74" r="54" fill="#cceef4"/><text x="58" y="100" font-family="Arial" font-size="70" fill="#11343d">B</text><circle cx="230" cy="105" r="58" fill="#e9b38f"/><path d="M178 92q42-74 116-30 36 22 44 70-80-38-160-4z" fill="#4a2e24"/><text x="340" y="88" class="tweetName">Anna Jones <tspan class="muted">@annaj • Jul 18</tspan></text><text x="340" y="166" class="tweet">A pass in the theory - fantastic! :) My first lesson with</text><text x="340" y="226" class="tweet">Dad - total disaster! :( Now Dad says I can't practise</text><text x="340" y="286" class="tweet">in his car :(.</text>
+  </g>
+  <g transform="translate(210 1970)">
+    <rect x="0" y="0" width="2086" height="300" rx="10" class="bubble"/><circle cx="88" cy="74" r="54" fill="#cceef4"/><text x="58" y="100" font-family="Arial" font-size="70" fill="#11343d">C</text><circle cx="230" cy="105" r="58" fill="#e9b38f"/><path d="M178 92q42-74 116-30 36 22 44 70-80-38-160-4z" fill="#4a2e24"/><text x="340" y="88" class="tweetName">Anna Jones <tspan class="muted">@annaj • Apr 23</tspan></text><text x="340" y="166" class="tweet">The theory test is very difficult. I can practise online,</text><text x="340" y="226" class="tweet">but I can't answer the questions. Help!</text>
+  </g>
+</svg>
