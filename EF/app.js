@@ -223,7 +223,7 @@ const nativeLessons = [
     startPage: 45,
     endPage: 46,
     title: "7B Lights, camera, action!",
-    url: "public/native/7b-lights-camera-action/index.html?v=20260613-7bphoto1"
+    url: "public/native/7b-lights-camera-action/index.html?v=20260613-7bphoto2"
   },
   {
     startPage: 47,
