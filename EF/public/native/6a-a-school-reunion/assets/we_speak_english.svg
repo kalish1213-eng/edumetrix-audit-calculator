@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2834" viewBox="0 0 4096 2834" role="img" aria-labelledby="title desc">
+  <title id="title">We speak English sign</title>
+  <desc id="desc">A vector sign saying We speak English.</desc>
+  <rect width="4096" height="2834" fill="#eef6f9"/>
+  <rect x="480" y="420" width="3136" height="1700" rx="90" fill="#fffdf8" stroke="#172027" stroke-width="28"/>
+  <rect x="680" y="620" width="2736" height="400" rx="40" fill="#2f7898"/>
+  <text x="2048" y="895" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="230" font-weight="900" fill="#fff">WE SPEAK</text>
+  <text x="2048" y="1545" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="360" font-weight="900" fill="#172027">ENGLISH</text>
+  <g fill="none" stroke="#2f7898" stroke-width="34" stroke-linecap="round">
+    <path d="M1280 1850h1536"/>
+    <path d="M1560 1985h976"/>
+  </g>
+  <circle cx="1050" cy="2360" r="90" fill="#c41486"/>
+  <circle cx="3046" cy="2360" r="90" fill="#168248"/>
+</svg>
