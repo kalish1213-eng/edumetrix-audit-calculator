@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3072" viewBox="0 0 4096 3072" role="img" aria-labelledby="title desc">
+  <title id="title">Pia runs to her bus</title>
+  <desc id="desc">Vector street scene with a student running toward a red bus at a bus stop.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#a9dcff"/><stop offset=".75" stop-color="#eef7ff"/><stop offset="1" stop-color="#f4e2b6"/></linearGradient></defs>
+  <rect width="4096" height="3072" fill="url(#sky)"/>
+  <rect y="1910" width="4096" height="1162" fill="#4c5158"/><path d="M0 2350h4096" stroke="#f5e78d" stroke-width="44" stroke-dasharray="220 150"/>
+  <g transform="translate(1760 1040)">
+    <rect width="1860" height="900" rx="70" fill="#c8202f" stroke="#791722" stroke-width="24"/>
+    <rect x="130" y="125" width="1150" height="360" rx="32" fill="#d9f2ff"/><rect x="1380" y="125" width="320" height="360" rx="32" fill="#d9f2ff"/>
+    <rect x="0" y="565" width="1860" height="140" fill="#9e1722"/><text x="760" y="665" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="110" font-weight="900" fill="#fff">CITY BUS</text>
+    <circle cx="390" cy="900" r="150" fill="#222"/><circle cx="1480" cy="900" r="150" fill="#222"/><circle cx="390" cy="900" r="75" fill="#aaa"/><circle cx="1480" cy="900" r="75" fill="#aaa"/>
+  </g>
+  <g transform="translate(500 840)">
+    <rect x="80" y="250" width="140" height="1430" rx="24" fill="#2f7f2c"/><rect x="-50" y="0" width="720" height="320" rx="40" fill="#2f7f2c"/><text x="310" y="205" text-anchor="middle" font-family="Arial" font-size="126" font-weight="900" fill="#fff">BUS STOP</text>
+  </g>
+  <g transform="translate(1210 1530)">
+    <circle cx="0" cy="140" r="140" fill="#efbf98"/><path d="M-160 105c70-245 330-220 365 0-140-82-255-78-365 0z" fill="#693d2a"/>
+    <path d="M-125 290h280l190 700h-650z" fill="#cf4f79"/>
+    <path d="M-90 470c-260 120-430 300-540 540M120 500c250 84 430 218 570 405" stroke="#cf4f79" stroke-width="118" stroke-linecap="round"/>
+    <path d="M-95 950c-210 170-390 360-520 610M135 955c230 90 430 240 600 450" stroke="#263044" stroke-width="115" stroke-linecap="round"/>
+    <circle cx="-45" cy="150" r="20"/><circle cx="60" cy="150" r="20"/><path d="M-30 240c50 35 95 35 145 0" stroke="#8e443c" stroke-width="20" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M0 1908c540-150 1050-160 1530-30 686 185 1480 160 2566-80v260H0z" fill="#a6bd72"/>
+</svg>

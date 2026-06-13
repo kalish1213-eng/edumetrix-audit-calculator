@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3072" viewBox="0 0 4096 3072" role="img" aria-labelledby="title desc">
+  <title id="title">Students at the school reception</title>
+  <desc id="desc">Vector video still of international students inside a bright school reception.</desc>
+  <defs><linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#ecf8ff"/><stop offset="1" stop-color="#f7fbef"/></linearGradient><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#183015" flood-opacity=".18"/></filter></defs>
+  <rect width="4096" height="3072" fill="url(#wall)"/>
+  <rect y="2100" width="4096" height="972" fill="#d8c493"/>
+  <g transform="translate(360 330)" filter="url(#shadow)">
+    <rect width="3376" height="1580" rx="46" fill="#fff" stroke="#c8ddbd" stroke-width="18"/>
+    <rect x="180" y="160" width="3016" height="260" rx="32" fill="#1260a8"/><text x="1688" y="335" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="900" fill="#fff">BRIGHTON LANGUAGE SCHOOL</text>
+    <rect x="240" y="610" width="780" height="500" fill="#9ac7df"/><rect x="2356" y="610" width="780" height="500" fill="#9ac7df"/><rect x="1240" y="620" width="860" height="670" rx="30" fill="#e6d2a8" stroke="#a27c47" stroke-width="16"/><text x="1670" y="810" text-anchor="middle" font-family="Arial" font-size="82" font-weight="900" fill="#5b4229">RECEPTION</text><rect x="1370" y="950" width="600" height="170" rx="26" fill="#795338"/>
+  </g>
+  <g transform="translate(620 1750)">
+    <g><circle cx="0" cy="230" r="150" fill="#e9b58a"/><path d="M-165 200c55-255 325-255 380 0-145-92-270-94-380 0z" fill="#3b2922"/><path d="M-230 450h460l190 650h-840z" fill="#2f69b0"/></g>
+    <g transform="translate(760 0)"><circle cx="0" cy="230" r="150" fill="#f0c19b"/><path d="M-165 198c60-250 330-232 380 0-145-88-270-86-380 0z" fill="#7a4a30"/><path d="M-230 450h460l190 650h-840z" fill="#cf4f79"/></g>
+    <g transform="translate(1520 0)"><circle cx="0" cy="230" r="150" fill="#dba06f"/><path d="M-170 198c55-260 340-260 395 0-150-92-280-92-395 0z" fill="#2c211c"/><path d="M-230 450h460l190 650h-840z" fill="#2f7f2c"/></g>
+    <g transform="translate(2280 0)"><circle cx="0" cy="230" r="150" fill="#ecc09b"/><path d="M-165 195c62-250 335-230 384 4-145-90-275-90-384-4z" fill="#5a3526"/><path d="M-230 450h460l190 650h-840z" fill="#604ba6"/></g>
+  </g>
+  <g fill="#243024"><circle cx="575" cy="1990" r="20"/><circle cx="665" cy="1990" r="20"/><circle cx="1335" cy="1990" r="20"/><circle cx="1425" cy="1990" r="20"/><circle cx="2095" cy="1990" r="20"/><circle cx="2185" cy="1990" r="20"/><circle cx="2855" cy="1990" r="20"/><circle cx="2945" cy="1990" r="20"/></g>
+  <g stroke="#88423c" stroke-width="20" fill="none" stroke-linecap="round"><path d="M585 2080c50 34 95 34 145 0"/><path d="M1345 2080c50 34 95 34 145 0"/><path d="M2105 2080c50 34 95 34 145 0"/><path d="M2865 2080c50 34 95 34 145 0"/></g>
+</svg>
