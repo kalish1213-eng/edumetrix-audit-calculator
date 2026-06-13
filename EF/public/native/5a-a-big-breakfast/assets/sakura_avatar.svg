@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Sakura avatar">
+  <rect width="512" height="512" rx="128" fill="#f7e9ef"/>
+  <circle cx="256" cy="218" r="92" fill="#f0c19b"/>
+  <path d="M145 224c0-102 52-158 128-158 76 0 126 58 126 158-88-8-154-41-198-94-28 28-46 60-56 94z" fill="#20242a"/>
+  <circle cx="222" cy="220" r="10" fill="#172027"/>
+  <circle cx="294" cy="220" r="10" fill="#172027"/>
+  <path d="M226 268q30 24 62 0" fill="none" stroke="#7b4238" stroke-width="12" stroke-linecap="round"/>
+  <path d="M112 468c24-95 84-142 144-142s120 47 144 142z" fill="#e35d6a"/>
+</svg>

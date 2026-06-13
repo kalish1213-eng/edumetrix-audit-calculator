@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Paulo avatar">
+  <rect width="512" height="512" rx="128" fill="#d9ecf4"/>
+  <circle cx="256" cy="218" r="92" fill="#b87955"/>
+  <path d="M158 202c18-92 78-136 154-116 54 14 84 54 87 118-94 8-166-13-225-61-10 18-16 38-16 59z" fill="#20242a"/>
+  <circle cx="222" cy="220" r="10" fill="#172027"/>
+  <circle cx="294" cy="220" r="10" fill="#172027"/>
+  <path d="M224 268q32 23 64 0" fill="none" stroke="#593127" stroke-width="12" stroke-linecap="round"/>
+  <path d="M116 468c21-93 80-140 140-140s119 47 140 140z" fill="#168248"/>
+</svg>

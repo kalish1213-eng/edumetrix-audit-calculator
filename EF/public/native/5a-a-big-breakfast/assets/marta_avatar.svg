@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Marta avatar">
+  <rect width="512" height="512" rx="128" fill="#f7d7c7"/>
+  <circle cx="256" cy="214" r="92" fill="#f1b98c"/>
+  <path d="M147 220c0-94 48-152 122-152 70 0 124 50 124 146-70-12-136-40-190-84-28 26-45 56-56 90z" fill="#3f2b24"/>
+  <circle cx="222" cy="214" r="10" fill="#172027"/>
+  <circle cx="292" cy="214" r="10" fill="#172027"/>
+  <path d="M228 266q30 24 61 0" fill="none" stroke="#7c3f34" stroke-width="12" stroke-linecap="round"/>
+  <path d="M115 468c18-94 78-142 141-142s123 48 141 142z" fill="#c41486"/>
+</svg>
