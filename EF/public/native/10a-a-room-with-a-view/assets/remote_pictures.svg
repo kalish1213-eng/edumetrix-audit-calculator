@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850 795" width="1850" height="795" role="img" aria-labelledby="title desc">
+  <title id="title">Remote control positions</title>
+  <desc id="desc">Six pictures showing a TV remote on, in, or under furniture.</desc>
+  <defs>
+    <g id="remote"><rect x="-70" y="-22" width="140" height="44" rx="16" fill="#1f2933"/><circle cx="-35" cy="0" r="8" fill="#e23b3b"/><circle cx="-5" cy="0" r="8" fill="#6cc04a"/><circle cx="25" cy="0" r="8" fill="#6aa5ff"/></g>
+    <g id="badge"><circle r="34" fill="#fff" stroke="#d41478" stroke-width="5"/></g>
+  </defs>
+  <rect width="1850" height="795" fill="#fff"/>
+  <g font-family="Arial" font-weight="900" text-anchor="middle">
+    <g transform="translate(45 25)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">1</text>
+      <rect x="105" y="240" width="420" height="80" rx="18" fill="#9b6a3c"/><path d="M150 320v135M480 320v135" stroke="#694326" stroke-width="24"/>
+      <use href="#remote" x="315" y="215"/>
+    </g>
+    <g transform="translate(660 25)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">2</text>
+      <rect x="110" y="155" width="410" height="245" rx="22" fill="#a9c8d4"/>
+      <rect x="150" y="200" width="330" height="150" rx="16" fill="#e8f4f7"/>
+      <use href="#remote" x="315" y="275"/>
+    </g>
+    <g transform="translate(1275 25)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">3</text>
+      <rect x="105" y="260" width="420" height="82" rx="18" fill="#9b6a3c"/><path d="M150 342v132M480 342v132" stroke="#694326" stroke-width="24"/>
+      <use href="#remote" x="315" y="390"/>
+    </g>
+    <g transform="translate(45 410)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">4</text>
+      <rect x="130" y="160" width="365" height="185" rx="28" fill="#6c8b72"/>
+      <rect x="155" y="205" width="315" height="92" rx="22" fill="#8eab93"/>
+      <use href="#remote" x="315" y="388"/>
+    </g>
+    <g transform="translate(660 410)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">5</text>
+      <rect x="145" y="145" width="340" height="250" rx="20" fill="#caa06a"/>
+      <path d="M180 185h270M180 255h270M180 325h270" stroke="#8f6b40" stroke-width="14"/>
+      <use href="#remote" x="315" y="438"/>
+    </g>
+    <g transform="translate(1275 410)">
+      <use href="#badge" x="40" y="38"/><text x="40" y="58" font-size="48" fill="#d41478">6</text>
+      <rect x="120" y="180" width="390" height="210" rx="28" fill="#5c3a2a"/>
+      <rect x="165" y="220" width="300" height="118" rx="18" fill="#80543b"/>
+      <use href="#remote" x="315" y="280"/>
+    </g>
+  </g>
+</svg>

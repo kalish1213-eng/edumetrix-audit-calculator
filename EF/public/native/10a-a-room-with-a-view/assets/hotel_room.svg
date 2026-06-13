@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1403 1035" width="1403" height="1035" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel bedroom</title>
+  <desc id="desc">A hotel room with numbered objects: picture, window, bed, chair, and mirror.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8eee9"/><stop offset="1" stop-color="#c8d0cb"/></linearGradient>
+    <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#5c2b1c"/><stop offset=".5" stop-color="#8b4a2c"/><stop offset="1" stop-color="#3a1d14"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1403" height="1035" fill="#f6f7f7"/>
+  <rect x="10" y="70" width="1380" height="845" fill="url(#wall)"/>
+  <rect x="10" y="770" width="1380" height="145" fill="#bfc4bb"/>
+  <path d="M0 522h1403" stroke="#562719" stroke-width="12"/>
+  <rect x="418" y="238" width="405" height="315" fill="#e8f7fb" stroke="#4c2a21" stroke-width="18"/>
+  <path d="M622 238v315M418 398h405" stroke="#4c2a21" stroke-width="14"/>
+  <path d="M330 160c-55 188-55 365 0 530h78c-45-193-43-365 8-516zM826 173c54 178 55 348 1 510h76c45-193 43-365-8-516z" fill="#0d6470"/>
+  <rect x="1017" y="380" width="170" height="205" fill="#e7ece6" stroke="#8b8e84" stroke-width="12"/>
+  <rect x="1039" y="414" width="125" height="135" fill="#b7d2d6"/>
+  <rect x="116" y="278" width="95" height="150" fill="#eef2ef" stroke="#7b7e78" stroke-width="8"/>
+  <g fill="#55615d"><rect x="136" y="302" width="58" height="18"/><rect x="136" y="340" width="58" height="18"/><rect x="136" y="378" width="58" height="18"/></g>
+  <rect x="60" y="700" width="885" height="210" fill="#f5fbff"/>
+  <path d="M442 690h695l195 220H700z" fill="#cfd5d3"/>
+  <path d="M560 690h516l217 220H720z" fill="#b8d0c3"/>
+  <g opacity=".7"><circle cx="640" cy="740" r="23" fill="#e65b83"/><circle cx="790" cy="785" r="25" fill="#e65b83"/><circle cx="960" cy="748" r="22" fill="#e5a55a"/><circle cx="1080" cy="840" r="24" fill="#e65b83"/></g>
+  <path d="M1040 650h135v260h-135zM1010 825h202" fill="url(#wood)"/>
+  <rect x="1115" y="555" width="115" height="140" fill="#1b6c75"/>
+  <path d="M1094 905h268V592h-70v256h-198z" fill="url(#wood)"/>
+  <path d="M480 600h212v85H480z" fill="#6d321f"/>
+  <circle cx="502" cy="610" r="44" fill="#457d55"/>
+  <g font-family="Arial" font-weight="900" text-anchor="middle">
+    <g><circle cx="102" cy="255" r="54" fill="#fff"/><text x="102" y="278" font-size="66" fill="#333">1</text></g>
+    <g><circle cx="653" cy="360" r="54" fill="#fff"/><text x="653" y="383" font-size="66" fill="#333">2</text></g>
+    <g><circle cx="518" cy="790" r="54" fill="#fff"/><text x="518" y="813" font-size="66" fill="#333">3</text></g>
+    <g><circle cx="940" cy="615" r="54" fill="#fff"/><text x="940" y="638" font-size="66" fill="#333">4</text></g>
+    <g><circle cx="1065" cy="430" r="54" fill="#fff"/><text x="1065" y="453" font-size="66" fill="#333">5</text></g>
+  </g>
+</svg>

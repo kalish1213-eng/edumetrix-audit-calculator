@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 1365" width="880" height="1365" role="img" aria-labelledby="title desc">
+  <title id="title">Craigdarroch Inn information card</title>
+  <desc id="desc">A hotel information card for the Craigdarroch Inn with facilities.</desc>
+  <rect width="880" height="1365" fill="#f7fbf7"/>
+  <rect x="22" y="22" width="836" height="1321" rx="22" fill="#fff" stroke="#86b675" stroke-width="10"/>
+  <rect x="56" y="60" width="768" height="285" rx="14" fill="#dcebd9"/>
+  <path d="M56 270c130-80 278-105 446-74 113 21 220 15 322-20v169H56z" fill="#3d7c38"/>
+  <path d="M56 192c145-98 284-118 418-62 122 51 239 40 350-34v190H56z" fill="#6f9451"/>
+  <path d="M330 155h180v155H330zM292 228h268v82H292z" fill="#875239"/>
+  <path d="M365 188h35v60M440 188h35v60" stroke="#f0e1b5" stroke-width="20"/>
+  <text x="440" y="430" font-family="Arial" font-size="62" font-weight="900" text-anchor="middle" fill="#1b7d46">The Craigdarroch Inn</text>
+  <text x="440" y="500" font-family="Arial" font-size="40" font-weight="700" text-anchor="middle" fill="#345">Loch Ness, Scotland</text>
+  <g font-family="Arial" font-size="39" fill="#26382d">
+    <text x="92" y="610">There is:</text>
+    <text x="132" y="685">✓ a good view</text>
+    <text x="132" y="760">✓ TV in every room</text>
+    <text x="132" y="835">✓ wi-fi</text>
+    <text x="132" y="910">✓ a bar</text>
+    <text x="92" y="1030">There isn't:</text>
+    <text x="132" y="1105">✕ a lift</text>
+    <text x="132" y="1180">✕ a restaurant</text>
+    <text x="132" y="1255">✕ shops near the hotel</text>
+  </g>
+</svg>

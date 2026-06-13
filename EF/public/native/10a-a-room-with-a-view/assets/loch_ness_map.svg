@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 665 715" width="665" height="715" role="img" aria-labelledby="title desc">
+  <title id="title">Map of Scotland and Loch Ness</title>
+  <desc id="desc">A simplified map of Scotland showing Inverness and Loch Ness.</desc>
+  <rect width="665" height="715" fill="#e8f3e4"/>
+  <path d="M312 40c64 36 79 96 42 167 69 15 95 69 72 128 70 46 105 98 103 158-2 77-52 131-128 162-69 28-158 17-221-23-72-45-92-111-48-194-49-39-56-86-20-141-54-55-46-111 24-166C189 88 247 57 312 40z" fill="#75ad61" stroke="#397f46" stroke-width="8"/>
+  <path d="M335 138c45 50 50 103 18 159M290 350c88 68 122 149 100 242" fill="none" stroke="#4c8f47" stroke-width="12" opacity=".6"/>
+  <path d="M340 392c-28 21-58 58-88 111-26 45-47 78-63 99" fill="none" stroke="#2977b5" stroke-width="26" stroke-linecap="round"/>
+  <path d="M340 392c-28 21-58 58-88 111-26 45-47 78-63 99" fill="none" stroke="#a9d8f2" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="354" cy="374" r="12" fill="#d22d2d"/>
+  <circle cx="188" cy="604" r="12" fill="#d22d2d"/>
+  <text x="374" y="368" font-family="Arial" font-size="34" font-weight="700" fill="#19425b">Inverness</text>
+  <text x="130" y="658" font-family="Arial" font-size="34" font-weight="700" fill="#19425b">Loch Ness</text>
+  <path d="M70 110h110M70 150h80" stroke="#397f46" stroke-width="8" stroke-linecap="round"/>
+  <text x="332" y="60" font-family="Arial" font-size="46" font-weight="900" text-anchor="middle" fill="#16714a">SCOTLAND</text>
+</svg>

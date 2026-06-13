@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1955 2800" width="1955" height="2800" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel reception and room</title>
+  <desc id="desc">Tourists arrive at a hotel reception and see a room with a view of Loch Ness.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1eee6"/><stop offset="1" stop-color="#c9d0c8"/></linearGradient>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f2c19c"/><stop offset="1" stop-color="#b9785d"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#000" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="1955" height="2800" fill="#fff"/>
+  <rect x="35" y="35" width="1885" height="2730" rx="22" fill="url(#wall)" stroke="#d7dfd7" stroke-width="16"/>
+  <rect x="90" y="135" width="1765" height="1120" rx="16" fill="#e6efe7"/>
+  <rect x="130" y="180" width="820" height="430" fill="#bcd5e3" stroke="#5b3b2b" stroke-width="18"/>
+  <path d="M130 480c180-70 350-80 510-28 123 40 226 32 310-25v183H130z" fill="#6b8b55"/>
+  <rect x="1140" y="195" width="520" height="335" fill="#f9faf8" stroke="#9aa49a" stroke-width="12"/>
+  <text x="1400" y="370" font-family="Arial" font-size="68" font-weight="900" text-anchor="middle" fill="#188047">Craigdarroch Inn</text>
+  <rect x="130" y="940" width="780" height="230" rx="18" fill="#845334"/>
+  <rect x="145" y="890" width="750" height="92" rx="14" fill="#b77946"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(250 610)">
+      <path d="M-95 760c22-174 88-298 202-372 91 70 193 70 304 0 112 77 182 199 208 372z" fill="#355b8f"/>
+      <path d="M80 70c76-72 198-75 276-3 92 86 89 232-2 320-80 78-200 77-281-1-94-91-91-232 7-316z" fill="url(#skin)"/>
+      <path d="M74 130c74-86 181-112 312-52-11-82-111-127-208-112-86 14-128 73-104 164z" fill="#6d4a2e"/>
+      <ellipse cx="166" cy="220" rx="19" ry="14" fill="#211712"/><ellipse cx="306" cy="220" rx="19" ry="14" fill="#211712"/>
+      <path d="M182 333c60 45 126 45 194 0" stroke="#7d3e34" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <rect x="48" y="555" width="320" height="360" rx="28" fill="#5d4a3d"/>
+    </g>
+    <g transform="translate(1220 560)">
+      <path d="M-130 810c24-196 100-335 230-417 105 79 222 80 348 0 126 83 203 223 230 417z" fill="#e8d8c7"/>
+      <path d="M70 83c83-79 214-82 298-4 99 92 96 250-1 344-87 84-216 84-304-1-101-98-97-250 7-339z" fill="url(#skin)"/>
+      <path d="M32 138c97-108 230-137 388-52 20 127-17 260-74 384 88-158 104-294 26-401C283-53 74-16 32 138z" fill="#d7a45e"/>
+      <ellipse cx="165" cy="235" rx="18" ry="14" fill="#211712"/><ellipse cx="305" cy="235" rx="18" ry="14" fill="#211712"/>
+      <path d="M184 348c61 45 128 45 198 0" stroke="#7d3e34" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <rect x="90" y="590" width="360" height="320" rx="26" fill="#ad3d6f"/>
+    </g>
+    <g transform="translate(800 600)">
+      <path d="M-100 720c18-166 82-288 191-360 88 65 185 66 293 0 108 72 173 195 197 360z" fill="#2e7f48"/>
+      <path d="M72 72c75-71 195-73 271-3 91 84 88 228 0 314-79 76-196 76-277-1-93-90-90-227 6-310z" fill="url(#skin)"/>
+      <path d="M68 128c68-80 170-105 292-49-6-75-96-119-189-107-82 11-124 66-103 156z" fill="#463022"/>
+      <ellipse cx="155" cy="218" rx="18" ry="14" fill="#211712"/><ellipse cx="292" cy="218" rx="18" ry="14" fill="#211712"/>
+      <path d="M174 330c58 42 121 42 187 0" stroke="#7d3e34" stroke-width="15" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+  <rect x="90" y="1390" width="1765" height="1190" rx="16" fill="#eef3ef"/>
+  <rect x="170" y="1480" width="720" height="350" fill="#d7eef8" stroke="#5b3b2b" stroke-width="18"/>
+  <path d="M170 1710c155-76 305-88 450-36 104 37 194 27 270-28v184H170z" fill="#5f8a56"/>
+  <rect x="1030" y="1765" width="640" height="330" rx="20" fill="#f2fbff"/>
+  <path d="M1030 1895h640" stroke="#5b3b2b" stroke-width="14"/>
+  <path d="M1180 1765v330M1520 1765v330" stroke="#5b3b2b" stroke-width="14"/>
+  <rect x="230" y="2135" width="950" height="250" fill="#f9fbff"/>
+  <path d="M720 2095h760l260 290H980z" fill="#d0d7d4"/>
+  <rect x="1320" y="2245" width="210" height="260" rx="18" fill="#82502f"/>
+  <use href="#none"/>
+  <g filter="url(#shadow)">
+    <path d="M595 2370h310v88H595z" fill="#6e3b27"/>
+    <rect x="690" y="2305" width="120" height="165" rx="18" fill="#26313b"/>
+    <circle cx="750" cy="2285" r="34" fill="#202730"/>
+  </g>
+  <text x="980" y="2680" font-family="Arial" font-size="78" font-weight="900" text-anchor="middle" fill="#188047">A room with a view</text>
+</svg>
