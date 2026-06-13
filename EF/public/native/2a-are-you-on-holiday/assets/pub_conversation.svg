@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3072" viewBox="0 0 4096 3072" role="img" aria-labelledby="title desc">
+  <title id="title">People talking outside The King's Arms</title>
+  <desc id="desc">A crisp vector pub conversation scene with four people at an outdoor table.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#bfe5ff"/><stop offset=".62" stop-color="#eff8ff"/><stop offset="1" stop-color="#e9f0dc"/></linearGradient></defs>
+  <rect width="4096" height="3072" fill="url(#sky)"/>
+  <rect y="1840" width="4096" height="1232" fill="#d7c49a"/>
+  <g transform="translate(390 420)">
+    <rect width="3310" height="1540" rx="38" fill="#b44132"/><rect x="210" y="330" width="2880" height="900" fill="#f2e0bd"/><rect x="420" y="510" width="520" height="500" fill="#6f8fb2"/><rect x="2370" y="510" width="520" height="500" fill="#6f8fb2"/>
+    <rect x="1150" y="440" width="1000" height="370" rx="22" fill="#2c5932"/><text x="1650" y="675" text-anchor="middle" font-family="Georgia,serif" font-size="150" font-weight="900" fill="#ffe2a6">THE KING'S</text><text x="1650" y="790" text-anchor="middle" font-family="Georgia,serif" font-size="112" font-weight="900" fill="#ffe2a6">ARMS</text>
+    <rect x="1340" y="890" width="620" height="650" fill="#6a382b"/><circle cx="1880" cy="1200" r="28" fill="#e2b45c"/>
+  </g>
+  <g transform="translate(730 1660)">
+    <ellipse cx="1350" cy="900" rx="970" ry="170" fill="#7d6044" opacity=".35"/>
+    <rect x="1020" y="630" width="660" height="80" rx="38" fill="#7b5437"/><path d="M1110 710h80v500h-80zM1510 710h80v500h-80z" fill="#5f402d"/>
+    <g transform="translate(250 0)"><circle cx="0" cy="330" r="155" fill="#eab58a"/><path d="M-170 290c40-250 330-260 370 0-120-80-250-82-370 0z" fill="#513024"/><path d="M-220 500h440l180 560h-800z" fill="#3f75b5"/><circle cx="-55" cy="345" r="20"/><circle cx="60" cy="345" r="20"/><path d="M-40 440c50 38 95 38 145 0" stroke="#8b3d37" stroke-width="20" fill="none" stroke-linecap="round"/></g>
+    <g transform="translate(930 60)"><circle cx="0" cy="310" r="150" fill="#efbd96"/><path d="M-165 295c60-255 315-230 350-20-130-72-240-66-350 20z" fill="#2c241f"/><path d="M-220 480h440l160 560h-760z" fill="#a93d58"/><circle cx="-50" cy="320" r="20"/><circle cx="58" cy="320" r="20"/><path d="M-42 415c48 34 92 34 140 0" stroke="#8b3d37" stroke-width="20" fill="none" stroke-linecap="round"/></g>
+    <g transform="translate(1760 40)"><circle cx="0" cy="320" r="150" fill="#e5aa7a"/><path d="M-170 280c55-245 320-245 370 0-145-75-270-75-370 0z" fill="#5a3325"/><path d="M-230 500h460l180 560h-820z" fill="#285d3a"/><circle cx="-55" cy="335" r="20"/><circle cx="55" cy="335" r="20"/><path d="M-50 430c55 42 100 42 155 0" stroke="#8b3d37" stroke-width="20" fill="none" stroke-linecap="round"/></g>
+    <g transform="translate(2440 20)"><circle cx="0" cy="330" r="152" fill="#f1c099"/><path d="M-180 295c70-270 340-230 372 0-130-78-250-75-372 0z" fill="#c28b48"/><path d="M-240 510h480l180 550h-840z" fill="#5845a3"/><circle cx="-55" cy="340" r="20"/><circle cx="55" cy="340" r="20"/><path d="M-48 435c54 38 100 38 154 0" stroke="#8b3d37" stroke-width="20" fill="none" stroke-linecap="round"/></g>
+  </g>
+</svg>
