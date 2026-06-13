@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LinguaPro LMS - English File Beginner</title>
-    <link rel="stylesheet" href="styles.css?v=20260613-lms6" />
+    <link rel="stylesheet" href="styles.css?v=20260613-lms8" />
   </head>
   <body>
     <div class="lms-shell">
@@ -18,45 +18,53 @@
         </a>
 
         <nav class="sidebar-nav" aria-label="Разделы LMS">
-          <button class="side-link" type="button" data-section="overview">
+          <button class="side-link" type="button" data-section="overview" aria-label="Обзор курса">
             <span class="side-icon">□</span>
             <span>Обзор курса</span>
           </button>
-          <button class="side-link active" type="button" data-section="lessons">
+          <button class="side-link active" type="button" data-section="lessons" aria-label="Уроки">
             <span class="side-icon">▥</span>
             <span>Уроки</span>
           </button>
-          <button class="side-link" type="button" data-section="homework">
+          <button class="side-link" type="button" data-section="homework" aria-label="Домашние задания">
             <span class="side-icon">✓</span>
             <span>Домашние задания</span>
             <span class="badge danger">2</span>
           </button>
-          <button class="side-link" type="button" data-section="dictionary">
+          <button class="side-link" type="button" data-section="dictionary" aria-label="Словарь">
             <span class="side-icon">✎</span>
             <span>Словарь</span>
           </button>
-          <button class="side-link" type="button" data-section="grammar">
+          <button class="side-link" type="button" data-section="grammar" aria-label="Грамматика">
             <span class="side-icon">G</span>
             <span>Грамматика</span>
           </button>
-          <button class="side-link" type="button" data-section="club">
+          <button class="side-link" type="button" data-section="club" aria-label="Разговорный клуб">
             <span class="side-icon">◎</span>
             <span>Разговорный клуб</span>
           </button>
-          <button class="side-link" type="button" data-section="tests">
+          <button class="side-link" type="button" data-section="tests" aria-label="Тесты">
             <span class="side-icon">▣</span>
             <span>Тесты</span>
           </button>
-          <button class="side-link" type="button" data-section="messages">
+          <button class="side-link" type="button" data-section="calendar" aria-label="Календарь">
+            <span class="side-icon">▤</span>
+            <span>Календарь</span>
+          </button>
+          <button class="side-link" type="button" data-section="messages" aria-label="Сообщения">
             <span class="side-icon">◌</span>
             <span>Сообщения</span>
             <span class="badge">3</span>
           </button>
-          <button class="side-link" type="button" data-section="stats">
+          <button class="side-link" type="button" data-section="achievements" aria-label="Достижения">
+            <span class="side-icon">☆</span>
+            <span>Достижения</span>
+          </button>
+          <button class="side-link" type="button" data-section="stats" aria-label="Моя статистика">
             <span class="side-icon">↗</span>
             <span>Моя статистика</span>
           </button>
-          <button class="side-link" type="button" data-section="settings">
+          <button class="side-link" type="button" data-section="settings" aria-label="Настройки">
             <span class="side-icon">⚙</span>
             <span>Настройки</span>
           </button>
@@ -74,11 +82,11 @@
           <img src="public/native/practical-english-2/assets/london_pub.webp?v=20260613-pe2photo2" alt="" />
           <strong>English File Beginner</strong>
           <span>Interactive LMS course</span>
-          <div class="mini-progress"><span id="sidebarProgressBar" style="width: 0%"></span></div>
-          <small><b id="sidebarProgressText">0%</b> завершено</small>
+          <div class="mini-progress"><span id="sidebarProgressBar" style="width: 1%"></span></div>
+          <small><b id="sidebarProgressText">Начат</b> прогресс курса</small>
         </section>
 
-        <button class="support-card" type="button" data-section="support">
+        <button class="support-card" type="button" data-section="support" aria-label="Связаться с преподавателем">
           <span>Нужна помощь?</span>
           <small>Связаться с преподавателем</small>
         </button>
@@ -87,7 +95,7 @@
       <div class="main-shell">
         <header class="topbar" aria-label="Верхняя панель">
           <div class="breadcrumb">
-            <button id="backToLessons" class="icon-button" type="button" title="К списку уроков">‹</button>
+            <button id="backToLessons" class="icon-button" type="button" title="К списку уроков" aria-label="К списку уроков">‹</button>
             <span>English File Beginner</span>
             <span>/</span>
             <span id="unitCrumb">Unit 1</span>
@@ -98,15 +106,15 @@
           <div class="topbar-right">
             <div class="top-progress" aria-label="Прогресс курса">
               <span>Прогресс в курсе</span>
-              <strong id="topProgressText">0%</strong>
-              <div class="mini-progress"><span id="topProgressBar" style="width: 0%"></span></div>
+              <strong id="topProgressText">Начат</strong>
+              <div class="mini-progress"><span id="topProgressBar" style="width: 1%"></span></div>
             </div>
-            <button class="streak" type="button" title="Серия занятий">
+            <button class="streak" type="button" title="Серия занятий" aria-label="Серия занятий: 12 дней подряд">
               <span class="flame" aria-hidden="true"></span>
               <strong>12 дней подряд</strong>
             </button>
-            <button class="icon-button" type="button" title="Уведомления">●</button>
-            <button class="profile" type="button" title="Профиль">
+            <button class="icon-button" type="button" title="Уведомления" aria-label="Уведомления">●</button>
+            <button class="profile" type="button" title="Профиль" aria-label="Профиль ученика">
               <span class="avatar" aria-hidden="true">A</span>
               <span>Алина</span>
               <span aria-hidden="true">⌄</span>
@@ -123,18 +131,18 @@
               </label>
 
               <div class="pager" aria-label="Навигация по страницам">
-                <button id="firstLessonPage" type="button" title="Первая страница урока">|‹</button>
-                <button id="prevPage" type="button" title="Предыдущая страница">‹</button>
+                <button id="firstLessonPage" type="button" title="Первая страница" aria-label="Первая страница">|‹</button>
+                <button id="prevPage" type="button" title="Предыдущая страница" aria-label="Предыдущая страница">‹</button>
                 <label class="page-jump">
                   <input id="pageInput" type="number" min="1" value="1" />
                   <span id="pageTotal">/ 137</span>
                 </label>
-                <button id="nextPage" type="button" title="Следующая страница">›</button>
-                <button id="lastLessonPage" type="button" title="Последняя страница урока">›|</button>
+                <button id="nextPage" type="button" title="Следующая страница" aria-label="Следующая страница">›</button>
+                <button id="lastLessonPage" type="button" title="Последняя страница" aria-label="Последняя страница">›|</button>
               </div>
 
               <div class="zoom-box" aria-label="Масштаб">
-                <button id="zoomOut" type="button" title="Уменьшить">−</button>
+                <button id="zoomOut" type="button" title="Уменьшить" aria-label="Уменьшить масштаб">−</button>
                 <label>
                   <span class="visually-hidden">Масштаб</span>
                   <select id="zoomSelect">
@@ -145,7 +153,7 @@
                     <option value="1">100%</option>
                   </select>
                 </label>
-                <button id="zoomIn" type="button" title="Увеличить">+</button>
+                <button id="zoomIn" type="button" title="Увеличить" aria-label="Увеличить масштаб">+</button>
               </div>
 
               <label class="mode-toggle">
@@ -154,11 +162,11 @@
               </label>
 
               <div class="toolbar-actions">
-                <button id="checkPage" type="button" class="action-button primary" onclick="return window.__efLmsAction?.('check', event)">Проверить</button>
-                <button id="clearPage" type="button" class="action-button" onclick="return window.__efLmsAction?.('reset', event)">Сбросить</button>
-                <button id="showAnswers" type="button" class="action-button" onclick="return window.__efLmsAction?.('answers', event)">Ответы</button>
-                <button id="exportAnswers" type="button" class="action-button" onclick="return window.__efLmsAction?.('save', event)">Сохранить</button>
-                <button id="importAnswers" type="button" class="icon-button" title="Загрузить ответы">↥</button>
+                <button id="checkPage" type="button" class="action-button primary" aria-label="Проверить ответы" onclick="return window.__efLmsAction?.('check', event)">Проверить</button>
+                <button id="clearPage" type="button" class="action-button" aria-label="Сбросить ответы текущей страницы" onclick="return window.__efLmsAction?.('reset', event)">Сбросить</button>
+                <button id="showAnswers" type="button" class="action-button author-only" aria-label="Показать ключи ответов" onclick="return window.__efLmsAction?.('answers', event)" hidden>Ответы</button>
+                <button id="exportAnswers" type="button" class="action-button" aria-label="Сохранить ответы" onclick="return window.__efLmsAction?.('save', event)">Сохранить</button>
+                <button id="importAnswers" type="button" class="icon-button author-only" title="Загрузить ответы" aria-label="Загрузить ответы" hidden>↥</button>
                 <input id="importFile" class="visually-hidden" type="file" accept="application/json" />
               </div>
             </div>
@@ -240,14 +248,16 @@
                 <section class="panel-page" data-panel-page="progress">
                   <div class="progress-card">
                     <span>Текущий урок</span>
-                    <strong id="lessonProgressText">0%</strong>
-                    <div class="mini-progress"><span id="lessonProgressBar" style="width: 0%"></span></div>
+                    <strong id="lessonProgressText">—</strong>
+                    <div class="mini-progress"><span id="lessonProgressBar" style="width: 1%"></span></div>
                   </div>
                   <div class="stats-grid">
-                    <span><b id="completedLessons">0</b> пройдено</span>
-                    <span><b id="remainingLessons">0</b> осталось</span>
-                    <span><b id="activeFields">0</b> полей</span>
-                    <span><b id="timeLeft">~25</b> мин</span>
+                    <span><b id="completedLessons">—</b> полей</span>
+                    <span><b id="remainingLessons">—</b> заполнено</span>
+                    <span><b id="checkedFields">—</b> проверено</span>
+                    <span><b id="activeFields">—</b> верно</span>
+                    <span><b id="timeLeft">—</b> ошибок</span>
+                    <span><b id="pageCompletion">—</b> выполнение</span>
                   </div>
                 </section>
               </aside>
@@ -259,9 +269,9 @@
                 <strong>Автосохранение</strong>
                 <small id="autosaveTime">Сохранено только что</small>
               </div>
-              <button type="button" data-lms-action="reset" onclick="return window.__efLmsAction?.('reset', event)">Сбросить ответы</button>
-              <button type="button" data-lms-action="save" onclick="return window.__efLmsAction?.('save', event)">Сохранить ответы</button>
-              <button class="primary" type="button" data-lms-action="check" onclick="return window.__efLmsAction?.('check', event)">Проверить ответы</button>
+              <button type="button" data-lms-action="reset" aria-label="Сбросить ответы текущей страницы" onclick="return window.__efLmsAction?.('reset', event)">Сбросить ответы</button>
+              <button type="button" data-lms-action="save" aria-label="Сохранить ответы" onclick="return window.__efLmsAction?.('save', event)">Сохранить ответы</button>
+              <button class="primary" type="button" data-lms-action="check" aria-label="Проверить ответы" onclick="return window.__efLmsAction?.('check', event)">Проверить ответы</button>
             </footer>
           </section>
         </main>
@@ -302,6 +312,6 @@
       </article>
     </template>
 
-    <script src="app.js?v=20260613-lms6"></script>
+    <script src="app.js?v=20260613-lms8"></script>
   </body>
 </html>

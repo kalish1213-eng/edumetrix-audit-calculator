@@ -2,6 +2,8 @@ const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
 const STORAGE_LMS_NOTES = "ef-beginner-lms-notes";
 const STORAGE_LMS_WORDS = "ef-beginner-lms-words";
+const STORAGE_LMS_ANSWERS = "ef-beginner-lms-answer-model";
+const isAuthorMode = new URLSearchParams(location.search).get("mode") === "author";
 
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
@@ -41,6 +43,8 @@ const completedLessons = document.querySelector("#completedLessons");
 const remainingLessons = document.querySelector("#remainingLessons");
 const activeFields = document.querySelector("#activeFields");
 const timeLeft = document.querySelector("#timeLeft");
+const checkedFields = document.querySelector("#checkedFields");
+const pageCompletion = document.querySelector("#pageCompletion");
 const saveStatus = document.querySelector("#saveStatus");
 const autosaveTime = document.querySelector("#autosaveTime");
 const grammarTitle = document.querySelector("#grammarTitle");
@@ -72,6 +76,7 @@ let savedValues = loadJson(STORAGE_VALUES, {});
 let customFields = loadJson(STORAGE_CUSTOM, {});
 let lmsNotes = loadJson(STORAGE_LMS_NOTES, {});
 let lmsWords = loadJson(STORAGE_LMS_WORDS, defaultLmsWords());
+let lmsAnswerModel = loadJson(STORAGE_LMS_ANSWERS, {});
 
 const lessonIndex = [
   { title: "English File Beginner", page: 1 },
@@ -5923,6 +5928,12 @@ init();
 
 async function init() {
   try {
+    document.body.classList.toggle("is-author-mode", isAuthorMode);
+    document.querySelector(".advanced-tools")?.toggleAttribute("hidden", !isAuthorMode);
+    showAnswers?.toggleAttribute("hidden", !isAuthorMode);
+    importAnswers?.toggleAttribute("hidden", !isAuthorMode);
+    pageInput?.setAttribute("aria-label", "Номер страницы");
+
     const response = await fetch("public/manifest.json?v=20260612-bookmatter1", { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Manifest load failed: ${response.status}`);
@@ -5930,6 +5941,7 @@ async function init() {
     manifest = await response.json();
     pageInput.max = String(manifest.pageCount);
     pageTotal.textContent = `/ ${manifest.pageCount}`;
+    pageTotal.setAttribute("aria-label", `Всего страниц: ${manifest.pageCount}`);
     populateLessonSelect();
     populateLessonRail();
     currentPage = clampPage(currentPage);
@@ -6005,6 +6017,8 @@ function renderPages({ resetScroll = false } = {}) {
   const pages = visiblePageNumbers();
   pagesHost.innerHTML = "";
   pageInput.value = String(currentPage);
+  pageInput.setAttribute("value", String(currentPage));
+  pageInput.setAttribute("aria-label", `Текущая страница ${currentPage} из ${manifest.pageCount}`);
   syncLessonSelect();
   updateNavState();
   syncLmsUi(pages);
@@ -6018,7 +6032,7 @@ function renderPages({ resetScroll = false } = {}) {
     const layer = node.querySelector(".answer-layer");
 
     node.dataset.page = String(pageNumber);
-    node.querySelector(".page-label").textContent = nativeLesson ? `${nativeLesson.title} · native` : `Страница ${pageNumber}`;
+    node.querySelector(".page-label").textContent = nativeLesson ? nativeLesson.title : `Страница ${pageNumber}`;
     if (nativeLesson) {
       renderNativeLessonPage({ surface, image, layer, pageNumber, nativeLesson });
       pagesHost.appendChild(node);
@@ -6041,7 +6055,7 @@ function renderPages({ resetScroll = false } = {}) {
 
   const nativeLesson = nativeLessonForVisiblePages(pages);
   if (nativeLesson) {
-    setStatus(`${nativeLesson.title}: нативная интерактивная страница. Поля, ответы или заметки находятся внутри урока.`);
+    setStatus("");
     if (resetScroll) resetReaderScroll();
     return;
   }
@@ -6086,8 +6100,8 @@ function renderNativeLessonPage({ surface, image, layer, nativeLesson }) {
 }
 
 async function loadNativeLessonEmbed(embed, url) {
-  const shadow = embed.attachShadow({ mode: "open" });
-  shadow.innerHTML = `<div class="native-loading">Loading ${escapeHtml(embed.dataset.src || "lesson")}...</div>`;
+  const shadow = embed.shadowRoot || embed.attachShadow({ mode: "open" });
+  renderNativeLoading(shadow);
 
   try {
     const response = await fetch(url, { cache: "no-store" });
@@ -6131,6 +6145,13 @@ async function loadNativeLessonEmbed(embed, url) {
       .native-error {
         color: #9f2f1d;
       }
+      ${!isAuthorMode ? `
+      #answersBtn,
+      #exportBtn,
+      .native-answer-reveal {
+        display: none !important;
+      }
+      ` : ""}
     `;
     shadow.appendChild(hostStyle);
 
@@ -6166,9 +6187,131 @@ async function loadNativeLessonEmbed(embed, url) {
     initEmbeddedNativeLesson(shadow, lesson);
     syncLmsUi(visiblePageNumbers());
   } catch (error) {
-    shadow.innerHTML = `<div class="native-error">Could not load native lesson.</div>`;
     console.error(error);
+    renderNativeError(shadow, () => {
+      loadNativeLessonEmbed(embed, url);
+    });
   }
+}
+
+function renderNativeLoading(shadow) {
+  shadow.innerHTML = `
+    <style>${nativeLoaderStyles()}</style>
+    <div class="native-loader-shell" role="status" aria-live="polite">
+      <div class="native-loader-page">
+        <span class="native-loader-line w60"></span>
+        <span class="native-loader-line w90"></span>
+        <span class="native-loader-line w72"></span>
+        <span class="native-loader-block"></span>
+        <span class="native-loader-line w80"></span>
+        <span class="native-loader-line w50"></span>
+      </div>
+      <p>Загружаем страницу учебника...</p>
+    </div>
+  `;
+}
+
+function renderNativeError(shadow, onRetry) {
+  shadow.innerHTML = `
+    <style>${nativeLoaderStyles()}</style>
+    <div class="native-error-card" role="alert">
+      <strong>Не удалось загрузить страницу учебника</strong>
+      <p>Проверьте соединение и попробуйте ещё раз.</p>
+      <button type="button">Повторить загрузку</button>
+    </div>
+  `;
+  shadow.querySelector("button")?.addEventListener("click", onRetry);
+}
+
+function nativeLoaderStyles() {
+  return `
+    :host {
+      display: block;
+      min-height: 640px;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+    }
+    .native-loader-shell,
+    .native-error-card {
+      min-height: 640px;
+      display: grid;
+      place-items: center;
+      gap: 18px;
+      padding: 28px;
+      border-radius: 22px;
+      background: #fff;
+      color: #64748b;
+    }
+    .native-loader-page {
+      width: min(620px, 88%);
+      min-height: 520px;
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      padding: 42px;
+      border: 1px solid rgba(15, 23, 42, .08);
+      border-radius: 22px;
+      background: #f8fafc;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+      overflow: hidden;
+    }
+    .native-loader-line,
+    .native-loader-block {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e5eaf2;
+    }
+    .native-loader-line { height: 18px; }
+    .native-loader-block {
+      height: 190px;
+      border-radius: 18px;
+      margin: 10px 0;
+    }
+    .w50 { width: 50%; }
+    .w60 { width: 60%; }
+    .w72 { width: 72%; }
+    .w80 { width: 80%; }
+    .w90 { width: 90%; }
+    .native-loader-line::after,
+    .native-loader-block::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+      animation: shimmer 1.15s infinite;
+    }
+    .native-loader-shell p {
+      margin: 0;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .native-error-card {
+      align-content: center;
+      text-align: center;
+    }
+    .native-error-card strong {
+      color: #0f172a;
+      font-size: 18px;
+    }
+    .native-error-card p {
+      margin: 0;
+    }
+    .native-error-card button {
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid #2563eb;
+      border-radius: 12px;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
+    }
+  `;
 }
 
 function rewriteNativeCssUrls(css, baseUrl) {
@@ -6245,8 +6388,12 @@ function initEmbeddedNativeLesson(root, lesson) {
     });
   };
 
-  const saveValues = () => {
-    localStorage.setItem(storageKey(), JSON.stringify({ values: readValues(), updated_at: new Date().toISOString() }));
+  const saveValues = (mode = "input") => {
+    const values = readValues();
+    localStorage.setItem(storageKey(), JSON.stringify({ values, updated_at: new Date().toISOString() }));
+    persistNativeAnswerModel({ lesson, fields, values, mode, isCorrect, answerText });
+    syncLmsUi(visiblePageNumbers());
+    updateLmsSaveTime();
   };
 
   const clearState = (control) => control?.classList.remove("state-ok", "state-bad", "state-empty");
@@ -6484,6 +6631,7 @@ function initEmbeddedNativeLesson(root, lesson) {
   };
 
   const initAnswerReveals = () => {
+    if (!isAuthorMode) return;
     scorable().forEach(showAnswerReveal);
   };
 
@@ -6529,9 +6677,9 @@ function initEmbeddedNativeLesson(root, lesson) {
     if (!result.total) {
       if (byId("scoreStat")) byId("scoreStat").textContent = "-";
       if (byId("percentStat")) byId("percentStat").textContent = "-";
-      if (byId("resultBox")) byId("resultBox").textContent = "This section has no fixed answers. Notes saved.";
-      saveValues();
-      showToast("Notes saved.");
+      if (byId("resultBox")) byId("resultBox").textContent = "Для этого задания автоматическая проверка пока не настроена. Ответ сохранен.";
+      saveValues("checked");
+      showToast("Ответ сохранен.");
       return;
     }
     scorable().forEach((field) => {
@@ -6541,13 +6689,13 @@ function initEmbeddedNativeLesson(root, lesson) {
       if (!String(value).trim()) control?.classList.add("state-empty");
       else if (isCorrect(field, value)) control?.classList.add("state-ok");
       else control?.classList.add("state-bad");
-      if (!String(value).trim() || !isCorrect(field, value)) showAnswerHint(field);
+      if (isAuthorMode && (!String(value).trim() || !isCorrect(field, value))) showAnswerHint(field);
     });
     if (byId("scoreStat")) byId("scoreStat").textContent = String(result.correct);
     if (byId("percentStat")) byId("percentStat").textContent = `${result.percent}%`;
-    if (byId("resultBox")) byId("resultBox").textContent = `Checked: ${result.correct}/${result.total} correct (${result.percent}%). Corrections are shown next to the fields.`;
-    saveValues();
-    showToast(`Checked: ${result.correct}/${result.total}`);
+    if (byId("resultBox")) byId("resultBox").textContent = `Проверено: ${result.correct}/${result.total} верно (${result.percent}%). Ошибки подсвечены, попробуйте исправить форму.`;
+    saveValues("checked");
+    showToast(`Проверено: ${result.correct}/${result.total}`);
   };
 
   const showAnswers = () => {
@@ -6569,7 +6717,7 @@ function initEmbeddedNativeLesson(root, lesson) {
       control?.classList.add("state-ok");
     });
     updateProgress();
-    saveValues();
+    saveValues("checked");
     if (byId("scoreStat")) byId("scoreStat").textContent = String(scorable().length);
     if (byId("percentStat")) byId("percentStat").textContent = "100%";
     if (byId("resultBox")) byId("resultBox").textContent = "Answers inserted.";
@@ -6577,6 +6725,7 @@ function initEmbeddedNativeLesson(root, lesson) {
   };
 
   const reset = () => {
+    if (!confirm("Сбросить ответы на этой странице?")) return;
     removeRevealButtons();
     clearAnswerHints();
     fillable().forEach((field) => {
@@ -6584,8 +6733,9 @@ function initEmbeddedNativeLesson(root, lesson) {
       clearState(controlFor(field));
     });
     localStorage.removeItem(storageKey());
+    clearNativeAnswerModel({ lesson, fields });
     updateProgress();
-    initAnswerReveals();
+    if (isAuthorMode) initAnswerReveals();
     if (byId("scoreStat")) byId("scoreStat").textContent = "-";
     if (byId("percentStat")) byId("percentStat").textContent = "-";
     if (byId("resultBox")) byId("resultBox").textContent = "Fields reset.";
@@ -6733,26 +6883,28 @@ function initEmbeddedNativeLesson(root, lesson) {
     control.addEventListener("input", () => {
       clearState(control);
       removeAnswerHint(field);
-      if (!field.free && answerText(field)) showAnswerReveal(field);
+      if (isAuthorMode && !field.free && answerText(field)) showAnswerReveal(field);
       updateProgress();
       saveValues();
     });
     control.addEventListener("change", () => {
       clearState(control);
       removeAnswerHint(field);
-      if (!field.free && answerText(field)) showAnswerReveal(field);
+      if (isAuthorMode && !field.free && answerText(field)) showAnswerReveal(field);
       updateProgress();
       saveValues();
     });
-    control.addEventListener("focus", () => showAnswerReveal(field));
+    if (isAuthorMode) control.addEventListener("focus", () => showAnswerReveal(field));
   });
 
   installInlineAnswerStyles();
-  initAnswerReveals();
+  if (isAuthorMode) initAnswerReveals();
   initShipBoards();
   updateProgress();
   byId("checkBtn")?.addEventListener("click", check);
-  byId("answersBtn")?.addEventListener("click", showAnswers);
+  byId("answersBtn")?.toggleAttribute("hidden", !isAuthorMode);
+  byId("exportBtn")?.toggleAttribute("hidden", !isAuthorMode);
+  if (isAuthorMode) byId("answersBtn")?.addEventListener("click", showAnswers);
   byId("resetBtn")?.addEventListener("click", () => {
     reset();
     initShipBoards();
@@ -6775,6 +6927,102 @@ function escapeHtml(value) {
   }[char]));
 }
 
+function answerModelKey({ page = currentPage, lessonId, fieldId }) {
+  return `${page}:${lessonId || currentLessonLabel()}:${fieldId}`;
+}
+
+function persistNativeAnswerModel({ lesson, fields, values, mode, isCorrect, answerText }) {
+  const now = new Date().toISOString();
+  fields
+    .filter((field) => !field.readonly)
+    .forEach((field) => {
+      const value = values[field.id] || "";
+      const correctValue = answerText(field);
+      const hasKey = Boolean(correctValue);
+      const existingKey = answerModelKey({ lessonId: lesson.lesson_id, fieldId: field.id });
+      const previous = lmsAnswerModel[existingKey] || {};
+      let status = previous.status || "unchecked";
+
+      if (mode === "checked") {
+        if (!hasKey || field.free) status = "unchecked";
+        else if (!String(value).trim()) status = "unchecked";
+        else status = isCorrect(field, value) ? "correct" : "incorrect";
+      } else if (String(value).trim()) {
+        status = previous.status && previous.value === value ? previous.status : "unchecked";
+      } else {
+        status = "unchecked";
+      }
+
+      lmsAnswerModel[existingKey] = {
+        page: currentPage,
+        lessonId: lesson.lesson_id || currentLessonLabel(),
+        exerciseId: field.exercise_id || field.group || "",
+        fieldId: field.id,
+        type: field.type || inferFieldType(field),
+        value,
+        correctValue: hasKey ? correctValue : null,
+        status,
+        attempts: mode === "checked" ? (previous.attempts || 0) + 1 : (previous.attempts || 0),
+        updatedAt: now
+      };
+    });
+  saveJson(STORAGE_LMS_ANSWERS, lmsAnswerModel);
+}
+
+function clearNativeAnswerModel({ lesson, fields }) {
+  fields.forEach((field) => {
+    delete lmsAnswerModel[answerModelKey({ lessonId: lesson.lesson_id, fieldId: field.id })];
+  });
+  saveJson(STORAGE_LMS_ANSWERS, lmsAnswerModel);
+  syncLmsUi(visiblePageNumbers());
+}
+
+function clearAnswerModelForPages(pages) {
+  const pageSet = new Set(pages.map(Number));
+  Object.keys(lmsAnswerModel).forEach((key) => {
+    if (pageSet.has(Number(lmsAnswerModel[key]?.page))) delete lmsAnswerModel[key];
+  });
+  saveJson(STORAGE_LMS_ANSWERS, lmsAnswerModel);
+}
+
+function persistWidgetAnswerModel(pageNumber, widget, value, mode = "input") {
+  const key = answerModelKey({ page: pageNumber, lessonId: currentLessonLabel(), fieldId: widget.id });
+  const previous = lmsAnswerModel[key] || {};
+  const hasKey = Boolean(widget.answer);
+  const normalized = normalize(value);
+  let status = previous.status || "unchecked";
+
+  if (mode === "checked") {
+    if (!hasKey || widget.free) status = "unchecked";
+    else if (!normalized) status = "unchecked";
+    else status = matchesAnswer(normalized, widget.answer) ? "correct" : "incorrect";
+  } else if (String(value || "").trim()) {
+    status = previous.status && previous.value === value ? previous.status : "unchecked";
+  } else {
+    status = "unchecked";
+  }
+
+  lmsAnswerModel[key] = {
+    page: pageNumber,
+    lessonId: currentLessonLabel(),
+    exerciseId: String(widget.label || "").split(" ")[0] || "",
+    fieldId: widget.id,
+    type: widget.type || "short_text",
+    value,
+    correctValue: hasKey ? answerForReveal(widget.answer) : null,
+    status,
+    attempts: mode === "checked" ? (previous.attempts || 0) + 1 : (previous.attempts || 0),
+    updatedAt: new Date().toISOString()
+  };
+  saveJson(STORAGE_LMS_ANSWERS, lmsAnswerModel);
+}
+
+function inferFieldType(field) {
+  if (field.free) return "writing_task";
+  if ((field.options || []).length) return "dropdown";
+  return "short_text";
+}
+
 function bindLmsEvents() {
   window.__efLmsAction = (action, event) => {
     event?.preventDefault?.();
@@ -6783,11 +7031,16 @@ function bindLmsEvents() {
     if (action === "check") {
       if (!runNativeLessonAction("check")) checkVisiblePages();
     } else if (action === "answers") {
-      if (!runNativeLessonAction("answers")) revealVisibleAnswers();
+      if (!isAuthorMode) {
+        setStatus("Ключи ответов доступны только в режиме преподавателя.");
+      } else if (!runNativeLessonAction("answers")) {
+        revealVisibleAnswers();
+      }
     } else if (action === "reset") {
       if (!runNativeLessonAction("reset")) clearVisiblePages();
     } else if (action === "save") {
-      exportAllAnswers();
+      if (isAuthorMode) exportAllAnswers();
+      else saveCurrentWork();
     }
 
     updateLmsSaveTime();
@@ -6810,7 +7063,7 @@ function bindLmsEvents() {
   }, true);
 
   checkPage?.addEventListener("click", () => runNativeLessonAction("check"));
-  showAnswers?.addEventListener("click", () => runNativeLessonAction("answers"));
+  if (isAuthorMode) showAnswers?.addEventListener("click", () => runNativeLessonAction("answers"));
   clearPage?.addEventListener("click", () => runNativeLessonAction("reset"));
 
   document.querySelectorAll(".side-link, .support-card").forEach((button) => {
@@ -6826,7 +7079,9 @@ function bindLmsEvents() {
         grammar: 93,
         club: 79,
         tests: 29,
+        calendar: currentPage,
         messages: currentPage,
+        achievements: currentPage,
         stats: currentPage,
         settings: currentPage,
         support: currentPage
@@ -6857,13 +7112,11 @@ function bindLmsEvents() {
   zoomIn?.addEventListener("click", () => stepZoom(1));
 
   firstLessonPage?.addEventListener("click", () => {
-    const lesson = nativeLessonForPage(currentPage);
-    goToPage(lesson ? lesson.startPage : 1);
+    goToPage(1);
   });
 
   lastLessonPage?.addEventListener("click", () => {
-    const lesson = nativeLessonForPage(currentPage);
-    goToPage(lesson ? lesson.endPage : manifest.pageCount);
+    goToPage(manifest.pageCount);
   });
 
   backToLessons?.addEventListener("click", () => {
@@ -6947,27 +7200,29 @@ function populateLessonRail() {
 function syncLmsUi(pages = visiblePageNumbers()) {
   const lesson = nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage);
   const nativeIndex = Math.max(0, nativeLessons.findIndex((item) => item.startPage <= currentPage && item.endPage >= currentPage));
-  const progress = manifest ? Math.round((currentPage / manifest.pageCount) * 100) : 0;
+  const progress = manifest ? Math.max(1, Math.round((currentPage / manifest.pageCount) * 100)) : null;
   const lessonStart = lesson.startPage || lesson.page || currentPage;
   const lessonEnd = lesson.endPage || lesson.page || currentPage;
   const lessonPercent = Math.round(((currentPage - lessonStart + 1) / Math.max(1, lessonEnd - lessonStart + 1)) * 100);
   const clampedLessonPercent = clamp(lessonPercent, 0, 100);
-  const fieldCount = pages.reduce((total, page) => total + widgetsForPage(page).length + (customFields[page] || []).length, 0);
+  const answerStats = currentAnswerStats(pages);
 
   setText(currentLessonTitle, lesson.title);
   setText(lessonCrumb, lesson.title);
   setText(unitCrumb, unitNameForLesson(lesson.title));
   setText(lessonCounter, `Урок ${nativeIndex + 1} из ${nativeLessons.length}`);
-  setText(topProgressText, `${progress}%`);
-  setText(sidebarProgressText, `${progress}%`);
-  setText(lessonProgressText, `${clampedLessonPercent}%`);
-  setText(completedLessons, String(Math.max(0, nativeIndex)));
-  setText(remainingLessons, String(Math.max(0, nativeLessons.length - nativeIndex - 1)));
-  setText(activeFields, String(fieldCount));
-  setText(timeLeft, String(Math.max(5, 30 - Math.floor(clampedLessonPercent / 5))));
+  setText(topProgressText, progress ? `${progress}%` : "Начат");
+  setText(sidebarProgressText, progress ? `${progress}%` : "Начат");
+  setText(lessonProgressText, answerStats.total ? `${answerStats.percent}%` : `${clampedLessonPercent}%`);
+  setText(completedLessons, answerStats.total == null ? "—" : String(answerStats.total));
+  setText(remainingLessons, answerStats.filled == null ? "—" : String(answerStats.filled));
+  setText(checkedFields, answerStats.checked == null ? "—" : String(answerStats.checked));
+  setText(activeFields, answerStats.correct == null ? "—" : String(answerStats.correct));
+  setText(timeLeft, answerStats.errors == null ? "—" : String(answerStats.errors));
+  setText(pageCompletion, answerStats.total ? `${answerStats.percent}%` : "—");
 
-  setBar(topProgressBar, progress);
-  setBar(sidebarProgressBar, progress);
+  setBar(topProgressBar, progress || 1);
+  setBar(sidebarProgressBar, progress || 1);
   setBar(lessonProgressBar, clampedLessonPercent);
 
   document.querySelectorAll(".lesson-pill").forEach((button) => {
@@ -6985,6 +7240,66 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   renderWordList();
 }
 
+function currentAnswerStats(pages = visiblePageNumbers()) {
+  const pageSet = new Set(pages.map(Number));
+  const entries = Object.values(lmsAnswerModel).filter((entry) => pageSet.has(Number(entry.page)));
+  const nativeRoot = activeNativeRoot();
+
+  if (nativeRoot) {
+    const controls = [...nativeRoot.querySelectorAll("[data-field-id]")]
+      .filter((control) => !control.matches("[readonly], .example"))
+      .filter((control) => control.offsetParent !== null || control.getClientRects().length);
+
+    if (!controls.length) {
+      return entries.length
+        ? statsFromEntries(entries)
+        : { total: null, filled: null, checked: null, correct: null, errors: null, percent: 0 };
+    }
+
+    const filled = controls.filter((control) => {
+      if (control.type === "checkbox" || control.type === "radio") return control.checked;
+      return String(control.value || "").trim();
+    }).length;
+    const entryStats = statsFromEntries(entries);
+    return {
+      total: controls.length,
+      filled,
+      checked: entryStats.checked,
+      correct: entryStats.correct,
+      errors: entryStats.errors,
+      percent: controls.length ? Math.round((filled / controls.length) * 100) : 0
+    };
+  }
+
+  const widgets = pages.flatMap((page) => widgetsForPage(page).map((widget) => ({ page, widget })));
+  const total = widgets.length;
+  const filled = widgets.filter(({ widget }) => String(valueFor(widget) || "").trim()).length;
+  const entryStats = statsFromEntries(entries);
+  return {
+    total,
+    filled,
+    checked: entryStats.checked,
+    correct: entryStats.correct,
+    errors: entryStats.errors,
+    percent: total ? Math.round((filled / total) * 100) : 0
+  };
+}
+
+function statsFromEntries(entries) {
+  const checked = entries.filter((entry) => entry.status === "correct" || entry.status === "incorrect").length;
+  const correct = entries.filter((entry) => entry.status === "correct").length;
+  const errors = entries.filter((entry) => entry.status === "incorrect").length;
+  const filled = entries.filter((entry) => String(entry.value || "").trim()).length;
+  return {
+    total: entries.length,
+    filled,
+    checked,
+    correct,
+    errors,
+    percent: entries.length ? Math.round((filled / entries.length) * 100) : 0
+  };
+}
+
 function activeNativeRoot() {
   const embed = document.querySelector(".native-lesson-embed");
   return embed?.shadowRoot || null;
@@ -6993,6 +7308,10 @@ function activeNativeRoot() {
 function runNativeLessonAction(action) {
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (!nativeLesson) return false;
+  if (action === "answers" && !isAuthorMode) {
+    setStatus("Ключи ответов доступны только в режиме преподавателя.");
+    return true;
+  }
 
   const buttonId = {
     check: "checkBtn",
@@ -7008,7 +7327,7 @@ function runNativeLessonAction(action) {
     answers: "ответы показаны",
     reset: "ответы сброшены"
   };
-  setStatus(`${nativeLesson.title}: ${labels[action]} в нативном уроке.`);
+  setStatus(`${nativeLesson.title}: ${labels[action]}.`);
   updateLmsSaveTime();
   return true;
 }
@@ -7099,15 +7418,28 @@ function defaultLmsWords() {
   return [
     { id: "word-hello", term: "hello", translation: "привет", lesson: "Lesson 1A" },
     { id: "word-meet", term: "meet", translation: "знакомиться", lesson: "Lesson 1A" },
+    { id: "word-fine", term: "fine", translation: "хорошо", lesson: "Lesson 1A" },
     { id: "word-thanks", term: "thanks", translation: "спасибо", lesson: "Lesson 1A" },
-    { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" }
+    { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" },
+    { id: "word-japan", term: "Japan", translation: "Япония", lesson: "Lesson 1B" },
+    { id: "word-students", term: "students", translation: "студенты", lesson: "Lesson 1B" }
   ];
 }
 
 function renderWordList() {
   if (!wordList) return;
   wordList.innerHTML = "";
-  lmsWords.slice(0, 12).forEach((word) => {
+  const seen = new Set();
+  const words = [...defaultLmsWords(), ...lmsWords]
+    .filter((word) => {
+      const key = String(word.term || "").toLowerCase();
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 12);
+
+  words.forEach((word) => {
     const item = document.createElement("article");
     item.className = "word-item";
     const strong = document.createElement("strong");
@@ -7117,9 +7449,10 @@ function renderWordList() {
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "small-button";
-    remove.textContent = "Удалить";
+    remove.textContent = lmsWords.some((entry) => String(entry.term).toLowerCase() === String(word.term).toLowerCase()) ? "В словаре" : "Добавить";
     remove.addEventListener("click", () => {
-      lmsWords = lmsWords.filter((entry) => entry.id !== word.id);
+      const exists = lmsWords.some((entry) => String(entry.term).toLowerCase() === String(word.term).toLowerCase());
+      if (!exists) lmsWords = [{ ...word, id: `word-${Date.now()}` }, ...lmsWords];
       saveJson(STORAGE_LMS_WORDS, lmsWords);
       renderWordList();
       updateLmsSaveTime();
@@ -7150,6 +7483,20 @@ function updateLmsSaveTime() {
   const time = now.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
   setText(saveStatus, `Сохранено в ${time}`);
   setText(autosaveTime, `Сохранено в ${time}`);
+}
+
+function saveCurrentWork() {
+  setText(saveStatus, "Сохраняем...");
+  setText(autosaveTime, "Сохраняем...");
+  saveJson("ef-beginner-lms-last-save", {
+    page: currentPage,
+    lessonId: currentLessonLabel(),
+    savedAt: new Date().toISOString()
+  });
+  window.setTimeout(() => {
+    updateLmsSaveTime();
+    setStatus("Ответы сохранены на этом устройстве.");
+  }, 180);
 }
 
 function setText(node, value) {
@@ -7543,11 +7890,17 @@ function saveWidgetValue(pageNumber, widget, value) {
       return { ...field, value };
     });
     saveJson(STORAGE_CUSTOM, customFields);
+    persistWidgetAnswerModel(pageNumber, widget, value, "input");
+    syncLmsUi(visiblePageNumbers());
+    updateLmsSaveTime();
     return;
   }
 
   savedValues[widget.id] = value;
   saveJson(STORAGE_VALUES, savedValues);
+  persistWidgetAnswerModel(pageNumber, widget, value, "input");
+  syncLmsUi(visiblePageNumbers());
+  updateLmsSaveTime();
 }
 
 function valueFor(widget) {
@@ -7573,6 +7926,7 @@ function checkVisiblePages() {
   let checked = 0;
   let correct = 0;
   let free = 0;
+  setStatus("Проверяем ответы...");
 
   widgets.forEach((box) => {
     const control = box.querySelector("input, select, textarea");
@@ -7584,13 +7938,14 @@ function checkVisiblePages() {
     const value = normalize(rawValue);
 
     box.classList.remove("correct", "incorrect", "unchecked");
+    if (widget) persistWidgetAnswerModel(Number(box.dataset.page), widget, rawValue, "checked");
     if (isFree) {
       free += 1;
       box.classList.add("unchecked");
       if (widget?.type === "checkbox") {
         feedback.textContent = value ? "Отмечено" : "Свободно";
       } else {
-        feedback.textContent = value ? "Сохранено" : "Свободно";
+        feedback.textContent = value ? "Автопроверка пока не настроена" : "Для этого задания автоматическая проверка пока не настроена";
       }
       return;
     }
@@ -7614,13 +7969,19 @@ function checkVisiblePages() {
 
   if (!checked && free) {
     setStatus(`Свободных полей на странице: ${free}.`);
+    syncLmsUi(visiblePageNumbers());
     return;
   }
 
   setStatus(`Проверка: ${correct} / ${checked} верно${free ? `; свободных полей: ${free}` : ""}.`);
+  syncLmsUi(visiblePageNumbers());
 }
 
 function revealVisibleAnswers() {
+  if (!isAuthorMode) {
+    setStatus("Ключи ответов доступны только в режиме преподавателя.");
+    return;
+  }
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (nativeLesson) {
     const button = activeNativeRoot()?.getElementById("answersBtn");
@@ -7662,6 +8023,8 @@ function clearVisiblePages() {
     return;
   }
 
+  if (!confirm("Сбросить ответы на этой странице?")) return;
+  const pages = visiblePageNumbers();
   document.querySelectorAll(".answer-widget").forEach((box) => {
     const control = box.querySelector("input, select, textarea");
     const widget = findWidget(box.dataset.id);
@@ -7674,10 +8037,17 @@ function clearVisiblePages() {
     box.querySelector(".feedback").textContent = "";
     if (widget) saveWidgetValue(Number(box.dataset.page), widget, "");
   });
+  clearAnswerModelForPages(pages);
   setStatus("Поля на открытой странице очищены.");
+  syncLmsUi(pages);
 }
 
 function exportAllAnswers() {
+  if (!isAuthorMode) {
+    saveCurrentWork();
+    return;
+  }
+
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (nativeLesson) {
     const button = activeNativeRoot()?.getElementById("exportBtn");
@@ -7813,6 +8183,8 @@ function nativePageWidth() {
 function updateNavState() {
   prevPage.disabled = currentPage <= 1;
   nextPage.disabled = currentPage >= manifest.pageCount;
+  firstLessonPage.disabled = currentPage <= 1;
+  lastLessonPage.disabled = currentPage >= manifest.pageCount;
 }
 
 function getStartPage() {
@@ -7825,7 +8197,19 @@ function clampPage(pageNumber) {
 }
 
 function normalize(value) {
-  return String(value).trim().toLowerCase().replace(/\s+/g, " ");
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[’`´]/g, "'")
+    .replace(/\bi'm\b/g, "i am")
+    .replace(/\byou're\b/g, "you are")
+    .replace(/\bhe's\b/g, "he is")
+    .replace(/\bshe's\b/g, "she is")
+    .replace(/\bit's\b/g, "it is")
+    .replace(/\bwe're\b/g, "we are")
+    .replace(/\bthey're\b/g, "they are")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ");
 }
 
 function acceptedAnswers(answer) {
@@ -7870,5 +8254,6 @@ function resetIfRequested() {
 
   localStorage.removeItem(STORAGE_VALUES);
   localStorage.removeItem(STORAGE_CUSTOM);
+  localStorage.removeItem(STORAGE_LMS_ANSWERS);
   history.replaceState(null, "", `${location.pathname}${location.hash || ""}`);
 }
