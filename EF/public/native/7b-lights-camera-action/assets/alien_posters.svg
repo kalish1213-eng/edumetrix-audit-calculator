@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="12315" viewBox="0 0 4096 12315" role="img" aria-labelledby="title desc">
+  <title id="title">Sci-fi film posters and actor photos</title>
+  <desc id="desc">Vector workbook collage with Alien and Prometheus style posters and neutral actor portrait cards.</desc>
+  <defs>
+    <linearGradient id="space" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071016"/>
+      <stop offset=".55" stop-color="#16233a"/>
+      <stop offset="1" stop-color="#030407"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3c16b"/>
+      <stop offset=".45" stop-color="#d75436"/>
+      <stop offset="1" stop-color="#23121a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#02070a" flood-opacity=".28"/>
+    </filter>
+    <style>
+      .card{fill:#fffdf8;stroke:#cfdde4;stroke-width:10;filter:url(#shadow)}
+      .label{font:900 150px Arial,Helvetica,sans-serif;fill:#172027}
+      .caption{font:800 92px Arial,Helvetica,sans-serif;fill:#52636c}
+      .poster-title{font:900 260px Arial,Helvetica,sans-serif;letter-spacing:18px;fill:#eaf6ef}
+      .small{font:800 70px Arial,Helvetica,sans-serif;fill:#e6ecef}
+      .portrait-name{font:900 104px Arial,Helvetica,sans-serif;fill:#172027}
+      .line{fill:none;stroke:#172027;stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="4096" height="12315" fill="#eef2f4"/>
+  <g transform="translate(260 250)">
+    <g>
+      <rect class="card" width="3576" height="3000" rx="64"/>
+      <text class="label" x="180" y="250">A</text>
+      <rect x="340" y="360" width="2896" height="2260" rx="34" fill="url(#space)"/>
+      <circle cx="2050" cy="1120" r="470" fill="#152a24" stroke="#6de0a3" stroke-width="28"/>
+      <path d="M1720 1190q340-520 690 0q-320-210-690 0z" fill="#9ee9ad" opacity=".86"/>
+      <path d="M1540 1970q510-230 1020 0" fill="none" stroke="#e9fff0" stroke-width="34" stroke-linecap="round" opacity=".7"/>
+      <text class="poster-title" x="1788" y="2480" text-anchor="middle">ALIEN</text>
+      <text class="small" x="1788" y="2660" text-anchor="middle">science fiction horror</text>
+      <text class="caption" x="1788" y="2860" text-anchor="middle">classic space film</text>
+    </g>
+    <g transform="translate(0 3300)">
+      <rect class="card" width="3576" height="3000" rx="64"/>
+      <text class="label" x="180" y="250">B</text>
+      <rect x="340" y="360" width="2896" height="2260" rx="34" fill="url(#fire)"/>
+      <path d="M1788 690l420 820h-840z" fill="#252a31" stroke="#f7d08a" stroke-width="28"/>
+      <circle cx="1788" cy="1460" r="430" fill="none" stroke="#f7d08a" stroke-width="30" opacity=".72"/>
+      <path d="M980 2040q780-380 1616 0" fill="none" stroke="#ffdf9b" stroke-width="34" stroke-linecap="round" opacity=".78"/>
+      <text class="poster-title" x="1788" y="2480" text-anchor="middle" font-size="200">PROMETHEUS</text>
+      <text class="small" x="1788" y="2660" text-anchor="middle">science fiction adventure</text>
+      <text class="caption" x="1788" y="2860" text-anchor="middle">space expedition film</text>
+    </g>
+    <g transform="translate(0 6600)">
+      <rect class="card" width="1660" height="2300" rx="64"/>
+      <circle cx="830" cy="740" r="370" fill="#f0c19b" stroke="#172027" stroke-width="24"/>
+      <path d="M410 760c18-390 250-610 572-540c210 46 332 220 312 520c-310-18-560-130-758-328c-70 92-110 205-126 348z" fill="#5a3a2c"/>
+      <circle cx="690" cy="740" r="30" fill="#172027"/>
+      <circle cx="980" cy="740" r="30" fill="#172027"/>
+      <path class="line" d="M720 940q110 88 230 0"/>
+      <path d="M330 2070c80-520 280-780 500-780s420 260 500 780z" fill="#c7192d"/>
+      <text class="portrait-name" x="830" y="2190" text-anchor="middle">Sigourney Weaver</text>
+      <text class="caption" x="830" y="120" text-anchor="middle">Actor photo</text>
+    </g>
+    <g transform="translate(1916 6600)">
+      <rect class="card" width="1660" height="2300" rx="64"/>
+      <circle cx="830" cy="740" r="370" fill="#e2b891" stroke="#172027" stroke-width="24"/>
+      <path d="M430 620c80-300 320-460 620-330c160 70 250 210 260 405c-290 48-558-2-780-150c-48 56-82 82-100 75z" fill="#2f302d"/>
+      <circle cx="690" cy="740" r="30" fill="#172027"/>
+      <circle cx="980" cy="740" r="30" fill="#172027"/>
+      <path class="line" d="M730 942q105 76 220 0"/>
+      <path d="M330 2070c80-520 280-780 500-780s420 260 500 780z" fill="#2f7898"/>
+      <text class="portrait-name" x="830" y="2190" text-anchor="middle">Michael Fassbender</text>
+      <text class="caption" x="830" y="120" text-anchor="middle">Actor photo</text>
+    </g>
+    <g transform="translate(0 9300)">
+      <rect class="card" width="1660" height="2200" rx="64"/>
+      <circle cx="830" cy="720" r="350" fill="#efc09a" stroke="#172027" stroke-width="24"/>
+      <path d="M430 750c0-380 210-570 475-520c240 46 360 246 320 560c-280-36-500-150-660-320c-78 90-120 184-135 280z" fill="#2f2926"/>
+      <circle cx="700" cy="735" r="28" fill="#172027"/>
+      <circle cx="960" cy="735" r="28" fill="#172027"/>
+      <path class="line" d="M725 925q100 75 210 0"/>
+      <path d="M330 1990c80-500 280-750 500-750s420 250 500 750z" fill="#168248"/>
+      <text class="portrait-name" x="830" y="2110" text-anchor="middle">Noomi Rapace</text>
+      <text class="caption" x="830" y="120" text-anchor="middle">Actor photo</text>
+    </g>
+    <g transform="translate(1916 9300)">
+      <rect class="card" width="1660" height="2200" rx="64"/>
+      <text class="label" x="830" y="360" text-anchor="middle">SCI-FI</text>
+      <text class="caption" x="830" y="540" text-anchor="middle">films and actors</text>
+      <rect x="300" y="760" width="1060" height="780" rx="44" fill="#0d1720"/>
+      <circle cx="830" cy="1090" r="210" fill="#73d6f0" opacity=".55"/>
+      <path d="M500 1350q330-240 660 0" fill="none" stroke="#eaf6ef" stroke-width="28" stroke-linecap="round"/>
+      <text class="caption" x="830" y="1760" text-anchor="middle">Listen and match</text>
+      <text class="caption" x="830" y="1900" text-anchor="middle">pronouns to people</text>
+      <text class="caption" x="830" y="2040" text-anchor="middle">and films</text>
+    </g>
+  </g>
+</svg>
