@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3072" viewBox="0 0 4096 3072" role="img" aria-labelledby="title desc">
+  <title id="title">Classic cars at Beaulieu Motor Museum</title>
+  <desc id="desc">Vector video still of classic cars inside Beaulieu Motor Museum.</desc>
+  <defs><linearGradient id="hall" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#e9f8fb"/><stop offset="1" stop-color="#f7fbfc"/></linearGradient><filter id="shadow" x="-8%" y="-8%" width="116%" height="124%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#143d42" flood-opacity=".22"/></filter></defs>
+  <rect width="4096" height="3072" fill="url(#hall)"/>
+  <rect y="2070" width="4096" height="1002" fill="#cfd8dc"/>
+  <g transform="translate(300 290)"><rect width="3496" height="1560" rx="50" fill="#fff" stroke="#c9dfe3" stroke-width="20"/><rect x="170" y="150" width="3156" height="230" rx="30" fill="#007380"/><text x="1748" y="305" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="126" font-weight="900" fill="#fff">BEAULIEU MOTOR MUSEUM</text><rect x="280" y="600" width="760" height="500" fill="#b7dce8"/><rect x="2680" y="600" width="620" height="500" fill="#b7dce8"/></g>
+  <g transform="translate(410 1490)" filter="url(#shadow)">
+    <path d="M210 350c170-260 470-380 900-350 310 22 520 140 700 350h140c102 0 185 83 185 185v160H0V535c0-102 83-185 210-185z" fill="#1d4f91" stroke="#173661" stroke-width="24"/><path d="M580 120h520c130 15 260 85 380 220H390c52-95 110-170 190-220z" fill="#d8f1ff" stroke="#173661" stroke-width="18"/><circle cx="430" cy="700" r="135" fill="#222"/><circle cx="1580" cy="700" r="135" fill="#222"/><circle cx="430" cy="700" r="64" fill="#bbc6cc"/><circle cx="1580" cy="700" r="64" fill="#bbc6cc"/>
+  </g>
+  <g transform="translate(2180 1510)" filter="url(#shadow)">
+    <path d="M180 300c150-235 410-335 800-315 290 15 480 120 650 315h120c94 0 170 76 170 170v145H0V470c0-94 76-170 180-170z" fill="#d92332" stroke="#7c1822" stroke-width="24"/><path d="M520 95h470c120 12 230 75 340 195H360c44-82 96-148 160-195z" fill="#ffe5e6" stroke="#7c1822" stroke-width="18"/><circle cx="385" cy="615" r="125" fill="#222"/><circle cx="1450" cy="615" r="125" fill="#222"/><circle cx="385" cy="615" r="58" fill="#bbc6cc"/><circle cx="1450" cy="615" r="58" fill="#bbc6cc"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="900" fill="#33484c"><text x="760" y="2560">BLUEBIRD</text><text x="2660" y="2560">FERRARI DINO</text></g>
+</svg>

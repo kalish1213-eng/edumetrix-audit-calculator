@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4608" height="2340" viewBox="0 0 4608 2340" role="img" aria-labelledby="title desc">
+  <title id="title">Car showroom scene with two cars</title>
+  <desc id="desc">Vector car showroom with a red sports car and a blue compact car for adjective practice.</desc>
+  <defs><linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#eefbff"/><stop offset="1" stop-color="#f7fdff"/></linearGradient><filter id="shadow" x="-8%" y="-8%" width="116%" height="124%"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#143d42" flood-opacity=".22"/></filter></defs>
+  <rect width="4608" height="2340" fill="url(#wall)"/>
+  <rect y="1490" width="4608" height="850" fill="#d9e4e7"/>
+  <rect x="420" y="210" width="3768" height="1040" rx="50" fill="#fff" stroke="#c9dfe3" stroke-width="20"/>
+  <rect x="610" y="350" width="920" height="520" fill="#9fd3e5"/><rect x="3080" y="350" width="920" height="520" fill="#9fd3e5"/><path d="M610 610h920M1070 350v520M3080 610h920M3540 350v520" stroke="#fff" stroke-width="28" opacity=".75"/>
+  <text x="2304" y="470" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="150" font-weight="900" fill="#007380">PERFECT CAR SHOWROOM</text>
+  <g transform="translate(470 1020)" filter="url(#shadow)">
+    <path d="M210 410c190-310 530-450 1020-420 350 22 580 160 790 420h180c116 0 210 94 210 210v190H0V620c0-116 94-210 210-210z" fill="#d92332" stroke="#7c1822" stroke-width="28"/>
+    <path d="M660 140h610c150 16 300 98 440 250H440c60-110 130-195 220-250z" fill="#ffe5e6" stroke="#7c1822" stroke-width="22"/>
+    <circle cx="520" cy="810" r="170" fill="#222"/><circle cx="1800" cy="810" r="170" fill="#222"/><circle cx="520" cy="810" r="82" fill="#bcc6cc"/><circle cx="1800" cy="810" r="82" fill="#bcc6cc"/>
+  </g>
+  <g transform="translate(2580 1125)" filter="url(#shadow)">
+    <path d="M190 310c150-240 420-350 820-330 300 15 500 125 680 330h145c105 0 190 85 190 190v170H0V500c0-105 85-190 190-190z" fill="#189ac0" stroke="#0b5a70" stroke-width="26"/>
+    <path d="M560 100h520c130 14 250 80 370 205H390c48-90 105-160 170-205z" fill="#d9f5ff" stroke="#0b5a70" stroke-width="20"/>
+    <circle cx="440" cy="670" r="150" fill="#222"/><circle cx="1540" cy="670" r="150" fill="#222"/><circle cx="440" cy="670" r="70" fill="#bcc6cc"/><circle cx="1540" cy="670" r="70" fill="#bcc6cc"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="70" font-weight="900" fill="#445b60">
+    <text x="820" y="1300">RED CAR</text><text x="2960" y="1300">BLUE CAR</text>
+  </g>
+</svg>
