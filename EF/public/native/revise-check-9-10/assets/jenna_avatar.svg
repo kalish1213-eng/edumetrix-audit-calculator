@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 4096" width="4096" height="4096" role="img" aria-labelledby="title desc">
+  <title id="title">Jenna avatar</title>
+  <desc id="desc">A circular avatar of Jenna for travel tweets.</desc>
+  <defs><linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f4c19b"/><stop offset="1" stop-color="#b86e55"/></linearGradient><linearGradient id="hair" x1="0" x2="1"><stop stop-color="#e9c36b"/><stop offset=".6" stop-color="#b77a36"/><stop offset="1" stop-color="#6d3f1f"/></linearGradient></defs>
+  <circle cx="2048" cy="2048" r="2048" fill="#dbeaf1"/>
+  <circle cx="2048" cy="1970" r="1160" fill="url(#skin)"/>
+  <path d="M980 1760c280-780 1080-1080 1830-620 420 260 540 790 330 1370-210-640-640-1000-1280-1075-360-42-655 65-880 325z" fill="url(#hair)"/>
+  <ellipse cx="1650" cy="2050" rx="90" ry="65" fill="#1d1714"/><ellipse cx="2460" cy="2050" rx="90" ry="65" fill="#1d1714"/>
+  <path d="M1510 1870c210-115 410-115 600 0M2290 1870c210-115 410-115 600 0" stroke="#70442f" stroke-width="75" stroke-linecap="round" fill="none"/>
+  <path d="M1780 2660c360 250 730 250 1120 0" stroke="#853c36" stroke-width="100" stroke-linecap="round" fill="none"/>
+  <path d="M980 4096c150-760 520-1180 1110-1260 620 90 970 510 1100 1260z" fill="#3a8cc9"/>
+</svg>

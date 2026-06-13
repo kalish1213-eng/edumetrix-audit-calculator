@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 2629" width="4096" height="2629" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel room review</title>
+  <desc id="desc">A hotel room with chair, bed, cupboard, picture, door, and objects for prepositions.</desc>
+  <defs><linearGradient id="wall" x1="0" x2="1"><stop stop-color="#fff9df"/><stop offset="1" stop-color="#f3edcf"/></linearGradient><linearGradient id="wood" x1="0" x2="1"><stop stop-color="#b38b55"/><stop offset="1" stop-color="#7a5634"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".15"/></filter></defs>
+  <rect width="4096" height="2629" fill="#fff"/>
+  <rect y="70" width="4096" height="2220" fill="url(#wall)"/>
+  <rect y="1650" width="4096" height="780" fill="#cfdcce"/>
+  <g stroke="#eef5ee" stroke-width="9"><path d="M0 1880h4096M0 2120h4096M0 2360h4096"/><path d="M420 1650l-120 780M1020 1650l-20 780M1620 1650l75 780M2300 1650l170 780M3020 1650l300 780M3700 1650l430 780"/></g>
+  <rect x="20" y="340" width="420" height="780" fill="#bba984"/><rect x="50" y="390" width="360" height="665" fill="#b8a47d"/>
+  <rect x="1180" y="230" width="1260" height="690" fill="#e8f8f6" stroke="#17242a" stroke-width="22"/><path d="M1270 830c280-85 566-92 860-22" stroke="#dff5ef" stroke-width="32"/>
+  <rect x="2670" y="350" width="910" height="1050" fill="url(#wood)"/><rect x="2730" y="420" width="790" height="900" fill="#b79b70"/><path d="M2730 420c120 95 260 150 420 165 165-24 288-77 370-165" fill="none" stroke="#d5c098" stroke-width="22"/><path d="M2820 650h620" stroke="#e7d7b8" stroke-width="20"/>
+  <rect x="1065" y="1150" width="1260" height="780" fill="#f0bb4c"/><path d="M1080 1600h1230" stroke="#e8a932" stroke-width="34"/><rect x="1310" y="1100" width="920" height="230" fill="#e7b94e"/><path d="M1320 1170h435M1780 1170h430" stroke="#f9d36a" stroke-width="36"/>
+  <rect x="172" y="1300" width="720" height="980" rx="28" fill="#c4152a" filter="url(#s)"/><rect x="280" y="1480" width="520" height="510" rx="25" fill="#d21d31"/><path d="M175 1640h-120M890 1640h170" stroke="#9c0d1e" stroke-width="55"/>
+  <rect x="900" y="1210" width="295" height="295" fill="#c4a86f"/><rect x="970" y="975" width="120" height="245" fill="#c4a86f"/><path d="M990 1520v230M1120 1520v230" stroke="#8f6f43" stroke-width="28"/>
+  <rect x="2460" y="1200" width="270" height="300" fill="#c4a86f"/><rect x="2540" y="965" width="110" height="245" fill="#c4a86f"/><path d="M2550 1510v230M2670 1510v230" stroke="#8f6f43" stroke-width="28"/>
+  <rect x="3080" y="1310" width="360" height="260" rx="26" fill="#c92d36"/><rect x="3390" y="1330" width="190" height="235" rx="24" fill="#2d8889"/>
+  <rect x="3240" y="1870" width="170" height="70" rx="20" fill="#1f2933"/>
+  <rect x="1180" y="2010" width="260" height="70" rx="18" fill="#d86ea2"/>
+  <g font-family="Arial" font-size="82" font-weight="900" fill="#222"><text x="300" y="2350">1</text><text x="2150" y="1960">2</text><text x="740" y="2300">3</text><text x="3330" y="1890">4</text><text x="3295" y="1495">5</text></g>
+</svg>

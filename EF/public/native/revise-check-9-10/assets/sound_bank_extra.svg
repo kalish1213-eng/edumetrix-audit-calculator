@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 1096" width="4096" height="1096" role="img" aria-labelledby="title desc">
+  <title id="title">Extra sound icons</title>
+  <desc id="desc">Three extra pronunciation icons.</desc>
+  <rect width="4096" height="1096" fill="#fff"/>
+  <g font-family="Arial" font-weight="900" text-anchor="middle">
+    <g transform="translate(260 120)"><rect width="780" height="780" fill="#fdeaf5"/><text x="390" y="530" font-size="520" fill="#d41478">i:</text><path d="M250 610h280" stroke="#666" stroke-width="35"/></g>
+    <g transform="translate(1658 120)"><rect width="780" height="780" fill="#fdeaf5"/><text x="390" y="530" font-size="520" fill="#d41478">m</text><path d="M190 565c90-110 260-110 400 0" fill="none" stroke="#666" stroke-width="35"/></g>
+    <g transform="translate(3056 120)"><rect width="780" height="780" fill="#fdeaf5"/><text x="390" y="530" font-size="520" fill="#d41478">n</text><path d="M145 625h490" stroke="#666" stroke-width="35"/></g>
+  </g>
+</svg>

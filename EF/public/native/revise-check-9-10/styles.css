@@ -1,4 +1,4 @@
-@import url("../revise-check-7-8/styles.css?v=20260612-revise78a");
+@import url("../revise-check-7-8/styles.css?v=20260613-revise78photo1c");
 
 :root {
   --blue: #8bb9cc;
@@ -187,8 +187,9 @@
   font-weight: 900;
 }
 
-.tweet-order {
+.tweet .tweet-order {
   width: 54px;
+  min-width: 54px;
 }
 
 .tweet img {

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 1530" width="4096" height="1530" role="img" aria-labelledby="title desc">
+  <title id="title">Clothes review</title>
+  <desc id="desc">Seven numbered clothes pictures: dress, jacket, shirt, skirt, suit, trousers, and hat.</desc>
+  <rect width="4096" height="1530" fill="#fff"/>
+  <text x="105" y="145" font-family="Arial" font-size="105" font-weight="800" fill="#222">Write the clothes.</text>
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".16"/></filter>
+    <g id="line"><path d="M0 0h560" stroke="#b8b8b8" stroke-width="12"/><path d="M0 40h560" stroke="#d7d7d7" stroke-width="8"/></g>
+  </defs>
+  <g font-family="Arial" font-size="86" fill="#222" filter="url(#s)">
+    <path d="M175 380c140-74 270-82 390-16-42 58-122 95-240 112-91 13-151-18-150-96z" fill="#9b542d"/>
+    <path d="M222 465c140-74 270-82 390-16-42 58-122 95-240 112-91 13-151-18-150-96z" fill="#b96a36"/>
+    <text x="250" y="760" fill="#777" text-decoration="underline">shoes</text>
+    <path d="M1425 230l145-60 75 85 75-85 145 60-55 180-88-25v310h-306V385l-88 25z" fill="#7a8f25"/>
+    <path d="M1415 710h560" stroke="#ccc" stroke-width="12"/><text x="1275" y="705">1</text><use href="#line" x="1415" y="760"/>
+    <path d="M2395 200h360l92 450-205 40-52-265 18 295h-238l18-295-52 265-205-40z" fill="#112333"/>
+    <path d="M2455 270h270M2588 205v505M2470 375h235" stroke="#49616d" stroke-width="18" fill="none"/>
+    <text x="2225" y="705">2</text><use href="#line" x="2370" y="760"/>
+    <path d="M3470 190l120-50 70 80 70-80 120 50-45 170-72-18v330h-286V342l-72 18z" fill="#8fb8e2"/>
+    <path d="M3520 245h240M3640 205v440" stroke="#5790c8" stroke-width="15"/><text x="3310" y="705">3</text><use href="#line" x="3460" y="760"/>
+    <path d="M285 900h310l80 360c-137 85-292 85-465 0z" fill="#5866b7"/><path d="M280 930c140 75 273 75 400 0" fill="none" stroke="#e9edf7" stroke-width="20"/>
+    <text x="110" y="1360">4</text><use href="#line" x="250" y="1410"/>
+    <path d="M1390 910c156-95 314-95 475 0l72 395c-196 95-402 94-619-2z" fill="#23283a"/><path d="M1585 925v360M1495 950l95 120 105-120" stroke="#60687a" stroke-width="18" fill="none"/>
+    <text x="1260" y="1360">5</text><use href="#line" x="1400" y="1410"/>
+    <path d="M2490 890h275l50 440c-95 55-185 56-270 5-80 46-158 47-235 0z" fill="#bfc4bd"/><path d="M2535 905c36 82 41 210 33 392M2695 908c-42 96-55 226-55 390" stroke="#8b928c" stroke-width="18"/>
+    <text x="2250" y="1360">6</text><use href="#line" x="2390" y="1410"/>
+    <ellipse cx="3650" cy="1080" rx="260" ry="72" fill="#f2dfb4"/><path d="M3480 1065c38-176 138-264 300-263 142 2 228 88 260 263-180 74-366 74-560 0z" fill="#f7e7bf"/><path d="M3480 1065c178 55 364 55 560 0" stroke="#1d1b1c" stroke-width="35"/>
+    <text x="3310" y="1360">7</text><use href="#line" x="3460" y="1410"/>
+  </g>
+</svg>
