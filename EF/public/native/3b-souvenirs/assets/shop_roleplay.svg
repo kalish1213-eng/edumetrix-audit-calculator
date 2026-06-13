@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2246" viewBox="0 0 4096 2246" role="img" aria-labelledby="title desc">
+  <title id="title">Role-play scene in the souvenir shop</title>
+  <desc id="desc">A crisp vector souvenir shop role-play scene with a customer, shop assistant, shelves, mugs, shirts, scarves, caps, and key rings.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#fff2d8"/><stop offset="1" stop-color="#f7dfbc"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#512023" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="4096" height="2246" fill="url(#wall)"/>
+  <rect y="1715" width="4096" height="531" fill="#c7a06e"/>
+  <g transform="translate(220 180)" filter="url(#shadow)">
+    <rect width="3656" height="1240" rx="50" fill="#fff" stroke="#dfd5d2" stroke-width="18"/>
+    <rect x="160" y="125" width="3336" height="180" rx="28" fill="#bd242b"/>
+    <text x="1828" y="248" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="112" font-weight="900" fill="#fff">SOUVENIR SHOP</text>
+    <rect x="250" y="460" width="3156" height="120" rx="24" fill="#8a5638"/>
+    <rect x="250" y="880" width="3156" height="120" rx="24" fill="#8a5638"/>
+    <g transform="translate(380 355)">
+      <path d="M0 120h290v260H0z" fill="#1260a8"/><path d="M0 120c60-120 230-120 290 0" fill="#e7363e"/><text x="145" y="290" text-anchor="middle" font-family="Arial" font-size="68" font-weight="900" fill="#fff">UK</text>
+      <path d="M440 120h290v260H440z" fill="#208842"/><path d="M440 120c60-120 230-120 290 0" fill="#f4aa39"/><text x="585" y="290" text-anchor="middle" font-family="Arial" font-size="64" font-weight="900" fill="#fff">OX</text>
+      <rect x="900" y="125" width="280" height="245" rx="35" fill="#fff" stroke="#d7197a" stroke-width="26"/><path d="M960 125c0-95 160-95 160 0" fill="none" stroke="#d7197a" stroke-width="28"/>
+      <rect x="1350" y="105" width="360" height="260" rx="36" fill="#f6f0e8"/><circle cx="1530" cy="235" r="74" fill="#bd242b"/><text x="1530" y="260" text-anchor="middle" font-family="Arial" font-size="62" font-weight="900" fill="#fff">£</text>
+      <path d="M1890 120h430l-65 260h-300z" fill="#2f3238"/><path d="M1950 170h250" stroke="#f4aa39" stroke-width="38" stroke-linecap="round"/>
+      <path d="M2500 115h320v265h-320z" fill="#54c5bb"/><path d="M2500 115c55-120 265-120 320 0" fill="#e7363e"/><text x="2660" y="286" text-anchor="middle" font-family="Arial" font-size="60" font-weight="900" fill="#fff">CAP</text>
+    </g>
+    <g transform="translate(430 740)">
+      <rect x="0" y="120" width="240" height="190" rx="32" fill="#f6f0e8" stroke="#1260a8" stroke-width="22"/><path d="M240 185h85c72 0 72 80 0 80h-85" fill="none" stroke="#1260a8" stroke-width="22"/>
+      <rect x="470" y="120" width="240" height="190" rx="32" fill="#f6f0e8" stroke="#208842" stroke-width="22"/><path d="M710 185h85c72 0 72 80 0 80h-85" fill="none" stroke="#208842" stroke-width="22"/>
+      <circle cx="1060" cy="205" r="88" fill="#f4aa39"/><circle cx="1280" cy="205" r="88" fill="#f4aa39"/><path d="M1060 293l-120 120M1280 293l120 120" stroke="#5a4632" stroke-width="38" stroke-linecap="round"/>
+      <path d="M1630 112h380v250h-380z" fill="#e7363e"/><text x="1820" y="270" text-anchor="middle" font-family="Arial" font-size="82" font-weight="900" fill="#fff">T</text>
+      <path d="M2220 110h560l-70 250h-420z" fill="#1260a8"/><text x="2500" y="268" text-anchor="middle" font-family="Arial" font-size="62" font-weight="900" fill="#fff">SCARF</text>
+    </g>
+  </g>
+  <g transform="translate(380 1320)">
+    <rect x="0" y="420" width="3380" height="190" rx="38" fill="#8a5638"/>
+    <rect x="120" y="260" width="3140" height="300" rx="54" fill="#b5794a"/>
+    <rect x="300" y="320" width="520" height="135" rx="24" fill="#fff7e5"/><text x="560" y="410" text-anchor="middle" font-family="Arial" font-size="52" font-weight="900" fill="#bd242b">How much?</text>
+  </g>
+  <g transform="translate(1120 1110)">
+    <circle cx="0" cy="205" r="150" fill="#e9b58a"/><path d="M-170 175c58-252 340-252 392 5-150-90-275-95-392-5z" fill="#3b2922"/><path d="M-230 420h460l180 600h-820z" fill="#2f69b0"/><circle cx="-55" cy="220" r="21" fill="#111"/><circle cx="55" cy="220" r="21" fill="#111"/><path d="M-45 315c54 38 104 38 158 0" stroke="#8e443c" stroke-width="20" fill="none" stroke-linecap="round"/><path d="M-200 505c-270 60-460 165-570 330" stroke="#2f69b0" stroke-width="110" stroke-linecap="round"/></g>
+  <g transform="translate(2800 1090)">
+    <circle cx="0" cy="215" r="150" fill="#f0c19b"/><path d="M-170 178c70-260 348-235 394 0-145-88-278-86-394 0z" fill="#7b4a30"/><path d="M-230 430h460l180 590h-820z" fill="#d7197a"/><circle cx="-55" cy="230" r="21" fill="#111"/><circle cx="55" cy="230" r="21" fill="#111"/><path d="M-45 320c54 38 104 38 158 0" stroke="#8e443c" stroke-width="20" fill="none" stroke-linecap="round"/><path d="M195 520c240 75 410 210 520 390" stroke="#d7197a" stroke-width="110" stroke-linecap="round"/></g>
+  <g fill="#fff" stroke="#bd242b" stroke-width="12"><path d="M780 900c-120-160 8-300 210-300h260c190 0 315 140 205 300z"/><path d="M2730 875c-110-150 10-285 200-285h300c195 0 320 145 200 285z"/></g>
+</svg>
