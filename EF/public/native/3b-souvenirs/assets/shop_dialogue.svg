@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1970" height="3300" viewBox="0 0 1970 3300" role="img" aria-labelledby="title desc">
+  <title id="title">Shop dialogue</title>
+  <desc id="desc">A souvenir shop conversation with price blanks.</desc>
+  <rect width="1970" height="3300" rx="40" fill="#fff8f2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="80" y="90" width="1810" height="520" rx="42" fill="#f1e3d6"/>
+    <rect x="170" y="210" width="520" height="300" rx="28" fill="#e7363e"/>
+    <circle cx="1110" cy="320" r="105" fill="#f4c49d"/>
+    <circle cx="1450" cy="320" r="105" fill="#d99a73"/>
+    <path d="M930 560c80-220 300-220 380 0z" fill="#1260a8"/>
+    <path d="M1280 560c80-220 300-220 380 0z" fill="#d7197a"/>
+    <text x="985" y="760" font-size="58" font-weight="900" fill="#bd242b" text-anchor="middle">Complete the prices</text>
+    <g font-size="58" fill="#19191b">
+      <rect x="120" y="900" width="1450" height="260" rx="34" fill="#fff" stroke="#e3d0c3" stroke-width="8"/>
+      <text x="180" y="990">Assistant: Can I help you?</text>
+      <text x="180" y="1080">Customer: How much is this mug?</text>
+      <rect x="120" y="1260" width="1450" height="310" rx="34" fill="#fff" stroke="#e3d0c3" stroke-width="8"/>
+      <text x="180" y="1365">Assistant: It's £</text>
+      <line x1="930" y1="1365" x2="1290" y2="1365" stroke="#bd242b" stroke-width="8"/>
+      <text x="180" y="1460">Customer: And those key rings?</text>
+      <rect x="120" y="1690" width="1450" height="380" rx="34" fill="#fff" stroke="#e3d0c3" stroke-width="8"/>
+      <text x="180" y="1800">Assistant: They're £</text>
+      <line x1="790" y1="1800" x2="1150" y2="1800" stroke="#bd242b" stroke-width="8"/>
+      <text x="180" y="1905">Customer: OK. Two key rings</text>
+      <text x="180" y="2000">and this mug, please.</text>
+      <rect x="120" y="2240" width="1450" height="360" rx="34" fill="#fff" stroke="#e3d0c3" stroke-width="8"/>
+      <text x="180" y="2355">Assistant: That's £</text>
+      <line x1="650" y1="2355" x2="1010" y2="2355" stroke="#bd242b" stroke-width="8"/>
+      <text x="180" y="2460">Customer: Here you are.</text>
+      <rect x="120" y="2840" width="1450" height="280" rx="34" fill="#fff" stroke="#e3d0c3" stroke-width="8"/>
+      <text x="180" y="2955">Assistant: Thank you. That's £</text>
+      <line x1="590" y1="3070" x2="950" y2="3070" stroke="#bd242b" stroke-width="8"/>
+      <text x="970" y="3070">change.</text>
+    </g>
+  </g>
+</svg>

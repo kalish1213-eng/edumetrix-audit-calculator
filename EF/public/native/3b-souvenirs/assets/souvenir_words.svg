@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3900" height="1550" viewBox="0 0 3900 1550" role="img" aria-labelledby="title desc">
+  <title id="title">Souvenir words</title>
+  <desc id="desc">Eight souvenir items with names.</desc>
+  <rect width="3900" height="1550" rx="42" fill="#fff8f2"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle">
+    <g transform="translate(140 120)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><rect x="220" y="150" width="380" height="250" rx="24" fill="#f1f4f8"/><path d="M250 340c100-150 230-154 320 0z" fill="#3e8ec0"/><text x="410" y="515" font-size="62" fill="#19191b">a postcard</text></g>
+    <g transform="translate(1060 120)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><rect x="250" y="128" width="320" height="285" rx="26" fill="#e7363e"/><rect x="300" y="185" width="220" height="170" rx="12" fill="#fff6f6"/><text x="410" y="515" font-size="62" fill="#19191b">a T-shirt</text></g>
+    <g transform="translate(1980 120)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><circle cx="410" cy="245" r="135" fill="#f4aa39"/><circle cx="410" cy="245" r="82" fill="#fff"/><rect x="390" y="370" width="40" height="72" rx="16" fill="#bd242b"/><text x="410" y="515" font-size="62" fill="#19191b">a key ring</text></g>
+    <g transform="translate(2900 120)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><rect x="260" y="130" width="300" height="300" rx="34" fill="#1260a8"/><circle cx="410" cy="280" r="90" fill="#fff"/><text x="410" y="515" font-size="62" fill="#19191b">a magnet</text></g>
+    <g transform="translate(140 840)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><rect x="270" y="130" width="280" height="300" rx="28" fill="#f4aa39"/><path d="M300 430h220" stroke="#bd242b" stroke-width="28" stroke-linecap="round"/><text x="410" y="515" font-size="62" fill="#19191b">a mug</text></g>
+    <g transform="translate(1060 840)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><path d="M240 390l120-250h100l120 250z" fill="#208842"/><rect x="318" y="390" width="184" height="44" rx="22" fill="#bd242b"/><text x="410" y="515" font-size="62" fill="#19191b">a hat</text></g>
+    <g transform="translate(1980 840)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><rect x="250" y="135" width="320" height="270" rx="34" fill="#d7197a"/><path d="M250 220h320" stroke="#fff" stroke-width="24"/><text x="410" y="515" font-size="62" fill="#19191b">a bag</text></g>
+    <g transform="translate(2900 840)"><rect width="820" height="580" rx="28" fill="#fff" stroke="#e7d6c9" stroke-width="10"/><path d="M250 330c60-150 260-150 320 0z" fill="#1260a8"/><path d="M410 130v280" stroke="#19191b" stroke-width="20"/><text x="410" y="515" font-size="62" fill="#19191b">an umbrella</text></g>
+  </g>
+</svg>

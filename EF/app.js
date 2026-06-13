@@ -151,7 +151,7 @@ const nativeLessons = [
     startPage: 21,
     endPage: 22,
     title: "3B Souvenirs",
-    url: "public/native/3b-souvenirs/index.html?v=20260612-native3b5"
+    url: "public/native/3b-souvenirs/index.html?v=20260613-3bphoto1"
   },
   {
     startPage: 23,

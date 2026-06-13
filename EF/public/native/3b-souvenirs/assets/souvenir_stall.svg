@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4200" height="2840" viewBox="0 0 4200 2840" role="img" aria-labelledby="title desc">
+  <title id="title">Souvenir stall</title>
+  <desc id="desc">A souvenir stall with eight numbered items.</desc>
+  <rect width="4200" height="2840" fill="#f7efe7"/>
+  <rect x="250" y="350" width="3700" height="2080" rx="54" fill="#fff" stroke="#caa98a" stroke-width="24"/>
+  <rect x="250" y="350" width="3700" height="300" rx="54" fill="#e7363e"/>
+  <text x="2100" y="545" font-family="Arial, Helvetica, sans-serif" font-size="130" font-weight="900" fill="#fff" text-anchor="middle">Souvenirs</text>
+  <g stroke="#d7c1af" stroke-width="18"><line x1="250" y1="1115" x2="3950" y2="1115"/><line x1="250" y1="1840" x2="3950" y2="1840"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <g transform="translate(430 760)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">1</text><rect x="120" y="-70" width="410" height="240" rx="22" fill="#eaf3fb"/><path d="M150 130c120-170 260-180 350 0z" fill="#208842"/></g>
+    <g transform="translate(700 1450)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">2</text><rect x="120" y="-150" width="330" height="310" rx="30" fill="#e7363e"/><rect x="180" y="-80" width="210" height="170" rx="16" fill="#fff"/></g>
+    <g transform="translate(1120 2090)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">3</text><circle cx="300" cy="0" r="155" fill="#f4aa39"/><circle cx="300" cy="0" r="90" fill="#fff"/></g>
+    <g transform="translate(1380 900)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">4</text><rect x="150" y="-120" width="360" height="310" rx="38" fill="#1260a8"/><circle cx="330" cy="35" r="96" fill="#fff"/></g>
+    <g transform="translate(1650 1460)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">5</text><rect x="150" y="-140" width="310" height="330" rx="34" fill="#f4aa39"/><path d="M190 190h230" stroke="#bd242b" stroke-width="38" stroke-linecap="round"/></g>
+    <g transform="translate(2320 2050)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">6</text><path d="M180 130l170-340h140l170 340z" fill="#208842"/><rect x="255" y="130" width="330" height="60" rx="30" fill="#bd242b"/></g>
+    <g transform="translate(3040 980)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">7</text><rect x="130" y="-150" width="390" height="330" rx="44" fill="#d7197a"/><path d="M130 -40h390" stroke="#fff" stroke-width="34"/></g>
+    <g transform="translate(3130 2050)"><circle cx="0" cy="0" r="70" fill="#bd242b"/><text y="25" font-size="76" fill="#fff" text-anchor="middle">8</text><path d="M160 100c80-190 350-190 430 0z" fill="#1260a8"/><path d="M375 -180v360" stroke="#19191b" stroke-width="28"/></g>
+  </g>
+</svg>
