@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2330" viewBox="0 0 4096 2330" role="img" aria-labelledby="title desc">
+  <title id="title">Vocabulary things</title>
+  <desc id="desc">Five numbered vector pictures: credit card, teddy, umbrella, key, and cap, plus an example wallet.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#1d2b33" flood-opacity=".16"/>
+    </filter>
+    <linearGradient id="paper" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f1efe8"/>
+    </linearGradient>
+    <style>
+      .card{fill:url(#paper);stroke:#d6d0c4;stroke-width:8;filter:url(#shadow)}
+      .n{font:900 126px Arial,Helvetica,sans-serif;fill:#168248}
+      .line{fill:none;stroke:#172027;stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#172027;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+      .label{font:800 54px Arial,Helvetica,sans-serif;fill:#65737a}
+    </style>
+  </defs>
+  <rect width="4096" height="2330" fill="#eef4f1"/>
+  <g transform="translate(190 170)">
+    <g>
+      <rect class="card" x="0" y="0" width="1030" height="620" rx="44"/>
+      <text class="label" x="82" y="95">example</text>
+      <rect x="285" y="205" width="520" height="285" rx="44" fill="#8f5f3d" stroke="#172027" stroke-width="18"/>
+      <path d="M290 275h520v88H290z" fill="#c08a56"/>
+      <circle cx="710" cy="350" r="36" fill="#f3ca6b" stroke="#172027" stroke-width="12"/>
+    </g>
+    <g transform="translate(1325 0)">
+      <rect class="card" width="1030" height="620" rx="44"/>
+      <text class="n" x="70" y="145">1</text>
+      <rect x="260" y="205" width="590" height="330" rx="38" fill="#4c80c6" stroke="#172027" stroke-width="18"/>
+      <rect x="260" y="285" width="590" height="66" fill="#1f3f76"/>
+      <rect x="330" y="415" width="155" height="48" rx="12" fill="#f1d976"/>
+      <path class="thin" d="M540 430h230M540 470h175"/>
+    </g>
+    <g transform="translate(2650 0)">
+      <rect class="card" width="1030" height="620" rx="44"/>
+      <text class="n" x="70" y="145">2</text>
+      <circle cx="555" cy="260" r="105" fill="#c88a51" stroke="#172027" stroke-width="18"/>
+      <circle cx="410" cy="212" r="58" fill="#c88a51" stroke="#172027" stroke-width="16"/>
+      <circle cx="700" cy="212" r="58" fill="#c88a51" stroke="#172027" stroke-width="16"/>
+      <ellipse cx="555" cy="405" rx="162" ry="145" fill="#c88a51" stroke="#172027" stroke-width="18"/>
+      <circle cx="518" cy="250" r="15" fill="#172027"/>
+      <circle cx="592" cy="250" r="15" fill="#172027"/>
+      <path class="thin" d="M535 297q20 18 42 0"/>
+      <path class="line" d="M407 388l-105 95M703 388l105 95"/>
+    </g>
+    <g transform="translate(0 890)">
+      <rect class="card" width="1030" height="620" rx="44"/>
+      <text class="n" x="70" y="145">3</text>
+      <path d="M260 305q295-250 590 0z" fill="#e94964" stroke="#172027" stroke-width="18"/>
+      <path class="thin" d="M555 144v455M360 305q75-135 195-160M750 305q-75-135-195-160"/>
+      <path class="line" d="M555 598q0 88 88 88q78 0 78-72"/>
+    </g>
+    <g transform="translate(1325 890)">
+      <rect class="card" width="1030" height="620" rx="44"/>
+      <text class="n" x="70" y="145">4</text>
+      <circle cx="458" cy="275" r="82" fill="#f4cd65" stroke="#172027" stroke-width="18"/>
+      <path class="line" d="M520 337l300 300M626 443l-76 76M700 516l-76 76"/>
+    </g>
+    <g transform="translate(2650 890)">
+      <rect class="card" width="1030" height="620" rx="44"/>
+      <text class="n" x="70" y="145">5</text>
+      <path d="M285 382q124-215 420-180q122 15 203 82q-25 112-164 163q-250 92-459-65z" fill="#2e7fc1" stroke="#172027" stroke-width="18"/>
+      <path d="M640 248q58 122 32 232" fill="none" stroke="#e9f5fa" stroke-width="22" stroke-linecap="round"/>
+      <path d="M705 384q170 8 254 84q-115 62-292 38" fill="#72b5e0" stroke="#172027" stroke-width="16"/>
+    </g>
+  </g>
+</svg>
