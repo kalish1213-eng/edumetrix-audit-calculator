@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="620" viewBox="0 0 1300 620" role="img" aria-labelledby="title desc">
+  <title id="title">Profiles for Mark, Bianca, and Jacek</title>
+  <desc id="desc">Three profile cards with information for a reading exercise.</desc>
+  <rect width="1300" height="620" rx="24" fill="#f4fafc"/>
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#244656" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <g transform="translate(46 54)">
+      <rect width="376" height="512" rx="18" fill="#fff" stroke="#c5dce6" stroke-width="4"/>
+      <rect width="376" height="74" rx="18" fill="#2f7898"/>
+      <text x="188" y="50" font-size="38" font-weight="900" fill="#fff" text-anchor="middle">Mark</text>
+      <circle cx="82" cy="138" r="44" fill="#f1c39b"/>
+      <path d="M34 224c12-78 84-90 122 0z" fill="#446b95"/>
+      <path d="M45 130c22-54 88-48 106-8c-34-17-72-13-106 8z" fill="#5a351f"/>
+      <text x="178" y="128" font-size="28" font-weight="900" fill="#172027">Mark Davis</text>
+      <text x="178" y="166" font-size="24" fill="#43545d">Age: 28</text>
+      <text x="42" y="294" font-size="26" font-weight="900" fill="#2f7898">Nationality</text>
+      <text x="42" y="330" font-size="28" fill="#172027">American</text>
+      <text x="42" y="386" font-size="26" font-weight="900" fill="#2f7898">Marital status</text>
+      <text x="42" y="422" font-size="28" fill="#172027">single</text>
+      <text x="42" y="478" font-size="26" font-weight="900" fill="#2f7898">Occupation</text>
+      <text x="42" y="514" font-size="28" fill="#172027">teacher</text>
+    </g>
+    <g transform="translate(462 54)">
+      <rect width="376" height="512" rx="18" fill="#fff" stroke="#c5dce6" stroke-width="4"/>
+      <rect width="376" height="74" rx="18" fill="#168248"/>
+      <text x="188" y="50" font-size="38" font-weight="900" fill="#fff" text-anchor="middle">Bianca</text>
+      <circle cx="82" cy="138" r="44" fill="#d69b73"/>
+      <path d="M34 224c12-78 84-90 122 0z" fill="#c41486"/>
+      <path d="M46 126c18-62 92-62 112 0c-36-22-76-21-112 0z" fill="#2b1c18"/>
+      <text x="178" y="128" font-size="28" font-weight="900" fill="#172027">Bianca Costa</text>
+      <text x="178" y="166" font-size="24" fill="#43545d">Age: 20</text>
+      <text x="42" y="294" font-size="26" font-weight="900" fill="#168248">Nationality</text>
+      <text x="42" y="330" font-size="28" fill="#172027">Brazilian</text>
+      <text x="42" y="386" font-size="26" font-weight="900" fill="#168248">Marital status</text>
+      <text x="42" y="422" font-size="28" fill="#172027">single</text>
+      <text x="42" y="478" font-size="26" font-weight="900" fill="#168248">Occupation</text>
+      <text x="42" y="514" font-size="28" fill="#172027">student</text>
+    </g>
+    <g transform="translate(878 54)">
+      <rect width="376" height="512" rx="18" fill="#fff" stroke="#c5dce6" stroke-width="4"/>
+      <rect width="376" height="74" rx="18" fill="#c41486"/>
+      <text x="188" y="50" font-size="38" font-weight="900" fill="#fff" text-anchor="middle">Jacek</text>
+      <circle cx="82" cy="138" r="44" fill="#f0bf94"/>
+      <path d="M34 224c12-78 84-90 122 0z" fill="#334a5c"/>
+      <path d="M48 123c26-48 82-42 104 0c-32-12-70-12-104 0z" fill="#6a4b35"/>
+      <text x="178" y="128" font-size="28" font-weight="900" fill="#172027">Jacek Popko</text>
+      <text x="178" y="166" font-size="24" fill="#43545d">Age: 40</text>
+      <text x="42" y="294" font-size="26" font-weight="900" fill="#c41486">Nationality</text>
+      <text x="42" y="330" font-size="28" fill="#172027">Polish</text>
+      <text x="42" y="386" font-size="26" font-weight="900" fill="#c41486">Marital status</text>
+      <text x="42" y="422" font-size="28" fill="#172027">married</text>
+      <text x="42" y="478" font-size="26" font-weight="900" fill="#c41486">Occupation</text>
+      <text x="42" y="514" font-size="28" fill="#172027">doctor</text>
+    </g>
+  </g>
+</svg>
