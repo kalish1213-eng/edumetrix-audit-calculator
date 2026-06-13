@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4638" viewBox="0 0 4096 4638" role="img" aria-labelledby="title desc">
+  <title id="title">Life in a Day photo collage</title>
+  <desc id="desc">A sharp vector collage of five Life in a Day scenes with large white LIFE IN A DAY lettering and numbered caption strips.</desc>
+  <defs>
+    <linearGradient id="bath" x1="0" x2="1"><stop stop-color="#d9d7d0"/><stop offset=".5" stop-color="#f6eee4"/><stop offset="1" stop-color="#8f6049"/></linearGradient>
+    <linearGradient id="street" x1="0" x2="1"><stop stop-color="#ca6d35"/><stop offset=".45" stop-color="#d9d6c3"/><stop offset="1" stop-color="#7f8d6f"/></linearGradient>
+    <linearGradient id="mountain" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d9eef9"/><stop offset=".45" stop-color="#6f9f85"/><stop offset="1" stop-color="#7f6d55"/></linearGradient>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#74c6f8"/><stop offset="1" stop-color="#2d6ea5"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="8" dy="12" stdDeviation="12" flood-color="#0f1720" flood-opacity=".28"/></filter>
+    <style>
+      .big{font-family:Arial,Helvetica,sans-serif;font-size:1060px;font-weight:900;fill:#fff;opacity:.82}
+      .big2{font-family:Arial,Helvetica,sans-serif;font-size:1000px;font-weight:900;fill:#fff;opacity:.82}
+      .cap{font-family:Arial,Helvetica,sans-serif;font-size:96px;font-weight:700;fill:#1f252b}
+      .line{stroke:#27313b;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+      .strip{fill:#f7f7f2;opacity:.93}
+      .skin{fill:#edbd96}.skin2{fill:#a86c4e}
+    </style>
+  </defs>
+  <rect width="4096" height="4638" fill="#fff"/>
+  <rect x="64" y="14" width="3488" height="4610" fill="#111"/>
+
+  <g transform="translate(96 44)">
+    <rect x="0" y="0" width="3424" height="1450" fill="url(#bath)"/>
+    <rect x="62" y="60" width="1520" height="1180" rx="20" fill="#ece7dd" opacity=".78"/>
+    <g transform="translate(360 150)" filter="url(#shadow)">
+      <circle class="skin" cx="460" cy="300" r="220"/>
+      <path d="M250 235c60-265 456-300 624-64-220-74-430-54-624 64z" fill="#7b553a"/>
+      <rect x="230" y="500" width="535" height="540" rx="190" fill="#f1c39a"/>
+      <path d="M660 484c180 95 320 210 410 370" class="line" fill="none"/>
+      <rect x="842" y="652" width="54" height="190" rx="20" fill="#21313d"/>
+      <path d="M868 650c50-72 104-106 170-100" class="line" fill="none"/>
+      <circle cx="485" cy="318" r="15" fill="#20252b"/><path d="M430 385c72 30 140 28 206-8" fill="none" stroke="#7c463a" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(2050 185)" filter="url(#shadow)">
+      <circle class="skin" cx="450" cy="360" r="260"/>
+      <path d="M185 330c80-310 530-348 735-70-260-90-492-70-735 70z" fill="#7b553a"/>
+      <rect x="90" y="590" width="720" height="600" rx="250" fill="#d28d6a"/>
+    </g>
+    <text class="big" x="650" y="980">LIFE</text>
+    <rect class="strip" x="1700" y="1134" width="1740" height="164"/>
+    <text class="cap" x="1740" y="1248">1  A boy ______ for the first time.</text>
+  </g>
+
+  <g transform="translate(96 1498)">
+    <rect x="0" y="0" width="1648" height="1228" fill="url(#street)"/>
+    <g transform="translate(118 260)" filter="url(#shadow)">
+      <circle class="skin2" cx="332" cy="210" r="156"/><path d="M168 186c46-195 330-225 452-44-150-56-302-52-452 44z" fill="#181818"/>
+      <rect x="130" y="390" width="430" height="560" rx="145" fill="#e5c63f"/>
+      <g fill="#4a66a8"><rect x="150" y="515" width="390" height="52"/><rect x="150" y="650" width="390" height="52"/></g>
+      <rect x="480" y="700" width="460" height="190" rx="18" fill="#3b3129"/>
+      <path d="M470 650c-130 62-200 160-230 292" class="line" fill="none"/>
+      <path d="M540 650c120 54 216 120 322 228" class="line" fill="none"/>
+    </g>
+    <text class="big2" x="520" y="1020">IN</text>
+    <rect class="strip" x="0" y="1068" width="1648" height="148"/>
+    <text class="cap" x="28" y="1172">2  A small boy __________.</text>
+  </g>
+
+  <g transform="translate(1748 1498)">
+    <rect x="0" y="0" width="1772" height="1228" fill="url(#mountain)"/>
+    <path d="M0 860c340-390 560-520 890-274 300-360 580-430 882-210v852H0z" fill="#4a735f" opacity=".85"/>
+    <path d="M140 720 650 100 1180 760z" fill="#d9e8ef" opacity=".75"/><path d="M730 760 1200 160 1772 780z" fill="#cfdde8" opacity=".72"/>
+    <g transform="translate(744 360)" filter="url(#shadow)">
+      <circle class="skin" cx="178" cy="132" r="105"/><path d="M72 112c38-132 220-150 300-26-110-32-200-24-300 26z" fill="#583c2c"/>
+      <rect x="52" y="248" width="270" height="420" rx="110" fill="#243947"/>
+      <rect x="92" y="310" width="190" height="250" fill="#6e817d"/>
+      <path d="M62 370c-120 160-144 360-112 560" class="line" fill="none"/>
+      <path d="M310 370c116 164 150 360 120 560" class="line" fill="none"/>
+      <circle cx="-40" cy="948" r="35" fill="#1d252c"/><circle cx="430" cy="948" r="35" fill="#1d252c"/>
+    </g>
+    <text class="big2" x="210" y="980">A</text>
+    <rect class="strip" x="300" y="1068" width="1420" height="148"/>
+    <text class="cap" x="338" y="1172">3  A man ______ in ______.</text>
+  </g>
+
+  <g transform="translate(96 2730)">
+    <rect x="0" y="0" width="1718" height="1810" fill="url(#sky)"/>
+    <path d="M0 930c290-130 560-160 858-32 270-112 548-128 860 30v882H0z" fill="#2c6f9b"/>
+    <path d="M0 1040c360-120 840-106 1718 48" fill="none" stroke="#d8f0ff" stroke-width="34" opacity=".8"/>
+    <g transform="translate(650 620)" filter="url(#shadow)">
+      <circle class="skin" cx="145" cy="120" r="96"/><rect x="42" y="225" width="220" height="300" rx="95" fill="#1d252d"/>
+      <path d="M80 285c-210 160-330 360-420 640" class="line" fill="none"/>
+      <path d="M230 285c192 180 310 390 380 650" class="line" fill="none"/>
+      <path d="M98 500c-58 240-54 490-20 760" class="line" fill="none"/>
+      <path d="M210 500c60 250 64 500 34 770" class="line" fill="none"/>
+    </g>
+    <text class="big2" x="420" y="1140">D</text>
+    <rect class="strip" x="0" y="1538" width="1100" height="210"/>
+    <text class="cap" x="28" y="1634">4  A woman ______</text>
+    <text class="cap" x="128" y="1730">a ______.</text>
+  </g>
+
+  <g transform="translate(1816 2730)">
+    <rect x="0" y="0" width="1704" height="1810" fill="#d7b092"/>
+    <path d="M0 0c260 320 450 640 470 1100M1704 0c-300 270-520 650-560 1110" fill="none" stroke="#9a6d4d" stroke-width="110" opacity=".5"/>
+    <g transform="translate(150 360)" filter="url(#shadow)">
+      <circle class="skin2" cx="300" cy="180" r="130"/><path d="M150 142c60-150 260-170 410-40-124-22-260-12-410 40z" fill="#3c2921"/>
+      <rect x="110" y="320" width="360" height="520" rx="130" fill="#f1e9df"/>
+      <path d="M64 60c190 40 340 150 450 330" fill="none" stroke="#e63e2e" stroke-width="70"/>
+      <rect x="20" y="0" width="440" height="110" rx="10" fill="#e94738"/>
+    </g>
+    <g transform="translate(900 335)" filter="url(#shadow)">
+      <circle class="skin" cx="230" cy="195" r="132"/><path d="M88 162c55-150 278-170 410-38-146-28-280-18-410 38z" fill="#1d1715"/>
+      <rect x="40" y="335" width="380" height="520" rx="138" fill="#fbf4eb"/>
+      <path d="M98 42c160 54 292 174 390 360" fill="none" stroke="#e94738" stroke-width="70"/>
+      <rect x="20" y="0" width="425" height="105" rx="10" fill="#e94738"/>
+    </g>
+    <g fill="#fff7e7" opacity=".78"><circle cx="870" cy="290" r="86"/><circle cx="620" cy="760" r="62"/><circle cx="1340" cy="820" r="72"/><circle cx="300" cy="1200" r="55"/></g>
+    <text class="big2" x="120" y="1260">AY</text>
+    <rect class="strip" x="0" y="1538" width="1704" height="148"/>
+    <text class="cap" x="30" y="1642">5  A man and a woman __________.</text>
+  </g>
+</svg>

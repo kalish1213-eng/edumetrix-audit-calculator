@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2794" viewBox="0 0 4096 2794" role="img" aria-labelledby="title desc">
+  <title id="title">Ben arrives home and speaks to Linda</title>
+  <desc id="desc">A sharp vector home hallway scene with a father arriving with a suitcase and a daughter speaking to him near a coat stand.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1"><stop stop-color="#f6f6f4"/><stop offset=".45" stop-color="#ffffff"/><stop offset="1" stop-color="#f2f2f0"/></linearGradient>
+    <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f7eee7"/><stop offset="1" stop-color="#d3b9a6"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="12" dy="22" stdDeviation="20" flood-color="#111827" flood-opacity=".28"/></filter>
+    <style>
+      .brick{fill:none;stroke:#d7d7d5;stroke-width:8;opacity:.78}
+      .line{stroke:#27313b;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+      .skin{fill:#efbd96}.skin2{fill:#f3c8a8}.hair{fill:#75563d}.dark{fill:#1f2429}
+    </style>
+  </defs>
+  <rect width="4096" height="2794" fill="#fff"/>
+  <rect x="0" y="0" width="4096" height="2300" fill="url(#wall)"/>
+  <g class="brick">
+    <path d="M620 140h3180M620 260h3180M620 380h3180M620 500h3180M620 620h3180M620 740h3180M620 860h3180M620 980h3180M620 1100h3180M620 1220h3180M620 1340h3180M620 1460h3180M620 1580h3180"/>
+    <path d="M700 140v120M1020 260v120M1340 140v120M1660 260v120M1980 140v120M2300 260v120M2620 140v120M2940 260v120M3260 140v120M3580 260v120"/>
+    <path d="M820 500v120M1140 620v120M1460 500v120M1780 620v120M2100 500v120M2420 620v120M2740 500v120M3060 620v120M3380 500v120M3700 620v120"/>
+    <path d="M710 860v120M1030 980v120M1350 860v120M1670 980v120M1990 860v120M2310 980v120M2630 860v120M2950 980v120M3270 860v120M3590 980v120"/>
+    <path d="M830 1220v120M1150 1340v120M1470 1220v120M1790 1340v120M2110 1220v120M2430 1340v120M2750 1220v120M3070 1340v120M3390 1220v120M3710 1340v120"/>
+  </g>
+  <rect x="0" y="2220" width="4096" height="574" fill="url(#floor)"/>
+  <rect x="398" y="0" width="248" height="2230" fill="#e8e8e6"/><rect x="448" y="0" width="142" height="2230" fill="#fdfdfc" stroke="#cfd3d6" stroke-width="10"/>
+  <rect x="0" y="80" width="420" height="2080" fill="#f7f8f7" stroke="#c9cdd0" stroke-width="12"/>
+  <circle cx="484" cy="1164" r="42" fill="#7d7b76"/><rect x="510" y="1140" width="150" height="24" rx="12" fill="#7d7b76"/>
+  <g transform="translate(2150 1540)" filter="url(#shadow)">
+    <rect x="0" y="0" width="650" height="540" fill="#f4f7f8" stroke="#d7dadd" stroke-width="10"/>
+    <rect x="70" y="70" width="230" height="380" fill="#24272b"/><rect x="350" y="92" width="210" height="330" fill="#e5dfd0"/>
+    <rect x="30" y="520" width="600" height="330" fill="#f9f9f8" stroke="#d7dadd" stroke-width="10"/>
+    <g fill="#202326"><ellipse cx="160" cy="610" rx="78" ry="30"/><ellipse cx="330" cy="614" rx="80" ry="30"/></g>
+    <g fill="#d9294b"><ellipse cx="465" cy="610" rx="70" ry="30"/><ellipse cx="560" cy="610" rx="64" ry="30"/></g>
+    <g fill="#f1f1ea"><ellipse cx="180" cy="750" rx="74" ry="31"/><ellipse cx="362" cy="748" rx="78" ry="31"/></g>
+  </g>
+  <g transform="translate(3120 100)" filter="url(#shadow)">
+    <path d="M340 160 340 2180M120 2180 340 1280 560 2180" fill="none" stroke="#7d858b" stroke-width="18" stroke-linecap="round"/>
+    <path d="M248 330c68-164 260-144 324-6-76 72-96 260-40 420-116-70-236-68-350 0 64-168 54-302 66-414z" fill="#d9273f"/>
+    <path d="M474 248c140-70 274 20 292 166-102 26-190 92-230 210-62-134-82-254-62-376z" fill="#20242a"/>
+    <path d="M598 355c120 76 174 240 160 498" fill="none" stroke="#57616b" stroke-width="22" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(828 275)" filter="url(#shadow)">
+    <circle class="skin" cx="520" cy="270" r="178"/>
+    <path class="hair" d="M348 235c44-224 402-264 532-54-176-76-368-72-532 54z"/>
+    <rect x="235" y="520" width="580" height="970" rx="125" class="dark"/>
+    <rect x="390" y="520" width="270" height="690" rx="40" fill="#dbe8ef"/>
+    <path d="M248 780c-170 270-178 572-112 930" class="line" fill="none"/>
+    <path d="M785 780c108 162 128 340 60 552" class="line" fill="none"/>
+    <rect x="314" y="1440" width="170" height="740" rx="64" class="dark"/>
+    <rect x="590" y="1440" width="175" height="740" rx="64" class="dark"/>
+    <ellipse cx="386" cy="2205" rx="156" ry="50" fill="#1b1f24"/><ellipse cx="706" cy="2205" rx="160" ry="50" fill="#1b1f24"/>
+    <path d="M168 1598 94 2215" fill="none" stroke="#565a5e" stroke-width="18"/>
+    <path d="M284 1598 296 2215" fill="none" stroke="#565a5e" stroke-width="18"/>
+    <rect x="-190" y="2140" width="430" height="460" rx="62" fill="#202328"/>
+    <rect x="-120" y="2240" width="290" height="250" rx="25" fill="#343a40"/>
+    <circle cx="-84" cy="2565" r="42" fill="#111"/><circle cx="126" cy="2565" r="42" fill="#111"/>
+    <path d="M94 1598c40-122 152-120 190 0" fill="none" stroke="#32363b" stroke-width="22"/>
+  </g>
+  <g transform="translate(2340 405)" filter="url(#shadow)">
+    <circle class="skin2" cx="278" cy="255" r="164"/>
+    <path d="M120 242c42-190 320-226 430-40-132-62-280-56-430 40z" fill="#6c4a35"/>
+    <circle cx="528" cy="266" r="118" fill="#6c4a35"/>
+    <rect x="92" y="492" width="420" height="890" rx="150" fill="#7192c4"/>
+    <path d="M112 690c-70 280-54 616 82 1006" class="line" fill="none"/>
+    <path d="M472 704c74 260 96 586 44 920" class="line" fill="none"/>
+    <rect x="160" y="1346" width="140" height="725" rx="58" fill="#b5b7aa"/>
+    <rect x="332" y="1346" width="146" height="725" rx="58" fill="#b5b7aa"/>
+    <ellipse cx="216" cy="2130" rx="120" ry="48" fill="#9a6e4f"/><ellipse cx="404" cy="2130" rx="120" ry="48" fill="#9a6e4f"/>
+  </g>
+  <circle cx="2400" cy="545" r="150" fill="#f4e3bf" opacity=".95"/>
+  <rect x="2440" y="945" width="310" height="230" fill="#f6f1e8" stroke="#c9bca8" stroke-width="10"/>
+</svg>

@@ -295,7 +295,7 @@ const nativeLessons = [
     startPage: 69,
     endPage: 70,
     title: "11B How was your day?",
-    url: "public/native/11b-how-was-your-day/index.html?v=20260612-11b1"
+    url: "public/native/11b-how-was-your-day/index.html?v=20260613-11bphoto1"
   },
   {
     startPage: 71,
