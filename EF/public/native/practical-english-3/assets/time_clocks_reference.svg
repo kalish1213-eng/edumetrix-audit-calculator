@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4394" viewBox="0 0 4096 4394" role="img" aria-labelledby="title desc">
+  <title id="title">Clock reference times</title>
+  <desc id="desc">Twelve vector clock faces showing common times.</desc>
+  <defs>
+    <style>
+      .card{fill:#fffdf8;stroke:#cfdde4;stroke-width:8}
+      .face{fill:#fff;stroke:#172027;stroke-width:16}
+      .hand{stroke:#172027;stroke-width:18;stroke-linecap:round}
+      .min{stroke-width:12}
+      .num{font:900 88px Arial,Helvetica,sans-serif;fill:#2f7898}
+      .label{font:800 56px Arial,Helvetica,sans-serif;fill:#172027}
+      .tick{stroke:#172027;stroke-width:8;stroke-linecap:round}
+    </style>
+  </defs>
+  <rect width="4096" height="4394" fill="#edf6f9"/>
+  <script type="application/ecmascript"><![CDATA[]]></script>
+  <g transform="translate(180 150)">
+    <g transform="translate(0 0)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">1</text><text class="label" x="430" y="830" text-anchor="middle">three o'clock</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410V245"/><path class="hand" d="M430 410h145"/>
+    </g>
+    <g transform="translate(940 0)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">2</text><text class="label" x="430" y="830" text-anchor="middle">quarter past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410h165"/><path class="hand" d="M430 410l92 72"/>
+    </g>
+    <g transform="translate(1880 0)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">3</text><text class="label" x="430" y="830" text-anchor="middle">half past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410v165"/><path class="hand" d="M430 410l-72 96"/>
+    </g>
+    <g transform="translate(2820 0)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">4</text><text class="label" x="430" y="830" text-anchor="middle">quarter to four</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410H265"/><path class="hand" d="M430 410l86-96"/>
+    </g>
+    <g transform="translate(0 1020)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">5</text><text class="label" x="430" y="830" text-anchor="middle">five past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l82-144"/><path class="hand" d="M430 410h125"/>
+    </g>
+    <g transform="translate(940 1020)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">6</text><text class="label" x="430" y="830" text-anchor="middle">ten past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l144-82"/><path class="hand" d="M430 410h125"/>
+    </g>
+    <g transform="translate(1880 1020)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">7</text><text class="label" x="430" y="830" text-anchor="middle">twenty past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l144 82"/><path class="hand" d="M430 410l92 64"/>
+    </g>
+    <g transform="translate(2820 1020)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">8</text><text class="label" x="430" y="830" text-anchor="middle">twenty-five past three</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l82 144"/><path class="hand" d="M430 410l76 90"/>
+    </g>
+    <g transform="translate(0 2040)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">9</text><text class="label" x="430" y="830" text-anchor="middle">twenty-five to four</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l-82 144"/><path class="hand" d="M430 410l62-104"/>
+    </g>
+    <g transform="translate(940 2040)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">10</text><text class="label" x="430" y="830" text-anchor="middle">twenty to four</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l-144 82"/><path class="hand" d="M430 410l68-108"/>
+    </g>
+    <g transform="translate(1880 2040)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">11</text><text class="label" x="430" y="830" text-anchor="middle">ten to four</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l-144-82"/><path class="hand" d="M430 410l92-94"/>
+    </g>
+    <g transform="translate(2820 2040)">
+      <rect class="card" width="860" height="920" rx="36"/><text class="num" x="54" y="110">12</text><text class="label" x="430" y="830" text-anchor="middle">five to four</text><circle class="face" cx="430" cy="410" r="240"/><path class="tick" d="M430 194v44M430 582v44M214 410h44M602 410h44"/><path class="hand min" d="M430 410l-82-144"/><path class="hand" d="M430 410l102-82"/>
+    </g>
+  </g>
+</svg>

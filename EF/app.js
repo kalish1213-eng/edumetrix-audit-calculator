@@ -193,7 +193,7 @@ const nativeLessons = [
     startPage: 35,
     endPage: 36,
     title: "Practical English 3",
-    url: "public/native/practical-english-3/index.html?v=20260612-pe3b"
+    url: "public/native/practical-english-3/index.html?v=20260613-pe3photo1"
   },
   {
     startPage: 37,

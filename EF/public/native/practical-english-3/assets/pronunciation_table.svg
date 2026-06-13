@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="670" viewBox="0 0 4096 670" role="img" aria-labelledby="title desc">
+  <title id="title">Pronunciation table</title>
+  <desc id="desc">Vector pronunciation table for clock, what, Oxford, sorry, and coffee.</desc>
+  <rect width="4096" height="670" fill="#fffdf8"/>
+  <g fill="none" stroke="#cfdde4" stroke-width="8">
+    <rect x="60" y="70" width="3976" height="520" rx="26"/>
+    <path d="M855 70v520M1650 70v520M2445 70v520M3240 70v520M60 235h3976"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+    <text x="458" y="175" font-size="82" font-weight="900" fill="#c41486">clock</text>
+    <text x="1253" y="175" font-size="82" font-weight="900" fill="#c41486">what</text>
+    <text x="2048" y="175" font-size="82" font-weight="900" fill="#c41486">Oxford</text>
+    <text x="2843" y="175" font-size="82" font-weight="900" fill="#c41486">sorry</text>
+    <text x="3638" y="175" font-size="82" font-weight="900" fill="#c41486">coffee</text>
+    <text x="458" y="400" font-size="88" font-weight="800" fill="#172027">clock</text>
+    <text x="1253" y="400" font-size="88" font-weight="800" fill="#172027">what</text>
+    <text x="2048" y="400" font-size="88" font-weight="800" fill="#172027">Oxford</text>
+    <text x="2843" y="400" font-size="88" font-weight="800" fill="#172027">sorry</text>
+    <text x="3638" y="400" font-size="88" font-weight="800" fill="#172027">coffee</text>
+  </g>
+</svg>

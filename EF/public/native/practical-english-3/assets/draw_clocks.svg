@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2234" viewBox="0 0 4096 2234" role="img" aria-labelledby="title desc">
+  <title id="title">Blank clocks</title>
+  <desc id="desc">Six blank vector clock faces for drawing times.</desc>
+  <style>
+    .face{fill:#fff;stroke:#172027;stroke-width:18}
+    .tick{stroke:#172027;stroke-width:8;stroke-linecap:round}
+    .num{font:900 104px Arial,Helvetica,sans-serif;fill:#2f7898}
+    .label{font:800 64px Arial,Helvetica,sans-serif;fill:#172027}
+  </style>
+  <rect width="4096" height="2234" fill="#f5f9fb"/>
+  <g transform="translate(300 170)">
+    <g><text class="num" x="0" y="90">1</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">five past three</text></g>
+    <g transform="translate(1225 0)"><text class="num" x="0" y="90">2</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">quarter to four</text></g>
+    <g transform="translate(2450 0)"><text class="num" x="0" y="90">3</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">half past eight</text></g>
+    <g transform="translate(0 1060)"><text class="num" x="0" y="90">4</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">twenty past nine</text></g>
+    <g transform="translate(1225 1060)"><text class="num" x="0" y="90">5</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">ten to two</text></g>
+    <g transform="translate(2450 1060)"><text class="num" x="0" y="90">6</text><circle class="face" cx="420" cy="430" r="300"/><path class="tick" d="M420 160v54M420 646v54M150 430h54M636 430h54"/><text class="label" x="420" y="860" text-anchor="middle">twenty-five to seven</text></g>
+  </g>
+</svg>
