@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2550" viewBox="0 0 4096 2550" role="img" aria-labelledby="title desc">
+  <title id="title">Clock faces</title>
+  <desc id="desc">Six vector clock faces for review.</desc>
+  <style>
+    .face{fill:#fff;stroke:#172027;stroke-width:16}
+    .tick{stroke:#172027;stroke-width:7;stroke-linecap:round}
+    .hand{stroke:#172027;stroke-width:18;stroke-linecap:round}
+    .min{stroke-width:12}
+    .num{font:900 96px Arial,Helvetica,sans-serif;fill:#2f7898}
+    .card{fill:#fffdf8;stroke:#cfdde4;stroke-width:8}
+  </style>
+  <rect width="4096" height="2550" fill="#edf6f9"/>
+  <g transform="translate(250 160)">
+    <g><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">1</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500V300"/><path class="hand" d="M525 500h170"/></g>
+    <g transform="translate(1270 0)"><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">2</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500l170-98"/><path class="hand" d="M525 500h150"/></g>
+    <g transform="translate(2540 0)"><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">3</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500v200"/><path class="hand" d="M525 500l-96 122"/></g>
+    <g transform="translate(0 1180)"><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">4</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500H325"/><path class="hand" d="M525 500l112-120"/></g>
+    <g transform="translate(1270 1180)"><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">5</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500l-170 98"/><path class="hand" d="M525 500l84-146"/></g>
+    <g transform="translate(2540 1180)"><rect class="card" width="1050" height="980" rx="42"/><text class="num" x="72" y="120">6</text><circle class="face" cx="525" cy="500" r="280"/><path class="tick" d="M525 250v50M525 700v50M275 500h50M725 500h50"/><path class="hand min" d="M525 500l-98-170"/><path class="hand" d="M525 500l132-92"/></g>
+  </g>
+</svg>

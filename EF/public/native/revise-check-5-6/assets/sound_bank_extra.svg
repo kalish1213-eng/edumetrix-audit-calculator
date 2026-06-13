@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1880" viewBox="0 0 4096 1880" role="img" aria-labelledby="title desc">
+  <title id="title">Additional sound pictures p and b</title>
+  <desc id="desc">Vector sound pictures for p and b.</desc>
+  <rect width="4096" height="1880" fill="#eef6f9"/>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+    <rect x="420" y="260" width="1380" height="1240" rx="56" fill="#fffdf8" stroke="#cfdde4" stroke-width="10"/>
+    <text x="1110" y="520" font-size="160" font-weight="900" fill="#2f7898">parrot</text>
+    <path d="M890 1020c0-250 180-390 390-320 160 54 210 230 120 380-110 185-365 165-510-60z" fill="#4caf61" stroke="#172027" stroke-width="22"/>
+    <path d="M1260 710q180 30 220 170q-120-28-220-170z" fill="#e64d4d" stroke="#172027" stroke-width="18"/>
+    <circle cx="1190" cy="840" r="28" fill="#172027"/>
+    <rect x="2296" y="260" width="1380" height="1240" rx="56" fill="#fffdf8" stroke="#cfdde4" stroke-width="10"/>
+    <text x="2986" y="520" font-size="160" font-weight="900" fill="#2f7898">bag</text>
+    <path d="M2640 840h700l90 430h-880z" fill="#c17a45" stroke="#172027" stroke-width="24"/>
+    <path d="M2780 840q70-210 210-210t210 210" fill="none" stroke="#172027" stroke-width="24" stroke-linecap="round"/>
+  </g>
+</svg>
