@@ -26,6 +26,21 @@ GitHub Pages target:
 https://kalish1213-eng.github.io/edumetrix-audit-calculator/EF/index.html?v=20260612-fieldreveal2#page=1
 ```
 
+## Source Structure
+
+The LMS shell is vanilla JavaScript, organized as ES modules:
+
+```text
+src/
+  components/   LMS shell component contracts and DOM selectors
+  data/         page metadata, answer record shape, lesson ranges
+  state/        workbook, answer, and autosave state adapters
+  utils/        answer checking, page navigation, storage helpers
+  styles/       design tokens and future CSS split points
+```
+
+`app.js` remains the runtime entry point for the interactive workbook, while stable data and pure logic now live under `src/`. The old localStorage answer layer is wrapped through `state/useAnswersState.js` so it can later be replaced by an API without changing the workbook UI calls.
+
 ## Interaction
 
 - Type or select answers directly inside the exercises.

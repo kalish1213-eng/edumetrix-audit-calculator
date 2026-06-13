@@ -10,10 +10,11 @@ function Fail($Message) {
 
 $indexPath = Join-Path $ProjectRoot "index.html"
 $appPath = Join-Path $ProjectRoot "app.js"
+$lessonsPath = Join-Path $ProjectRoot "src\data\lessons.js"
 $manifestPath = Join-Path $ProjectRoot "public\manifest.json"
 $nativeRoot = Join-Path $ProjectRoot "public\native"
 
-foreach ($path in @($indexPath, $appPath, $manifestPath, $nativeRoot)) {
+foreach ($path in @($indexPath, $appPath, $lessonsPath, $manifestPath, $nativeRoot)) {
   if (-not (Test-Path -LiteralPath $path)) { Fail "missing $path" }
 }
 
@@ -40,7 +41,8 @@ foreach ($page in $pages) {
 if ($missingAssets.Count) { Fail "missing page assets: $($missingAssets -join ', ')" }
 
 $app = Get-Content -LiteralPath $appPath -Raw
-$nativeMatches = [regex]::Matches($app, 'startPage:\s*(\d+),\s*\r?\n\s*endPage:\s*(\d+),[\s\S]*?title:\s*"([^"]+)"')
+$lessons = Get-Content -LiteralPath $lessonsPath -Raw
+$nativeMatches = [regex]::Matches($lessons, 'startPage:\s*(\d+),\s*\r?\n\s*endPage:\s*(\d+),[\s\S]*?title:\s*"([^"]+)"')
 if ($nativeMatches.Count -lt 60) { Fail "too few native lesson ranges: $($nativeMatches.Count)" }
 
 $covered = New-Object "System.Collections.Generic.HashSet[int]"
@@ -79,7 +81,7 @@ if ($fixedFields -lt 2200) { Fail "too few checked answer fields: $fixedFields" 
 if ($noAnswerFields -ne 0) { Fail "checked fields without answer keys: $noAnswerFields" }
 
 $index = Get-Content -LiteralPath $indexPath -Raw
-if ($index -notmatch "20260613-lms8") { Fail "index does not reference 20260613-lms8 build" }
+if ($index -notmatch "20260613-structure2") { Fail "index does not reference 20260613-structure2 build" }
 if ($app -notmatch "native-answer-reveal") { Fail "single-field reveal controls are missing" }
 if ($app -notmatch "native-answer-hint") { Fail "inline correction hints are missing" }
 
