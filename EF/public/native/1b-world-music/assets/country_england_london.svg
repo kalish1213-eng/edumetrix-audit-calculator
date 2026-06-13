@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">England London</title>
+  <desc id="desc">A vector London scene with Big Ben, bridge, river, and a red bus.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#a8d8f4"/><stop offset="1" stop-color="#e9eef3"/></linearGradient></defs>
+  <rect width="4096" height="2304" fill="url(#sky)"/>
+  <path d="M0 1600h4096v704H0z" fill="#5fa4c8"/><path d="M0 1765c620-130 1230-90 1840 110 800 262 1510 210 2256-80v509H0z" fill="#3d84b2"/>
+  <g transform="translate(2500 360)">
+    <path d="M310 0h140l40 190H270z" fill="#b99257"/><path d="M228 190h304v1220H228z" fill="#c9a66c" stroke="#6c553a" stroke-width="20"/>
+    <circle cx="380" cy="440" r="105" fill="#f8f2d8" stroke="#6c553a" stroke-width="18"/><path d="M380 350v90l62 45" stroke="#294d72" stroke-width="16" stroke-linecap="round"/>
+    <path d="M180 1410h400v180H180z" fill="#ad8a55"/>
+  </g>
+  <g transform="translate(420 1120)">
+    <path d="M0 440c520-360 1040-360 1560 0" fill="none" stroke="#8c9aa8" stroke-width="70"/><path d="M160 440h1240v130H160z" fill="#d4d9df"/><g stroke="#6d7f8c" stroke-width="30"><path d="M270 470v260M520 470v260M780 470v260M1040 470v260M1290 470v260"/></g>
+  </g>
+  <g transform="translate(560 1438)">
+    <rect x="0" y="0" width="980" height="360" rx="54" fill="#c51f2a"/><rect x="86" y="78" width="260" height="130" rx="16" fill="#dff2ff"/><rect x="390" y="78" width="410" height="130" rx="16" fill="#dff2ff"/><path d="M0 236h980v64H0z" fill="#8f151c"/><circle cx="190" cy="360" r="70" fill="#25272b"/><circle cx="770" cy="360" r="70" fill="#25272b"/></g>
+  <path d="M0 1275h4096v120H0z" fill="#7c8a93"/>
+</svg>

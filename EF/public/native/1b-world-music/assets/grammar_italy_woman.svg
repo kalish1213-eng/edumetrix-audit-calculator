@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Woman from Italy</title>
+  <desc id="desc">Vector portrait of a woman with Italy flag colors.</desc>
+  <rect width="1365" height="4096" fill="#15915d"/><rect x="1365" width="1366" height="4096" fill="#fff7ed"/><rect x="2731" width="1365" height="4096" fill="#d62828"/>
+  <ellipse cx="2048" cy="3900" rx="1320" ry="820" fill="#1f693f"/>
+  <path d="M1180 1810c40-720 420-1120 940-1120 570 0 900 450 910 1140 6 680-310 1100-910 1100-588 0-980-438-940-1120z" fill="#33241f"/>
+  <ellipse cx="2090" cy="1900" rx="650" ry="760" fill="#ecc199"/>
+  <path d="M1380 1605c260-520 950-560 1332-100 20-620-1270-850-1332 100z" fill="#33241f"/>
+  <circle cx="1840" cy="1980" r="50" fill="#1a252c"/><circle cx="2325" cy="1980" r="50" fill="#1a252c"/>
+  <path d="M1900 2390c140 130 300 130 440 0" fill="none" stroke="#b44a4a" stroke-width="42" stroke-linecap="round"/>
+  <path d="M1430 3260c350-340 900-340 1240 0v836H1430z" fill="#ffffff"/>
+  <path d="M1120 1230c520-330 1170-328 1760 0" fill="none" stroke="#1f693f" stroke-width="120" stroke-linecap="round"/>
+</svg>

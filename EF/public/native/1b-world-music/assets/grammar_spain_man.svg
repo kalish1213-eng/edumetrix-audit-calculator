@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Man from Spain</title>
+  <desc id="desc">Vector portrait of a man with Spain flag colors.</desc>
+  <rect width="4096" height="1024" fill="#c60b1e"/><rect y="1024" width="4096" height="2048" fill="#ffc400"/><rect y="3072" width="4096" height="1024" fill="#c60b1e"/>
+  <ellipse cx="2048" cy="3900" rx="1250" ry="820" fill="#172e56"/>
+  <circle cx="2048" cy="1690" r="620" fill="#e3ad83" stroke="#4b2b21" stroke-width="40"/>
+  <path d="M1430 1515c130-560 1050-670 1225-50-290-170-740-185-1225 50z" fill="#3a241e"/>
+  <path d="M1510 1320c220-520 1050-570 1210 80-420-170-840-178-1210-80z" fill="#2f1d18"/>
+  <circle cx="1845" cy="1765" r="48" fill="#111"/><circle cx="2245" cy="1765" r="48" fill="#111"/>
+  <path d="M1870 2055c150 120 206 120 356 0" stroke="#86423b" stroke-width="42" fill="none" stroke-linecap="round"/>
+  <path d="M1640 2480h816l330 1616H1310z" fill="#203f7d"/>
+  <path d="M1725 2600h646v260h-646z" fill="#f5f1e7"/><path d="M1450 2750c-280 160-475 420-590 780M2646 2750c280 160 475 420 590 780" stroke="#203f7d" stroke-width="250" stroke-linecap="round"/>
+</svg>

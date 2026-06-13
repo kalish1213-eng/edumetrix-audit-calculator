@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">Japan temple</title>
+  <desc id="desc">A crisp vector Japanese temple with red sun, lanterns, and mountain background.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#eaf7ff"/><stop offset="1" stop-color="#f8d7d9"/></linearGradient></defs>
+  <rect width="4096" height="2304" fill="url(#bg)"/>
+  <circle cx="3080" cy="520" r="320" fill="#cf3131" opacity=".9"/>
+  <path d="M0 1430 780 650l520 540 420-380 660 690 510-510 1206 900v414H0z" fill="#b8c7d8"/>
+  <path d="M0 1600c740-202 1380-156 1932 138 702 374 1376 332 2164-8v574H0z" fill="#5e8f72"/>
+  <g transform="translate(835 650)">
+    <path d="M174 770h1890l150 210H24z" fill="#812222"/><path d="M370 540h1500l172 190H198z" fill="#a32929"/><path d="M620 330h1000l154 170H466z" fill="#bd3831"/>
+    <path d="M496 730h1320v760H496z" fill="#e8c590" stroke="#5d3324" stroke-width="22"/>
+    <path d="M700 500h900v230H700z" fill="#f3d6a5" stroke="#5d3324" stroke-width="20"/>
+    <path d="M886 276h530v224H886z" fill="#f6dfb6" stroke="#5d3324" stroke-width="18"/>
+    <path d="M390 1490h1540v126H390z" fill="#74351f"/><path d="M944 924h420v566H944z" fill="#552d27"/><path d="M626 890h188v268H626zM1508 890h188v268h-188z" fill="#3f6e83"/>
+    <g fill="#c22f2f"><circle cx="420" cy="1110" r="52"/><circle cx="1900" cy="1110" r="52"/></g>
+  </g>
+  <path d="M250 1984c376-86 678-88 1058-8M2720 1976c394-92 724-86 1120 12" stroke="#f3b1c0" stroke-width="46" stroke-linecap="round"/>
+</svg>

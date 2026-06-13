@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Vase from China</title>
+  <desc id="desc">Blue and white porcelain vase on a red Chinese-style background.</desc>
+  <rect width="4096" height="4096" fill="#b51622"/>
+  <circle cx="2048" cy="2048" r="1600" fill="#d72a31"/><circle cx="2048" cy="2048" r="1240" fill="#f1c24d" opacity=".35"/>
+  <path d="M1515 950h1066c-68 520 128 760 382 1100 360 482 154 1265-226 1540-386 280-996 280-1378 0-382-280-586-1058-226-1540 254-340 450-580 382-1100z" fill="#f9fbff" stroke="#164d90" stroke-width="70"/>
+  <path d="M1580 870h936v245h-936zM1690 520h716v350h-716z" fill="#f9fbff" stroke="#164d90" stroke-width="70"/>
+  <g fill="none" stroke="#1c65ae" stroke-width="52" stroke-linecap="round"><path d="M1430 1920c470-260 770-260 1236 0"/><path d="M1360 2560c522 250 856 250 1376 0"/><path d="M2048 1260c-220 210-220 430 0 660 220-230 220-450 0-660z"/></g>
+  <g fill="#1c65ae"><circle cx="1620" cy="2240" r="80"/><circle cx="2476" cy="2240" r="80"/><circle cx="2048" cy="2920" r="98"/></g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Skull from Mexico</title>
+  <desc id="desc">Colorful decorated sugar skull in Mexican folk-art style.</desc>
+  <rect width="4096" height="4096" fill="#1e7660"/>
+  <g transform="translate(548 488)">
+    <ellipse cx="1500" cy="1430" rx="1120" ry="1250" fill="#fff4de" stroke="#4d2d2d" stroke-width="70"/>
+    <path d="M900 2480h1200v640H900z" fill="#fff4de" stroke="#4d2d2d" stroke-width="70"/>
+    <circle cx="1050" cy="1420" r="340" fill="#2c2258"/><circle cx="1950" cy="1420" r="340" fill="#2c2258"/>
+    <circle cx="1050" cy="1420" r="170" fill="#f5c537"/><circle cx="1950" cy="1420" r="170" fill="#f05a67"/>
+    <path d="M1500 1760 1320 2110h360z" fill="#4d2d2d"/>
+    <path d="M1110 2260c260 220 520 220 780 0" fill="none" stroke="#4d2d2d" stroke-width="62" stroke-linecap="round"/>
+    <g stroke="#4d2d2d" stroke-width="38"><path d="M1250 2320v290M1500 2365v310M1750 2320v290"/></g>
+    <g fill="#f05a67"><circle cx="680" cy="900" r="120"/><circle cx="2320" cy="900" r="120"/><circle cx="1500" cy="600" r="130"/></g>
+    <g fill="#f5c537"><circle cx="850" cy="710" r="92"/><circle cx="2150" cy="710" r="92"/></g>
+    <path d="M1060 780c270-290 610-290 880 0" fill="none" stroke="#2aa3a3" stroke-width="86" stroke-linecap="round"/>
+  </g>
+</svg>

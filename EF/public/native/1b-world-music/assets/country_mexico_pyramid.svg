@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">Mexico pyramid</title>
+  <desc id="desc">A sharp vector scene of a stepped Mexican pyramid under a warm sky.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#78c6f1"/><stop offset=".58" stop-color="#f9c77e"/><stop offset="1" stop-color="#e3914c"/></linearGradient><linearGradient id="stone" x1="0" x2="1"><stop stop-color="#c79559"/><stop offset=".55" stop-color="#e0b574"/><stop offset="1" stop-color="#93683d"/></linearGradient></defs>
+  <rect width="4096" height="2304" fill="url(#sky)"/>
+  <circle cx="3210" cy="456" r="250" fill="#fff1aa" opacity=".9"/>
+  <path d="M0 1570c680-180 1250-210 1910-98 704 120 1380 96 2186-144v976H0z" fill="#9bc26b"/>
+  <path d="M0 1742c760-170 1328-112 2034 42 674 147 1258 111 2062-102v622H0z" fill="#6e9b50"/>
+  <g transform="translate(615 646)">
+    <path d="M420 1130 1415 120 2408 1130z" fill="url(#stone)" stroke="#5f432d" stroke-width="22"/>
+    <path d="M806 940h1218l170 190H636z" fill="#b98249"/><path d="M990 760h850l184 180H806z" fill="#d7a568"/><path d="M1166 586h498l176 174H990z" fill="#c18c55"/><path d="M1324 418h182l158 168h-498z" fill="#e4bd82"/>
+    <path d="M1396 242h48v888h-86V378z" fill="#7e5937" opacity=".6"/>
+    <path d="M1120 1130h590l-72-156h-446z" fill="#765031"/>
+    <g stroke="#7c5939" stroke-width="18" opacity=".45"><path d="M723 1038h1384"/><path d="M896 850h1042"/><path d="M1077 674h680"/><path d="M1266 501h310"/></g>
+  </g>
+  <path d="M145 1938c210-56 412-56 604 0M3192 1910c246-70 490-65 732 15" stroke="#376b3b" stroke-width="46" stroke-linecap="round" opacity=".55"/>
+</svg>

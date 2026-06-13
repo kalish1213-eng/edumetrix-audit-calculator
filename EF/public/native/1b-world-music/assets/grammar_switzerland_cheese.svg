@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Cheese from Switzerland</title>
+  <desc id="desc">Vector Swiss cheese with red flag and white cross.</desc>
+  <rect width="4096" height="4096" fill="#d52b1e"/>
+  <rect x="1700" y="820" width="696" height="2456" fill="#fff"/><rect x="820" y="1700" width="2456" height="696" fill="#fff"/>
+  <g transform="translate(540 2060)">
+    <path d="M320 780 2660 110l420 1260H320z" fill="#ffd34d" stroke="#7d5520" stroke-width="70" stroke-linejoin="round"/>
+    <path d="M320 780v680h2760v-90z" fill="#d59a2c" stroke="#7d5520" stroke-width="70" stroke-linejoin="round"/>
+    <g fill="#b6781e"><circle cx="1220" cy="820" r="170"/><circle cx="2020" cy="680" r="130"/><circle cx="2500" cy="1110" r="160"/><circle cx="780" cy="1190" r="120"/></g>
+    <g fill="#ffef9d"><circle cx="1180" cy="760" r="112"/><circle cx="1990" cy="640" r="84"/><circle cx="2470" cy="1060" r="108"/><circle cx="750" cy="1150" r="76"/></g>
+  </g>
+</svg>

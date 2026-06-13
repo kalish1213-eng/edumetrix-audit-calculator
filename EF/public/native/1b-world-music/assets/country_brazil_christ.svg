@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">Brazil Christ the Redeemer</title>
+  <desc id="desc">Vector Rio hills with a white Christ the Redeemer statue above the city.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#86d7ff"/><stop offset=".72" stop-color="#dff8ff"/><stop offset="1" stop-color="#ffe08c"/></linearGradient><linearGradient id="hill" x1="0" x2="1"><stop stop-color="#145c39"/><stop offset="1" stop-color="#45a35c"/></linearGradient></defs>
+  <rect width="4096" height="2304" fill="url(#sky)"/>
+  <circle cx="620" cy="420" r="190" fill="#fff2a3"/>
+  <path d="M0 1544c466-352 850-328 1154 24 390-530 928-562 1320-18 390-338 812-356 1198 4 160 148 300 236 424 286v464H0z" fill="url(#hill)"/>
+  <path d="M0 1815c715-260 1430-260 2145 0 760 276 1280 206 1951-90v579H0z" fill="#1f73a2" opacity=".72"/>
+  <g transform="translate(1540 290)" fill="#f8f8f0" stroke="#c9d2d5" stroke-width="24" stroke-linejoin="round">
+    <path d="M504 320c96 0 174 80 174 176 0 96-78 174-174 174s-174-78-174-174c0-96 78-176 174-176z"/>
+    <path d="M420 650h168l70 708H350z"/>
+    <path d="M110 770h788l-42 118H152z"/>
+    <path d="M38 742c250-108 672-108 930 0l-70 126c-238-64-552-64-790 0z"/>
+    <path d="M358 1358h292l122 474H236z"/>
+  </g>
+  <g fill="#f5d147" opacity=".9"><path d="M3054 1902h184v120h-184z"/><path d="M3268 1850h150v172h-150z"/><path d="M3438 1914h198v108h-198z"/></g>
+</svg>

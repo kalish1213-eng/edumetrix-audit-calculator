@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Woman from Japan</title>
+  <desc id="desc">Vector portrait of a woman in kimono with a red sun background.</desc>
+  <rect width="4096" height="4096" fill="#f9f5ef"/><circle cx="2048" cy="1550" r="1050" fill="#d63838"/>
+  <ellipse cx="2048" cy="3880" rx="1300" ry="900" fill="#283a69"/>
+  <path d="M1220 1790c0-650 350-1050 828-1050s828 400 828 1050c0 720-350 1120-828 1120s-828-400-828-1120z" fill="#171717"/>
+  <ellipse cx="2048" cy="1900" rx="590" ry="720" fill="#efc1a1"/>
+  <path d="M1430 1660c190-520 880-650 1236-150-40-670-1180-810-1236 150z" fill="#171717"/>
+  <circle cx="1848" cy="1980" r="42" fill="#111"/><circle cx="2248" cy="1980" r="42" fill="#111"/>
+  <path d="M1900 2380c120 110 176 110 296 0" fill="none" stroke="#a94c4c" stroke-width="40" stroke-linecap="round"/>
+  <path d="M1250 3200c410-380 1190-380 1600 0l-180 896H1430z" fill="#315293"/>
+  <path d="M1570 3220 2048 4096l478-876" fill="none" stroke="#f4d3ca" stroke-width="170" stroke-linejoin="round"/>
+</svg>

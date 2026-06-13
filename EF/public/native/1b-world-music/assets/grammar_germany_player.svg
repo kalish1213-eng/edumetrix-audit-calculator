@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Football player from Germany</title>
+  <desc id="desc">Vector football player with black, red, and gold Germany accents.</desc>
+  <rect width="4096" height="1365" fill="#111"/><rect y="1365" width="4096" height="1366" fill="#d8212f"/><rect y="2731" width="4096" height="1365" fill="#f2c232"/>
+  <circle cx="3140" cy="3260" r="360" fill="#fff" stroke="#111" stroke-width="42"/><g fill="#111"><path d="M3140 2925 3295 3040l-58 182h-194l-58-182z"/><path d="M2790 3180l178 80 12 190-170 70z"/><path d="M3490 3180l-190 70-12 190 178 80z"/></g>
+  <path d="M1240 3800c88-630 230-1040 458-1340h700c228 300 370 710 458 1340z" fill="#f2f2f2" stroke="#111" stroke-width="42"/>
+  <circle cx="2048" cy="1320" r="430" fill="#e7b184" stroke="#111" stroke-width="38"/>
+  <path d="M1620 1260c120-470 780-560 920-120-210-110-530-122-920 120z" fill="#3a281f"/>
+  <circle cx="1900" cy="1380" r="44" fill="#111"/><circle cx="2200" cy="1380" r="44" fill="#111"/>
+  <path d="M1900 1640c120 100 220 100 340 0" stroke="#93433b" stroke-width="38" fill="none" stroke-linecap="round"/>
+  <path d="M1210 2390c-245 110-420 330-510 660M2886 2390c245 110 420 330 510 660" stroke="#f2f2f2" stroke-width="250" stroke-linecap="round"/>
+  <path d="M1680 2600h736v330h-736z" fill="#111"/><path d="M1680 2930h736v270h-736z" fill="#d8212f"/>
+</svg>

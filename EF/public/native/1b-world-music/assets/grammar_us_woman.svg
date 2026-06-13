@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096" role="img" aria-labelledby="title desc">
+  <title id="title">Woman from the United States</title>
+  <desc id="desc">Vector portrait of a smiling woman with United States flag colors.</desc>
+  <rect width="4096" height="4096" fill="#eaf5ff"/>
+  <g opacity=".96"><path d="M0 420h4096v230H0zM0 880h4096v230H0zM0 1340h4096v230H0zM0 1800h4096v230H0z" fill="#c42f3f"/><rect width="1740" height="1560" fill="#234d91"/><g fill="#fff"><circle cx="270" cy="260" r="38"/><circle cx="620" cy="260" r="38"/><circle cx="970" cy="260" r="38"/><circle cx="1320" cy="260" r="38"/><circle cx="445" cy="570" r="38"/><circle cx="795" cy="570" r="38"/><circle cx="1145" cy="570" r="38"/><circle cx="1495" cy="570" r="38"/><circle cx="270" cy="890" r="38"/><circle cx="620" cy="890" r="38"/><circle cx="970" cy="890" r="38"/><circle cx="1320" cy="890" r="38"/></g></g>
+  <ellipse cx="2050" cy="3930" rx="1250" ry="920" fill="#244d80"/>
+  <path d="M1180 1760c0-610 420-1050 930-1050s928 440 928 1050c0 750-410 1230-928 1230s-930-480-930-1230z" fill="#3c2722"/>
+  <ellipse cx="2105" cy="1870" rx="650" ry="780" fill="#f1bd8d"/>
+  <path d="M1460 1580c240-420 810-520 1200-160 44-520-1110-780-1200 160z" fill="#3c2722"/>
+  <g fill="#1d2b36"><circle cx="1850" cy="1950" r="48"/><circle cx="2350" cy="1950" r="48"/></g>
+  <path d="M1890 2400c160 150 330 150 490 0" fill="none" stroke="#a84f48" stroke-width="44" stroke-linecap="round"/>
+  <path d="M1510 3300c360-350 910-360 1260 0v796H1510z" fill="#2f69b0"/>
+</svg>

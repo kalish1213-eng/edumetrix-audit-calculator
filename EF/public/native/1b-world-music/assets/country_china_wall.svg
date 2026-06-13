@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">China Great Wall</title>
+  <desc id="desc">A vector Great Wall crossing layered green mountains.</desc>
+  <defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#c9edff"/><stop offset="1" stop-color="#f5edc8"/></linearGradient></defs>
+  <rect width="4096" height="2304" fill="url(#sky)"/>
+  <circle cx="3280" cy="440" r="220" fill="#f5c35d"/>
+  <path d="M0 1360 620 820l450 330 420-454 650 590 410-340 450 404 450-298 646 486v766H0z" fill="#8bb86b"/>
+  <path d="M0 1655c540-260 1105-240 1695 60 580 295 1215 280 2401-80v669H0z" fill="#477b46"/>
+  <path d="M-80 1680c510-250 920-300 1230-150 428 207 740 192 1170-64 522-310 1040-284 1840 82" fill="none" stroke="#b5955d" stroke-width="152" stroke-linecap="round"/>
+  <path d="M-80 1680c510-250 920-300 1230-150 428 207 740 192 1170-64 522-310 1040-284 1840 82" fill="none" stroke="#6e5636" stroke-width="24" stroke-linecap="round" opacity=".55"/>
+  <g fill="#927247" stroke="#5c462b" stroke-width="18"><path d="M820 1275h300v260H820z"/><path d="M1880 1230h320v280h-320z"/><path d="M3060 1315h300v245h-300z"/></g>
+  <g stroke="#614a2e" stroke-width="18" opacity=".55"><path d="M160 1632l130 62M480 1518l122 70M1200 1530l134 70M2440 1398l124 74M3520 1428l128 70"/></g>
+</svg>
