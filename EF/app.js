@@ -253,7 +253,7 @@ const nativeLessons = [
     startPage: 55,
     endPage: 56,
     title: "9A Everything's fine!",
-    url: "public/native/9a-everythings-fine/index.html?v=20260612-9a3"
+    url: "public/native/9a-everythings-fine/index.html?v=20260613-9aphoto1"
   },
   {
     startPage: 57,
