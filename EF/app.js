@@ -1,5 +1,7 @@
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
+const STORAGE_LMS_NOTES = "ef-beginner-lms-notes";
+const STORAGE_LMS_WORDS = "ef-beginner-lms-words";
 
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
@@ -24,6 +26,40 @@ const clearPage = document.querySelector("#clearPage");
 const importAnswers = document.querySelector("#importAnswers");
 const importFile = document.querySelector("#importFile");
 const exportAnswers = document.querySelector("#exportAnswers");
+const lessonRail = document.querySelector("#lessonRail");
+const currentLessonTitle = document.querySelector("#currentLessonTitle");
+const lessonCounter = document.querySelector("#lessonCounter");
+const lessonCrumb = document.querySelector("#lessonCrumb");
+const unitCrumb = document.querySelector("#unitCrumb");
+const topProgressText = document.querySelector("#topProgressText");
+const topProgressBar = document.querySelector("#topProgressBar");
+const sidebarProgressText = document.querySelector("#sidebarProgressText");
+const sidebarProgressBar = document.querySelector("#sidebarProgressBar");
+const lessonProgressText = document.querySelector("#lessonProgressText");
+const lessonProgressBar = document.querySelector("#lessonProgressBar");
+const completedLessons = document.querySelector("#completedLessons");
+const remainingLessons = document.querySelector("#remainingLessons");
+const activeFields = document.querySelector("#activeFields");
+const timeLeft = document.querySelector("#timeLeft");
+const saveStatus = document.querySelector("#saveStatus");
+const autosaveTime = document.querySelector("#autosaveTime");
+const grammarTitle = document.querySelector("#grammarTitle");
+const grammarHint = document.querySelector("#grammarHint");
+const taskHint = document.querySelector("#taskHint");
+const lessonNotes = document.querySelector("#lessonNotes");
+const wordList = document.querySelector("#wordList");
+const wordForm = document.querySelector("#wordForm");
+const wordInput = document.querySelector("#wordInput");
+const aiForm = document.querySelector("#aiForm");
+const aiInput = document.querySelector("#aiInput");
+const aiThread = document.querySelector("#aiThread");
+const zoomOut = document.querySelector("#zoomOut");
+const zoomIn = document.querySelector("#zoomIn");
+const firstLessonPage = document.querySelector("#firstLessonPage");
+const lastLessonPage = document.querySelector("#lastLessonPage");
+const backToLessons = document.querySelector("#backToLessons");
+const clearNotes = document.querySelector("#clearNotes");
+const pinNote = document.querySelector("#pinNote");
 
 let manifest;
 let currentPage = getStartPage();
@@ -34,6 +70,8 @@ let resetScrollTimer;
 resetIfRequested();
 let savedValues = loadJson(STORAGE_VALUES, {});
 let customFields = loadJson(STORAGE_CUSTOM, {});
+let lmsNotes = loadJson(STORAGE_LMS_NOTES, {});
+let lmsWords = loadJson(STORAGE_LMS_WORDS, defaultLmsWords());
 
 const lessonIndex = [
   { title: "English File Beginner", page: 1 },
@@ -5893,6 +5931,7 @@ async function init() {
     pageInput.max = String(manifest.pageCount);
     pageTotal.textContent = `/ ${manifest.pageCount}`;
     populateLessonSelect();
+    populateLessonRail();
     currentPage = clampPage(currentPage);
     bindEvents();
     renderPages({ resetScroll: true });
@@ -5955,6 +5994,7 @@ function bindEvents() {
   importAnswers.addEventListener("click", () => importFile.click());
   importFile.addEventListener("change", importSavedAnswers);
   exportAnswers.addEventListener("click", exportAllAnswers);
+  bindLmsEvents();
   window.addEventListener("resize", renderPages);
   window.addEventListener("hashchange", handleHashChange);
 }
@@ -5967,6 +6007,7 @@ function renderPages({ resetScroll = false } = {}) {
   pageInput.value = String(currentPage);
   syncLessonSelect();
   updateNavState();
+  syncLmsUi(pages);
 
   pages.forEach((pageNumber) => {
     const meta = manifest.pages[pageNumber - 1];
@@ -6018,7 +6059,10 @@ function renderPages({ resetScroll = false } = {}) {
 }
 
 function resetReaderScroll() {
-  const reset = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  const reset = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.querySelector(".reader")?.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
 
   clearTimeout(resetScrollTimer);
   reset();
@@ -6120,6 +6164,7 @@ async function loadNativeLessonEmbed(embed, url) {
     rewriteNativeAssetUrls(content, baseUrl.href);
     shadow.appendChild(content);
     initEmbeddedNativeLesson(shadow, lesson);
+    syncLmsUi(visiblePageNumbers());
   } catch (error) {
     shadow.innerHTML = `<div class="native-error">Could not load native lesson.</div>`;
     console.error(error);
@@ -6730,6 +6775,391 @@ function escapeHtml(value) {
   }[char]));
 }
 
+function bindLmsEvents() {
+  window.__efLmsAction = (action, event) => {
+    event?.preventDefault?.();
+    event?.stopImmediatePropagation?.();
+
+    if (action === "check") {
+      if (!runNativeLessonAction("check")) checkVisiblePages();
+    } else if (action === "answers") {
+      if (!runNativeLessonAction("answers")) revealVisibleAnswers();
+    } else if (action === "reset") {
+      if (!runNativeLessonAction("reset")) clearVisiblePages();
+    } else if (action === "save") {
+      exportAllAnswers();
+    }
+
+    updateLmsSaveTime();
+    return false;
+  };
+
+  document.addEventListener("click", (event) => {
+    const command = event.target.closest?.("#checkPage, #showAnswers, #clearPage, #exportAnswers, [data-lms-action]");
+    if (!command) return;
+
+    const action =
+      command.id === "checkPage" ? "check" :
+      command.id === "showAnswers" ? "answers" :
+      command.id === "clearPage" ? "reset" :
+      command.id === "exportAnswers" ? "save" :
+      command.dataset.lmsAction;
+
+    if (!action) return;
+    window.__efLmsAction(action, event);
+  }, true);
+
+  checkPage?.addEventListener("click", () => runNativeLessonAction("check"));
+  showAnswers?.addEventListener("click", () => runNativeLessonAction("answers"));
+  clearPage?.addEventListener("click", () => runNativeLessonAction("reset"));
+
+  document.querySelectorAll(".side-link, .support-card").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".side-link").forEach((item) => item.classList.remove("active"));
+      if (button.classList.contains("side-link")) button.classList.add("active");
+      const section = button.dataset.section;
+      const targetPages = {
+        overview: 1,
+        lessons: currentPage,
+        homework: 17,
+        dictionary: 117,
+        grammar: 93,
+        club: 79,
+        tests: 29,
+        messages: currentPage,
+        stats: currentPage,
+        settings: currentPage,
+        support: currentPage
+      };
+      if (section === "stats") activatePanel("progress");
+      if (section === "dictionary") activatePanel("words");
+      if (section === "support" || section === "messages") activatePanel("ai");
+      if (targetPages[section] && targetPages[section] !== currentPage) goToPage(targetPages[section]);
+      setStatus(`LMS: открыт раздел «${button.textContent.trim().replace(/\s+/g, " ")}».`);
+    });
+  });
+
+  document.querySelectorAll(".panel-tab").forEach((button) => {
+    button.addEventListener("click", () => activatePanel(button.dataset.panel));
+  });
+
+  document.querySelectorAll("[data-lms-action]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const action = button.dataset.lmsAction;
+      if (action === "check") checkPage.click();
+      if (action === "reset") clearPage.click();
+      if (action === "save") exportAnswers.click();
+      updateLmsSaveTime();
+    });
+  });
+
+  zoomOut?.addEventListener("click", () => stepZoom(-1));
+  zoomIn?.addEventListener("click", () => stepZoom(1));
+
+  firstLessonPage?.addEventListener("click", () => {
+    const lesson = nativeLessonForPage(currentPage);
+    goToPage(lesson ? lesson.startPage : 1);
+  });
+
+  lastLessonPage?.addEventListener("click", () => {
+    const lesson = nativeLessonForPage(currentPage);
+    goToPage(lesson ? lesson.endPage : manifest.pageCount);
+  });
+
+  backToLessons?.addEventListener("click", () => {
+    document.querySelector(".lesson-strip")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    lessonSelect.focus();
+  });
+
+  lessonNotes?.addEventListener("input", () => {
+    lmsNotes[lessonStorageKey()] = lessonNotes.value;
+    saveJson(STORAGE_LMS_NOTES, lmsNotes);
+    updateLmsSaveTime();
+  });
+
+  clearNotes?.addEventListener("click", () => {
+    lmsNotes[lessonStorageKey()] = "";
+    saveJson(STORAGE_LMS_NOTES, lmsNotes);
+    if (lessonNotes) lessonNotes.value = "";
+    updateLmsSaveTime();
+  });
+
+  pinNote?.addEventListener("click", () => {
+    const prefix = `[${currentLessonLabel()}] `;
+    if (lessonNotes && !lessonNotes.value.startsWith(prefix)) {
+      lessonNotes.value = `${prefix}${lessonNotes.value}`.trim();
+      lmsNotes[lessonStorageKey()] = lessonNotes.value;
+      saveJson(STORAGE_LMS_NOTES, lmsNotes);
+      updateLmsSaveTime();
+    }
+  });
+
+  wordForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const value = wordInput.value.trim();
+    if (!value) return;
+    const [term, translation] = value.split(/\s[-–—]\s/);
+    lmsWords.unshift({
+      id: `word-${Date.now()}`,
+      term: term.trim(),
+      translation: (translation || "добавлено в словарь").trim(),
+      lesson: currentLessonLabel()
+    });
+    wordInput.value = "";
+    saveJson(STORAGE_LMS_WORDS, lmsWords);
+    renderWordList();
+    updateLmsSaveTime();
+  });
+
+  aiForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const question = aiInput.value.trim();
+    if (!question) return;
+    appendAiMessage(question, "user");
+    aiInput.value = "";
+    appendAiMessage(aiReply(question), "assistant");
+  });
+
+  document.querySelectorAll("[data-ai-preset]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const prompt = button.dataset.aiPreset;
+      appendAiMessage(prompt, "user");
+      appendAiMessage(aiReply(prompt), "assistant");
+    });
+  });
+}
+
+function populateLessonRail() {
+  if (!lessonRail) return;
+  lessonRail.innerHTML = "";
+  nativeLessons.forEach((lesson, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "lesson-pill";
+    button.dataset.page = String(lesson.startPage);
+    button.title = lesson.title;
+    button.textContent = shortLessonTitle(lesson.title, index);
+    button.addEventListener("click", () => goToPage(lesson.startPage));
+    lessonRail.appendChild(button);
+  });
+}
+
+function syncLmsUi(pages = visiblePageNumbers()) {
+  const lesson = nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage);
+  const nativeIndex = Math.max(0, nativeLessons.findIndex((item) => item.startPage <= currentPage && item.endPage >= currentPage));
+  const progress = manifest ? Math.round((currentPage / manifest.pageCount) * 100) : 0;
+  const lessonStart = lesson.startPage || lesson.page || currentPage;
+  const lessonEnd = lesson.endPage || lesson.page || currentPage;
+  const lessonPercent = Math.round(((currentPage - lessonStart + 1) / Math.max(1, lessonEnd - lessonStart + 1)) * 100);
+  const clampedLessonPercent = clamp(lessonPercent, 0, 100);
+  const fieldCount = pages.reduce((total, page) => total + widgetsForPage(page).length + (customFields[page] || []).length, 0);
+
+  setText(currentLessonTitle, lesson.title);
+  setText(lessonCrumb, lesson.title);
+  setText(unitCrumb, unitNameForLesson(lesson.title));
+  setText(lessonCounter, `Урок ${nativeIndex + 1} из ${nativeLessons.length}`);
+  setText(topProgressText, `${progress}%`);
+  setText(sidebarProgressText, `${progress}%`);
+  setText(lessonProgressText, `${clampedLessonPercent}%`);
+  setText(completedLessons, String(Math.max(0, nativeIndex)));
+  setText(remainingLessons, String(Math.max(0, nativeLessons.length - nativeIndex - 1)));
+  setText(activeFields, String(fieldCount));
+  setText(timeLeft, String(Math.max(5, 30 - Math.floor(clampedLessonPercent / 5))));
+
+  setBar(topProgressBar, progress);
+  setBar(sidebarProgressBar, progress);
+  setBar(lessonProgressBar, clampedLessonPercent);
+
+  document.querySelectorAll(".lesson-pill").forEach((button) => {
+    const page = Number(button.dataset.page);
+    const item = nativeLessonForPage(page);
+    button.classList.toggle("active", Boolean(item && currentPage >= item.startPage && currentPage <= item.endPage));
+  });
+
+  const hint = hintForLesson(lesson.title);
+  setText(grammarTitle, hint.title);
+  setText(grammarHint, hint.grammar);
+  setText(taskHint, hint.task);
+
+  if (lessonNotes && document.activeElement !== lessonNotes) lessonNotes.value = lmsNotes[lessonStorageKey()] || "";
+  renderWordList();
+}
+
+function activeNativeRoot() {
+  const embed = document.querySelector(".native-lesson-embed");
+  return embed?.shadowRoot || null;
+}
+
+function runNativeLessonAction(action) {
+  const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
+  if (!nativeLesson) return false;
+
+  const buttonId = {
+    check: "checkBtn",
+    answers: "answersBtn",
+    reset: "resetBtn"
+  }[action];
+  const button = buttonId ? activeNativeRoot()?.getElementById(buttonId) : null;
+  if (!button) return false;
+
+  button.click();
+  const labels = {
+    check: "ответы проверены",
+    answers: "ответы показаны",
+    reset: "ответы сброшены"
+  };
+  setStatus(`${nativeLesson.title}: ${labels[action]} в нативном уроке.`);
+  updateLmsSaveTime();
+  return true;
+}
+
+function activatePanel(name) {
+  document.querySelectorAll(".panel-tab").forEach((button) => {
+    button.classList.toggle("active", button.dataset.panel === name);
+  });
+  document.querySelectorAll(".panel-page").forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.panelPage === name);
+  });
+}
+
+function stepZoom(direction) {
+  const values = ["fit", "0.35", "0.5", "0.75", "1"];
+  const index = Math.max(0, values.indexOf(zoomSelect.value));
+  const next = clamp(index + direction, 0, values.length - 1);
+  zoomSelect.value = values[next];
+  renderPages();
+}
+
+function lessonIndexForPage(pageNumber) {
+  const current = [...lessonIndex].reverse().find((item) => pageNumber >= item.page) || lessonIndex[0];
+  return { ...current, startPage: current.page, endPage: current.page };
+}
+
+function currentLessonLabel() {
+  return (nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage)).title;
+}
+
+function lessonStorageKey() {
+  const lesson = nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage);
+  return `${lesson.startPage || lesson.page}:${lesson.title}`;
+}
+
+function shortLessonTitle(title, index) {
+  const match = title.match(/^(\d+[AB]|Practical English \d+|Revise and Check \d+&\d+|Grammar Bank \d+[A-Z-]*|Vocabulary Bank)/i);
+  if (match) return match[1].replace("Practical English", "PE").replace("Revise and Check", "R&C");
+  if (index < 3) return title;
+  return `${index + 1}`;
+}
+
+function unitNameForLesson(title) {
+  const match = title.match(/^(\d+)/);
+  if (match) return `Unit ${match[1]}`;
+  if (/Grammar Bank/i.test(title)) return "Grammar Bank";
+  if (/Vocabulary Bank/i.test(title)) return "Vocabulary Bank";
+  return "Course";
+}
+
+function hintForLesson(title) {
+  if (/1A|cappuccino|Nice to meet/i.test(title)) {
+    return {
+      title: "Глагол be (I / you)",
+      grammar: "I am, you are. В коротких репликах можно использовать I'm. После you форма всегда are.",
+      task: "Сначала найдите подлежащее в фразе, потом выберите форму be."
+    };
+  }
+  if (/World music|countries|holiday|bus|family|car/i.test(title)) {
+    return {
+      title: "be: countries and people",
+      grammar: "He is, she is, they are. Для страны используйте from: She is from Japan.",
+      task: "Посмотрите на фото или подпись, затем заполните пропуск одним коротким словом."
+    };
+  }
+  if (/breakfast|flight|cooking|food/i.test(title)) {
+    return {
+      title: "a / an / some",
+      grammar: "Перед единственным предметом используйте a или an. Для еды и напитков часто нужен some.",
+      task: "Проверьте, исчисляемое ли слово и начинается ли оно с гласного звука."
+    };
+  }
+  if (/past|were|was|train|fine|weekend/i.test(title)) {
+    return {
+      title: "Past simple",
+      grammar: "Was / were описывают прошлое состояние. Для действий используйте форму прошедшего времени.",
+      task: "Найдите маркер времени и выберите форму настоящего или прошлого времени."
+    };
+  }
+  return {
+    title: "Подсказка по уроку",
+    grammar: "Читайте инструкцию, заполняйте интерактивные поля и используйте проверку после попытки.",
+    task: "Если задание кажется сложным, выполните сначала примеры с очевидным ответом."
+  };
+}
+
+function defaultLmsWords() {
+  return [
+    { id: "word-hello", term: "hello", translation: "привет", lesson: "Lesson 1A" },
+    { id: "word-meet", term: "meet", translation: "знакомиться", lesson: "Lesson 1A" },
+    { id: "word-thanks", term: "thanks", translation: "спасибо", lesson: "Lesson 1A" },
+    { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" }
+  ];
+}
+
+function renderWordList() {
+  if (!wordList) return;
+  wordList.innerHTML = "";
+  lmsWords.slice(0, 12).forEach((word) => {
+    const item = document.createElement("article");
+    item.className = "word-item";
+    const strong = document.createElement("strong");
+    strong.textContent = word.term;
+    const translation = document.createElement("span");
+    translation.textContent = `${word.translation} · ${word.lesson}`;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "small-button";
+    remove.textContent = "Удалить";
+    remove.addEventListener("click", () => {
+      lmsWords = lmsWords.filter((entry) => entry.id !== word.id);
+      saveJson(STORAGE_LMS_WORDS, lmsWords);
+      renderWordList();
+      updateLmsSaveTime();
+    });
+    item.append(strong, translation, remove);
+    wordList.appendChild(item);
+  });
+}
+
+function appendAiMessage(text, kind) {
+  if (!aiThread) return;
+  const message = document.createElement("div");
+  message.className = `ai-message ${kind === "user" ? "user" : "assistant"}`;
+  message.textContent = text;
+  aiThread.appendChild(message);
+  aiThread.scrollTop = aiThread.scrollHeight;
+}
+
+function aiReply(question) {
+  const lesson = currentLessonLabel();
+  if (/пример/i.test(question)) return `${lesson}: попробуйте составить короткий ответ по модели из задания, затем нажмите «Проверить».`;
+  if (/ответ/i.test(question)) return "Я дам подсказку без готового ответа: проверьте подлежащее, время и форму глагола.";
+  return `Подсказка по «${lesson}»: начните с инструкции задания, заполните очевидные поля и вернитесь к сложным после первого прохода.`;
+}
+
+function updateLmsSaveTime() {
+  const now = new Date();
+  const time = now.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" });
+  setText(saveStatus, `Сохранено в ${time}`);
+  setText(autosaveTime, `Сохранено в ${time}`);
+}
+
+function setText(node, value) {
+  if (node) node.textContent = value;
+}
+
+function setBar(node, percent) {
+  if (node) node.style.width = `${clamp(percent, 0, 100)}%`;
+}
+
 function nativeLessonForPage(pageNumber) {
   return nativeLessons.find((lesson) => pageNumber >= lesson.startPage && pageNumber <= lesson.endPage) || null;
 }
@@ -7128,6 +7558,13 @@ function valueFor(widget) {
 function checkVisiblePages() {
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (nativeLesson) {
+    const button = activeNativeRoot()?.getElementById("checkBtn");
+    if (button) {
+      button.click();
+      setStatus(`${nativeLesson.title}: ответы проверены в нативном уроке.`);
+      updateLmsSaveTime();
+      return;
+    }
     setStatus(`${nativeLesson.title}: используйте кнопки проверки внутри нативного урока.`);
     return;
   }
@@ -7186,6 +7623,13 @@ function checkVisiblePages() {
 function revealVisibleAnswers() {
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (nativeLesson) {
+    const button = activeNativeRoot()?.getElementById("answersBtn");
+    if (button) {
+      button.click();
+      setStatus(`${nativeLesson.title}: ответы показаны в нативном уроке.`);
+      updateLmsSaveTime();
+      return;
+    }
     setStatus(`${nativeLesson.title}: ответы открываются кнопкой внутри нативного урока.`);
     return;
   }
@@ -7207,6 +7651,13 @@ function revealVisibleAnswers() {
 function clearVisiblePages() {
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (nativeLesson) {
+    const button = activeNativeRoot()?.getElementById("resetBtn");
+    if (button) {
+      button.click();
+      setStatus(`${nativeLesson.title}: ответы сброшены в нативном уроке.`);
+      updateLmsSaveTime();
+      return;
+    }
     setStatus(`${nativeLesson.title}: очистка выполняется кнопкой внутри нативного урока.`);
     return;
   }
@@ -7227,6 +7678,17 @@ function clearVisiblePages() {
 }
 
 function exportAllAnswers() {
+  const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
+  if (nativeLesson) {
+    const button = activeNativeRoot()?.getElementById("exportBtn");
+    if (button) {
+      button.click();
+      setStatus(`${nativeLesson.title}: попытка сохранена из нативного урока.`);
+      updateLmsSaveTime();
+      return;
+    }
+  }
+
   const checkedAnswers = {};
   Object.values(builtInWidgets)
     .flat()

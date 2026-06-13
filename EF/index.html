@@ -3,81 +3,294 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>English File Beginner - Interactive Book</title>
-    <link rel="stylesheet" href="styles.css?v=20260613-revise78photo2" />
+    <title>LinguaPro LMS - English File Beginner</title>
+    <link rel="stylesheet" href="styles.css?v=20260613-lms6" />
   </head>
   <body>
-    <header class="toolbar" aria-label="Панель учебника">
-      <div class="brand">
-        <span class="series">English File Beginner</span>
-        <h1>Interactive Student's Book</h1>
+    <div class="lms-shell">
+      <aside class="sidebar" aria-label="Навигация курса">
+        <a class="logo" href="#page=1" aria-label="LinguaPro">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>
+            <strong>LinguaPro</strong>
+            <small>School of English</small>
+          </span>
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Разделы LMS">
+          <button class="side-link" type="button" data-section="overview">
+            <span class="side-icon">□</span>
+            <span>Обзор курса</span>
+          </button>
+          <button class="side-link active" type="button" data-section="lessons">
+            <span class="side-icon">▥</span>
+            <span>Уроки</span>
+          </button>
+          <button class="side-link" type="button" data-section="homework">
+            <span class="side-icon">✓</span>
+            <span>Домашние задания</span>
+            <span class="badge danger">2</span>
+          </button>
+          <button class="side-link" type="button" data-section="dictionary">
+            <span class="side-icon">✎</span>
+            <span>Словарь</span>
+          </button>
+          <button class="side-link" type="button" data-section="grammar">
+            <span class="side-icon">G</span>
+            <span>Грамматика</span>
+          </button>
+          <button class="side-link" type="button" data-section="club">
+            <span class="side-icon">◎</span>
+            <span>Разговорный клуб</span>
+          </button>
+          <button class="side-link" type="button" data-section="tests">
+            <span class="side-icon">▣</span>
+            <span>Тесты</span>
+          </button>
+          <button class="side-link" type="button" data-section="messages">
+            <span class="side-icon">◌</span>
+            <span>Сообщения</span>
+            <span class="badge">3</span>
+          </button>
+          <button class="side-link" type="button" data-section="stats">
+            <span class="side-icon">↗</span>
+            <span>Моя статистика</span>
+          </button>
+          <button class="side-link" type="button" data-section="settings">
+            <span class="side-icon">⚙</span>
+            <span>Настройки</span>
+          </button>
+        </nav>
+
+        <section class="level-card" aria-label="Уровень">
+          <span>Ваш уровень</span>
+          <strong>A1</strong>
+          <em>Beginner</em>
+          <div class="mini-progress"><span style="width: 33%"></span></div>
+          <small>Следующий: A2 <b>33%</b></small>
+        </section>
+
+        <section class="course-card" aria-label="Курс">
+          <img src="public/native/practical-english-2/assets/london_pub.webp?v=20260613-pe2photo2" alt="" />
+          <strong>English File Beginner</strong>
+          <span>Interactive LMS course</span>
+          <div class="mini-progress"><span id="sidebarProgressBar" style="width: 0%"></span></div>
+          <small><b id="sidebarProgressText">0%</b> завершено</small>
+        </section>
+
+        <button class="support-card" type="button" data-section="support">
+          <span>Нужна помощь?</span>
+          <small>Связаться с преподавателем</small>
+        </button>
+      </aside>
+
+      <div class="main-shell">
+        <header class="topbar" aria-label="Верхняя панель">
+          <div class="breadcrumb">
+            <button id="backToLessons" class="icon-button" type="button" title="К списку уроков">‹</button>
+            <span>English File Beginner</span>
+            <span>/</span>
+            <span id="unitCrumb">Unit 1</span>
+            <span>/</span>
+            <strong id="lessonCrumb">Interactive Book</strong>
+          </div>
+
+          <div class="topbar-right">
+            <div class="top-progress" aria-label="Прогресс курса">
+              <span>Прогресс в курсе</span>
+              <strong id="topProgressText">0%</strong>
+              <div class="mini-progress"><span id="topProgressBar" style="width: 0%"></span></div>
+            </div>
+            <button class="streak" type="button" title="Серия занятий">
+              <span class="flame" aria-hidden="true"></span>
+              <strong>12 дней подряд</strong>
+            </button>
+            <button class="icon-button" type="button" title="Уведомления">●</button>
+            <button class="profile" type="button" title="Профиль">
+              <span class="avatar" aria-hidden="true">A</span>
+              <span>Алина</span>
+              <span aria-hidden="true">⌄</span>
+            </button>
+          </div>
+        </header>
+
+        <main class="lms-main">
+          <section class="workspace">
+            <div class="lesson-toolbar" aria-label="Инструменты урока">
+              <label class="lesson-picker">
+                <span class="visually-hidden">Урок</span>
+                <select id="lessonSelect"></select>
+              </label>
+
+              <div class="pager" aria-label="Навигация по страницам">
+                <button id="firstLessonPage" type="button" title="Первая страница урока">|‹</button>
+                <button id="prevPage" type="button" title="Предыдущая страница">‹</button>
+                <label class="page-jump">
+                  <input id="pageInput" type="number" min="1" value="1" />
+                  <span id="pageTotal">/ 137</span>
+                </label>
+                <button id="nextPage" type="button" title="Следующая страница">›</button>
+                <button id="lastLessonPage" type="button" title="Последняя страница урока">›|</button>
+              </div>
+
+              <div class="zoom-box" aria-label="Масштаб">
+                <button id="zoomOut" type="button" title="Уменьшить">−</button>
+                <label>
+                  <span class="visually-hidden">Масштаб</span>
+                  <select id="zoomSelect">
+                    <option value="fit">По ширине</option>
+                    <option value="0.35">35%</option>
+                    <option value="0.5">50%</option>
+                    <option value="0.75">75%</option>
+                    <option value="1">100%</option>
+                  </select>
+                </label>
+                <button id="zoomIn" type="button" title="Увеличить">+</button>
+              </div>
+
+              <label class="mode-toggle">
+                <input id="spreadMode" type="checkbox" />
+                <span>Разворот</span>
+              </label>
+
+              <div class="toolbar-actions">
+                <button id="checkPage" type="button" class="action-button primary" onclick="return window.__efLmsAction?.('check', event)">Проверить</button>
+                <button id="clearPage" type="button" class="action-button" onclick="return window.__efLmsAction?.('reset', event)">Сбросить</button>
+                <button id="showAnswers" type="button" class="action-button" onclick="return window.__efLmsAction?.('answers', event)">Ответы</button>
+                <button id="exportAnswers" type="button" class="action-button" onclick="return window.__efLmsAction?.('save', event)">Сохранить</button>
+                <button id="importAnswers" type="button" class="icon-button" title="Загрузить ответы">↥</button>
+                <input id="importFile" class="visually-hidden" type="file" accept="application/json" />
+              </div>
+            </div>
+
+            <div class="lesson-strip" aria-label="Уроки курса">
+              <div>
+                <span id="lessonCounter">Урок 1 из 66</span>
+                <strong id="currentLessonTitle">English File Beginner</strong>
+              </div>
+              <div id="lessonRail" class="lesson-rail"></div>
+            </div>
+
+            <div class="content-row">
+              <section class="reader" aria-label="Интерактивная книга">
+                <div id="statusLine" class="status-line">Загрузка учебника...</div>
+                <div class="notebook">
+                  <span class="binder" aria-hidden="true"></span>
+                  <section id="pagesHost" class="pages-host" aria-live="polite"></section>
+                </div>
+              </section>
+
+              <aside class="assistant-panel" aria-label="Правая панель">
+                <div class="save-state">
+                  <span class="ok-dot" aria-hidden="true"></span>
+                  <span id="saveStatus">Сохранено только что</span>
+                </div>
+
+                <div class="panel-tabs" role="tablist" aria-label="Панели помощника">
+                  <button class="panel-tab active" type="button" data-panel="ai">AI-помощник</button>
+                  <button class="panel-tab" type="button" data-panel="notes">Заметки</button>
+                  <button class="panel-tab" type="button" data-panel="words">Слова</button>
+                  <button class="panel-tab" type="button" data-panel="progress">Прогресс</button>
+                </div>
+
+                <section class="panel-page active" data-panel-page="ai">
+                  <article class="hint-card">
+                    <span class="card-kicker">Объяснение грамматики</span>
+                    <h3 id="grammarTitle">Глагол be</h3>
+                    <p id="grammarHint">I am, you are, he / she / it is. Используйте короткие ответы и проверяйте форму после подлежащего.</p>
+                    <button class="small-button" type="button" data-ai-preset="Покажи примеры по текущему уроку">Показать примеры</button>
+                  </article>
+                  <article class="hint-card">
+                    <span class="card-kicker accent">Подсказка к заданию</span>
+                    <p id="taskHint">Прочитайте инструкцию задания, заполните поля и нажмите «Проверить».</p>
+                    <button class="small-button" type="button" data-ai-preset="Дай еще одну подсказку, но не называй ответ">Подсказать ещё</button>
+                  </article>
+                  <form id="aiForm" class="ask-ai">
+                    <label for="aiInput">Спросите AI</label>
+                    <div>
+                      <input id="aiInput" type="text" placeholder="Напишите вопрос..." />
+                      <button type="submit" title="Отправить">›</button>
+                    </div>
+                  </form>
+                  <div id="aiThread" class="ai-thread" aria-live="polite"></div>
+                </section>
+
+                <section class="panel-page" data-panel-page="notes">
+                  <label class="notes-box">
+                    <span>Заметки к уроку</span>
+                    <textarea id="lessonNotes" placeholder="Запишите идею, вопрос или домашнее задание..."></textarea>
+                  </label>
+                  <div class="note-tools">
+                    <button id="pinNote" class="small-button" type="button">Закрепить</button>
+                    <button id="clearNotes" class="small-button" type="button">Очистить</button>
+                  </div>
+                </section>
+
+                <section class="panel-page" data-panel-page="words">
+                  <form id="wordForm" class="word-form">
+                    <label for="wordInput">Добавить слово</label>
+                    <div>
+                      <input id="wordInput" type="text" placeholder="word - перевод" />
+                      <button type="submit">+</button>
+                    </div>
+                  </form>
+                  <div id="wordList" class="word-list"></div>
+                </section>
+
+                <section class="panel-page" data-panel-page="progress">
+                  <div class="progress-card">
+                    <span>Текущий урок</span>
+                    <strong id="lessonProgressText">0%</strong>
+                    <div class="mini-progress"><span id="lessonProgressBar" style="width: 0%"></span></div>
+                  </div>
+                  <div class="stats-grid">
+                    <span><b id="completedLessons">0</b> пройдено</span>
+                    <span><b id="remainingLessons">0</b> осталось</span>
+                    <span><b id="activeFields">0</b> полей</span>
+                    <span><b id="timeLeft">~25</b> мин</span>
+                  </div>
+                </section>
+              </aside>
+            </div>
+
+            <footer class="bottom-actions" aria-label="Действия урока">
+              <div>
+                <span class="ok-dot" aria-hidden="true"></span>
+                <strong>Автосохранение</strong>
+                <small id="autosaveTime">Сохранено только что</small>
+              </div>
+              <button type="button" data-lms-action="reset" onclick="return window.__efLmsAction?.('reset', event)">Сбросить ответы</button>
+              <button type="button" data-lms-action="save" onclick="return window.__efLmsAction?.('save', event)">Сохранить ответы</button>
+              <button class="primary" type="button" data-lms-action="check" onclick="return window.__efLmsAction?.('check', event)">Проверить ответы</button>
+            </footer>
+          </section>
+        </main>
       </div>
+    </div>
 
-      <nav class="controls" aria-label="Навигация по страницам">
-        <button id="prevPage" type="button" title="Предыдущая страница">Назад</button>
-        <label class="page-jump">
-          <span>Стр.</span>
-          <input id="pageInput" type="number" min="1" value="1" />
-          <span id="pageTotal">/ 137</span>
-        </label>
-        <button id="nextPage" type="button" title="Следующая страница">Вперед</button>
-        <label>
-          <span>Урок</span>
-          <select id="lessonSelect"></select>
-        </label>
-      </nav>
-
-      <div class="controls secondary-controls">
-        <label>
-          <span>Масштаб</span>
-          <select id="zoomSelect">
-            <option value="fit">По ширине</option>
-            <option value="0.35">35%</option>
-            <option value="0.5">50%</option>
-            <option value="0.75">75%</option>
-            <option value="1">100%</option>
-          </select>
-        </label>
-        <label class="toggle">
-          <input id="spreadMode" type="checkbox" />
-          <span>Разворот</span>
-        </label>
-      </div>
-
-      <div class="controls answer-controls">
-        <label>
-          <span>Тип поля</span>
-          <select id="fieldType">
-            <option value="text">Короткий ответ</option>
-            <option value="textarea">Развернутый ответ</option>
-          </select>
-        </label>
-        <button id="addField" type="button">Добавить поле</button>
-        <label>
-          <span>Шаблон</span>
-          <select id="templateSelect">
-            <option value="short5">5 коротких</option>
-            <option value="short10">10 коротких</option>
-            <option value="twoColumn10">2 колонки</option>
-            <option value="writing">Письмо</option>
-            <option value="checks6">6 галочек</option>
-          </select>
-        </label>
-        <button id="addTemplate" type="button">Добавить набор</button>
-        <button id="editFields" type="button">Править поля</button>
-        <button id="checkPage" type="button" class="primary">Проверить</button>
-        <button id="showAnswers" type="button">Ответы</button>
-        <button id="clearPage" type="button">Очистить</button>
-        <button id="importAnswers" type="button">Загрузить ответы</button>
-        <button id="exportAnswers" type="button">Скачать ответы</button>
-        <input id="importFile" class="visually-hidden" type="file" accept="application/json" />
-      </div>
-    </header>
-
-    <main class="reader" aria-label="Интерактивный учебник">
-      <div id="statusLine" class="status-line">Загрузка учебника...</div>
-      <section id="pagesHost" class="pages-host" aria-live="polite"></section>
-    </main>
+    <details class="advanced-tools">
+      <summary>Инструменты разметки</summary>
+      <label>
+        <span>Тип поля</span>
+        <select id="fieldType">
+          <option value="text">Короткий ответ</option>
+          <option value="textarea">Развернутый ответ</option>
+        </select>
+      </label>
+      <button id="addField" type="button">Добавить поле</button>
+      <label>
+        <span>Шаблон</span>
+        <select id="templateSelect">
+          <option value="short5">5 коротких</option>
+          <option value="short10">10 коротких</option>
+          <option value="twoColumn10">2 колонки</option>
+          <option value="writing">Письмо</option>
+          <option value="checks6">6 галочек</option>
+        </select>
+      </label>
+      <button id="addTemplate" type="button">Добавить набор</button>
+      <button id="editFields" type="button">Править поля</button>
+    </details>
 
     <template id="pageTemplate">
       <article class="page-card">
@@ -89,6 +302,6 @@
       </article>
     </template>
 
-    <script src="app.js?v=20260613-revise78photo2"></script>
+    <script src="app.js?v=20260613-lms6"></script>
   </body>
 </html>
