@@ -127,7 +127,7 @@ const nativeLessons = [
     startPage: 13,
     endPage: 14,
     title: "2A Are you on holiday?",
-    url: "public/native/2a-are-you-on-holiday/index.html?v=20260612-native2a"
+    url: "public/native/2a-are-you-on-holiday/index.html?v=20260613-2aphoto1"
   },
   {
     startPage: 15,
