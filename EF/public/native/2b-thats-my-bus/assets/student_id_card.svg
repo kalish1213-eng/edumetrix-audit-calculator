@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" role="img" aria-labelledby="title desc">
+  <title id="title">International Student Identity Card</title>
+  <desc id="desc">Vector identity card for a beginner English exercise.</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#eef6ff"/>
+    </linearGradient>
+    <linearGradient id="photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8ecff"/>
+      <stop offset="1" stop-color="#b7d2ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#25364b" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="980" height="620" rx="34" fill="#f3f7fb"/>
+  <g filter="url(#shadow)">
+    <rect x="58" y="70" width="864" height="480" rx="28" fill="url(#card)" stroke="#2f6aa4" stroke-width="8"/>
+    <rect x="58" y="70" width="864" height="96" rx="28" fill="#2868a8"/>
+    <path d="M58 138h864v46H58z" fill="#2868a8"/>
+    <text x="490" y="134" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#fff" text-anchor="middle">International Student Identity Card</text>
+    <rect x="94" y="204" width="236" height="286" rx="18" fill="url(#photo)" stroke="#85a9c8" stroke-width="5"/>
+    <circle cx="212" cy="295" r="58" fill="#f6d2ad"/>
+    <path d="M142 448c16-66 124-66 140 0z" fill="#355f8d"/>
+    <path d="M158 292c10-55 98-67 116-8c-38-20-76-13-116 8z" fill="#3a2a1d"/>
+    <g font-family="Arial, Helvetica, sans-serif" fill="#1f3147">
+      <text x="370" y="235" font-size="32" font-weight="900">Name</text>
+      <line x1="370" y1="282" x2="850" y2="282" stroke="#7fa1bf" stroke-width="5" stroke-linecap="round"/>
+      <text x="370" y="350" font-size="32" font-weight="900">Nationality</text>
+      <line x1="370" y1="397" x2="850" y2="397" stroke="#7fa1bf" stroke-width="5" stroke-linecap="round"/>
+      <text x="370" y="465" font-size="32" font-weight="900">Age</text>
+      <line x1="370" y1="512" x2="590" y2="512" stroke="#7fa1bf" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <circle cx="850" cy="482" r="38" fill="#ffcc45" stroke="#2868a8" stroke-width="5"/>
+    <path d="M830 481l13 14l29-34" fill="none" stroke="#2868a8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
