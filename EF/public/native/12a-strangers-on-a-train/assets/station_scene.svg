@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3663" viewBox="0 0 4096 3663" role="img" aria-labelledby="title desc">
+  <title id="title">David sees Olivia from a train at the station</title>
+  <desc id="desc">A sharp vector train window scene showing a man inside a train looking at a woman standing on a busy station platform.</desc>
+  <defs>
+    <linearGradient id="roof" x1="0" x2="1"><stop stop-color="#d8e7ef"/><stop offset=".55" stop-color="#b6bfd0"/><stop offset="1" stop-color="#f6f8fb"/></linearGradient>
+    <linearGradient id="train" x1="0" x2="1"><stop stop-color="#162965"/><stop offset=".5" stop-color="#234cb0"/><stop offset="1" stop-color="#162965"/></linearGradient>
+    <linearGradient id="table" x1="0" x2="1"><stop stop-color="#e8d8bd"/><stop offset="1" stop-color="#caa77d"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="12" dy="18" stdDeviation="16" flood-color="#0f1720" flood-opacity=".32"/></filter>
+    <style>
+      .line{stroke:#26313b;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+      .skin{fill:#efbd96}.skin2{fill:#f3c7a8}.hair{fill:#b8893e}.dark{fill:#17202c}
+    </style>
+  </defs>
+  <rect width="4096" height="3663" fill="#fffdf3"/>
+  <rect x="210" y="0" width="3760" height="2920" rx="36" fill="#f6f9fb" stroke="#20252b" stroke-width="18"/>
+  <rect x="260" y="70" width="3660" height="2790" rx="32" fill="#eef5f8"/>
+  <path d="M620 0c-210 620-250 1370-120 2350" fill="none" stroke="#111820" stroke-width="58" opacity=".9"/>
+  <g opacity=".82">
+    <rect x="900" y="120" width="2920" height="650" fill="url(#roof)"/>
+    <g stroke="#dfeaf0" stroke-width="26"><path d="M980 740 1260 70M1300 740 1580 70M1620 740 1900 70M1940 740 2220 70M2260 740 2540 70M2580 740 2860 70M2900 740 3180 70M3220 740 3500 70"/></g>
+    <rect x="760" y="1030" width="3180" height="520" fill="url(#train)"/>
+    <rect x="760" y="1080" width="3180" height="22" fill="#f2d929"/><rect x="760" y="1480" width="3180" height="30" fill="#d12058"/>
+    <g fill="#1a2b5a"><rect x="900" y="1190" width="300" height="120" rx="18"/><rect x="1350" y="1190" width="300" height="120" rx="18"/><rect x="1800" y="1190" width="300" height="120" rx="18"/><rect x="2250" y="1190" width="300" height="120" rx="18"/><rect x="2700" y="1190" width="300" height="120" rx="18"/><rect x="3150" y="1190" width="300" height="120" rx="18"/></g>
+    <rect x="740" y="1560" width="3200" height="450" fill="#eff3f4"/>
+  </g>
+  <g transform="translate(2650 640)" filter="url(#shadow)">
+    <circle class="skin2" cx="390" cy="320" r="190"/>
+    <path d="M202 288c64-220 385-260 520-60-180-70-350-56-520 60z" fill="#f2e3d0"/>
+    <rect x="105" y="560" width="590" height="840" rx="180" fill="#2d4e70"/>
+    <rect x="260" y="665" width="300" height="490" fill="#111f35"/>
+    <g fill="#fff"><circle cx="312" cy="720" r="20"/><circle cx="420" cy="780" r="20"/><circle cx="520" cy="865" r="20"/><circle cx="370" cy="965" r="20"/></g>
+    <rect x="170" y="1260" width="180" height="560" rx="58" fill="#6d747c"/><rect x="470" y="1260" width="180" height="560" rx="58" fill="#6d747c"/>
+    <path d="M135 845c-110 230-115 465-40 720" class="line" fill="none"/><path d="M668 838c70 215 72 440 0 690" class="line" fill="none"/>
+  </g>
+  <g transform="translate(210 500)" filter="url(#shadow)">
+    <circle class="skin" cx="740" cy="500" r="250"/>
+    <path class="hair" d="M480 430c82-310 570-360 760-82-240-94-496-70-760 82z"/>
+    <rect x="320" y="820" width="850" height="1450" rx="180" class="dark"/>
+    <rect x="610" y="840" width="250" height="720" fill="#f8f4e9"/><rect x="675" y="840" width="92" height="730" fill="#0e2d66"/>
+    <path d="M1130 1180c170 300 410 470 820 580" class="line" fill="none"/>
+    <path d="M360 1150c-165 310-220 650-160 1120" class="line" fill="none"/>
+    <circle cx="660" cy="480" r="20" fill="#111"/><path d="M720 640c120 45 236 34 350-32" fill="none" stroke="#8b5144" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <rect x="0" y="2550" width="4096" height="1113" fill="url(#table)"/>
+  <rect x="1600" y="2860" width="620" height="130" rx="30" fill="#dfe8ec" stroke="#c6d1d6" stroke-width="12"/>
+  <rect x="1500" y="3020" width="760" height="105" rx="30" fill="#c8b08f"/>
+  <rect x="1650" y="3170" width="520" height="90" rx="28" fill="#26313b"/>
+</svg>

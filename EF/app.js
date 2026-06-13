@@ -307,7 +307,7 @@ const nativeLessons = [
     startPage: 73,
     endPage: 74,
     title: "12A Strangers on a train",
-    url: "public/native/12a-strangers-on-a-train/index.html?v=20260612-12a1"
+    url: "public/native/12a-strangers-on-a-train/index.html?v=20260613-12aphoto1"
   },
   {
     startPage: 75,

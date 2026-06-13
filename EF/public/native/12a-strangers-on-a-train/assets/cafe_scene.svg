@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="7425" viewBox="0 0 4096 7425" role="img" aria-labelledby="title desc">
+  <title id="title">David and Olivia talking at the station cafe</title>
+  <desc id="desc">A sharp vector cafe scene with David and Olivia sitting opposite each other holding takeaway coffee cups in a busy station cafe.</desc>
+  <defs>
+    <linearGradient id="mall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e4edf1"/><stop offset=".55" stop-color="#d8d2be"/><stop offset="1" stop-color="#8cb68e"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="10" dy="18" stdDeviation="14" flood-color="#0f1720" flood-opacity=".28"/></filter>
+    <style>
+      .line{stroke:#26313b;stroke-width:22;stroke-linecap:round;stroke-linejoin:round}
+      .skin{fill:#efbd96}.skin2{fill:#f3c7a8}.hair{fill:#b8893e}.dark{fill:#17243a}
+    </style>
+  </defs>
+  <rect width="4096" height="7425" fill="#fffdf3"/>
+  <rect x="130" y="0" width="3836" height="6380" fill="url(#mall)" stroke="#ece4c9" stroke-width="24"/>
+  <g opacity=".62">
+    <rect x="450" y="0" width="3100" height="1450" fill="#e9eef2"/>
+    <g stroke="#a4b1b8" stroke-width="22"><path d="M520 300h2950M520 600h2950M520 900h2950M520 1200h2950"/><path d="M760 0v1450M1080 0v1450M1400 0v1450M1720 0v1450M2040 0v1450M2360 0v1450M2680 0v1450M3000 0v1450M3320 0v1450"/></g>
+    <rect x="580" y="1480" width="2920" height="540" fill="#fff"/>
+    <g fill="#385f91"><rect x="660" y="1600" width="460" height="280"/><rect x="1380" y="1600" width="460" height="280"/><rect x="2100" y="1600" width="460" height="280"/><rect x="2820" y="1600" width="460" height="280"/></g>
+  </g>
+  <rect x="1180" y="2660" width="1720" height="900" fill="#2c332f" opacity=".72"/>
+  <g fill="#477b54" opacity=".96"><ellipse cx="1140" cy="2500" rx="560" ry="230"/><ellipse cx="2340" cy="2480" rx="580" ry="245"/><ellipse cx="3180" cy="2520" rx="430" ry="210"/></g>
+  <g transform="translate(220 2700)" filter="url(#shadow)">
+    <circle class="skin" cx="780" cy="560" r="280"/>
+    <path class="hair" d="M500 500c80-340 620-395 850-90-310-108-580-82-850 90z"/>
+    <rect x="300" y="900" width="920" height="1950" rx="260" class="dark"/>
+    <rect x="570" y="920" width="250" height="840" fill="#f8f4e9"/><rect x="640" y="920" width="90" height="860" fill="#1f377a"/>
+    <path d="M1020 1290c430 220 690 470 850 820" class="line" fill="none"/>
+    <path d="M450 1330c-285 420-320 930-140 1580" class="line" fill="none"/>
+    <rect x="1560" y="2070" width="310" height="470" rx="45" fill="#c99953" stroke="#6e4d28" stroke-width="18"/>
+    <rect x="1520" y="1990" width="390" height="110" rx="30" fill="#26313b"/>
+  </g>
+  <g transform="translate(2180 2670)" filter="url(#shadow)">
+    <circle class="skin2" cx="640" cy="520" r="270"/>
+    <path d="M362 485c92-320 550-372 760-82-270-82-520-62-760 82z" fill="#efe0c8"/>
+    <rect x="195" y="855" width="870" height="1740" rx="255" fill="#273a4b"/>
+    <rect x="430" y="890" width="320" height="880" fill="#111b2b"/>
+    <g fill="#fff"><circle cx="500" cy="960" r="22"/><circle cx="620" cy="1055" r="22"/><circle cx="710" cy="1195" r="22"/></g>
+    <path d="M250 1280c-170 520-142 910 85 1220" class="line" fill="none"/>
+    <path d="M1010 1230c-250 310-480 520-760 645" class="line" fill="none"/>
+    <rect x="110" y="1740" width="315" height="470" rx="45" fill="#c99953" stroke="#6e4d28" stroke-width="18"/>
+    <rect x="70" y="1660" width="395" height="110" rx="30" fill="#26313b"/>
+  </g>
+  <ellipse cx="2010" cy="5980" rx="1700" ry="360" fill="#27313b" opacity=".22"/>
+</svg>
