@@ -89,7 +89,9 @@
 }
 
 .sound-image {
+  aspect-ratio: 1420 / 980;
   border-color: transparent;
+  margin-bottom: 48px;
 }
 
 .compact-grid {

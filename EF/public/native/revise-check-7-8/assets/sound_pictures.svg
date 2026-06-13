@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="980" viewBox="0 0 1420 980" role="img" aria-label="Sound picture worksheet">
+  <defs><style>.title{font:700 60px Arial,Helvetica,sans-serif;fill:#222}.n{font:700 58px Arial;fill:#444}.line{stroke:#aaa;stroke-width:5}.pink{fill:#d64c97}.word{font:500 54px Arial;fill:#777}</style></defs>
+  <rect width="1420" height="980" fill="#fff"/>
+  <text x="0" y="82" class="title">Write the words for the sound pictures.</text>
+  <line x1="0" y1="190" x2="695" y2="190" class="line"/><line x1="755" y1="190" x2="1420" y2="190" class="line"/>
+  <line x1="0" y1="400" x2="695" y2="400" class="line"/><line x1="755" y1="400" x2="1420" y2="400" class="line"/>
+  <line x1="0" y1="615" x2="695" y2="615" class="line"/><line x1="755" y1="615" x2="1420" y2="615" class="line"/>
+  <line x1="0" y1="830" x2="695" y2="830" class="line"/><line x1="755" y1="830" x2="1420" y2="830" class="line"/>
+  <g transform="translate(110 220)"><rect width="170" height="150" fill="#fdeaf5"/><path d="M44 108q40-42 90 0" fill="none" stroke="#555" stroke-width="8"/><path d="M80 32c38 42 38 82 0 124-38-42-38-82 0-124z" fill="none" stroke="#d64c97" stroke-width="15"/></g>
+  <text x="318" y="320" class="word">bike</text>
+  <text x="2" y="530" class="n">1</text><g transform="translate(110 435)"><rect width="170" height="150" fill="#fdeaf5"/><path d="M46 92h82q42 0 42-42" fill="none" stroke="#555" stroke-width="8"/><path d="M84 32v94" stroke="#d64c97" stroke-width="17"/></g>
+  <text x="2" y="745" class="n">2</text><g transform="translate(110 650)"><rect width="170" height="150" fill="#fdeaf5"/><circle cx="82" cy="70" r="54" fill="none" stroke="#555" stroke-width="8"/><path d="M82 28v92" stroke="#d64c97" stroke-width="16"/><path d="M120 112l38 38" stroke="#555" stroke-width="8"/></g>
+  <text x="760" y="320" class="n">3</text><g transform="translate(835 220)"><rect width="170" height="150" fill="#fdeaf5"/><path d="M84 32c44 46 44 82 0 124-44-46-44-82 0-124z" fill="none" stroke="#d64c97" stroke-width="14"/><path d="M42 100q42 38 86 0t50 0" fill="none" stroke="#555" stroke-width="8"/></g>
+  <text x="760" y="530" class="n">4</text><g transform="translate(835 435)"><rect width="170" height="150" fill="#fdeaf5"/><path d="M44 106h92q34 0 34-34V46H32v58q0 34 12 34z" fill="none" stroke="#555" stroke-width="8"/><path d="M82 30v112M40 75h94" stroke="#d64c97" stroke-width="16"/></g>
+  <text x="760" y="745" class="n">5</text><g transform="translate(835 650)"><rect width="170" height="150" fill="#fdeaf5"/><path d="M82 36c38 42 38 82 0 124-38-42-38-82 0-124z" fill="none" stroke="#d64c97" stroke-width="15"/><path d="M36 102q48-34 96 0t52 0" fill="none" stroke="#555" stroke-width="8"/></g>
+</svg>

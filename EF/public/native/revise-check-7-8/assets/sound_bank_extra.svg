@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="390" viewBox="0 0 740 390" role="img" aria-label="Extra sound pictures">
+  <defs><style>.t{font:700 54px Arial,Helvetica,sans-serif;fill:#222}.pink{fill:#d64c97}</style></defs>
+  <rect width="740" height="390" fill="#fff"/>
+  <text x="20" y="70" class="t">Look at more</text>
+  <text x="20" y="140" class="t">sounds in <tspan font-weight="900">i</tspan>, <tspan font-weight="900">a</tspan>, and <tspan font-weight="900">or</tspan>.</text>
+  <g transform="translate(72 200)"><rect width="130" height="120" fill="#fdeaf5"/><path d="M68 26c38 42 38 70 0 104-38-34-38-62 0-104z" fill="none" stroke="#d64c97" stroke-width="12"/><path d="M34 78q36 28 72 0t40 0" fill="none" stroke="#555" stroke-width="7"/></g>
+  <g transform="translate(272 200)"><rect width="130" height="120" fill="#fdeaf5"/><circle cx="64" cy="64" r="42" fill="none" stroke="#555" stroke-width="7"/><path d="M64 25v82" stroke="#d64c97" stroke-width="13"/></g>
+  <g transform="translate(472 200)"><rect width="130" height="120" fill="#fdeaf5"/><path d="M35 85q58-58 100 0" fill="none" stroke="#555" stroke-width="7"/><text x="42" y="82" font-family="Arial" font-weight="900" font-size="70" class="pink">or</text></g>
+</svg>
