@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1542" viewBox="0 0 4096 1542" role="img" aria-labelledby="title desc">
+  <title id="title">Morning vocabulary objects</title>
+  <desc id="desc">Vector vocabulary pictures for avocado and bath.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#172027" flood-opacity=".16"/>
+    </filter>
+    <style>
+      .card{fill:#fffdf8;stroke:#cfdde4;stroke-width:8;filter:url(#shadow)}
+      .n{font:900 120px Arial,Helvetica,sans-serif;fill:#168248}
+      .word{font:900 96px Arial,Helvetica,sans-serif;fill:#172027}
+      .line{fill:none;stroke:#172027;stroke-width:22;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="4096" height="1542" fill="#eef6f1"/>
+  <g transform="translate(260 170)">
+    <g>
+      <rect class="card" width="1640" height="1120" rx="50"/>
+      <text class="n" x="90" y="150">1</text>
+      <path d="M820 210c210 0 380 180 380 402s-170 402-380 402-380-180-380-402 170-402 380-402z" fill="#2e8a54" stroke="#172027" stroke-width="18"/>
+      <path d="M820 300c160 0 290 140 290 312s-130 312-290 312-290-140-290-312 130-312 290-312z" fill="#c9e289"/>
+      <circle cx="820" cy="625" r="110" fill="#7b4a2f" stroke="#172027" stroke-width="14"/>
+      <text class="word" x="820" y="1045" text-anchor="middle">avocado</text>
+    </g>
+    <g transform="translate(1936 0)">
+      <rect class="card" width="1640" height="1120" rx="50"/>
+      <text class="n" x="90" y="150">2</text>
+      <path d="M405 652h830c75 0 122 70 96 140l-58 156H365l-58-156c-26-70 21-140 98-140z" fill="#bfe5f4" stroke="#172027" stroke-width="18"/>
+      <path class="line" d="M492 652V420c0-120 96-216 216-216h20"/>
+      <path d="M730 190h150v80H730z" fill="#8fd0e8" stroke="#172027" stroke-width="16"/>
+      <path class="line" d="M930 652v-70M1030 652v-70"/>
+      <circle cx="540" cy="835" r="30" fill="#fff"/>
+      <circle cx="660" cy="835" r="22" fill="#fff"/>
+      <text class="word" x="820" y="1045" text-anchor="middle">bath</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1625" viewBox="0 0 4096 1625" role="img" aria-labelledby="title desc">
+  <title id="title">Pronunciation y table</title>
+  <desc id="desc">Vector pronunciation table for yacht and usually sound groups.</desc>
+  <rect width="4096" height="1625" fill="#fffdf8"/>
+  <g fill="none" stroke="#cfdde4" stroke-width="8">
+    <rect x="120" y="120" width="3856" height="1180" rx="34"/>
+    <path d="M120 420h3856M2048 120v1180"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+    <text x="1084" y="320" font-size="130" font-weight="900" fill="#c41486">yacht</text>
+    <text x="3012" y="320" font-size="130" font-weight="900" fill="#c41486">usually</text>
+    <text x="1084" y="610" font-size="112" font-weight="850" fill="#172027">yes</text>
+    <text x="1084" y="790" font-size="112" font-weight="850" fill="#172027">you</text>
+    <text x="1084" y="970" font-size="112" font-weight="850" fill="#172027">your</text>
+    <text x="1084" y="1150" font-size="112" font-weight="850" fill="#172027">young</text>
+    <text x="3012" y="610" font-size="112" font-weight="850" fill="#172027">usually</text>
+    <text x="3012" y="790" font-size="112" font-weight="850" fill="#172027">university</text>
+    <text x="3012" y="970" font-size="112" font-weight="850" fill="#172027">music</text>
+    <text x="3012" y="1150" font-size="112" font-weight="850" fill="#172027">computer</text>
+  </g>
+</svg>
