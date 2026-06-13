@@ -1,18 +1,20 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-pdfmatch1";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-pdfmatch1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-pdfmatch1";
-import { registerShellComponents } from "./src/components/index.js?v=20260614-pdfmatch1";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-pdfmatch1";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-pdfmatch1";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-pdfmatch1";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-pdfmatch1";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-pdfmatch1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-progress1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-progress1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-progress1";
+import { registerShellComponents } from "./src/components/index.js?v=20260614-progress1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-progress1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-progress1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-progress1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-progress1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-progress1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
 const STORAGE_LMS_NOTES = "ef-beginner-lms-notes";
 const STORAGE_LMS_WORDS = "ef-beginner-lms-words";
 const STORAGE_LMS_ANSWERS = "ef-beginner-lms-answer-model";
+const STORAGE_LMS_COURSE_PROGRESS = "ef-beginner-lms-course-progress";
+const STORAGE_LMS_LAST_SAVE = "ef-beginner-lms-last-save";
 const isAuthorMode = new URLSearchParams(location.search).get("mode") === "author";
 
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -90,6 +92,7 @@ let customFields = loadJson(STORAGE_CUSTOM, {});
 let lmsNotes = loadJson(STORAGE_LMS_NOTES, {});
 let lmsWords = loadJson(STORAGE_LMS_WORDS, defaultLmsWords());
 let lmsAnswerModel = answersState.value;
+let lmsCourseProgress = loadJson(STORAGE_LMS_COURSE_PROGRESS, null);
 const mountedShellComponents = registerShellComponents(document);
 document.documentElement.dataset.lmsComponents = String(mountedShellComponents.length);
 document.documentElement.dataset.lmsMountedComponents = String(mountedShellComponents.filter((item) => item.mounted).length);
@@ -6874,10 +6877,52 @@ function populateLessonRail() {
   });
 }
 
+function currentCourseProgress() {
+  if (!manifest) return null;
+
+  const savedProgressPage = storedCourseProgressPage();
+  const lastSavePage = Number(loadJson(STORAGE_LMS_LAST_SAVE, {})?.page || 0);
+  const answerPage = highestAnsweredPage();
+  const maxPage = clamp(
+    Math.max(1, currentPage, savedProgressPage, lastSavePage, answerPage),
+    1,
+    manifest.pageCount
+  );
+  const percent = Math.max(1, Math.round((maxPage / manifest.pageCount) * 100));
+
+  if (
+    !lmsCourseProgress ||
+    Number(lmsCourseProgress.maxPage || lmsCourseProgress.page || 0) !== maxPage ||
+    Number(lmsCourseProgress.pageCount || 0) !== Number(manifest.pageCount)
+  ) {
+    lmsCourseProgress = {
+      maxPage,
+      pageCount: manifest.pageCount,
+      percent,
+      updatedAt: new Date().toISOString()
+    };
+    saveJson(STORAGE_LMS_COURSE_PROGRESS, lmsCourseProgress);
+  }
+
+  return { maxPage, pageCount: manifest.pageCount, percent };
+}
+
+function storedCourseProgressPage() {
+  if (typeof lmsCourseProgress === "number") return Number(lmsCourseProgress) || 0;
+  return Number(lmsCourseProgress?.maxPage || lmsCourseProgress?.page || 0);
+}
+
+function highestAnsweredPage() {
+  return Object.values(lmsAnswerModel).reduce((maxPage, entry) => {
+    const page = Number(entry?.page || 0);
+    return Number.isFinite(page) ? Math.max(maxPage, page) : maxPage;
+  }, 0);
+}
+
 function syncLmsUi(pages = visiblePageNumbers()) {
   const lesson = nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage);
   const nativeIndex = Math.max(0, nativeLessons.findIndex((item) => item.startPage <= currentPage && item.endPage >= currentPage));
-  const progress = manifest ? Math.max(1, Math.round((currentPage / manifest.pageCount) * 100)) : null;
+  const progress = currentCourseProgress()?.percent || null;
   const lessonStart = lesson.startPage || lesson.page || currentPage;
   const lessonEnd = lesson.endPage || lesson.page || currentPage;
   const lessonPercent = Math.round(((currentPage - lessonStart + 1) / Math.max(1, lessonEnd - lessonStart + 1)) * 100);
@@ -7198,7 +7243,7 @@ function updateLmsSaveTime() {
 function saveCurrentWork() {
   setText(saveStatus, "Сохраняем...");
   setText(autosaveTime, "Сохраняем...");
-  saveJson("ef-beginner-lms-last-save", {
+  saveJson(STORAGE_LMS_LAST_SAVE, {
     page: currentPage,
     lessonId: currentLessonLabel(),
     savedAt: new Date().toISOString()
@@ -7915,5 +7960,7 @@ function resetIfRequested() {
   localStorage.removeItem(STORAGE_VALUES);
   localStorage.removeItem(STORAGE_CUSTOM);
   localStorage.removeItem(STORAGE_LMS_ANSWERS);
+  localStorage.removeItem(STORAGE_LMS_COURSE_PROGRESS);
+  localStorage.removeItem(STORAGE_LMS_LAST_SAVE);
   history.replaceState(null, "", `${location.pathname}${location.hash || ""}`);
 }

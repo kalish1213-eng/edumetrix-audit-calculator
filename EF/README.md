@@ -65,7 +65,7 @@ Expected summary: `Status: ok`, 137 pages, 66 native modules, 2829 interactive f
 For browser acceptance checks, open:
 
 ```text
-acceptance.html?v=20260614-pdfmatch1
+acceptance.html?v=20260614-progress1
 ```
 
 The runner covers opening, student mode, answer saving, navigation, checking, reset confirmation, responsive widths, and contextual AI hints. It snapshots EF localStorage before running and restores it when the run finishes.

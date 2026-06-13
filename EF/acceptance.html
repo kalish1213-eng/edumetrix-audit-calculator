@@ -145,7 +145,7 @@
     </main>
 
     <script type="module">
-      const APP_VERSION = "20260614-pdfmatch1";
+      const APP_VERSION = "20260614-progress1";
       const APP_URL = `index.html?v=${APP_VERSION}`;
       const STORAGE_PREFIXES = ["ef-"];
       const frame = document.querySelector("#appFrame");
@@ -245,6 +245,11 @@
         return style.display !== "none" && style.visibility !== "hidden" && (node.offsetParent !== null || node.getClientRects().length > 0);
       }
 
+      function topCoursePercent() {
+        const text = appDocument().querySelector("#topProgressText")?.textContent || "";
+        return Number(text.match(/\d+/)?.[0] || 0);
+      }
+
       async function runTest(name, test) {
         try {
           await test();
@@ -305,7 +310,16 @@
             assert(appWindow().location.hash === "#page=1", "URL hash did not return to #page=1");
           });
 
-          await test("Test 5: Checking", async () => {
+          await test("Test 5: Course progress", async () => {
+            await loadPage(19);
+            const after3A = topCoursePercent();
+            assert(after3A >= 14, `Course progress on 3A is too low: ${after3A}%`);
+            await loadPage(13);
+            const after2A = topCoursePercent();
+            assert(after2A >= after3A, `Course progress regressed from ${after3A}% to ${after2A}%`);
+          });
+
+          await test("Test 6: Checking", async () => {
             await loadPage(7);
             setNativeField("p7-photo-i", "I");
             appDocument().querySelector("#checkPage").click();
@@ -315,7 +329,7 @@
             assert(/1 верно/.test(stats), "Correct count did not update");
           });
 
-          await test("Test 6: Reset", async () => {
+          await test("Test 7: Reset", async () => {
             await loadPage(9);
             setNativeField("b2_france", "France");
             await loadPage(7);
@@ -332,7 +346,7 @@
             assert(nativeField("b2_france").value === "France", "Reset affected another page/module");
           });
 
-          await test("Test 7: Responsive", async () => {
+          await test("Test 8: Responsive", async () => {
             for (const width of [1440, 1280, 768, 390]) {
               await loadPage(7, width);
               assert(appDocument().documentElement.scrollWidth <= appDocument().documentElement.clientWidth + 2, `${width}px has page horizontal overflow`);
@@ -341,7 +355,7 @@
             frame.style.width = "100%";
           });
 
-          await test("Test 8: AI panel", async () => {
+          await test("Test 9: AI panel", async () => {
             await loadPage(7);
             appDocument().querySelector('[data-panel="ai"]').click();
             const grammar = appDocument().querySelector("#grammarTitle").textContent;
