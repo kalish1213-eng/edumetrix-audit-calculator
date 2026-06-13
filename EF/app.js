@@ -277,7 +277,7 @@ const nativeLessons = [
     startPage: 63,
     endPage: 64,
     title: "10B Where were you?",
-    url: "public/native/10b-where-were-you/index.html?v=20260612-10b2"
+    url: "public/native/10b-where-were-you/index.html?v=20260613-10bphoto1"
   },
   {
     startPage: 65,

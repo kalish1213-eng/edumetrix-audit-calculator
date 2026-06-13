@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1145 1013" width="1145" height="1013" role="img" aria-labelledby="title desc">
+  <title id="title">Jason's wife asleep in bed</title>
+  <desc id="desc">A woman sleeping in a white bed, used as the first example answer.</desc>
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f3c19b"/><stop offset="1" stop-color="#bd7359"/></linearGradient>
+    <linearGradient id="linen" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset=".6" stop-color="#f5e4ee"/><stop offset="1" stop-color="#d7cbd4"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="1145" height="1013" fill="#f7eef4"/>
+  <rect y="0" width="1145" height="8" fill="#6fb14b"/>
+  <rect x="0" y="690" width="1145" height="323" fill="#eee8ec"/>
+  <path d="M20 152c250-142 551-149 902-20 110 40 186 95 223 166v715H0z" fill="url(#linen)"/>
+  <path d="M0 670c252-88 516-94 792-17 153 43 270 107 353 191v169H0z" fill="#fff"/>
+  <g filter="url(#shadow)">
+    <path d="M270 152c145-90 316-48 404 93 97 156 21 359-154 415-160 51-337-52-382-218-33-124 11-231 132-290z" fill="url(#skin)"/>
+    <path d="M189 240c91-174 297-225 472-103 60 42 94 104 100 185-85-94-205-134-360-120-79 7-150 20-212 38z" fill="#6b4b30"/>
+    <path d="M160 272c43-95 115-155 216-179-92-28-186 8-240 88-38 56-47 110-28 162z" fill="#845c38"/>
+    <ellipse cx="370" cy="375" rx="20" ry="13" fill="#684333" transform="rotate(-18 370 375)"/>
+    <ellipse cx="520" cy="408" rx="20" ry="13" fill="#684333" transform="rotate(-18 520 408)"/>
+    <path d="M344 342c48-20 89-16 124 13M502 369c46-7 82 6 109 39" stroke="#7f513c" stroke-width="13" stroke-linecap="round" fill="none"/>
+    <path d="M386 525c58 41 124 53 199 37" stroke="#8a443d" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M552 545c255-2 454 112 593 342v126H337c-64-163 8-319 215-468z" fill="#fff7fb"/>
+    <path d="M482 595c-150 30-297 22-441-25v443h425c-100-152-95-291 16-418z" fill="#f7edf4"/>
+    <path d="M161 500c-74 54-116 120-126 199" stroke="#b88e80" stroke-width="50" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1587 1015" width="1587" height="1015" role="img" aria-labelledby="title desc">
+  <title id="title">Old Bank Hotel Oxford</title>
+  <desc id="desc">Stone hotel facade with large Old Bank Hotel sign.</desc>
+  <defs>
+    <linearGradient id="stone" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#c5a868"/><stop offset=".5" stop-color="#8f7448"/><stop offset="1" stop-color="#d0b980"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="7" dy="9" stdDeviation="6" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1587" height="1015" fill="#eef5e8"/>
+  <rect x="12" y="28" width="1563" height="950" rx="18" fill="url(#stone)" stroke="#75b84d" stroke-width="12"/>
+  <g opacity=".25" stroke="#6d5534" stroke-width="7">
+    <path d="M40 130h1500M40 235h1500M40 340h1500M40 445h1500M40 550h1500M40 655h1500M40 760h1500"/>
+    <path d="M185 28v820M365 28v820M545 28v820M725 28v820M905 28v820M1085 28v820M1265 28v820M1445 28v820"/>
+  </g>
+  <rect x="175" y="178" width="390" height="520" fill="#cbd8cf" stroke="#4c402f" stroke-width="18"/>
+  <rect x="1035" y="170" width="410" height="520" fill="#cbd8cf" stroke="#4c402f" stroke-width="18"/>
+  <g stroke="#6f765e" stroke-width="10">
+    <path d="M370 178v520M175 350h390M175 520h390"/>
+    <path d="M1240 170v520M1035 340h410M1035 510h410"/>
+  </g>
+  <rect x="160" y="690" width="430" height="92" fill="#60715f"/>
+  <rect x="1020" y="682" width="440" height="92" fill="#60715f"/>
+  <g fill="#3a653e"><circle cx="242" cy="675" r="42"/><circle cx="350" cy="670" r="50"/><circle cx="480" cy="675" r="42"/><circle cx="1120" cy="668" r="45"/><circle cx="1248" cy="662" r="52"/><circle cx="1370" cy="670" r="44"/></g>
+  <rect x="0" y="845" width="1587" height="56" fill="#6d5738"/>
+  <g fill="#3c2c1c"><rect x="20" y="900" width="1547" height="65"/><g opacity=".8"><rect x="65" y="905" width="32" height="55"/><rect x="135" y="905" width="32" height="55"/><rect x="205" y="905" width="32" height="55"/><rect x="275" y="905" width="32" height="55"/><rect x="345" y="905" width="32" height="55"/><rect x="415" y="905" width="32" height="55"/><rect x="485" y="905" width="32" height="55"/><rect x="555" y="905" width="32" height="55"/><rect x="625" y="905" width="32" height="55"/><rect x="695" y="905" width="32" height="55"/><rect x="765" y="905" width="32" height="55"/><rect x="835" y="905" width="32" height="55"/><rect x="905" y="905" width="32" height="55"/><rect x="975" y="905" width="32" height="55"/><rect x="1045" y="905" width="32" height="55"/><rect x="1115" y="905" width="32" height="55"/><rect x="1185" y="905" width="32" height="55"/><rect x="1255" y="905" width="32" height="55"/><rect x="1325" y="905" width="32" height="55"/><rect x="1395" y="905" width="32" height="55"/><rect x="1465" y="905" width="32" height="55"/></g></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900" text-anchor="middle" fill="#fff4d4" filter="url(#shadow)">
+    <text x="794" y="315" font-size="132">OLD</text>
+    <text x="794" y="515" font-size="132">BANK</text>
+    <text x="794" y="715" font-size="132">HOTEL</text>
+  </g>
+</svg>
