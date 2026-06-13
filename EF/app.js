@@ -259,7 +259,7 @@ const nativeLessons = [
     startPage: 57,
     endPage: 58,
     title: "9B Working undercover",
-    url: "public/native/9b-working-undercover/index.html?v=20260612-9b2"
+    url: "public/native/9b-working-undercover/index.html?v=20260613-9bphoto1"
   },
   {
     startPage: 59,

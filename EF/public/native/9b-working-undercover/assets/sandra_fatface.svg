@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1530 1000" width="1530" height="1000" role="img" aria-labelledby="title desc">
+  <title id="title">Work experience at a clothes shop</title>
+  <desc id="desc">A smiling teenage shop assistant outside a clothes shop in London.</desc>
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f5caa8"/><stop offset="1" stop-color="#c98365"/></linearGradient>
+    <linearGradient id="hair" x1="0" x2="1"><stop stop-color="#dfbd7d"/><stop offset=".55" stop-color="#b4783f"/><stop offset="1" stop-color="#74451f"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1530" height="1000" fill="#b6aaa0"/>
+  <rect x="520" y="0" width="1010" height="1000" fill="#b49d84"/>
+  <g stroke="#806f5e" stroke-width="10" opacity=".55">
+    <path d="M560 45h940M540 105h960M565 165h925M545 225h955M565 285h925M540 345h960"/>
+  </g>
+  <rect x="790" y="245" width="635" height="555" fill="#5c432f"/>
+  <rect x="840" y="305" width="235" height="435" fill="#e6a955"/>
+  <rect x="1105" y="305" width="270" height="435" fill="#eeaf5c"/>
+  <path d="M795 245h630v70H795z" fill="#d7d0c9"/>
+  <text x="1108" y="205" font-family="Arial, Helvetica, sans-serif" font-size="126" font-weight="700" fill="#f0f0ed" text-anchor="middle">fat face</text>
+  <circle cx="745" cy="170" r="76" fill="#d7d0c9"/>
+  <path d="M700 170c24-38 76-45 116-13M709 193c37 29 76 31 119 6" fill="none" stroke="#8e8d8a" stroke-width="13" stroke-linecap="round"/>
+  <g opacity=".72">
+    <path d="M930 735h110V505c-61-38-99-31-110 0z" fill="#24344a"/>
+    <circle cx="985" cy="470" r="40" fill="#c58a6e"/>
+    <path d="M1188 735h90V535c-53-31-88-27-105 15z" fill="#232b32"/>
+    <circle cx="1235" cy="502" r="35" fill="#c58a6e"/>
+    <path d="M1354 735h70V570c-40-24-66-16-77 16z" fill="#2e4540"/>
+  </g>
+  <rect x="0" y="830" width="1530" height="170" fill="#817e79"/>
+  <g filter="url(#shadow)">
+    <path d="M42 1000c30-254 123-435 279-544 107 90 230 91 367 2 153 121 238 298 271 542z" fill="#111"/>
+    <path d="M195 414c-125-100-82-327 88-386 145-50 352 16 416 190 51 137 19 317-77 429-152 21-299 3-441-54-39-54-34-116 14-179z" fill="url(#hair)"/>
+    <path d="M198 214c86-136 298-156 414-46 84 79 93 229 39 352-68 154-310 177-432 44-85-94-93-236-21-350z" fill="url(#skin)"/>
+    <path d="M174 286c108-93 230-159 367-196 54 45 101 105 139 180-8-161-119-263-280-281-153-17-259 89-226 297z" fill="url(#hair)"/>
+    <path d="M248 375c53-33 103-33 150 0m123 2c51-35 101-34 152 0" fill="none" stroke="#71472f" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="335" cy="428" rx="25" ry="18" fill="#1d1714"/>
+    <ellipse cx="575" cy="428" rx="25" ry="18" fill="#1d1714"/>
+    <path d="M439 437c-19 75-38 125-23 147 20 29 89 27 114-1" fill="none" stroke="#b36e5b" stroke-width="15" stroke-linecap="round"/>
+    <path d="M306 662c98 88 242 95 351 2" fill="none" stroke="#7d3e36" stroke-width="24" stroke-linecap="round"/>
+    <path d="M350 637c77 34 166 34 260 0" stroke="#fff1e6" stroke-width="18" stroke-linecap="round"/>
+    <path d="M294 795h390v205H164z" fill="#080808"/>
+    <path d="M367 815c63 52 151 50 220 0l-33 185H390z" fill="#151515"/>
+    <text x="475" y="949" font-family="Arial, Helvetica, sans-serif" font-size="128" font-weight="700" fill="#fff" text-anchor="middle">00</text>
+  </g>
+</svg>

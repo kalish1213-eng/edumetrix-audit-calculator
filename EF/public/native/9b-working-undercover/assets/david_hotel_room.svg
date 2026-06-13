@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2240 1340" width="2240" height="1340" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel room work</title>
+  <desc id="desc">The hotel manager working undercover in a bedroom, wearing a white polo shirt and holding towels.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#b06b24"/><stop offset=".5" stop-color="#d58b31"/><stop offset="1" stop-color="#8d4f21"/></linearGradient>
+    <linearGradient id="linen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#e8edf0"/><stop offset="1" stop-color="#cfd8de"/></linearGradient>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#efbd92"/><stop offset="1" stop-color="#b86a4d"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#000" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="2240" height="1340" fill="#1f2225"/>
+  <rect x="70" y="62" width="2100" height="1215" rx="12" fill="#111"/>
+  <rect x="95" y="88" width="2050" height="1165" fill="#eee"/>
+  <rect x="96" y="88" width="780" height="730" fill="url(#wood)"/>
+  <rect x="875" y="88" width="1270" height="730" fill="#d1b36d"/>
+  <g opacity=".23" stroke="#6c3f1e" stroke-width="8">
+    <path d="M120 150h720M110 260h710M130 390h690M120 540h735M125 690h720"/>
+  </g>
+  <path d="M226 238c65-92 191-130 304-80 56 25 99 64 130 113" fill="none" stroke="#1a1917" stroke-width="50" stroke-linecap="round" opacity=".72"/>
+  <path d="M612 143c94-68 212-37 279 56" fill="none" stroke="#1a1917" stroke-width="50" stroke-linecap="round" opacity=".72"/>
+  <rect x="1135" y="155" width="320" height="170" fill="#d6c184" opacity=".75"/>
+  <rect x="1730" y="180" width="330" height="405" fill="#24272c"/>
+  <rect x="1765" y="235" width="275" height="245" rx="10" fill="#8c8d95"/>
+  <circle cx="1924" cy="538" r="30" fill="#16191e"/>
+  <rect x="260" y="735" width="440" height="270" fill="#7a3d20"/>
+  <rect x="295" y="760" width="355" height="76" fill="#9b542d"/>
+  <rect x="301" y="855" width="344" height="90" fill="#6d351d"/>
+  <path d="M96 746c345-100 667-89 957 70 373-132 751-126 1092-22v459H96z" fill="url(#linen)"/>
+  <path d="M870 900c-245 15-477 110-691 278h884c50-115 11-206-193-278z" fill="#f7f8f7"/>
+  <path d="M887 1160c210-155 443-219 699-191 159 18 319 72 480 165v119H728z" fill="#dfe7eb"/>
+  <g filter="url(#shadow)">
+    <path d="M1120 508c74-62 185-60 258-1 86 70 95 205 22 289-70 80-198 84-280 11-89-79-87-226 0-299z" fill="url(#skin)"/>
+    <path d="M1091 420c110-96 270-64 329 61-77-47-173-56-279-30-29 7-45 2-50-31z" fill="#77716d"/>
+    <path d="M1050 1215l76-405c61 63 221 72 298-7l142 412z" fill="#eef6f8"/>
+    <path d="M862 1215c24-230 121-395 264-405 64 167 214 176 297-7 173 24 278 161 333 412z" fill="#f5fbfd"/>
+    <path d="M987 912c-124 35-207 57-300 54l-112-11c-39-4-61 39-34 68 77 81 257 91 488 7z" fill="#f7fbfd"/>
+    <path d="M717 965c-125-23-230 13-315 96 78 77 205 104 348 80 110-19 186-76 232-171-94 28-181 32-265-5z" fill="#eef3f5"/>
+    <path d="M1548 922c157 69 285 166 383 291h-330c-55-126-107-225-159-298z" fill="#dce6ea"/>
+    <ellipse cx="1182" cy="616" rx="23" ry="17" fill="#221c18"/>
+    <ellipse cx="1322" cy="616" rx="23" ry="17" fill="#221c18"/>
+    <path d="M1175 565c40-24 83-28 126-11M1307 559c47-10 87-2 120 23" fill="none" stroke="#51413a" stroke-width="16" stroke-linecap="round"/>
+    <path d="M1220 721c55 48 124 49 182 0" fill="none" stroke="#7e4037" stroke-width="18" stroke-linecap="round"/>
+    <rect x="1228" y="908" width="140" height="105" rx="8" fill="#f7f7f7" stroke="#d7d7d7" stroke-width="6"/>
+    <circle cx="1299" cy="946" r="29" fill="#27966e"/>
+    <path d="M1272 955c32-43 73-36 97 0" fill="none" stroke="#0c684d" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1275 1000h91" stroke="#a7b0b3" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 580" width="1190" height="580" role="img" aria-labelledby="title desc">
+  <title id="title">Broken oven</title>
+  <desc id="desc">A worker kneeling in front of a broken commercial oven with a caption.</desc>
+  <defs>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d8a470"/><stop offset="1" stop-color="#9f6338"/></linearGradient>
+    <linearGradient id="steel" x1="0" x2="1"><stop stop-color="#f6f7f8"/><stop offset=".5" stop-color="#b7c2c7"/><stop offset="1" stop-color="#65737c"/></linearGradient>
+  </defs>
+  <rect width="1190" height="580" fill="#f4f6f6"/>
+  <rect y="405" width="1190" height="175" fill="url(#floor)"/>
+  <rect x="0" y="0" width="392" height="580" fill="#d7e7f7"/>
+  <rect x="78" y="42" width="235" height="365" rx="12" fill="url(#steel)" stroke="#74848d" stroke-width="8"/>
+  <circle cx="125" cy="86" r="18" fill="#23313a"/><circle cx="184" cy="86" r="18" fill="#23313a"/><circle cx="243" cy="86" r="18" fill="#23313a"/>
+  <rect x="420" y="86" width="310" height="333" rx="10" fill="#202326"/>
+  <rect x="450" y="125" width="252" height="232" rx="8" fill="#101113" stroke="#343a3f" stroke-width="10"/>
+  <path d="M470 360h210" stroke="#76838a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M537 86l-28-58h104l-24 58z" fill="#d49b7b"/>
+  <path d="M515 26c14-25 54-24 68 0 12 20 5 55-34 68-40-13-47-49-34-68z" fill="#f0b18b"/>
+  <path d="M592 157c42 18 76 53 91 101l132 55-28 62-164-42c-25-47-57-77-98-90z" fill="#2d3340"/>
+  <path d="M680 314l93 11" stroke="#d99c74" stroke-width="37" stroke-linecap="round"/>
+  <path d="M500 121c81 23 128 79 142 166l-96 43-82-169z" fill="#4f5967"/>
+  <path d="M467 291c-70 52-98 117-84 196h128c-10-75 11-126 63-155z" fill="#abb3b8"/>
+  <path d="M542 327l235 70c37 11 36 64-2 73l-172 41" fill="none" stroke="#6f7980" stroke-width="72" stroke-linecap="round"/>
+  <path d="M621 517l173-42" stroke="#24282d" stroke-width="38" stroke-linecap="round"/>
+  <path d="M423 506c39 27 83 31 134 13" fill="none" stroke="#1e2328" stroke-width="38" stroke-linecap="round"/>
+  <rect x="360" y="489" width="830" height="91" fill="#262421" opacity=".92"/>
+  <text x="407" y="553" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" fill="#fff">One of the ovens is broken.</text>
+</svg>

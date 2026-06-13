@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2105 590" width="2105" height="590" role="img" aria-labelledby="title desc">
+  <title id="title">Sound icons row</title>
+  <desc id="desc">Six pronunciation icons for egg, boot, cat, phone, owl, and tree.</desc>
+  <rect width="2105" height="590" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="160" y="74" font-size="58" fill="#555">cap</text>
+    <text x="350" y="74" font-size="58" fill="#555">coat</text>
+    <text x="560" y="74" font-size="58" fill="#555">dress</text>
+    <text x="760" y="74" font-size="58" fill="#555">hat</text>
+    <text x="985" y="74" font-size="58" fill="#555">jacket</text>
+    <text x="1210" y="74" font-size="58" fill="#555">jeans</text>
+    <text x="1425" y="74" font-size="58" fill="#555">shoes</text>
+    <text x="1615" y="74" font-size="58" fill="#555">suit</text>
+    <text x="1815" y="74" font-size="58" fill="#555">sweater</text>
+    <text x="2030" y="74" font-size="58" fill="#555">trousers</text>
+    <path d="M0 118h2105M0 187h2105" stroke="#aaa" stroke-width="10"/>
+    <g transform="translate(0 185)">
+      <g>
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="165" font-size="150" fill="#d21278">e</text>
+        <path d="M123 178h110M123 206h110" stroke="#626262" stroke-width="11"/>
+        <text x="178" y="372" font-size="58" fill="#555">egg</text>
+      </g>
+      <g transform="translate(350 0)">
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="166" font-size="150" fill="#d21278">u:</text>
+        <path d="M107 214c68 35 145 36 209 0 11 67-31 103-105 105-79 2-124-33-104-105z" fill="none" stroke="#626262" stroke-width="12"/>
+        <text x="178" y="372" font-size="58" fill="#555">boot</text>
+      </g>
+      <g transform="translate(700 0)">
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="166" font-size="150" fill="#d21278">æ</text>
+        <path d="M116 210c7-84 96-131 162-62 30 31 38 70 24 112" fill="none" stroke="#626262" stroke-width="12"/>
+        <text x="178" y="372" font-size="58" fill="#555">cat</text>
+      </g>
+      <g transform="translate(1050 0)">
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="166" font-size="150" fill="#d21278">əʊ</text>
+        <path d="M92 208c68-96 169-96 237 0-62 45-169 45-237 0z" fill="none" stroke="#626262" stroke-width="12"/>
+        <text x="178" y="372" font-size="58" fill="#555">phone</text>
+      </g>
+      <g transform="translate(1400 0)">
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="166" font-size="150" fill="#d21278">aʊ</text>
+        <circle cx="178" cy="187" r="100" fill="none" stroke="#626262" stroke-width="12"/>
+        <path d="M98 245l-33 44m193-44l33 44" stroke="#626262" stroke-width="12" stroke-linecap="round"/>
+        <text x="178" y="372" font-size="58" fill="#555">owl</text>
+      </g>
+      <g transform="translate(1750 0)">
+        <rect x="28" y="22" width="300" height="260" fill="#f8e7f3"/><text x="178" y="166" font-size="150" fill="#d21278">i:</text>
+        <path d="M99 214c48-92 112-136 192-131 12 92-15 160-81 205" fill="none" stroke="#626262" stroke-width="12"/>
+        <text x="178" y="372" font-size="58" fill="#555">tree</text>
+      </g>
+    </g>
+    <g stroke="#aaa" stroke-width="7"><path d="M350 187v403M700 187v403M1050 187v403M1400 187v403M1750 187v403"/></g>
+  </g>
+</svg>

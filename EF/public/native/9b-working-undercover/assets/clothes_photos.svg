@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2250 605" width="2250" height="605" role="img" aria-labelledby="title desc">
+  <title id="title">Clothes photos</title>
+  <desc id="desc">Five numbered clothes items: T-shirt, jeans, suit, hat, and jacket.</desc>
+  <defs>
+    <filter id="drop"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity=".18"/></filter>
+    <radialGradient id="badge"><stop stop-color="#fff4ff"/><stop offset="1" stop-color="#e6c4df"/></radialGradient>
+  </defs>
+  <rect width="2250" height="605" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(110 35)" filter="url(#drop)">
+      <circle cx="8" cy="4" r="58" fill="url(#badge)"/><text x="-15" y="25" font-size="86" fill="#111">1</text>
+      <path d="M125 72l108-45 56 69 56-69 108 45-38 128-64-18v285H166V182l-63 18z" fill="#ee2d42"/>
+      <path d="M180 169h157m-154 254h151" stroke="#ca1e31" stroke-width="12" opacity=".45"/>
+    </g>
+    <g transform="translate(540 25)" filter="url(#drop)">
+      <circle cx="10" cy="14" r="58" fill="url(#badge)"/><text x="-14" y="36" font-size="86" fill="#111">2</text>
+      <path d="M183 48h224l35 472c-65 30-131 24-197-18-63 31-125 36-188 12z" fill="#244f70"/>
+      <path d="M209 58c33 78 34 212 36 434m116-435c-44 83-54 217-80 444" fill="none" stroke="#143349" stroke-width="19"/>
+      <path d="M190 124h220M226 203h151M187 310h105M321 298h101" stroke="#5f8ead" stroke-width="10" opacity=".55"/>
+      <circle cx="295" cy="100" r="11" fill="#d8b36a"/>
+    </g>
+    <g transform="translate(945 25)" filter="url(#drop)">
+      <circle cx="8" cy="14" r="58" fill="url(#badge)"/><text x="-15" y="36" font-size="86" fill="#111">3</text>
+      <path d="M122 95c77-63 170-70 279-20l57 433c-131 58-258 61-381 2z" fill="#8d7462"/>
+      <path d="M206 68c-26 125-22 279-4 450m96-447c31 105 36 243 18 414" stroke="#5d493e" stroke-width="22"/>
+      <path d="M118 108c46 63 72 126 78 189m200-204c-44 75-65 150-70 225" fill="none" stroke="#d7c6b7" stroke-width="14"/>
+      <path d="M240 132l44 52 46-54" fill="none" stroke="#3f312b" stroke-width="14"/>
+    </g>
+    <g transform="translate(1385 50)" filter="url(#drop)">
+      <circle cx="-2" cy="-10" r="58" fill="url(#badge)"/><text x="-25" y="12" font-size="86" fill="#111">4</text>
+      <ellipse cx="265" cy="308" rx="235" ry="56" fill="#151923"/>
+      <path d="M102 294c26-158 98-238 214-241 104-3 176 77 205 241-128 48-267 53-419 0z" fill="#202a3c"/>
+      <path d="M98 291c125 46 266 43 421-8" stroke="#687383" stroke-width="17" fill="none"/>
+      <path d="M157 301c105 23 219 19 342-12" stroke="#9a6f57" stroke-width="22" fill="none"/>
+    </g>
+    <g transform="translate(1790 45)" filter="url(#drop)">
+      <circle cx="-4" cy="-5" r="58" fill="url(#badge)"/><text x="-28" y="17" font-size="86" fill="#111">5</text>
+      <path d="M158 71c86-46 173-49 262-4l92 410-141 39-44-239 15 269H206l15-269-46 239-139-39z" fill="#111820"/>
+      <path d="M253 84l54 96 58-96m-58 96v356M211 183h198M144 307h80m197 0h83" stroke="#4d5965" stroke-width="14" fill="none"/>
+      <path d="M242 236h39m70 0h42m-104 122h46" stroke="#d6dde3" stroke-width="10" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
