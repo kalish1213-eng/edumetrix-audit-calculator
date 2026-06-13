@@ -181,7 +181,7 @@ const nativeLessons = [
     startPage: 31,
     endPage: 32,
     title: "5A A big breakfast?",
-    url: "public/native/5a-a-big-breakfast/index.html?v=20260613-5aphoto1"
+    url: "public/native/5a-a-big-breakfast/index.html?v=20260613-5avector1"
   },
   {
     startPage: 33,

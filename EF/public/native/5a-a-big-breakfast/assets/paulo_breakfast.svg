@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2731" viewBox="0 0 4096 2731" role="img" aria-labelledby="title desc">
+  <title id="title">Paulo's breakfast</title>
+  <desc id="desc">Healthy home breakfast with fruit, yogurt, and toast.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9f8ee"/><stop offset="1" stop-color="#fff3d8"/></linearGradient><linearGradient id="table" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7b48b"/><stop offset="1" stop-color="#a86f3e"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity=".22"/></filter></defs>
+  <rect width="4096" height="2731" fill="url(#bg)"/><rect y="1640" width="4096" height="1091" fill="url(#table)"/>
+  <g filter="url(#s)">
+    <ellipse cx="1770" cy="1975" rx="1180" ry="415" fill="#fff" stroke="#d8dde0" stroke-width="24"/>
+    <circle cx="1260" cy="1870" r="170" fill="#f55a49"/><circle cx="1475" cy="1985" r="150" fill="#ffd348"/><circle cx="1695" cy="1840" r="160" fill="#8bc34a"/><circle cx="1925" cy="2005" r="150" fill="#f47f28"/>
+    <path d="M1110 1780c95 62 190 62 285 0M1560 1738c85 60 172 60 258 0M1840 1900c85 58 172 58 258 0" fill="none" stroke="#fff8c9" stroke-width="28" stroke-linecap="round"/>
+    <rect x="2480" y="1385" width="520" height="595" rx="86" fill="#fefefe" stroke="#bfd3dc" stroke-width="22"/>
+    <path d="M2540 1610h400v250c0 112-91 203-203 203s-197-91-197-203z" fill="#f7fbff"/>
+    <ellipse cx="2740" cy="1600" rx="190" ry="54" fill="#eef6fb"/>
+    <path d="M3090 1780l440-130 155 430-440 130z" fill="#e6a348" stroke="#9d641e" stroke-width="18"/>
+    <path d="M3198 1845l325-95 87 240-325 95z" fill="#f6d094"/>
+  </g>
+  <text x="255" y="430" font-family="Arial,Helvetica,sans-serif" font-size="210" font-weight="900" fill="#d7197a">Paulo</text>
+  <text x="260" y="625" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="800" fill="#39434a">fruit, yogurt and toast at home</text>
+</svg>
