@@ -217,7 +217,7 @@ const nativeLessons = [
     startPage: 43,
     endPage: 44,
     title: "7A Have a nice weekend!",
-    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260612-7a2"
+    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260613-7aphoto1"
   },
   {
     startPage: 45,
