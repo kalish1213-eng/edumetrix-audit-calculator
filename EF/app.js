@@ -145,7 +145,7 @@ const nativeLessons = [
     startPage: 19,
     endPage: 20,
     title: "3A Where are my keys?",
-    url: "public/native/3a-where-are-my-keys/index.html?v=20260612-native3a"
+    url: "public/native/3a-where-are-my-keys/index.html?v=20260613-3aphoto1"
   },
   {
     startPage: 21,

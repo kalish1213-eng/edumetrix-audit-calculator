@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2050" height="1260" viewBox="0 0 2050 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Singular and plural chart</title>
+  <desc id="desc">Chart with pencil, laptop, and umbrella examples.</desc>
+  <rect width="2050" height="1260" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="35" y="35" width="1980" height="1190" rx="18" fill="#fff9f8" stroke="#dfd5d2" stroke-width="8"/>
+    <rect x="35" y="35" width="1980" height="150" rx="18" fill="#e7363e"/>
+    <text x="342" y="128" font-size="64" font-weight="900" fill="#fff" text-anchor="middle">Singular</text>
+    <text x="1345" y="128" font-size="64" font-weight="900" fill="#fff" text-anchor="middle">Plural</text>
+    <line x1="1025" y1="35" x2="1025" y2="1225" stroke="#dfd5d2" stroke-width="8"/>
+    <line x1="35" y1="600" x2="2015" y2="600" stroke="#dfd5d2" stroke-width="8"/>
+    <g font-weight="900" fill="#19191b">
+      <text x="115" y="278" font-size="48">1</text>
+      <text x="805" y="278" font-size="48">a pencil</text>
+      <text x="1120" y="278" font-size="48">1</text>
+      <text x="1790" y="278" font-size="48">pencils</text>
+    </g>
+    <g transform="translate(226 262) rotate(-18)">
+      <path d="M0 0L430 0L500 34L430 68L0 68Z" fill="#f4aa39"/>
+      <path d="M430 0L500 34L430 68Z" fill="#f5d2a2"/>
+      <path d="M492 34L430 18L430 50Z" fill="#3d302a"/>
+      <rect x="0" y="0" width="44" height="68" fill="#e7363e"/>
+    </g>
+    <g transform="translate(1212 242) rotate(-7)">
+      <path d="M0 0L310 0L360 24L310 48L0 48Z" fill="#f4aa39"/>
+      <path d="M0 76L310 76L360 100L310 124L0 124Z" fill="#f4aa39"/>
+      <path d="M0 152L310 152L360 176L310 200L0 200Z" fill="#f4aa39"/>
+      <path d="M0 228L310 228L360 252L310 276L0 276Z" fill="#f4aa39"/>
+    </g>
+    <g font-weight="900" fill="#19191b">
+      <text x="115" y="705" font-size="48">2</text>
+      <text x="1115" y="705" font-size="48">2</text>
+      <text x="115" y="1055" font-size="48">3</text>
+      <text x="1115" y="1055" font-size="48">3</text>
+    </g>
+    <g transform="translate(250 716)">
+      <rect x="0" y="0" width="360" height="216" rx="20" fill="#222b33"/>
+      <rect x="36" y="34" width="288" height="146" rx="12" fill="#d9edf8"/>
+      <rect x="-34" y="218" width="428" height="36" rx="18" fill="#4a5660"/>
+    </g>
+    <g transform="translate(1180 704)">
+      <g transform="translate(0 0) scale(.72)"><rect x="0" y="0" width="360" height="216" rx="20" fill="#222b33"/><rect x="36" y="34" width="288" height="146" rx="12" fill="#d9edf8"/><rect x="-34" y="218" width="428" height="36" rx="18" fill="#4a5660"/></g>
+      <g transform="translate(360 40) scale(.72)"><rect x="0" y="0" width="360" height="216" rx="20" fill="#222b33"/><rect x="36" y="34" width="288" height="146" rx="12" fill="#d9edf8"/><rect x="-34" y="218" width="428" height="36" rx="18" fill="#4a5660"/></g>
+    </g>
+    <g transform="translate(300 998)">
+      <path d="M0 190C50 54 154 0 250 0C346 0 450 54 500 190" fill="none" stroke="#e7363e" stroke-width="18"/>
+      <path d="M52 190H448" stroke="#e7363e" stroke-width="18" stroke-linecap="round"/>
+      <path d="M250 0V190" stroke="#e7363e" stroke-width="18"/>
+    </g>
+    <g transform="translate(1195 1000) scale(.72)">
+      <path d="M0 190C50 54 154 0 250 0C346 0 450 54 500 190" fill="none" stroke="#e7363e" stroke-width="18"/>
+      <path d="M52 190H448" stroke="#e7363e" stroke-width="18" stroke-linecap="round"/>
+      <path d="M250 0V190" stroke="#e7363e" stroke-width="18"/>
+    </g>
+    <g transform="translate(1540 1020) scale(.6)">
+      <path d="M0 190C50 54 154 0 250 0C346 0 450 54 500 190" fill="none" stroke="#e7363e" stroke-width="18"/>
+      <path d="M52 190H448" stroke="#e7363e" stroke-width="18" stroke-linecap="round"/>
+      <path d="M250 0V190" stroke="#e7363e" stroke-width="18"/>
+    </g>
+  </g>
+</svg>
