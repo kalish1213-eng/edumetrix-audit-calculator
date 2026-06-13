@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3072" viewBox="0 0 4096 3072" role="img" aria-labelledby="title desc">
+  <title id="title">Family photo A with dialogue</title>
+  <desc id="desc">Vector family photo A showing parents, children, and a babysitter in a living room.</desc>
+  <rect width="4096" height="3072" fill="#f5e6d8"/>
+  <rect y="2050" width="4096" height="1022" fill="#c9a474"/>
+  <rect x="340" y="350" width="3416" height="1590" rx="52" fill="#fffaf0" stroke="#dfd5d2" stroke-width="22"/>
+  <rect x="640" y="600" width="780" height="560" fill="#9ccbe3"/><path d="M640 880h780M1030 600v560" stroke="#fff" stroke-width="28" opacity=".7"/>
+  <rect x="2580" y="590" width="760" height="570" fill="#9ccbe3"/><path d="M2580 875h760M2960 590v570" stroke="#fff" stroke-width="28" opacity=".7"/>
+  <rect x="850" y="1490" width="2400" height="450" rx="80" fill="#9c5941"/>
+  <g transform="translate(650 1160)"><circle cx="0" cy="260" r="170" fill="#e5ad7c"/><path d="M-190 220c70-310 390-300 430 0-160-100-300-100-430 0z" fill="#34241f"/><path d="M-260 500h520l200 720h-920z" fill="#2f69b0"/><circle cx="-60" cy="276" r="24"/><circle cx="62" cy="276" r="24"/><path d="M-50 380c58 42 112 42 170 0" stroke="#8e443c" stroke-width="24" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(1400 1170)"><circle cx="0" cy="250" r="165" fill="#f0c19b"/><path d="M-180 215c70-300 380-275 425 0-160-96-300-96-425 0z" fill="#7a4a30"/><path d="M-250 490h500l190 730h-880z" fill="#d7197a"/><circle cx="-58" cy="266" r="24"/><circle cx="60" cy="266" r="24"/><path d="M-48 374c58 42 110 42 168 0" stroke="#8e443c" stroke-width="24" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(2170 1300) scale(.84)"><circle cx="0" cy="250" r="165" fill="#ecc09b"/><path d="M-175 220c70-295 370-280 415 0-155-92-295-92-415 0z" fill="#5d3424"/><path d="M-245 490h490l190 700h-870z" fill="#f4aa39"/><circle cx="-58" cy="266" r="24"/><circle cx="60" cy="266" r="24"/><path d="M-48 374c58 42 110 42 168 0" stroke="#8e443c" stroke-width="24" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(2860 1300) scale(.84)"><circle cx="0" cy="250" r="165" fill="#e8b184"/><path d="M-175 215c70-290 370-290 415 0-155-90-295-90-415 0z" fill="#2f241f"/><path d="M-245 490h490l190 700h-870z" fill="#208842"/><circle cx="-58" cy="266" r="24"/><circle cx="60" cy="266" r="24"/><path d="M-48 374c58 42 110 42 168 0" stroke="#8e443c" stroke-width="24" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(3430 1180) scale(.92)"><circle cx="0" cy="250" r="165" fill="#efbf98"/><path d="M-180 210c65-300 380-270 420 0-150-92-285-92-420 0z" fill="#c1844d"/><path d="M-250 490h500l190 700h-880z" fill="#6655a3"/><circle cx="-58" cy="266" r="24"/><circle cx="60" cy="266" r="24"/><path d="M-48 374c58 42 110 42 168 0" stroke="#8e443c" stroke-width="24" fill="none" stroke-linecap="round"/></g>
+  <g fill="#fff" stroke="#bd242b" stroke-width="14"><path d="M445 555c-110-150 5-290 200-290h310c195 0 320 140 205 290z"/><path d="M2580 420c-120-155 8-300 210-300h390c205 0 330 148 210 300z"/></g>
+</svg>
