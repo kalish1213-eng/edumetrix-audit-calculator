@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EF LMS Acceptance Tests</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --line: rgba(15, 23, 42, 0.1);
+        --accent: #2563eb;
+        --green: #16a34a;
+        --red: #dc2626;
+        --page: #f6f8fc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font: 14px/1.5 Inter, "Segoe UI", Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      p {
+        margin: 4px 0 0;
+        color: var(--muted);
+      }
+
+      button {
+        min-height: 42px;
+        padding: 0 18px;
+        border: 1px solid var(--accent);
+        border-radius: 12px;
+        background: var(--accent);
+        color: #fff;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: minmax(320px, 430px) minmax(0, 1fr);
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .panel,
+      iframe {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+      }
+
+      .panel {
+        padding: 16px;
+      }
+
+      ol {
+        display: grid;
+        gap: 8px;
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        display: grid;
+        gap: 3px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        color: var(--muted);
+      }
+
+      li.pass {
+        border-color: rgba(22, 163, 74, 0.25);
+        background: #f0fdf4;
+        color: #166534;
+      }
+
+      li.fail {
+        border-color: rgba(220, 38, 38, 0.25);
+        background: #fef2f2;
+        color: #991b1b;
+      }
+
+      li strong {
+        color: inherit;
+      }
+
+      iframe {
+        width: 100%;
+        height: calc(100vh - 116px);
+      }
+
+      @media (max-width: 980px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        iframe {
+          height: 760px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>EF LMS Acceptance Tests</h1>
+        <p>Тесты запускаются в iframe, делают snapshot EF localStorage и восстанавливают его после прогона.</p>
+      </div>
+      <button id="runTests" type="button">Запустить тесты</button>
+    </header>
+
+    <main>
+      <section class="panel" aria-live="polite">
+        <strong id="summary">Готово к запуску</strong>
+        <ol id="results"></ol>
+      </section>
+      <iframe id="appFrame" title="EF LMS under test"></iframe>
+    </main>
+
+    <script type="module">
+      const APP_VERSION = "20260613-structure3";
+      const APP_URL = `index.html?v=${APP_VERSION}`;
+      const STORAGE_PREFIXES = ["ef-"];
+      const frame = document.querySelector("#appFrame");
+      const results = document.querySelector("#results");
+      const summary = document.querySelector("#summary");
+      const runButton = document.querySelector("#runTests");
+
+      let storageSnapshot = null;
+
+      function snapshotStorage() {
+        const snapshot = {};
+        for (let index = 0; index < localStorage.length; index += 1) {
+          const key = localStorage.key(index);
+          if (STORAGE_PREFIXES.some((prefix) => key.startsWith(prefix))) {
+            snapshot[key] = localStorage.getItem(key);
+          }
+        }
+        return snapshot;
+      }
+
+      function restoreStorage(snapshot) {
+        if (!snapshot) return;
+        const keys = [];
+        for (let index = 0; index < localStorage.length; index += 1) {
+          const key = localStorage.key(index);
+          if (STORAGE_PREFIXES.some((prefix) => key.startsWith(prefix))) keys.push(key);
+        }
+        keys.forEach((key) => localStorage.removeItem(key));
+        Object.entries(snapshot).forEach(([key, value]) => localStorage.setItem(key, value));
+      }
+
+      window.addEventListener("beforeunload", () => restoreStorage(storageSnapshot));
+
+      function addResult(name, status, detail = "") {
+        const item = document.createElement("li");
+        item.className = status;
+        item.innerHTML = `<strong>${name}</strong><span>${detail}</span>`;
+        results.appendChild(item);
+      }
+
+      function assert(condition, message) {
+        if (!condition) throw new Error(message);
+      }
+
+      function appWindow() {
+        return frame.contentWindow;
+      }
+
+      function appDocument() {
+        return frame.contentDocument;
+      }
+
+      function nativeRoot() {
+        return appDocument().querySelector(".native-lesson-embed")?.shadowRoot;
+      }
+
+      function nativeField(fieldId) {
+        return nativeRoot()?.querySelector(`[data-field-id="${CSS.escape(fieldId)}"]`);
+      }
+
+      function setNativeField(fieldId, value) {
+        const control = nativeField(fieldId);
+        assert(control, `Не найдено поле ${fieldId}`);
+        control.value = value;
+        control.dispatchEvent(new Event("input", { bubbles: true }));
+        control.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      async function waitFor(check, message, timeout = 8000) {
+        const startedAt = performance.now();
+        while (performance.now() - startedAt < timeout) {
+          if (check()) return;
+          await new Promise((resolve) => setTimeout(resolve, 80));
+        }
+        throw new Error(message);
+      }
+
+      async function loadPage(page, width = null) {
+        if (width) frame.style.width = `${width}px`;
+        frame.src = `${APP_URL}&acceptance=${Date.now()}#page=${page}`;
+        await new Promise((resolve) => frame.addEventListener("load", resolve, { once: true }));
+        await waitFor(() => appDocument()?.querySelector("#pageInput"), "LMS shell did not mount");
+        await waitFor(() => nativeRoot()?.querySelector(".native-shadow-content"), `Native page ${page} did not load`, 12000);
+      }
+
+      async function reloadFrame() {
+        const loaded = new Promise((resolve) => frame.addEventListener("load", resolve, { once: true }));
+        appWindow().location.reload();
+        await loaded;
+        await waitFor(() => nativeRoot()?.querySelector(".native-shadow-content"), "Native page did not load after reload", 12000);
+      }
+
+      function visible(selector) {
+        const node = appDocument().querySelector(selector);
+        if (!node || node.hidden) return false;
+        const style = appWindow().getComputedStyle(node);
+        return style.display !== "none" && style.visibility !== "hidden" && (node.offsetParent !== null || node.getClientRects().length > 0);
+      }
+
+      async function runTest(name, test) {
+        try {
+          await test();
+          addResult(name, "pass", "passed");
+          return true;
+        } catch (error) {
+          addResult(name, "fail", error.message);
+          return false;
+        }
+      }
+
+      async function runAcceptance() {
+        runButton.disabled = true;
+        results.innerHTML = "";
+        summary.textContent = "Выполняю...";
+        storageSnapshot = snapshotStorage();
+        let passed = 0;
+        let total = 0;
+
+        const test = async (name, fn) => {
+          total += 1;
+          if (await runTest(name, fn)) passed += 1;
+        };
+
+        try {
+          await test("Test 1: Opening", async () => {
+            await loadPage(1);
+            assert(appDocument().querySelector("#pageInput").value === "1", "Toolbar does not show page 1");
+            assert(appDocument().querySelector("#pageTotal").textContent.trim() === "/ 137", "Toolbar total is not / 137");
+            assert(nativeRoot().querySelector(".native-shadow-content"), "Page 1 content is not visible");
+            assert(!nativeRoot().querySelector(".native-loader-shell"), "Loader is still visible");
+            assert(!/Загрузка учебника/.test(appDocument().querySelector("#statusLine").textContent), "Loading text is still visible");
+          });
+
+          await test("Test 2: Student mode", async () => {
+            await loadPage(1);
+            assert(!visible(".advanced-tools"), "Инструменты разметки visible");
+            assert(!visible("#addField"), "Добавить поле visible");
+            assert(!visible("#editFields"), "Править поля visible");
+            assert(!visible("#showAnswers"), "Ответы key button visible");
+          });
+
+          await test("Test 3: Answer saving", async () => {
+            await loadPage(7);
+            setNativeField("p7-photo-i", "I");
+            await waitFor(() => appDocument().querySelector("#remainingLessons").textContent.trim() === "1", "Filled stat did not update");
+            await reloadFrame();
+            assert(nativeField("p7-photo-i").value === "I", "Answer did not survive reload");
+          });
+
+          await test("Test 4: Navigation", async () => {
+            await loadPage(1);
+            appDocument().querySelector("#nextPage").click();
+            await waitFor(() => appDocument().querySelector("#pageInput").value === "2", "Next did not navigate to page 2");
+            assert(appWindow().location.hash === "#page=2", "URL hash did not update to #page=2");
+            appDocument().querySelector("#prevPage").click();
+            await waitFor(() => appDocument().querySelector("#pageInput").value === "1", "Prev did not return to page 1");
+            assert(appWindow().location.hash === "#page=1", "URL hash did not return to #page=1");
+          });
+
+          await test("Test 5: Checking", async () => {
+            await loadPage(7);
+            setNativeField("p7-photo-i", "I");
+            appDocument().querySelector("#checkPage").click();
+            await waitFor(() => nativeField("p7-photo-i").classList.contains("state-ok"), "Correct field was not marked green");
+            const stats = [...appDocument().querySelectorAll(".stats-grid span")].map((node) => node.textContent.trim()).join(" | ");
+            assert(/1 проверено/.test(stats), "Checked count did not update");
+            assert(/1 верно/.test(stats), "Correct count did not update");
+          });
+
+          await test("Test 6: Reset", async () => {
+            await loadPage(9);
+            setNativeField("b2_france", "France");
+            await loadPage(7);
+            setNativeField("p7-photo-i", "I");
+            const confirmations = [];
+            appWindow().confirm = (message) => {
+              confirmations.push(message);
+              return true;
+            };
+            appDocument().querySelector("#clearPage").click();
+            await waitFor(() => nativeField("p7-photo-i").value === "", "Current page answer was not reset");
+            assert(confirmations.includes("Сбросить ответы на этой странице?"), "Reset confirmation was not shown");
+            await loadPage(9);
+            assert(nativeField("b2_france").value === "France", "Reset affected another page/module");
+          });
+
+          await test("Test 7: Responsive", async () => {
+            for (const width of [1440, 1280, 768, 390]) {
+              await loadPage(7, width);
+              assert(appDocument().documentElement.scrollWidth <= appDocument().documentElement.clientWidth + 2, `${width}px has page horizontal overflow`);
+              assert(nativeRoot().querySelectorAll("[data-field-id]").length > 0, `${width}px native fields missing`);
+            }
+            frame.style.width = "100%";
+          });
+
+          await test("Test 8: AI panel", async () => {
+            await loadPage(7);
+            appDocument().querySelector('[data-panel="ai"]').click();
+            const grammar = appDocument().querySelector("#grammarTitle").textContent;
+            const hint = appDocument().querySelector("#taskHint").textContent;
+            assert(/be|I \/ you|Глагол/i.test(grammar), "Grammar hint is not tied to page 7");
+            assert(/подлежащее|form|be|форм/i.test(hint), "Task hint is too generic");
+          });
+        } finally {
+          restoreStorage(storageSnapshot);
+          storageSnapshot = null;
+          summary.textContent = `${passed} / ${total} passed`;
+          runButton.disabled = false;
+        }
+      }
+
+      runButton.addEventListener("click", runAcceptance);
+    </script>
+  </body>
+</html>

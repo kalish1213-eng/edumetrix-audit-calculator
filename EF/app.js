@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260613-structure2";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260613-structure2";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260613-structure2";
-import { registerShellComponents } from "./src/components/index.js?v=20260613-structure2";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260613-structure2";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260613-structure2";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260613-structure2";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260613-structure2";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260613-structure2";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260613-structure3";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260613-structure3";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260613-structure3";
+import { registerShellComponents } from "./src/components/index.js?v=20260613-structure3";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260613-structure3";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260613-structure3";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260613-structure3";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260613-structure3";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260613-structure3";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
@@ -7721,9 +7721,7 @@ function visiblePageNumbers() {
 }
 
 function pageStep() {
-  const nativeLesson = nativeLessonForPage(currentPage);
-  if (nativeLesson) return Math.max(1, nativeLesson.endPage - currentPage + 1);
-  return spreadMode.checked ? 2 : 1;
+  return 1;
 }
 
 function pageWidth(meta) {

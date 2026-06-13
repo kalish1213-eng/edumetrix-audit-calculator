@@ -61,3 +61,11 @@ powershell -ExecutionPolicy Bypass -File .\tools\verify-ef-project.ps1
 ```
 
 Expected summary: `Status: ok`, 137 pages, 66 native modules, 2829 interactive fields, 2289 checked fields, and 0 checked fields without answer keys.
+
+For browser acceptance checks, open:
+
+```text
+acceptance.html?v=20260613-structure3
+```
+
+The runner covers opening, student mode, answer saving, navigation, checking, reset confirmation, responsive widths, and contextual AI hints. It snapshots EF localStorage before running and restores it when the run finishes.
