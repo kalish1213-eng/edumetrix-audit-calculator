@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260613-production1";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260613-production1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260613-production1";
-import { registerShellComponents } from "./src/components/index.js?v=20260613-production1";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260613-production1";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260613-production1";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260613-production1";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260613-production1";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260613-production1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-textfit1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-textfit1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-textfit1";
+import { registerShellComponents } from "./src/components/index.js?v=20260614-textfit1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-textfit1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-textfit1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-textfit1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-textfit1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-textfit1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
@@ -5498,6 +5498,7 @@ init();
 async function init() {
   try {
     configureAccessMode();
+    installVectorIcons();
     pageInput?.setAttribute("aria-label", "Номер страницы");
 
     const response = await fetch(MANIFEST_URL, { cache: "no-store" });
@@ -5541,6 +5542,34 @@ function configureAccessMode() {
     node.removeAttribute("aria-hidden");
     node.removeAttribute("inert");
   });
+}
+
+function installVectorIcons() {
+  const icons = {
+    overview: "M4 5h6v6H4z M14 5h6v6h-6z M4 15h6v6H4z M14 15h6v6h-6z",
+    lessons: "M5 4h14a2 2 0 0 1 2 2v15a1 1 0 0 1-1.5.86L12 18l-7.5 3.86A1 1 0 0 1 3 21V6a2 2 0 0 1 2-2z M8 7h8 M8 10h8",
+    homework: "M9 11l2 2 4-5 M5 4h14v16H5z",
+    dictionary: "M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z M8 7h8 M8 11h7 M8 15h5",
+    grammar: "M5 19V5h14v14z M8 9h8 M8 12h4 M8 16l2-3 2 3 2-3 2 3",
+    club: "M7 13a4 4 0 1 1 3.1-6.53A5.5 5.5 0 0 1 20 10.5c0 3.04-2.46 5.5-5.5 5.5H13l-4 3v-3.25A4 4 0 0 1 7 13z",
+    tests: "M7 4h10l3 3v13H7z M10 10h6 M10 14h6 M10 18h3",
+    calendar: "M5 6h14v14H5z M8 3v5 M16 3v5 M5 10h14",
+    messages: "M4 5h16v11H8l-4 4z M8 9h8 M8 12h5",
+    achievements: "M8 4h8v5a4 4 0 0 1-8 0z M6 5H4a4 4 0 0 0 4 4 M18 5h2a4 4 0 0 1-4 4 M12 13v5 M9 21h6",
+    stats: "M4 19h16 M7 16V9 M12 16V5 M17 16v-7",
+    settings: "M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M3 12h3 M18 12h3 M12 3v3 M12 18v3 M5.6 5.6l2.1 2.1 M16.3 16.3l2.1 2.1 M18.4 5.6l-2.1 2.1 M7.7 16.3l-2.1 2.1",
+    support: "M12 4a7 7 0 0 0-7 7v4a3 3 0 0 0 3 3h1v-6H6v-1a6 6 0 0 1 12 0v1h-3v6h1a3 3 0 0 0 3-3v-4a7 7 0 0 0-7-7z"
+  };
+
+  document.querySelectorAll(".side-link[data-section]").forEach((button) => {
+    const target = button.querySelector(".side-icon");
+    const path = icons[button.dataset.section];
+    if (target && path) target.innerHTML = svgIcon(path);
+  });
+}
+
+function svgIcon(path) {
+  return `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`;
 }
 
 function bindEvents() {
@@ -5718,12 +5747,14 @@ async function loadNativeLessonEmbed(embed, url) {
       :host {
         display: block;
         min-height: 860px;
+        overflow: hidden;
         background: transparent;
         color: var(--ink, #111827);
         font-family: Inter, Arial, Helvetica, sans-serif;
       }
       .native-shadow-content {
         min-height: inherit;
+        transform-origin: 0 0;
       }
       .native-loading,
       .native-error {
@@ -5792,6 +5823,7 @@ async function loadNativeLessonEmbed(embed, url) {
     rewriteNativeAssetUrls(content, baseUrl.href);
     shadow.appendChild(content);
     initEmbeddedNativeLesson(shadow, lesson);
+    fitNativeShadowContent(embed, content);
     syncLmsUi(visiblePageNumbers());
   } catch (error) {
     console.error(error);
@@ -5932,6 +5964,10 @@ function rewriteNativeAssetUrls(root, baseUrl) {
   root.querySelectorAll("[src]").forEach((node) => {
     const value = node.getAttribute("src");
     if (value && !value.startsWith("data:")) node.setAttribute("src", new URL(value, baseUrl).href);
+    if (node.tagName === "IMG") {
+      node.loading = "lazy";
+      node.decoding = "async";
+    }
   });
   root.querySelectorAll("[poster]").forEach((node) => {
     const value = node.getAttribute("poster");
@@ -6534,6 +6570,40 @@ function escapeHtml(value) {
   }[char]));
 }
 
+function fitNativeShadowContent(embed, content) {
+  if (!embed || !content) return;
+
+  const apply = () => {
+    if (!embed.isConnected) return;
+
+    content.style.zoom = "";
+    content.style.width = "";
+    embed.style.minHeight = "";
+
+    if (zoomSelect?.value !== "fit") return;
+
+    const availableWidth = Math.max(320, Math.floor(embed.clientWidth || nativePageWidth()));
+    const contentWidth = Math.max(content.scrollWidth, content.getBoundingClientRect().width);
+    if (!contentWidth || contentWidth <= availableWidth + 2) return;
+
+    const scale = clamp(availableWidth / contentWidth, 0.42, 1);
+    content.style.zoom = String(scale);
+    content.style.width = `${100 / scale}%`;
+    embed.style.minHeight = `${Math.ceil(content.getBoundingClientRect().height)}px`;
+  };
+
+  requestAnimationFrame(apply);
+  window.setTimeout(apply, 120);
+
+  if ("ResizeObserver" in window) {
+    const observer = new ResizeObserver(() => requestAnimationFrame(apply));
+    observer.observe(embed);
+    observer.observe(content);
+    embed._nativeFitObserver?.disconnect?.();
+    embed._nativeFitObserver = observer;
+  }
+}
+
 function answerModelKey({ page = currentPage, lessonId, fieldId }) {
   return `${page}:${lessonId || currentLessonLabel()}:${fieldId}`;
 }
@@ -6831,7 +6901,7 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   const hasNoInteractiveFields = !answerStats.loading && !answerStats.total;
   if (progressEmpty) {
     progressEmpty.hidden = !hasNoInteractiveFields;
-    progressEmpty.textContent = "На этой странице нет заданий для заполнения.";
+    progressEmpty.innerHTML = "<strong>Заданий для заполнения нет</strong>Это справочная или текстовая страница. Ее можно читать и искать по тексту; прогресс курса считается по открытым страницам.";
   }
   if (statsGrid) {
     statsGrid.hidden = hasNoInteractiveFields;

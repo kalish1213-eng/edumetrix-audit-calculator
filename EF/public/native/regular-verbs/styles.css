@@ -165,6 +165,87 @@ body {
   gap: 26px;
 }
 
+.text-bank {
+  display: grid;
+  gap: 18px;
+}
+
+.table-card {
+  padding: 22px;
+  border: 1px solid rgba(17, 79, 136, .14);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.table-card h2 {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.table-card p {
+  margin: 6px 0 16px;
+  color: var(--muted);
+}
+
+.verb-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.text-bank table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.text-bank th,
+.text-bank td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #dfeadf;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.text-bank th {
+  background: #ecf8f0;
+  color: #174d32;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.text-bank tr:last-child td {
+  border-bottom: 0;
+}
+
+.text-bank td:first-child {
+  width: 42%;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.table-input {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid #b9d5c2;
+  border-radius: 6px;
+  background: #fbfefc;
+  color: #111827;
+  font: 800 14px/1.2 Arial, Helvetica, sans-serif;
+  padding: 5px 8px;
+}
+
+.table-input:focus {
+  border-color: var(--accent);
+  outline: 2px solid rgba(24, 132, 76, .16);
+}
+
 .grammar-page {
   position: relative;
   width: min(100%, 1120px);
@@ -270,6 +351,10 @@ body {
 
   .controls {
     justify-content: flex-start;
+  }
+
+  .verb-columns {
+    grid-template-columns: 1fr;
   }
 
   .overlay-field {

@@ -1,6 +1,6 @@
-@import url("./src/styles/tokens.css?v=20260613-production1");
-@import url("./src/styles/layout.css?v=20260613-production1");
-@import url("./src/styles/components.css?v=20260613-production1");
+@import url("./src/styles/tokens.css?v=20260614-textfit1");
+@import url("./src/styles/layout.css?v=20260614-textfit1");
+@import url("./src/styles/components.css?v=20260614-textfit1");
 
 * {
   box-sizing: border-box;
@@ -164,6 +164,16 @@ textarea:focus-visible {
   height: 22px;
   color: inherit;
   font-weight: 800;
+}
+
+.side-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .badge {
@@ -929,10 +939,17 @@ textarea:focus-visible {
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: var(--soft);
-  color: var(--muted);
+  background: linear-gradient(180deg, #ffffff, var(--soft));
+  color: #526078;
   font-size: 13px;
   line-height: 1.45;
+}
+
+.progress-empty strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 14px;
 }
 
 .stats-grid {

@@ -1,4 +1,4 @@
-import { loadJson, saveJson } from "../utils/storage.js?v=20260613-production1";
+import { loadJson, saveJson } from "../utils/storage.js?v=20260614-textfit1";
 
 export function createAnswersState(storageKey, fallback = {}) {
   let value = loadJson(storageKey, fallback);

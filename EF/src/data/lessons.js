@@ -433,7 +433,7 @@ export const nativeLessons = [
     startPage: 134,
     endPage: 134,
     title: "Regular and irregular verbs",
-    url: "public/native/regular-verbs/index.html?v=20260612-verbs1"
+    url: "public/native/regular-verbs/index.html?v=20260614-verbs-text1"
   },
   {
     startPage: 135,
