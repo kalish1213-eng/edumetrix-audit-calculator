@@ -187,7 +187,7 @@ const nativeLessons = [
     startPage: 33,
     endPage: 34,
     title: "5B A very long flight",
-    url: "public/native/5b-a-very-long-flight/index.html?v=20260613-5bphoto1"
+    url: "public/native/5b-a-very-long-flight/index.html?v=20260613-5bvector1"
   },
   {
     startPage: 35,

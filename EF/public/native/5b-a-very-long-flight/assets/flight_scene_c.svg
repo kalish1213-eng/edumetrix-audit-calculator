@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2304" viewBox="0 0 4096 2304" role="img" aria-labelledby="title desc">
+  <title id="title">Flight conversation scene C</title><desc id="desc">Passenger sleeps during a long flight while the cabin lights are low.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#263954"/><stop offset=".65" stop-color="#516b88"/><stop offset="1" stop-color="#9db1c3"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="20" stdDeviation="20" flood-opacity=".35"/></filter><style>.t{font-family:Arial,Helvetica,sans-serif;font-weight:900}.skin{fill:#efbd91}.line{stroke:#2d3740;stroke-width:22;stroke-linecap:round;stroke-linejoin:round;fill:none}</style></defs>
+  <rect width="4096" height="2304" fill="url(#bg)"/><g opacity=".55"><rect x="350" y="240" width="650" height="430" rx="64" fill="#d8edf9"/><rect x="1210" y="240" width="650" height="430" rx="64" fill="#d8edf9"/><rect x="2070" y="240" width="650" height="430" rx="64" fill="#d8edf9"/><rect x="2930" y="240" width="650" height="430" rx="64" fill="#d8edf9"/></g>
+  <g filter="url(#s)"><rect x="770" y="970" width="2530" height="920" rx="120" fill="#273955"/><rect x="950" y="1110" width="2170" height="610" rx="70" fill="#3e5675"/><path d="M1050 1370h1970" stroke="#253143" stroke-width="42"/></g>
+  <g transform="translate(1640 710)" filter="url(#s)"><circle cx="300" cy="190" r="142" class="skin"/><path d="M160 150c130-160 348-102 420 35-130-32-250-22-380 22z" fill="#6b3b25"/><path d="M240 190h125M410 188h80" class="line"/><rect x="60" y="375" width="515" height="585" rx="150" fill="#d7197a"/><path d="M75 500c-180 78-275 210-335 385M560 500c180 80 278 215 325 385" class="line"/></g>
+  <path d="M2555 590c-70 0-125-56-125-125 0-41 20-78 51-101-7 35 4 75 33 104 28 29 67 42 104 35-20 52-71 87-132 87z" fill="#fff5a6"/>
+  <text class="t" x="520" y="390" font-size="116" fill="#fff">A very long flight...</text>
+  <path d="M2620 760c160-90 330-90 510 0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><text class="t" x="2670" y="775" font-size="88" fill="#263238">zzz</text>
+</svg>
