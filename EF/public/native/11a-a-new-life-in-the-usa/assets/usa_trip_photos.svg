@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1285" viewBox="0 0 4096 1285" role="img" aria-labelledby="title desc">
+  <title id="title">A blueberry farm and a National Park trip</title>
+  <desc id="desc">Two sharp vector travel photos: a person with a box of blueberries at a farm and a National Park waterfall with a snake warning sign.</desc>
+  <defs>
+    <linearGradient id="farm" x1="0" x2="1"><stop stop-color="#d7ecd5"/><stop offset="1" stop-color="#8fc06a"/></linearGradient>
+    <linearGradient id="park" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#a9d2f4"/><stop offset=".5" stop-color="#526a69"/><stop offset="1" stop-color="#1d251f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="8" dy="14" stdDeviation="12" flood-color="#0f1720" flood-opacity=".25"/></filter>
+    <style>
+      .title{font-family:Arial,Helvetica,sans-serif;font-size:118px;font-weight:800;fill:#656057}
+      .sign{font-family:Arial,Helvetica,sans-serif;font-size:66px;font-weight:900;fill:#8f2930}
+      .line{stroke:#26313b;stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="4096" height="1285" fill="#fff"/>
+  <g transform="translate(12 20)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1980" height="1228" rx="16" fill="#fff" stroke="#e7e1d2" stroke-width="12"/>
+    <rect x="18" y="18" width="1944" height="1192" rx="12" fill="url(#farm)"/>
+    <path d="M22 612c360-150 640-185 950-80 318-148 622-138 988 68v610H22z" fill="#94c46d"/>
+    <g stroke="#d8efb0" stroke-width="9" opacity=".9"><path d="M760 380 1900 1150"/><path d="M1050 360 1960 1000"/><path d="M1320 365 1960 820"/></g>
+    <g transform="translate(80 86)">
+      <rect x="250" y="0" width="1230" height="166" fill="#fbf8e8" opacity=".95"/>
+      <text class="title" x="300" y="118">A trip to a blueberry farm</text>
+    </g>
+    <g transform="translate(70 250)">
+      <circle cx="435" cy="248" r="210" fill="#d8a181"/><path d="M214 212c78-250 420-270 548-55-195-72-360-60-548 55z" fill="#5f544c"/>
+      <rect x="105" y="440" width="650" height="560" rx="180" fill="#456f9d"/>
+      <rect x="144" y="210" width="585" height="92" rx="35" fill="#111820"/>
+      <rect x="160" y="218" width="240" height="76" rx="24" fill="#253440"/><rect x="475" y="218" width="240" height="76" rx="24" fill="#253440"/>
+      <rect x="510" y="622" width="1120" height="330" rx="22" fill="#c99458" stroke="#463522" stroke-width="12"/>
+      <g fill="#395a9e"><circle cx="610" cy="720" r="25"/><circle cx="700" cy="760" r="28"/><circle cx="790" cy="710" r="26"/><circle cx="870" cy="792" r="25"/><circle cx="968" cy="735" r="29"/><circle cx="1060" cy="798" r="26"/><circle cx="1156" cy="725" r="27"/><circle cx="1246" cy="785" r="26"/><circle cx="1342" cy="728" r="28"/><circle cx="1450" cy="795" r="27"/><circle cx="1540" cy="735" r="25"/></g>
+      <path d="M720 620c-162-54-306-34-440 60" class="line" fill="none"/>
+    </g>
+  </g>
+  <g transform="translate(2100 20)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1984" height="1228" rx="16" fill="#fff" stroke="#e7e1d2" stroke-width="12"/>
+    <rect x="18" y="18" width="1948" height="1192" rx="12" fill="url(#park)"/>
+    <path d="M18 330c290-126 520-98 732 20 278-182 686-248 1216 18v842H18z" fill="#2a3c3a"/>
+    <path d="M468 0c120 360 108 702-66 1018" fill="none" stroke="#eaf6ff" stroke-width="72" opacity=".88"/>
+    <path d="M548 0c70 370 50 692-110 1024" fill="none" stroke="#9fd3f6" stroke-width="36" opacity=".84"/>
+    <g transform="translate(305 70)">
+      <rect x="120" y="0" width="1440" height="166" fill="#fbf8e8" opacity=".95"/>
+      <text class="title" x="174" y="118">A trip to a National Park</text>
+    </g>
+    <g transform="translate(840 320)">
+      <rect x="0" y="0" width="900" height="510" rx="34" fill="#f2eee2" stroke="#8f5e5b" stroke-width="20"/>
+      <rect x="48" y="48" width="804" height="414" fill="#dce6df" opacity=".72"/>
+      <text class="sign" x="165" y="132">NORTHERN</text>
+      <text class="sign" x="120" y="220">WATER SNAKE</text>
+      <text class="sign" x="246" y="308">HABITAT</text>
+      <text class="sign" x="130" y="394">PLEASE DON'T</text>
+      <text class="sign" x="214" y="468">DISTURB</text>
+    </g>
+  </g>
+</svg>

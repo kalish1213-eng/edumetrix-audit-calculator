@@ -289,7 +289,7 @@ const nativeLessons = [
     startPage: 67,
     endPage: 68,
     title: "11A A new life in the USA",
-    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260612-11a4"
+    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260613-11aphoto1b"
   },
   {
     startPage: 69,
