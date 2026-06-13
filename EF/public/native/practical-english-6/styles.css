@@ -146,17 +146,25 @@
   height: auto;
 }
 
-.city-map-card .map-field {
-  position: absolute;
-  z-index: 2;
+.map-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 10px;
+  margin: 8px 0 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf2;
+}
+
+.map-answer-grid .map-field {
   display: grid;
   grid-template-columns: 26px minmax(0, 1fr);
   gap: 4px;
   align-items: center;
-  width: 31%;
 }
 
-.city-map-card .map-field span {
+.map-answer-grid .map-field span {
   display: grid;
   place-items: center;
   width: 26px;
@@ -168,7 +176,7 @@
   font-weight: 950;
 }
 
-.city-map-card .map-field input {
+.map-answer-grid .map-field input {
   width: 100%;
   min-width: 0;
   min-height: 28px;
@@ -179,10 +187,13 @@
   padding: 2px 5px;
 }
 
-.city-map-card .map-a { left: 55.5%; top: 6.4%; }
-.city-map-card .map-b { left: 35.1%; top: 46.6%; }
-.city-map-card .map-c { left: 61.4%; top: 54.3%; }
-.city-map-card .map-d { left: 50.5%; top: 82.6%; }
+.map-answer-grid .map-a,
+.map-answer-grid .map-b,
+.map-answer-grid .map-c,
+.map-answer-grid .map-d {
+  left: auto;
+  top: auto;
+}
 
 .rhythm-task {
   margin-top: 84px;
@@ -442,18 +453,18 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .city-map-card .map-field {
+  .map-answer-grid .map-field {
     grid-template-columns: 24px minmax(0, 1fr);
   }
 
-  .city-map-card .map-field span {
+  .map-answer-grid .map-field span {
     width: 24px;
     height: 24px;
     font-size: 12px;
   }
 
-  .city-map-card .map-field input {
-    width: 116px;
+  .map-answer-grid .map-field input {
+    width: 100%;
     font-size: 13px;
   }
 
@@ -469,6 +480,10 @@
 @media (max-width: 500px) {
   .prep-grid,
   .turn-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-answer-grid {
     grid-template-columns: 1fr;
   }
 }

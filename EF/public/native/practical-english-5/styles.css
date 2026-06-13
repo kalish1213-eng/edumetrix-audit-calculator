@@ -1,4 +1,4 @@
-@import url("../practical-english-4/styles.css?v=20260613-pe4photo1c");
+@import url("../practical-english-4/styles.css?v=20260614-overlapaudit2");
 
 :root {
   --gold: #b99630;
@@ -37,16 +37,15 @@
 }
 
 .scene-card label {
-  position: absolute;
-  left: 14px;
-  top: 12px;
+  position: static;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-height: 48px;
-  border-radius: 999px;
-  padding: 5px 8px 5px 12px;
-  background: rgba(255, 255, 255, .9);
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  padding: 8px 12px;
+  background: #fff;
   color: #181818;
   font-size: 22px;
   font-weight: 900;

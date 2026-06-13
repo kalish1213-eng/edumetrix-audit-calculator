@@ -333,31 +333,43 @@ mark {
 }
 
 .car-scene {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
   margin: 0 28px 28px;
-  aspect-ratio: 4608 / 2340;
+  aspect-ratio: auto;
+  padding: 0 12px 12px;
 }
 
-.car-word {
-  position: absolute;
-  width: 14.2%;
-  min-width: 104px;
-  height: 5.8%;
+.car-scene img {
+  grid-column: 1 / -1;
+  width: calc(100% + 24px);
+  max-width: none;
+  margin: 0 -12px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.answer.car-word {
+  position: static;
+  width: 100%;
+  min-width: 0;
+  height: auto;
   min-height: 30px;
   border: 1px solid #8dbfc8;
-  background: rgba(218, 247, 255, 0.96);
+  background: #fff;
   text-align: center;
 }
 
-.car-word.red { left: 7.2%; }
-.car-word.blue { left: 28.6%; }
+.car-word.red { left: auto; }
+.car-word.blue { left: auto; }
 .car-word.r1,
-.car-word.b1 { top: 61.6%; }
+.car-word.b1 { top: auto; }
 .car-word.r2,
-.car-word.b2 { top: 68.4%; }
+.car-word.b2 { top: auto; }
 .car-word.r3,
-.car-word.b3 { top: 75.2%; }
+.car-word.b3 { top: auto; }
 .car-word.r4,
-.car-word.b4 { top: 81.8%; }
+.car-word.b4 { top: auto; }
 
 .speech-line {
   margin: 10px 0 14px;
@@ -623,11 +635,26 @@ select.answer {
   .grammar-choices label { grid-template-columns: auto 58px 1fr; }
   .grammar-choices label span:last-child { grid-column: 3; }
   .sound-table { grid-template-columns: 64px repeat(2, minmax(0, 1fr)); }
-  .car-scene { margin: 0 18px 18px; }
-  .car-word {
-    width: 18%;
-    min-width: 72px;
-    min-height: 26px;
-    font-size: 13px;
+  .car-scene {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0 18px 18px;
   }
+  .answer.car-word {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 30px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .car-word.r1,
+  .car-word.b1 { top: auto; }
+  .car-word.r2,
+  .car-word.b2 { top: auto; }
+  .car-word.r3,
+  .car-word.b3 { top: auto; }
+  .car-word.r4,
+  .car-word.b4 { top: auto; }
 }

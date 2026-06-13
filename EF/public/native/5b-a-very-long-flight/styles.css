@@ -357,22 +357,21 @@ textarea { font: inherit; }
 }
 
 .flight-pictures label {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  z-index: 1;
+  position: static;
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 4px 7px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, .94);
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: #fff;
   color: var(--magenta);
   font-size: 19px;
   font-weight: 950;
 }
 
 .picture-select {
+  min-width: 54px;
   width: 54px;
 }
 

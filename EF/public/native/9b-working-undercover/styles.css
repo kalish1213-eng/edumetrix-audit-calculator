@@ -238,6 +238,13 @@
   border-left: 0;
 }
 
+.clothes-photo-grid .answer {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .sound-example,
 .word-bank {
   margin: 10px 0 12px;
@@ -288,6 +295,13 @@
 
 .sound-grid b {
   color: var(--pink);
+}
+
+.sound-grid .answer {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .sandra-panel {

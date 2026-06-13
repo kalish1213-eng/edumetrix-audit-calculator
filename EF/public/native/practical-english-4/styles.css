@@ -329,7 +329,11 @@ select.answer.tiny { min-width: 58px; width: 58px; }
 
 .quiz-card {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   margin: 0 0 16px;
+  padding: 0 10px 10px;
   background: #f3edcf;
 }
 
@@ -341,28 +345,45 @@ select.answer.tiny { min-width: 58px; width: 58px; }
   height: auto;
 }
 
+.quiz-card img {
+  grid-column: 1 / -1;
+  width: calc(100% + 20px);
+  max-width: none;
+  margin: 0 -10px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
 .quiz-select {
-  position: absolute;
+  position: static;
   z-index: 2;
   min-width: 58px;
-  width: 58px;
+  width: 100%;
   min-height: 28px;
   padding: 2px 4px;
   text-align: center;
 }
 
-.ordinals-card { aspect-ratio: 2220 / 4940; }
-.ordinals-card .q1 { left: 40.3%; top: 18.9%; }
-.ordinals-card .q2 { left: 80.6%; top: 18.9%; }
-.ordinals-card .q3 { left: 9.6%; top: 38%; }
-.ordinals-card .q4 { left: 51.3%; top: 49.2%; }
-.ordinals-card .q6 { left: 42.4%; top: 67.1%; }
-.ordinals-card .q7 { left: 14.6%; top: 88.6%; }
-.ordinals-card .q8 { left: 7.5%; top: 94.2%; }
-.ordinals-card .q9 { left: 85%; top: 94.2%; }
+.ordinals-card { aspect-ratio: auto; }
+.ordinals-card .q1,
+.ordinals-card .q2,
+.ordinals-card .q3,
+.ordinals-card .q4,
+.ordinals-card .q6,
+.ordinals-card .q7,
+.ordinals-card .q8,
+.ordinals-card .q9 {
+  left: auto;
+  top: auto;
+}
 
-.fifth-card { aspect-ratio: 1735 / 940; }
-.fifth-card .q5 { left: 71.2%; top: 79%; }
+.fifth-card {
+  aspect-ratio: auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+.fifth-card .q5 {
+  left: auto;
+  top: auto;
+}
 
 .sound-row {
   display: grid;
@@ -633,9 +654,12 @@ select.answer.tiny { min-width: 58px; width: 58px; }
 }
 
 @media (max-width: 520px) {
+  .quiz-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .quiz-select {
-    width: 48px;
-    min-width: 48px;
+    width: 100%;
+    min-width: 0;
     font-size: 12px;
   }
 }

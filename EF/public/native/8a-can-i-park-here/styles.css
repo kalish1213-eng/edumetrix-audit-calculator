@@ -430,7 +430,11 @@ select.answer.tiny { min-width: 58px; width: 58px; }
 
 .tweet-card {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
   margin: 0;
+  padding: 0 10px 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
@@ -444,19 +448,30 @@ select.answer.tiny { min-width: 58px; width: 58px; }
   height: auto;
 }
 
-.tweet-card .overlay {
-  position: absolute;
-  width: 58px;
-  min-width: 58px;
-  height: 34px;
-  padding: 2px 5px;
-  background: rgba(255, 255, 255, .98);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+.tweet-card img {
+  grid-column: 1 / -1;
+  width: calc(100% + 20px);
+  max-width: none;
+  margin: 0 -10px 2px;
+  border-bottom: 1px solid var(--line);
 }
 
-.tweet-card .qA { left: 8.5%; top: 54.3%; }
-.tweet-card .qB { left: 8.5%; top: 72.1%; }
-.tweet-card .qC { left: 8.5%; top: 89.7%; }
+.tweet-card .overlay {
+  position: static;
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 2px 5px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.tweet-card .qA,
+.tweet-card .qB,
+.tweet-card .qC {
+  left: auto;
+  top: auto;
+}
 
 .phone-dialogue {
   position: relative;
