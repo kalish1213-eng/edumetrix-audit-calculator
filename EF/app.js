@@ -139,7 +139,7 @@ const nativeLessons = [
     startPage: 17,
     endPage: 18,
     title: "Revise and Check 1&2",
-    url: "public/native/revise-check-1-2/index.html?v=20260613-revise12photo1"
+    url: "public/native/revise-check-1-2/index.html?v=20260613-revise12photo2"
   },
   {
     startPage: 19,
