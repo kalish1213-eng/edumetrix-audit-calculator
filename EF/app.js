@@ -205,7 +205,7 @@ const nativeLessons = [
     startPage: 39,
     endPage: 40,
     title: "6B Good morning, goodnight",
-    url: "public/native/6b-good-morning-goodnight/index.html?v=20260613-6bphoto1"
+    url: "public/native/6b-good-morning-goodnight/index.html?v=20260613-6bphoto2"
   },
   {
     startPage: 41,
