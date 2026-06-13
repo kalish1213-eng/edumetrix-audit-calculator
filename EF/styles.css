@@ -1,6 +1,6 @@
-@import url("./src/styles/tokens.css?v=20260613-structure3");
-@import url("./src/styles/layout.css?v=20260613-structure3");
-@import url("./src/styles/components.css?v=20260613-structure3");
+@import url("./src/styles/tokens.css?v=20260613-production1");
+@import url("./src/styles/layout.css?v=20260613-production1");
+@import url("./src/styles/components.css?v=20260613-production1");
 
 * {
   box-sizing: border-box;
@@ -924,6 +924,17 @@ textarea:focus-visible {
   font-size: 32px;
 }
 
+.progress-empty {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -945,6 +956,10 @@ textarea:focus-visible {
 .stats-grid b {
   color: var(--ink);
   font-size: 24px;
+}
+
+.stats-grid.is-loading b {
+  color: var(--muted);
 }
 
 .bottom-actions {

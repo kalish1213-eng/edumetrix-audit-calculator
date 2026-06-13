@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260613-structure3";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260613-structure3";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260613-structure3";
-import { registerShellComponents } from "./src/components/index.js?v=20260613-structure3";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260613-structure3";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260613-structure3";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260613-structure3";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260613-structure3";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260613-structure3";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260613-production1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260613-production1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260613-production1";
+import { registerShellComponents } from "./src/components/index.js?v=20260613-production1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260613-production1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260613-production1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260613-production1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260613-production1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260613-production1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
@@ -55,6 +55,8 @@ const activeFields = document.querySelector("#activeFields");
 const timeLeft = document.querySelector("#timeLeft");
 const checkedFields = document.querySelector("#checkedFields");
 const pageCompletion = document.querySelector("#pageCompletion");
+const progressEmpty = document.querySelector("#progressEmpty");
+const statsGrid = document.querySelector(".stats-grid");
 const saveStatus = document.querySelector("#saveStatus");
 const autosaveTime = document.querySelector("#autosaveTime");
 const grammarTitle = document.querySelector("#grammarTitle");
@@ -5495,10 +5497,7 @@ init();
 
 async function init() {
   try {
-    document.body.classList.toggle("is-author-mode", isAuthorMode);
-    document.querySelector(".advanced-tools")?.toggleAttribute("hidden", !isAuthorMode);
-    showAnswers?.toggleAttribute("hidden", !isAuthorMode);
-    importAnswers?.toggleAttribute("hidden", !isAuthorMode);
+    configureAccessMode();
     pageInput?.setAttribute("aria-label", "Номер страницы");
 
     const response = await fetch(MANIFEST_URL, { cache: "no-store" });
@@ -5520,6 +5519,30 @@ async function init() {
   }
 }
 
+function configureAccessMode() {
+  document.body.classList.toggle("is-author-mode", isAuthorMode);
+  document.body.classList.toggle("is-student-mode", !isAuthorMode);
+
+  const authorOnlyNodes = [...document.querySelectorAll(".author-only")];
+  const advancedTools = document.querySelector(".advanced-tools");
+
+  if (!isAuthorMode) {
+    [...authorOnlyNodes, advancedTools].filter(Boolean).forEach((node) => node.remove());
+    [addField, addTemplate, editFields, fieldType, templateSelect, showAnswers, importAnswers].forEach((node) => {
+      node?.setAttribute("aria-hidden", "true");
+      node?.setAttribute("tabindex", "-1");
+      if ("disabled" in node) node.disabled = true;
+    });
+    return;
+  }
+
+  [advancedTools, ...authorOnlyNodes].filter(Boolean).forEach((node) => {
+    node.hidden = false;
+    node.removeAttribute("aria-hidden");
+    node.removeAttribute("inert");
+  });
+}
+
 function bindEvents() {
   prevPage.addEventListener("click", () => goToPage(currentPage - pageStep()));
   nextPage.addEventListener("click", () => goToPage(currentPage + pageStep()));
@@ -5538,44 +5561,48 @@ function bindEvents() {
     renderPages();
   });
 
-  addField.addEventListener("click", () => {
+  if (isAuthorMode) bindAuthorTools();
+
+  checkPage.addEventListener("click", checkVisiblePages);
+  if (isAuthorMode) showAnswers?.addEventListener("click", revealVisibleAnswers);
+  clearPage.addEventListener("click", clearVisiblePages);
+  if (isAuthorMode) importAnswers?.addEventListener("click", () => importFile.click());
+  importFile.addEventListener("change", importSavedAnswers);
+  exportAnswers.addEventListener("click", exportAllAnswers);
+  bindLmsEvents();
+  window.addEventListener("resize", renderPages);
+  window.addEventListener("hashchange", handleHashChange);
+}
+
+function bindAuthorTools() {
+  addField?.addEventListener("click", () => {
     addMode = !addMode;
     if (addMode) templateMode = false;
     addField.classList.toggle("primary", addMode);
-    addTemplate.classList.remove("primary");
+    addTemplate?.classList.remove("primary");
     setStatus(addMode ? "Кликни по странице, где нужно добавить поле ответа." : "");
     document.querySelectorAll(".answer-layer").forEach((layer) => {
       layer.classList.toggle("armed", addMode || templateMode);
     });
   });
 
-  addTemplate.addEventListener("click", () => {
+  addTemplate?.addEventListener("click", () => {
     templateMode = !templateMode;
     if (templateMode) addMode = false;
     addTemplate.classList.toggle("primary", templateMode);
-    addField.classList.remove("primary");
+    addField?.classList.remove("primary");
     setStatus(templateMode ? "Кликни в начале задания: здесь появится выбранный набор полей." : "");
     document.querySelectorAll(".answer-layer").forEach((layer) => {
       layer.classList.toggle("armed", addMode || templateMode);
     });
   });
 
-  editFields.addEventListener("click", () => {
+  editFields?.addEventListener("click", () => {
     editMode = !editMode;
     editFields.classList.toggle("primary", editMode);
     setStatus(editMode ? "Режим правки: перетаскивай личные поля за заголовок, меняй ширину круглой ручкой." : "");
     renderPages();
   });
-
-  checkPage.addEventListener("click", checkVisiblePages);
-  showAnswers.addEventListener("click", revealVisibleAnswers);
-  clearPage.addEventListener("click", clearVisiblePages);
-  importAnswers.addEventListener("click", () => importFile.click());
-  importFile.addEventListener("change", importSavedAnswers);
-  exportAnswers.addEventListener("click", exportAllAnswers);
-  bindLmsEvents();
-  window.addEventListener("resize", renderPages);
-  window.addEventListener("hashchange", handleHashChange);
 }
 
 function renderPages({ resetScroll = false } = {}) {
@@ -5713,6 +5740,19 @@ async function loadNativeLessonEmbed(embed, url) {
         color: #9f2f1d;
       }
       ${!isAuthorMode ? `
+      .native-shadow-content > .shell > .topbar,
+      .native-shadow-content .progress-panel {
+        display: none !important;
+      }
+      .native-shadow-content .shell {
+        padding-top: 0 !important;
+      }
+      .native-shadow-content .layout {
+        display: block !important;
+      }
+      .native-shadow-content .workbook {
+        max-width: none !important;
+      }
       #answersBtn,
       #exportBtn,
       .native-answer-reveal {
@@ -6780,17 +6820,27 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   setText(lessonCounter, `Урок ${nativeIndex + 1} из ${nativeLessons.length}`);
   setText(topProgressText, progress ? `${progress}%` : "Начат");
   setText(sidebarProgressText, progress ? `${progress}%` : "Начат");
-  setText(lessonProgressText, answerStats.total ? `${answerStats.percent}%` : `${clampedLessonPercent}%`);
-  setText(completedLessons, answerStats.total == null ? "—" : String(answerStats.total));
-  setText(remainingLessons, answerStats.filled == null ? "—" : String(answerStats.filled));
-  setText(checkedFields, answerStats.checked == null ? "—" : String(answerStats.checked));
-  setText(activeFields, answerStats.correct == null ? "—" : String(answerStats.correct));
-  setText(timeLeft, answerStats.errors == null ? "—" : String(answerStats.errors));
-  setText(pageCompletion, answerStats.total ? `${answerStats.percent}%` : "—");
+  setText(lessonProgressText, answerStats.loading ? "..." : answerStats.total ? `${answerStats.percent}%` : `${clampedLessonPercent}%`);
+  setText(completedLessons, answerStats.loading ? "..." : answerStats.total == null ? "0" : String(answerStats.total));
+  setText(remainingLessons, answerStats.loading ? "..." : answerStats.filled == null ? "0" : String(answerStats.filled));
+  setText(checkedFields, answerStats.loading ? "..." : answerStats.checked == null ? "0" : String(answerStats.checked));
+  setText(activeFields, answerStats.loading ? "..." : answerStats.correct == null ? "0" : String(answerStats.correct));
+  setText(timeLeft, answerStats.loading ? "..." : answerStats.errors == null ? "0" : String(answerStats.errors));
+  setText(pageCompletion, answerStats.loading ? "..." : answerStats.total ? `${answerStats.percent}%` : "0%");
+
+  const hasNoInteractiveFields = !answerStats.loading && !answerStats.total;
+  if (progressEmpty) {
+    progressEmpty.hidden = !hasNoInteractiveFields;
+    progressEmpty.textContent = "На этой странице нет заданий для заполнения.";
+  }
+  if (statsGrid) {
+    statsGrid.hidden = hasNoInteractiveFields;
+    statsGrid.classList.toggle("is-loading", Boolean(answerStats.loading));
+  }
 
   setBar(topProgressBar, progress || 1);
   setBar(sidebarProgressBar, progress || 1);
-  setBar(lessonProgressBar, clampedLessonPercent);
+  setBar(lessonProgressBar, answerStats.total ? answerStats.percent : clampedLessonPercent);
 
   document.querySelectorAll(".lesson-pill").forEach((button) => {
     const page = Number(button.dataset.page);
@@ -6818,9 +6868,12 @@ function currentAnswerStats(pages = visiblePageNumbers()) {
       .filter((control) => control.offsetParent !== null || control.getClientRects().length);
 
     if (!controls.length) {
+      if (nativeRoot.querySelector(".native-loader-shell")) {
+        return { total: null, filled: null, checked: null, correct: null, errors: null, percent: 0, loading: true };
+      }
       return entries.length
         ? statsFromEntries(entries)
-        : { total: null, filled: null, checked: null, correct: null, errors: null, percent: 0 };
+        : { total: 0, filled: 0, checked: 0, correct: 0, errors: 0, percent: 0 };
     }
 
     const filled = controls.filter((control) => {
@@ -6953,6 +7006,13 @@ function hintForLesson(title) {
       task: "Сначала найдите подлежащее в фразе, потом выберите форму be."
     };
   }
+  if (/3A|Where are my keys|small things/i.test(title)) {
+    return {
+      title: "Singular / plural nouns, a / an",
+      grammar: "Для одного предмета используйте a или an: a book, an umbrella. Во множественном числе чаще добавляется -s: books, keys, phones.",
+      task: "На странице 19 сначала назовите small things, затем заполните таблицу: один предмет слева, несколько предметов справа."
+    };
+  }
   if (/World music|countries|holiday|bus|family|car/i.test(title)) {
     return {
       title: "be: countries and people",
@@ -6989,7 +7049,13 @@ function defaultLmsWords() {
     { id: "word-thanks", term: "thanks", translation: "спасибо", lesson: "Lesson 1A" },
     { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" },
     { id: "word-japan", term: "Japan", translation: "Япония", lesson: "Lesson 1B" },
-    { id: "word-students", term: "students", translation: "студенты", lesson: "Lesson 1B" }
+    { id: "word-students", term: "students", translation: "студенты", lesson: "Lesson 1B" },
+    { id: "word-book", term: "book", translation: "книга", lesson: "Lesson 3A" },
+    { id: "word-laptop", term: "laptop", translation: "ноутбук", lesson: "Lesson 3A" },
+    { id: "word-phone", term: "phone", translation: "телефон", lesson: "Lesson 3A" },
+    { id: "word-photo", term: "photo", translation: "фото", lesson: "Lesson 3A" },
+    { id: "word-keys", term: "keys", translation: "ключи", lesson: "Lesson 3A" },
+    { id: "word-umbrella", term: "umbrella", translation: "зонт", lesson: "Lesson 3A" }
   ];
 }
 
@@ -6997,12 +7063,19 @@ function renderWordList() {
   if (!wordList) return;
   wordList.innerHTML = "";
   const seen = new Set();
+  const lesson = currentLessonLabel();
+  const lessonNumber = lesson.match(/\d+[AB]?/)?.[0] || "";
   const words = [...defaultLmsWords(), ...lmsWords]
     .filter((word) => {
       const key = String(word.term || "").toLowerCase();
       if (!key || seen.has(key)) return false;
       seen.add(key);
       return true;
+    })
+    .sort((a, b) => {
+      const aCurrent = lessonNumber && String(a.lesson || "").includes(lessonNumber) ? 0 : 1;
+      const bCurrent = lessonNumber && String(b.lesson || "").includes(lessonNumber) ? 0 : 1;
+      return aCurrent - bCurrent;
     })
     .slice(0, 12);
 
@@ -7040,9 +7113,10 @@ function appendAiMessage(text, kind) {
 
 function aiReply(question) {
   const lesson = currentLessonLabel();
-  if (/пример/i.test(question)) return `${lesson}: попробуйте составить короткий ответ по модели из задания, затем нажмите «Проверить».`;
-  if (/ответ/i.test(question)) return "Я дам подсказку без готового ответа: проверьте подлежащее, время и форму глагола.";
-  return `Подсказка по «${lesson}»: начните с инструкции задания, заполните очевидные поля и вернитесь к сложным после первого прохода.`;
+  const hint = hintForLesson(lesson);
+  if (/пример/i.test(question)) return `${lesson}: пример по модели урока - ${hint.grammar}`;
+  if (/ответ/i.test(question)) return `Я не называю готовый ответ: ${hint.task}`;
+  return `Подсказка по «${lesson}»: ${hint.task}`;
 }
 
 function updateLmsSaveTime() {
