@@ -241,7 +241,7 @@ const nativeLessons = [
     startPage: 51,
     endPage: 52,
     title: "8B I love cooking",
-    url: "public/native/8b-i-love-cooking/index.html?v=20260612-8b2"
+    url: "public/native/8b-i-love-cooking/index.html?v=20260613-8bphoto1"
   },
   {
     startPage: 53,

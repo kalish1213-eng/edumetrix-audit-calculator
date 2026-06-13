@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1495" height="960" viewBox="0 0 1495 960" role="img" aria-label="Pronunciation table for bull, boot, and singer">
+  <defs>
+    <style>
+      .word{font:700 64px Arial,Helvetica,sans-serif;fill:#343434}
+      .small{font:700 58px Arial,Helvetica,sans-serif;fill:#444}
+      .pink{fill:#d94b97}.line{stroke:#9d9d9d;stroke-width:6}.thin{stroke:#b8b8b8;stroke-width:4}
+    </style>
+  </defs>
+  <rect width="1495" height="960" fill="#fff"/>
+  <line x1="0" y1="24" x2="1495" y2="24" class="line"/>
+  <line x1="580" y1="24" x2="580" y2="960" class="line"/>
+  <line x1="0" y1="330" x2="1495" y2="330" class="thin"/>
+  <line x1="0" y1="630" x2="1495" y2="630" class="thin"/>
+  <g transform="translate(24 56)">
+    <rect width="248" height="226" fill="#fde9f5"/>
+    <path d="M126 36c50 50 50 108 0 166-50-58-50-116 0-166z" fill="none" stroke="#d94b97" stroke-width="16"/>
+    <path d="M58 126q68-42 136 0t80 0M74 164q54-28 108 0t68 0" fill="none" stroke="#555" stroke-width="7"/>
+  </g>
+  <text x="310" y="178" class="word">b<tspan class="pink">u</tspan>ll</text>
+  <text x="630" y="135" class="small">b<tspan class="pink">oo</tspan>k</text>
+  <text x="865" y="135" class="small">c<tspan class="pink">oo</tspan>k</text>
+  <text x="630" y="235" class="small">l<tspan class="pink">oo</tspan>k</text>
+  <text x="865" y="235" class="small">g<tspan class="pink">oo</tspan>d</text>
+  <g transform="translate(24 366)">
+    <rect width="248" height="226" fill="#fde9f5"/>
+    <path d="M62 164h132q42 0 42-42V70H50v52q0 42 12 42z" fill="none" stroke="#555" stroke-width="8"/>
+    <path d="M124 50v120" stroke="#d94b97" stroke-width="18"/>
+    <path d="M72 92h105" stroke="#d94b97" stroke-width="18"/>
+  </g>
+  <text x="310" y="488" class="word">b<tspan class="pink">oo</tspan>t</text>
+  <text x="630" y="445" class="small">t<tspan class="pink">oo</tspan></text>
+  <text x="865" y="445" class="small">f<tspan class="pink">oo</tspan>d</text>
+  <text x="630" y="545" class="small">s<tspan class="pink">oo</tspan>n</text>
+  <text x="865" y="545" class="small">sch<tspan class="pink">oo</tspan>l</text>
+  <g transform="translate(24 676)">
+    <rect width="248" height="226" fill="#fde9f5"/>
+    <circle cx="122" cy="102" r="76" fill="none" stroke="#555" stroke-width="8"/>
+    <path d="M122 34v128" stroke="#d94b97" stroke-width="16"/>
+    <path d="M70 126q52 42 104 0" fill="none" stroke="#555" stroke-width="8"/>
+    <path d="M156 148l46 48" stroke="#555" stroke-width="8"/>
+  </g>
+  <text x="310" y="798" class="word">si<tspan class="pink">ng</tspan>er</text>
+  <text x="630" y="755" class="small">doi<tspan class="pink">ng</tspan></text>
+  <text x="865" y="755" class="small">goi<tspan class="pink">ng</tspan></text>
+  <text x="630" y="855" class="small">swimmi<tspan class="pink">ng</tspan></text>
+  <text x="960" y="855" class="small">thi<tspan class="pink">ng</tspan></text>
+</svg>

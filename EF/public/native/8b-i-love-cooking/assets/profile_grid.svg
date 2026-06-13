@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2380" height="4780" viewBox="0 0 2380 4780" role="img" aria-label="Six dating profile cards with likes and dislikes">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#6b7478" flood-opacity=".25"/></filter>
+    <style>
+      .title{font:900 150px Arial,Helvetica,sans-serif;fill:#111}
+      .name{font:900 90px Arial,Helvetica,sans-serif;fill:#111}
+      .txt{font:500 64px Arial,Helvetica,sans-serif;fill:#222}
+      .heart{fill:#e51d42}.check{fill:#42b94f}.cross{fill:#18b9c4}
+    </style>
+  </defs>
+  <rect width="2380" height="4780" rx="48" fill="#e8f0f3"/>
+  <text x="86" y="170" class="title">Do you <tspan fill="#fff">like</tspan> what I <tspan fill="#fff">like?</tspan></text>
+  <g id="heart"><text x="0" y="0" font-size="72" font-family="Arial" font-weight="900" class="heart">♥</text></g>
+  <g id="check"><text x="0" y="0" font-size="72" font-family="Arial" font-weight="900" class="check">✓</text></g>
+  <g id="cross"><text x="0" y="0" font-size="72" font-family="Arial" font-weight="900" class="cross">✕</text></g>
+  <g id="card"><rect width="1030" height="1380" rx="34" fill="#eef4f6" filter="url(#shadow)"/><rect width="1030" height="805" rx="34" fill="#d8ddd8"/></g>
+  <g transform="translate(86 270)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#a86d4f"/><rect y="480" width="1030" height="325" fill="#442b22" opacity=".55"/>
+    <circle cx="520" cy="290" r="150" fill="#e5b08d"/><path d="M342 265q90-180 286-118 118 38 152 150-160-78-310-22z" fill="#b96b36"/><rect x="245" y="565" width="560" height="240" fill="#55362c"/>
+    <text x="48" y="910" class="name">Isabella</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love playing the piano.</text>
+    <use href="#check" x="54" y="1100"/><text x="130" y="1100" class="txt">I like doing sport.</text>
+    <use href="#cross" x="54" y="1190"/><text x="130" y="1190" class="txt">I don't like travelling.</text>
+  </g>
+  <g transform="translate(1264 270)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#91bf76"/><path d="M0 560q260-170 520-80t510-90v415H0z" fill="#5c8e4d"/><circle cx="520" cy="300" r="150" fill="#e2ae87"/><path d="M374 238q110-150 290-38 34 22 52 70-180-72-342-32z" fill="#59342d"/><path d="M390 510h300" stroke="#222" stroke-width="70"/><path d="M430 210h180" stroke="#fff" stroke-width="26"/>
+    <text x="48" y="910" class="name">William</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love running and</text><text x="130" y="1090" class="txt">cycling.</text>
+    <use href="#check" x="54" y="1180"/><text x="130" y="1180" class="txt">I like classical music.</text>
+    <use href="#cross" x="54" y="1270"/><use href="#cross" x="118" y="1270"/><text x="200" y="1270" class="txt">I hate flying.</text>
+  </g>
+  <g transform="translate(86 1715)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#97704e"/><rect y="250" width="1030" height="330" fill="#442e21"/><rect x="50" y="180" width="260" height="450" rx="20" fill="#251b17"/><circle cx="520" cy="306" r="150" fill="#e2ae87"/><path d="M366 240q116-150 280-62 58 32 74 102-164-70-354-40z" fill="#3b211b"/><path d="M370 544q260-120 430 40v220H370z" fill="#f5f5ed"/>
+    <text x="48" y="910" class="name">Angie</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love buying clothes.</text>
+    <use href="#check" x="54" y="1100"/><text x="130" y="1100" class="txt">I like the cinema.</text>
+    <use href="#cross" x="54" y="1190"/><text x="130" y="1190" class="txt">I don't like reading.</text>
+  </g>
+  <g transform="translate(1264 1715)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#f0b451"/><path d="M120 560q300-260 760-280v525H120z" fill="#f68b2d"/><circle cx="520" cy="310" r="145" fill="#e4b08b"/><path d="M370 250q124-128 298-48 48 22 64 82-176-64-362-34z" fill="#4a2922"/><path d="M330 556h380q120 0 160 249H210q28-210 120-249z" fill="#f5f7f2"/>
+    <text x="48" y="910" class="name">Daniel</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love cooking.</text>
+    <use href="#check" x="54" y="1100"/><text x="130" y="1100" class="txt">I like camping.</text>
+    <use href="#cross" x="54" y="1190"/><text x="130" y="1190" class="txt">I don't like watching TV.</text>
+  </g>
+  <g transform="translate(86 3160)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#8ba27a"/><circle cx="520" cy="300" r="150" fill="#e4b18c"/><path d="M330 210q160-160 374 0v190H330z" fill="#202020"/><rect x="320" y="540" width="420" height="265" fill="#406059"/><path d="M0 650q300-180 560-80t470-160v395H0z" fill="#728862"/>
+    <text x="48" y="910" class="name">Adriana</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love walking in the</text><text x="130" y="1090" class="txt">mountains.</text>
+    <use href="#check" x="54" y="1180"/><text x="130" y="1180" class="txt">I like good food.</text>
+    <use href="#cross" x="54" y="1270"/><use href="#cross" x="118" y="1270"/><text x="200" y="1270" class="txt">I hate shopping.</text>
+  </g>
+  <g transform="translate(1264 3160)">
+    <use href="#card"/>
+    <rect width="1030" height="805" rx="34" fill="#f3d4bd"/><circle cx="520" cy="300" r="150" fill="#e4af88"/><path d="M350 214q160-126 332 0v90H350z" fill="#111"/><rect x="325" y="520" width="390" height="285" fill="#344b5e"/><path d="M402 270h260" stroke="#111" stroke-width="40"/><path d="M420 420q70 50 170 0" stroke="#fff" stroke-width="10"/>
+    <text x="48" y="910" class="name">Luke</text>
+    <use href="#heart" x="54" y="1010"/><text x="130" y="1010" class="txt">I love shopping.</text>
+    <use href="#check" x="54" y="1100"/><text x="130" y="1100" class="txt">I like watching films.</text>
+    <use href="#cross" x="54" y="1190"/><text x="130" y="1190" class="txt">I don't like sport.</text>
+  </g>
+</svg>
