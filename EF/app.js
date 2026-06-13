@@ -313,7 +313,7 @@ const nativeLessons = [
     startPage: 75,
     endPage: 76,
     title: "12B Revise the past",
-    url: "public/native/12b-revise-the-past/index.html?v=20260612-12b2"
+    url: "public/native/12b-revise-the-past/index.html?v=20260613-12bphoto1"
   },
   {
     startPage: 77,
