@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1735" height="940" viewBox="0 0 1735 940" role="img" aria-label="Fifth Avenue ordinals quiz question">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5f1cf"/>
+      <stop offset="1" stop-color="#e8ddb0"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" x2="1">
+      <stop offset="0" stop-color="#ead5b5"/>
+      <stop offset="1" stop-color="#b78d73"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#6d5c27" flood-opacity=".25"/>
+    </filter>
+    <style>
+      .q{font:700 76px Arial,Helvetica,sans-serif;fill:#191919}
+      .opt{font:500 66px Arial,Helvetica,sans-serif;fill:#222}
+      .red{fill:#d13947}
+      .street{font:700 92px Arial,Helvetica,sans-serif;fill:#eef8ff}
+      .small{font:700 46px Arial,Helvetica,sans-serif;fill:#f8fff8}
+    </style>
+  </defs>
+  <rect width="1735" height="940" fill="url(#bg)"/>
+  <rect x="36" y="56" width="1082" height="724" rx="10" fill="#fff8df"/>
+  <rect x="58" y="76" width="1038" height="684" rx="8" fill="url(#sky)"/>
+  <g opacity=".88">
+    <rect x="72" y="92" width="190" height="668" fill="#bd7f65"/>
+    <rect x="292" y="70" width="182" height="700" fill="#d3a07c"/>
+    <rect x="500" y="88" width="230" height="672" fill="#a96d5c"/>
+    <rect x="758" y="74" width="155" height="690" fill="#c49072"/>
+    <rect x="935" y="96" width="138" height="664" fill="#8f5f56"/>
+    <g fill="#f4d7a9" opacity=".68">
+      <rect x="102" y="132" width="50" height="96"/><rect x="176" y="132" width="50" height="96"/>
+      <rect x="318" y="130" width="50" height="104"/><rect x="398" y="130" width="50" height="104"/>
+      <rect x="528" y="150" width="58" height="98"/><rect x="626" y="150" width="58" height="98"/>
+      <rect x="782" y="124" width="42" height="100"/><rect x="852" y="124" width="42" height="100"/>
+      <rect x="956" y="150" width="40" height="92"/><rect x="1018" y="150" width="40" height="92"/>
+    </g>
+  </g>
+  <g filter="url(#softShadow)">
+    <path d="M211 218h530q50 0 50 50v96q0 50-50 50H211q-50 0-50-50v-96q0-50 50-50z" fill="#00558d"/>
+    <path d="M211 218h530q50 0 50 50v96q0 50-50 50H211q-50 0-50-50v-96q0-50 50-50z" fill="none" stroke="#013f38" stroke-width="18"/>
+    <text x="274" y="342" class="street">Fifth Ave</text>
+    <rect x="656" y="534" width="376" height="116" fill="#14292f" stroke="#1f6b62" stroke-width="14"/>
+    <text x="706" y="612" class="small">ONE WAY</text>
+    <path d="M984 560l90 32-90 34z" fill="#e9eeee"/>
+    <rect x="742" y="414" width="44" height="286" rx="20" fill="#0b534b"/>
+  </g>
+  <rect x="1120" y="60" width="575" height="716" fill="#ede5bc"/>
+  <text x="1186" y="236" class="q">Which city has</text>
+  <text x="1186" y="326" class="q">a street</text>
+  <text x="1462" y="326" class="q red">Fifth</text>
+  <text x="1186" y="416" class="q">Avenue?</text>
+  <text x="1205" y="540" class="opt">a New York</text>
+  <text x="1205" y="640" class="opt">b London</text>
+  <text x="1205" y="740" class="opt">c Sydney</text>
+  <text x="1430" y="844" font-family="Arial,Helvetica,sans-serif" font-size="270" font-weight="900" fill="#fff" opacity=".88" filter="url(#softShadow)">5</text>
+  <rect y="830" width="1735" height="18" fill="#d2d2d2"/>
+  <rect y="858" width="1735" height="82" fill="#fff"/>
+</svg>

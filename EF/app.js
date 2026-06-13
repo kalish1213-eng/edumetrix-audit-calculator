@@ -229,7 +229,7 @@ const nativeLessons = [
     startPage: 47,
     endPage: 48,
     title: "Practical English 4",
-    url: "public/native/practical-english-4/index.html?v=20260612-pe4a"
+    url: "public/native/practical-english-4/index.html?v=20260613-pe4photo1b"
   },
   {
     startPage: 49,

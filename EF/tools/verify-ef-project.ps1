@@ -79,7 +79,7 @@ if ($fixedFields -lt 2200) { Fail "too few checked answer fields: $fixedFields" 
 if ($noAnswerFields -ne 0) { Fail "checked fields without answer keys: $noAnswerFields" }
 
 $index = Get-Content -LiteralPath $indexPath -Raw
-if ($index -notmatch "7bphoto1") { Fail "index does not reference 7bphoto1 build" }
+if ($index -notmatch "pe4photo1b") { Fail "index does not reference pe4photo1b build" }
 if ($app -notmatch "native-answer-reveal") { Fail "single-field reveal controls are missing" }
 if ($app -notmatch "native-answer-hint") { Fail "inline correction hints are missing" }
 
