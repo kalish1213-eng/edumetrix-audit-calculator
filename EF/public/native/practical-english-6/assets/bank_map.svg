@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="3408" viewBox="0 0 4096 3408" role="img" aria-labelledby="title desc">
+  <title id="title">Street map with three banks and Rob marker</title>
+  <desc id="desc">A sharp vector street map with three banks labelled A, B and C, a red car, and Rob marked near the bottom centre.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="8" dy="10" stdDeviation="8" flood-color="#5b5029" flood-opacity=".22"/></filter>
+    <style>
+      .road{fill:#f2e3a8;stroke:#eadb98;stroke-width:26}
+      .pin{fill:#b99832}.pintext{font-family:Arial,Helvetica,sans-serif;font-size:70px;font-weight:900;fill:#fff}
+      .bank{font-family:Georgia,'Times New Roman',serif;font-size:86px;font-weight:900;fill:#151515}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:54px;font-weight:800;fill:#111}
+      .ink{stroke:#222;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="4096" height="3408" fill="#fffdf4"/>
+  <path class="road" d="M380 600h3320M380 1510h3320M380 2535h3320M880 220v2940M1970 220v2940M3100 220v2940"/>
+  <g filter="url(#shadow)" transform="translate(760 1055)">
+    <rect x="0" y="0" width="390" height="680" fill="#faf8df" stroke="#222" stroke-width="8"/><rect x="240" y="250" width="260" height="560" fill="#f0edc5" stroke="#222" stroke-width="8"/>
+    <g fill="#222"><rect x="70" y="130" width="32" height="90"/><rect x="180" y="130" width="32" height="90"/><rect x="315" y="410" width="32" height="80"/><rect x="410" y="410" width="32" height="80"/></g>
+  </g>
+  <g filter="url(#shadow)" transform="translate(1835 1360)">
+    <circle class="pin" cx="120" cy="-30" r="80"/><text class="pintext" x="95" y="-5">B</text>
+    <rect x="0" y="80" width="560" height="550" fill="#d8dde4" stroke="#222" stroke-width="9"/>
+    <path d="M0 80 135-35h390l35 115z" fill="#eceff1" stroke="#222" stroke-width="9"/>
+    <g fill="#9ba4ae"><rect x="70" y="250" width="55" height="240"/><rect x="190" y="250" width="55" height="240"/><rect x="310" y="250" width="55" height="240"/><rect x="430" y="250" width="55" height="240"/></g>
+    <text class="bank" x="145" y="735">BANK</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(2600 580)">
+    <rect x="0" y="180" width="360" height="520" fill="#e7a84f" stroke="#222" stroke-width="8"/><rect x="360" y="150" width="340" height="550" fill="#a5d07b" stroke="#222" stroke-width="8"/>
+    <g fill="#70401f"><rect x="80" y="280" width="35" height="70"/><rect x="180" y="280" width="35" height="70"/><rect x="460" y="260" width="35" height="80"/><rect x="560" y="260" width="35" height="80"/></g>
+    <rect x="120" y="585" width="470" height="96" fill="#30825f"/><text class="small" x="195" y="652" fill="#fff">SHOP</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(3220 410)">
+    <circle class="pin" cx="320" cy="15" r="80"/><text class="pintext" x="295" y="40">C</text>
+    <rect x="0" y="220" width="620" height="520" fill="#616572" stroke="#222" stroke-width="9"/>
+    <path d="M0 220 120 70h420l80 150z" fill="#777a88" stroke="#222" stroke-width="9"/>
+    <rect x="0" y="510" width="620" height="125" fill="#2f8ec3"/><text class="small" x="125" y="592" fill="#fff">BARCLAYS</text>
+    <text class="bank" x="200" y="830">BANK</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(1065 2580)">
+    <circle class="pin" cx="320" cy="0" r="80"/><text class="pintext" x="295" y="25">A</text>
+    <rect x="0" y="120" width="640" height="520" fill="#d5d7dc" stroke="#222" stroke-width="9"/>
+    <path d="M0 120 130 0h380l130 120z" fill="#eceff1" stroke="#222" stroke-width="9"/>
+    <g fill="#929ba5"><rect x="70" y="270" width="60" height="250"/><rect x="210" y="270" width="60" height="250"/><rect x="350" y="270" width="60" height="250"/><rect x="490" y="270" width="60" height="250"/></g>
+  </g>
+  <g filter="url(#shadow)" transform="translate(660 1920)">
+    <path d="M0 120c130-155 390-150 520 0l40 220H-40z" fill="#e61d22" stroke="#222" stroke-width="8"/>
+    <circle cx="105" cy="342" r="42" fill="#222"/><circle cx="390" cy="342" r="42" fill="#222"/>
+  </g>
+  <g transform="translate(2330 2580)">
+    <circle cx="0" cy="210" r="36" fill="#e01822"/><path d="M0 190v-145" class="ink"/><path d="M0 45l-46 54M0 45l46 54" class="ink"/>
+    <text class="small" x="-130" y="355">Rob is here.</text>
+  </g>
+</svg>

@@ -301,7 +301,7 @@ const nativeLessons = [
     startPage: 71,
     endPage: 72,
     title: "Practical English 6",
-    url: "public/native/practical-english-6/index.html?v=20260612-pe6b"
+    url: "public/native/practical-english-6/index.html?v=20260613-pe6photo1"
   },
   {
     startPage: 73,
