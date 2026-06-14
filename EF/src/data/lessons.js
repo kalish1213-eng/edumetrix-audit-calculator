@@ -205,7 +205,7 @@ export const nativeLessons = [
     startPage: 51,
     endPage: 52,
     title: "8B I love cooking",
-    url: "public/native/8b-i-love-cooking/index.html?v=20260614-photoall1"
+    url: "public/native/8b-i-love-cooking/index.html?v=20260614-8bpronphoto1"
   },
   {
     startPage: 53,
