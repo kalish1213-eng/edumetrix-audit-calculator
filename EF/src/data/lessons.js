@@ -181,7 +181,7 @@ export const nativeLessons = [
     startPage: 43,
     endPage: 44,
     title: "7A Have a nice weekend!",
-    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260613-7aphoto2"
+    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260614-7apronphoto1"
   },
   {
     startPage: 45,
