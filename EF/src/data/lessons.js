@@ -73,109 +73,109 @@ export const nativeLessons = [
     startPage: 7,
     endPage: 8,
     title: "1A A cappuccino, please",
-    url: "public/native/1a-cappuccino-please/index.html?v=20260613-1aphotoall2"
+    url: "public/native/1a-cappuccino-please/index.html?v=20260614-photoall1"
   },
   {
     startPage: 9,
     endPage: 10,
     title: "1B World music",
-    url: "public/native/1b-world-music/index.html?v=20260613-1bvector1"
+    url: "public/native/1b-world-music/index.html?v=20260614-photoall1"
   },
   {
     startPage: 11,
     endPage: 12,
     title: "Practical English 1",
-    url: "public/native/practical-english-1/index.html?v=20260613-pe1photo3"
+    url: "public/native/practical-english-1/index.html?v=20260614-photoall1"
   },
   {
     startPage: 13,
     endPage: 14,
     title: "2A Are you on holiday?",
-    url: "public/native/2a-are-you-on-holiday/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/2a-are-you-on-holiday/index.html?v=20260614-photoall1"
   },
   {
     startPage: 15,
     endPage: 16,
     title: "2B That's my bus!",
-    url: "public/native/2b-thats-my-bus/index.html?v=20260613-2bvector1"
+    url: "public/native/2b-thats-my-bus/index.html?v=20260614-photoall1"
   },
   {
     startPage: 17,
     endPage: 18,
     title: "Revise and Check 1&2",
-    url: "public/native/revise-check-1-2/index.html?v=20260613-revise12photo2"
+    url: "public/native/revise-check-1-2/index.html?v=20260614-photoall1"
   },
   {
     startPage: 19,
     endPage: 20,
     title: "3A Where are my keys?",
-    url: "public/native/3a-where-are-my-keys/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/3a-where-are-my-keys/index.html?v=20260614-photoall1"
   },
   {
     startPage: 21,
     endPage: 22,
     title: "3B Souvenirs",
-    url: "public/native/3b-souvenirs/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/3b-souvenirs/index.html?v=20260614-photoall1"
   },
   {
     startPage: 23,
     endPage: 24,
     title: "Practical English 2",
-    url: "public/native/practical-english-2/index.html?v=20260613-pe2photo2"
+    url: "public/native/practical-english-2/index.html?v=20260614-photoall1"
   },
   {
     startPage: 25,
     endPage: 26,
     title: "4A Meet the family",
-    url: "public/native/4a-meet-the-family/index.html?v=20260613-4avector1"
+    url: "public/native/4a-meet-the-family/index.html?v=20260614-photoall1"
   },
   {
     startPage: 27,
     endPage: 28,
     title: "4B The perfect car",
-    url: "public/native/4b-the-perfect-car/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/4b-the-perfect-car/index.html?v=20260614-photoall1"
   },
   {
     startPage: 29,
     endPage: 30,
     title: "Revise and Check 3&4",
-    url: "public/native/revise-check-3-4/index.html?v=20260613-revise34photo2"
+    url: "public/native/revise-check-3-4/index.html?v=20260614-photoall1"
   },
   {
     startPage: 31,
     endPage: 32,
     title: "5A A big breakfast?",
-    url: "public/native/5a-a-big-breakfast/index.html?v=20260613-5avector1"
+    url: "public/native/5a-a-big-breakfast/index.html?v=20260614-photoall1"
   },
   {
     startPage: 33,
     endPage: 34,
     title: "5B A very long flight",
-    url: "public/native/5b-a-very-long-flight/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/5b-a-very-long-flight/index.html?v=20260614-photoall1"
   },
   {
     startPage: 35,
     endPage: 36,
     title: "Practical English 3",
-    url: "public/native/practical-english-3/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/practical-english-3/index.html?v=20260614-photoall1"
   },
   {
     startPage: 37,
     endPage: 38,
     title: "6A A school reunion",
-    url: "public/native/6a-a-school-reunion/index.html?v=20260613-6avector1"
+    url: "public/native/6a-a-school-reunion/index.html?v=20260614-photoall1"
   },
   {
     startPage: 39,
     endPage: 40,
     title: "6B Good morning, goodnight",
-    url: "public/native/6b-good-morning-goodnight/index.html?v=20260613-6bphoto2"
+    url: "public/native/6b-good-morning-goodnight/index.html?v=20260614-photoall1"
   },
   {
     startPage: 41,
     endPage: 42,
     title: "Revise and Check 5&6",
-    url: "public/native/revise-check-5-6/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/revise-check-5-6/index.html?v=20260614-photoall1"
   },
   {
     startPage: 43,
@@ -187,103 +187,103 @@ export const nativeLessons = [
     startPage: 45,
     endPage: 46,
     title: "7B Lights, camera, action!",
-    url: "public/native/7b-lights-camera-action/index.html?v=20260613-7bphoto2"
+    url: "public/native/7b-lights-camera-action/index.html?v=20260614-photoall1"
   },
   {
     startPage: 47,
     endPage: 48,
     title: "Practical English 4",
-    url: "public/native/practical-english-4/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/practical-english-4/index.html?v=20260614-photoall1"
   },
   {
     startPage: 49,
     endPage: 50,
     title: "8A Can I park here?",
-    url: "public/native/8a-can-i-park-here/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/8a-can-i-park-here/index.html?v=20260614-photoall1"
   },
   {
     startPage: 51,
     endPage: 52,
     title: "8B I love cooking",
-    url: "public/native/8b-i-love-cooking/index.html?v=20260613-8bphoto2"
+    url: "public/native/8b-i-love-cooking/index.html?v=20260614-photoall1"
   },
   {
     startPage: 53,
     endPage: 54,
     title: "Revise and Check 7&8",
-    url: "public/native/revise-check-7-8/index.html?v=20260613-revise78photo2"
+    url: "public/native/revise-check-7-8/index.html?v=20260614-photoall1"
   },
   {
     startPage: 55,
     endPage: 56,
     title: "9A Everything's fine!",
-    url: "public/native/9a-everythings-fine/index.html?v=20260613-9aphoto1"
+    url: "public/native/9a-everythings-fine/index.html?v=20260614-photoall1"
   },
   {
     startPage: 57,
     endPage: 58,
     title: "9B Working undercover",
-    url: "public/native/9b-working-undercover/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/9b-working-undercover/index.html?v=20260614-photoall1"
   },
   {
     startPage: 59,
     endPage: 60,
     title: "Practical English 5",
-    url: "public/native/practical-english-5/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/practical-english-5/index.html?v=20260614-photoall1"
   },
   {
     startPage: 61,
     endPage: 62,
     title: "10A A room with a view",
-    url: "public/native/10a-a-room-with-a-view/index.html?v=20260613-10aphoto1"
+    url: "public/native/10a-a-room-with-a-view/index.html?v=20260614-photoall1"
   },
   {
     startPage: 63,
     endPage: 64,
     title: "10B Where were you?",
-    url: "public/native/10b-where-were-you/index.html?v=20260613-10bphoto1"
+    url: "public/native/10b-where-were-you/index.html?v=20260614-photoall1"
   },
   {
     startPage: 65,
     endPage: 66,
     title: "Revise and Check 9&10",
-    url: "public/native/revise-check-9-10/index.html?v=20260613-revise910photo1c"
+    url: "public/native/revise-check-9-10/index.html?v=20260614-photoall1"
   },
   {
     startPage: 67,
     endPage: 68,
     title: "11A A new life in the USA",
-    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260613-11aphoto1b"
+    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260614-photoall1"
   },
   {
     startPage: 69,
     endPage: 70,
     title: "11B How was your day?",
-    url: "public/native/11b-how-was-your-day/index.html?v=20260613-11bphoto1"
+    url: "public/native/11b-how-was-your-day/index.html?v=20260614-photoall1"
   },
   {
     startPage: 71,
     endPage: 72,
     title: "Practical English 6",
-    url: "public/native/practical-english-6/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/practical-english-6/index.html?v=20260614-photoall1"
   },
   {
     startPage: 73,
     endPage: 74,
     title: "12A Strangers on a train",
-    url: "public/native/12a-strangers-on-a-train/index.html?v=20260613-12aphoto1"
+    url: "public/native/12a-strangers-on-a-train/index.html?v=20260614-photoall1"
   },
   {
     startPage: 75,
     endPage: 76,
     title: "12B Revise the past",
-    url: "public/native/12b-revise-the-past/index.html?v=20260613-12bphoto1"
+    url: "public/native/12b-revise-the-past/index.html?v=20260614-photoall1"
   },
   {
     startPage: 77,
     endPage: 78,
     title: "Revise and Check 11&12",
-    url: "public/native/revise-check-11-12/index.html?v=20260613-revise1112photo1"
+    url: "public/native/revise-check-11-12/index.html?v=20260614-photoall1"
   },
   {
     startPage: 79,
@@ -313,7 +313,7 @@ export const nativeLessons = [
     startPage: 95,
     endPage: 96,
     title: "Grammar Bank 2A-2B",
-    url: "public/native/grammar-bank-2/index.html?v=20260614-3aphotoitems1"
+    url: "public/native/grammar-bank-2/index.html?v=20260614-photoall1"
   },
   {
     startPage: 97,
