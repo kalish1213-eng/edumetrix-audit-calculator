@@ -1,112 +1,272 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="4300" height="2900" viewBox="0 0 4300 2900" role="img" aria-labelledby="title desc">
   <title id="title">Town map with streets and buildings</title>
-  <desc id="desc">A sharp vector town map showing hospital, train station, hotel, school, car park, bank, gym, factory, Italian restaurant, cinema, supermarket, bookshop, and four labelled blanks A to D.</desc>
+  <desc id="desc">A detailed sharp vector town map showing the hospital, train station, hotel, school, car park, bank, gym, factory, Italian restaurant, cinema, supermarket, bookshop, park, and four labelled blanks A to D.</desc>
   <defs>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="8" dy="10" stdDeviation="8" flood-color="#5b5029" flood-opacity=".22"/></filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="145%">
+      <feDropShadow dx="10" dy="14" stdDeviation="10" flood-color="#3d3422" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="roadEdge" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#faefbb"/>
+      <stop offset=".55" stop-color="#efd779"/>
+      <stop offset="1" stop-color="#e5ca63"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e6f9ff"/>
+      <stop offset=".55" stop-color="#92d5ef"/>
+      <stop offset="1" stop-color="#52a9cf"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fbfbfb"/>
+      <stop offset="1" stop-color="#d7dbe1"/>
+    </linearGradient>
+    <linearGradient id="station" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe4a1"/>
+      <stop offset="1" stop-color="#d99a2d"/>
+    </linearGradient>
+    <linearGradient id="park" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#c8ef8e"/>
+      <stop offset="1" stop-color="#6dbf55"/>
+    </linearGradient>
+    <pattern id="brick" width="76" height="48" patternUnits="userSpaceOnUse">
+      <rect width="76" height="48" fill="#a86d56"/>
+      <path d="M0 47h76M38 0v24M0 24h76M76 24v24" fill="none" stroke="#87513f" stroke-width="5" opacity=".38"/>
+    </pattern>
+    <pattern id="awning" width="86" height="90" patternUnits="userSpaceOnUse">
+      <rect width="86" height="90" fill="#fff7f1"/>
+      <rect width="42" height="90" fill="#e93035"/>
+    </pattern>
     <style>
-      .road{fill:#f1df92;stroke:#ead783;stroke-width:28;stroke-linejoin:round}
-      .street{font-family:Georgia,'Times New Roman',serif;font-size:82px;font-weight:900;fill:#151515}
-      .label{font-family:Georgia,'Times New Roman',serif;font-size:70px;font-weight:900;fill:#151515}
-      .small{font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:800;fill:#222}
-      .blank{fill:#fff;stroke:#bfc4c8;stroke-width:9}
-      .pin{fill:#b99832}.pintext{font-family:Arial,Helvetica,sans-serif;font-size:47px;font-weight:900;fill:#fff}
-      .ink{stroke:#222;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
-      .building{filter:url(#shadow)}
+      .road{fill:none;stroke:url(#roadEdge);stroke-width:158;stroke-linecap:round;stroke-linejoin:round}
+      .road-line{fill:none;stroke:#fff9d7;stroke-width:28;stroke-linecap:round;stroke-opacity:.55}
+      .street{font-family:Georgia,'Times New Roman',serif;font-size:80px;font-weight:900;letter-spacing:.5px;fill:#1a1a1a;stroke:#fff6ce;stroke-width:14;paint-order:stroke fill;stroke-linejoin:round}
+      .label{font-family:Georgia,'Times New Roman',serif;font-size:72px;font-weight:900;letter-spacing:.5px;fill:#171717}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:800;fill:#202020}
+      .tiny{font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:800;fill:#222}
+      .building{filter:url(#softShadow)}
+      .ink{stroke:#1c1b1a;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .ink2{stroke:#1c1b1a;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .blank{fill:#fff;stroke:#c7ccd4;stroke-width:8}
+      .pin{fill:#ba9a35;stroke:#fff;stroke-width:8}
+      .pintext{font-family:Arial,Helvetica,sans-serif;font-size:48px;font-weight:900;fill:#fff}
+      .window{fill:#2d3d98}
     </style>
   </defs>
-  <rect width="4300" height="2900" fill="#fffdf2"/>
-  <path class="road" d="M160 930h3950M160 1905h3950M160 2770h3950M1045 180v2590M2510 180v2590M3820 250v2520"/>
-  <text class="street" x="1510" y="985">NORTH STREET</text>
-  <text class="street" x="1510" y="1995">KING STREET</text>
-  <text class="street" x="1480" y="2860">SOUTH STREET</text>
-  <text class="street" transform="translate(1130 1085) rotate(-90)">EAST ROAD</text>
-  <text class="street" transform="translate(2620 1100) rotate(-90)">LONDON ROAD</text>
-  <text class="street" transform="translate(3930 1125) rotate(-90)">SCHOOL ROAD</text>
 
-  <g class="building" transform="translate(260 265)">
-    <rect x="0" y="205" width="760" height="455" fill="#bfe7f7" stroke="#222" stroke-width="8"/>
-    <path d="M0 205 105 28h600l55 177z" fill="#d9dbdf" stroke="#222" stroke-width="8"/>
-    <rect x="100" y="0" width="560" height="210" fill="#e2e3e6" stroke="#222" stroke-width="8"/>
-    <text class="label" x="210" y="130">HOSPITAL</text>
-    <g fill="#82c8e6"><rect x="60" y="300" width="160" height="42"/><rect x="260" y="300" width="160" height="42"/><rect x="460" y="300" width="160" height="42"/></g>
+  <rect width="4300" height="2900" fill="#fffdf4"/>
+  <g opacity=".18">
+    <path d="M230 150c240 180 520 140 780 80M3170 100c270 135 520 110 760 10M280 2820c430-80 770-55 1120 45M2480 2830c560-75 900-25 1300 42" fill="none" stroke="#d6d0ad" stroke-width="22" stroke-linecap="round"/>
   </g>
-  <g class="building" transform="translate(1440 300)">
-    <text class="label" x="180" y="0">TRAIN STATION</text>
-    <path d="M95 120h720l120 210v370H0V330z" fill="#f4d48f" stroke="#222" stroke-width="8"/>
-    <rect x="315" y="220" width="185" height="145" fill="#fff" stroke="#222" stroke-width="8"/>
-    <circle cx="408" cy="292" r="34" fill="#fff" stroke="#222" stroke-width="7"/>
-    <g fill="#6c6e76"><path d="M80 530q90-170 210 0z"/><path d="M362 530q90-170 210 0z"/><path d="M645 530q90-170 210 0z"/></g>
+
+  <g aria-label="streets">
+    <path class="road" d="M195 940h3895"/>
+    <path class="road-line" d="M210 940h3860"/>
+    <path class="road" d="M195 1908h3895"/>
+    <path class="road-line" d="M210 1908h3860"/>
+    <path class="road" d="M195 2782h3895"/>
+    <path class="road-line" d="M210 2782h3860"/>
+    <path class="road" d="M1048 225V2790"/>
+    <path class="road-line" d="M1048 250V2760"/>
+    <path class="road" d="M2505 220V2790"/>
+    <path class="road-line" d="M2505 250V2760"/>
+    <path class="road" d="M3824 270V2780"/>
+    <path class="road-line" d="M3824 300V2750"/>
   </g>
-  <g class="building" transform="translate(2610 230)">
-    <circle class="pin" cx="0" cy="80" r="54"/><text class="pintext" x="-17" y="98">A</text><rect class="blank" x="70" y="38" width="440" height="106"/>
-    <rect x="75" y="190" width="380" height="560" fill="#eadf9d" stroke="#222" stroke-width="8"/>
-    <rect x="104" y="495" width="285" height="140" fill="#3439a4"/>
-    <g fill="#222"><rect x="150" y="260" width="22" height="72"/><rect x="220" y="260" width="22" height="72"/><rect x="290" y="260" width="22" height="72"/><rect x="150" y="370" width="22" height="72"/><rect x="220" y="370" width="22" height="72"/><rect x="290" y="370" width="22" height="72"/></g>
-    <g transform="translate(455 255)">
-      <rect x="0" y="180" width="920" height="315" fill="#dff2ef" stroke="#222" stroke-width="8"/>
-      <path d="M0 180 120 25h705l95 155z" fill="#e4eee1" stroke="#222" stroke-width="8"/>
-      <path d="M120 340h705" class="ink"/><text class="label" x="280" y="185">HOTEL</text>
-      <rect x="360" y="500" width="210" height="175" fill="#bbe9ed" stroke="#222" stroke-width="8"/>
+
+  <g aria-label="birds" fill="none" stroke="#202020" stroke-width="9" stroke-linecap="round">
+    <path d="M3330 170q35 30 70 0q35 30 70 0"/>
+    <path d="M3470 115q30 25 60 0q30 25 60 0"/>
+    <path d="M3610 175q32 28 64 0q32 28 64 0"/>
+    <path d="M3220 105q26 20 52 0q26 20 52 0"/>
+  </g>
+
+  <g class="building" transform="translate(285 280)" aria-label="Hospital">
+    <path d="M0 650V245L115 70h150l70-70h450l70 70h145l110 175v405z" fill="#caeefb" class="ink"/>
+    <path d="M115 70h740v205H115z" fill="url(#stone)" class="ink"/>
+    <path d="M0 245h1110" class="ink"/>
+    <text class="label" x="350" y="197">HOSPITAL</text>
+    <g fill="url(#glass)" stroke="#1c1b1a" stroke-width="5">
+      <rect x="70" y="340" width="155" height="78"/><rect x="265" y="340" width="155" height="78"/><rect x="460" y="340" width="155" height="78"/><rect x="655" y="340" width="155" height="78"/><rect x="850" y="340" width="155" height="78"/>
+      <rect x="70" y="470" width="155" height="86"/><rect x="265" y="470" width="155" height="86"/><rect x="460" y="470" width="155" height="86"/><rect x="655" y="470" width="155" height="86"/><rect x="850" y="470" width="155" height="86"/>
+    </g>
+    <rect x="468" y="575" width="126" height="75" fill="#f8fbff" class="ink2"/>
+  </g>
+
+  <g class="building" transform="translate(1435 110)" aria-label="Train station">
+    <text class="label" x="265" y="70">TRAIN STATION</text>
+    <path d="M95 250h760l125 190v430H0V440z" fill="url(#station)" class="ink"/>
+    <path d="M185 250c110-80 575-80 680 0" fill="#ffedbd" class="ink2"/>
+    <rect x="370" y="330" width="210" height="150" fill="#fffdf5" class="ink"/>
+    <circle cx="475" cy="402" r="42" fill="#f8fbff" class="ink2"/>
+    <g fill="#484950" stroke="#1c1b1a" stroke-width="4">
+      <path d="M65 770q95-220 250 0z"/>
+      <path d="M392 770q95-220 250 0z"/>
+      <path d="M712 770q95-220 250 0z"/>
+    </g>
+    <g stroke="#202020" stroke-width="8">
+      <path d="M100 835h820"/><path d="M140 870h740"/>
     </g>
   </g>
-  <g class="building" transform="translate(215 1100)">
-    <rect x="0" y="130" width="710" height="470" fill="#ddd" stroke="#222" stroke-width="8"/>
-    <path d="M45 130h620l-80-120H120z" fill="#f3f4f5" stroke="#222" stroke-width="8"/>
-    <text class="label" x="175" y="180">CAR</text><text class="label" x="145" y="260">PARK</text>
-    <g fill="#181818"><rect x="0" y="318" width="710" height="28"/><rect x="0" y="420" width="710" height="28"/><rect x="0" y="522" width="710" height="28"/></g>
-    <rect x="110" y="205" width="95" height="55" fill="#e22"/><rect x="520" y="205" width="95" height="55" fill="#313fa6"/>
+
+  <g class="building" transform="translate(2688 246)" aria-label="Phone shop and hotel">
+    <circle class="pin" cx="0" cy="68" r="58"/><text class="pintext" x="-17" y="86">A</text>
+    <rect class="blank" x="70" y="20" width="485" height="108"/>
+    <g transform="translate(80 165)">
+      <rect x="0" y="0" width="390" height="705" fill="#efe28c" class="ink"/>
+      <rect x="42" y="520" width="300" height="146" fill="#3133a0"/>
+      <g fill="#1c1b1a">
+        <rect x="72" y="88" width="28" height="95"/><rect x="153" y="88" width="28" height="95"/><rect x="234" y="88" width="28" height="95"/>
+        <rect x="72" y="235" width="28" height="95"/><rect x="153" y="235" width="28" height="95"/><rect x="234" y="235" width="28" height="95"/>
+        <rect x="72" y="382" width="28" height="95"/><rect x="153" y="382" width="28" height="95"/><rect x="234" y="382" width="28" height="95"/>
+      </g>
+    </g>
+    <g transform="translate(460 205)">
+      <rect x="0" y="205" width="890" height="470" fill="#dff4ed" class="ink"/>
+      <path d="M0 205 110 30h700l80 175z" fill="#ebf5e5" class="ink"/>
+      <rect x="75" y="500" width="130" height="175" fill="#a5dce8" class="ink2"/>
+      <rect x="685" y="500" width="130" height="175" fill="#a5dce8" class="ink2"/>
+      <path d="M130 360h630M130 455h630" class="ink2"/>
+      <text class="label" x="310" y="205">HOTEL</text>
+      <g fill="#244c37"><circle cx="65" cy="595" r="38"/><circle cx="820" cy="595" r="38"/></g>
+    </g>
   </g>
-  <g class="building" transform="translate(1280 1258)">
-    <circle class="pin" cx="350" cy="26" r="54"/><text class="pintext" x="333" y="44">B</text><rect class="blank" x="410" y="-20" width="520" height="100"/>
-    <rect x="0" y="120" width="360" height="390" fill="#d8dde4" stroke="#222" stroke-width="8"/><path d="M0 120 90 20h260l10 100z" fill="#eceff1" stroke="#222" stroke-width="8"/>
-    <text class="label" x="80" y="250">BANK</text>
-    <g fill="#a0a8b0"><rect x="45" y="320" width="45" height="170"/><rect x="155" y="320" width="45" height="170"/><rect x="265" y="320" width="45" height="170"/></g>
-    <rect x="360" y="155" width="460" height="360" fill="#f4f0e2" stroke="#222" stroke-width="8"/><rect x="405" y="295" width="375" height="98" fill="#e31822"/><text class="small" x="442" y="355">HEALTH FOOD</text>
-    <rect x="820" y="80" width="270" height="450" fill="#f7f0db" stroke="#222" stroke-width="8"/><text class="label" x="840" y="260">GYM</text>
+
+  <g class="building" transform="translate(235 1110)" aria-label="Car park">
+    <path d="M0 150h770v545H0z" fill="#dadde3" class="ink"/>
+    <path d="M70 150h625L610 20H160z" fill="#f4f5f7" class="ink"/>
+    <text class="label" x="280" y="218">CAR</text>
+    <text class="label" x="250" y="304">PARK</text>
+    <g fill="#181818">
+      <rect x="0" y="372" width="770" height="34"/><rect x="0" y="478" width="770" height="34"/><rect x="0" y="584" width="770" height="34"/>
+    </g>
+    <g transform="translate(135 255)">
+      <path d="M0 80h165l38 60H-20z" fill="#e72b2e" class="ink2"/><circle cx="28" cy="146" r="18" fill="#161616"/><circle cx="150" cy="146" r="18" fill="#161616"/>
+    </g>
+    <g transform="translate(505 255)">
+      <path d="M0 80h165l38 60H-20z" fill="#3142b0" class="ink2"/><circle cx="28" cy="146" r="18" fill="#161616"/><circle cx="150" cy="146" r="18" fill="#161616"/>
+    </g>
   </g>
-  <g class="building" transform="translate(2700 1080)">
-    <rect x="0" y="80" width="720" height="650" fill="#83c86b" stroke="#222" stroke-width="8"/>
-    <path d="M130 540c150-210 260-265 490-315" fill="none" stroke="#fff2bc" stroke-width="70"/>
-    <circle class="pin" cx="250" cy="445" r="54"/><text class="pintext" x="233" y="463">C</text><rect class="blank" x="310" y="400" width="440" height="100"/>
-    <ellipse cx="560" cy="280" rx="155" ry="108" fill="#9cdcf2"/>
-    <g fill="#3c7834"><circle cx="115" cy="250" r="65"/><circle cx="360" cy="245" r="70"/><circle cx="250" cy="545" r="66"/></g>
+
+  <g class="building" transform="translate(1240 1110)" aria-label="Bank health food shop and gym">
+    <circle class="pin" cx="410" cy="68" r="58"/><text class="pintext" x="393" y="86">B</text>
+    <rect class="blank" x="485" y="20" width="520" height="108"/>
+    <g transform="translate(0 145)">
+      <rect x="0" y="125" width="385" height="480" fill="#d8dde4" class="ink"/>
+      <path d="M0 125 95 20h290l0 105z" fill="#f2f4f7" class="ink"/>
+      <text class="label" x="88" y="282">BANK</text>
+      <g fill="#9ea7b0">
+        <rect x="46" y="365" width="48" height="210"/><rect x="160" y="365" width="48" height="210"/><rect x="274" y="365" width="48" height="210"/>
+      </g>
+    </g>
+    <g transform="translate(386 255)">
+      <rect x="0" y="0" width="565" height="494" fill="#fff7e9" class="ink"/>
+      <path d="M0 0h565v142H0z" fill="#fff"/>
+      <path d="M0 142h565" class="ink2"/>
+      <rect x="38" y="220" width="488" height="125" fill="#e6292d"/>
+      <text class="small" x="138" y="294">HEALTH FOOD</text>
+      <g fill="#247346"><circle cx="80" cy="405" r="30"/><circle cx="490" cy="405" r="30"/></g>
+    </g>
+    <g transform="translate(950 175)">
+      <path d="M0 55 82 0h260l70 55v575H0z" fill="#faf4df" class="ink"/>
+      <text class="label" x="72" y="215">GYM</text>
+      <path d="M45 330h320M65 385h280" class="ink2"/>
+    </g>
   </g>
-  <g class="building" transform="translate(3270 1180)">
-    <path d="M20 480h680v330H20z" fill="#f6d06e" stroke="#222" stroke-width="8"/>
-    <path d="M260 0 80 480h370z" fill="#e2bd45" stroke="#222" stroke-width="8"/>
-    <path d="M300 18 560 480h-190z" fill="#754b4d" stroke="#222" stroke-width="8"/>
-    <circle cx="264" cy="300" r="44" fill="#fff" stroke="#222" stroke-width="7"/>
-    <rect x="230" y="575" width="105" height="180" fill="#fff" stroke="#222" stroke-width="7"/>
-    <text class="label" x="170" y="860">SCHOOL</text>
+
+  <g class="building" transform="translate(2715 1060)" aria-label="Park and school">
+    <g transform="translate(0 40)">
+      <path d="M0 115h760v710H0z" fill="url(#park)" class="ink"/>
+      <path d="M86 650c115-215 315-360 625-440" fill="none" stroke="#fff4c2" stroke-width="82" stroke-linecap="round"/>
+      <path d="M100 650c115-215 315-360 625-440" fill="none" stroke="#dcb053" stroke-width="8" stroke-dasharray="26 22" opacity=".55"/>
+      <ellipse cx="625" cy="245" rx="170" ry="110" fill="#94dcf1"/>
+      <g fill="#3f823a">
+        <circle cx="110" cy="285" r="68"/><circle cx="360" cy="285" r="76"/><circle cx="250" cy="595" r="72"/><circle cx="660" cy="660" r="78"/>
+      </g>
+      <g stroke="#795b2c" stroke-width="16"><path d="M110 345v60"/><path d="M360 355v70"/><path d="M250 665v72"/></g>
+      <g transform="translate(365 185)">
+        <rect x="0" y="0" width="170" height="82" fill="#b63d31" class="ink2"/>
+        <text class="tiny" x="32" y="52">park</text>
+      </g>
+      <circle class="pin" cx="258" cy="520" r="58"/><text class="pintext" x="241" y="538">C</text>
+      <rect class="blank" x="330" y="472" width="500" height="108"/>
+      <path d="M0 108h760" fill="none" stroke="#1c1b1a" stroke-width="8" stroke-dasharray="28 22"/>
+    </g>
+    <g transform="translate(705 270)">
+      <path d="M40 485h690v350H40z" fill="#f7d063" class="ink"/>
+      <path d="M300 0 95 485h420z" fill="#f2c64c" class="ink"/>
+      <path d="M335 0 600 485h-185z" fill="#80515a" class="ink"/>
+      <circle cx="305" cy="300" r="44" fill="#fff" class="ink"/>
+      <rect x="278" y="610" width="110" height="190" fill="#fff" class="ink2"/>
+      <g fill="#f5e2a0" stroke="#1c1b1a" stroke-width="5"><rect x="95" y="610" width="95" height="80"/><rect x="520" y="610" width="95" height="80"/></g>
+      <text class="label" x="220" y="900">SCHOOL</text>
+    </g>
   </g>
-  <g class="building" transform="translate(120 2150)">
-    <rect x="80" y="250" width="780" height="520" fill="#a77b62" stroke="#222" stroke-width="8"/>
-    <rect x="0" y="140" width="120" height="630" fill="#8b6655" stroke="#222" stroke-width="8"/><rect x="650" y="0" width="95" height="770" fill="#8b6655" stroke="#222" stroke-width="8"/>
-    <text class="label" x="205" y="395">FACTORY</text>
-    <g fill="#fff"><rect x="170" y="480" width="85" height="160"/><rect x="330" y="480" width="85" height="160"/><rect x="490" y="480" width="85" height="160"/></g>
+
+  <g class="building" transform="translate(115 1950)" aria-label="Factory">
+    <rect x="80" y="250" width="820" height="560" fill="url(#brick)" class="ink"/>
+    <path d="M80 250 350 360l260-110 290 120v440H80z" fill="#9c6c5b" class="ink2"/>
+    <rect x="0" y="65" width="122" height="745" fill="#7d544a" class="ink"/>
+    <rect x="665" y="0" width="112" height="810" fill="#7d544a" class="ink"/>
+    <rect x="835" y="155" width="110" height="655" fill="#7d544a" class="ink"/>
+    <g fill="none" stroke="#d7d2c4" stroke-width="14" stroke-linecap="round">
+      <path d="M45 20c-85-95 140-95 50-190"/><path d="M720-35c-85-95 135-95 50-190"/><path d="M895 105c-80-95 135-95 50-190"/>
+    </g>
+    <text class="label" x="250" y="420">FACTORY</text>
+    <g fill="#f8fbff" stroke="#1c1b1a" stroke-width="4">
+      <rect x="205" y="500" width="90" height="195"/><rect x="365" y="500" width="90" height="195"/><rect x="525" y="500" width="90" height="195"/>
+    </g>
   </g>
-  <g class="building" transform="translate(1048 2185)">
-    <path d="M70 0h430l64 205H0z" fill="#f2d0a8" stroke="#222" stroke-width="8"/><rect x="30" y="205" width="500" height="535" fill="#cc5a34" stroke="#222" stroke-width="8"/>
-    <text class="label" x="60" y="100">ITALIAN</text><text class="label" x="10" y="198">RESTAURANT</text>
-    <g fill="#2c405c"><rect x="70" y="450" width="78" height="230"/><rect x="206" y="450" width="78" height="230"/><rect x="342" y="450" width="78" height="230"/></g>
+
+  <g class="building" transform="translate(1045 1960)" aria-label="Italian restaurant and cinema">
+    <g>
+      <path d="M70 0h450l75 200H0z" fill="#f1c898" class="ink"/>
+      <rect x="30" y="200" width="535" height="615" fill="#ce5b35" class="ink"/>
+      <text class="label" x="86" y="90">ITALIAN</text>
+      <text class="label" x="8" y="188">RESTAURANT</text>
+      <g fill="#2c405c"><rect x="75" y="445" width="78" height="260"/><rect x="224" y="445" width="78" height="260"/><rect x="373" y="445" width="78" height="260"/></g>
+      <g fill="#f2d2a7"><rect x="80" y="325" width="70" height="62"/><rect x="225" y="325" width="70" height="62"/><rect x="370" y="325" width="70" height="62"/></g>
+    </g>
+    <g transform="translate(555 55)">
+      <path d="M0 200q305-285 610 0v610H0z" fill="#fffdf9" class="ink"/>
+      <text class="label" x="172" y="185">CINEMA</text>
+      <path d="M116 260q188-95 376 0" fill="none" stroke="#cc1b7c" stroke-width="32"/>
+      <text class="tiny" x="205" y="312">TWO SCREEN</text>
+      <g fill="#3442a2"><rect x="118" y="585" width="82" height="170"/><rect x="370" y="585" width="82" height="170"/></g>
+      <g fill="#f6ce57" stroke="#1c1b1a" stroke-width="4"><rect x="118" y="405" width="80" height="108"/><rect x="265" y="405" width="80" height="108"/><rect x="410" y="405" width="80" height="108"/></g>
+    </g>
+    <g transform="translate(1145 0)">
+      <circle class="pin" cx="0" cy="125" r="58"/><text class="pintext" x="-17" y="143">D</text>
+      <rect class="blank" x="82" y="77" width="500" height="108"/>
+      <rect x="32" y="285" width="610" height="525" fill="#f5faf8" class="ink"/>
+      <rect x="32" y="285" width="610" height="116" fill="url(#awning)" class="ink2"/>
+      <g fill="#2f7f8d"><circle cx="110" cy="720" r="32"/><circle cx="560" cy="720" r="32"/></g>
+      <g fill="#92d5e8"><rect x="95" y="480" width="118" height="138"/><rect x="270" y="480" width="118" height="138"/><rect x="445" y="480" width="118" height="138"/></g>
+    </g>
   </g>
-  <g class="building" transform="translate(1580 2295)">
-    <path d="M0 160q290-255 580 0v520H0z" fill="#fff" stroke="#222" stroke-width="8"/>
-    <text class="label" x="170" y="142">CINEMA</text><text class="small" x="170" y="260" fill="#b71e7b">TWO SCREEN</text>
-    <g fill="#3442a2"><rect x="110" y="500" width="80" height="145"/><rect x="300" y="500" width="80" height="145"/></g>
+
+  <g class="building" transform="translate(2830 1960)" aria-label="Supermarket and bookshop">
+    <g>
+      <rect x="0" y="248" width="760" height="585" fill="#c7d8df" class="ink"/>
+      <path d="M145 248 455 30l305 218z" fill="#dc7c38" class="ink"/>
+      <text class="label" x="160" y="205">SUPERMARKET</text>
+      <rect x="310" y="380" width="190" height="215" fill="#f8f8f2" class="ink"/>
+      <g fill="url(#glass)" stroke="#1c1b1a" stroke-width="5"><rect x="92" y="458" width="120" height="130"/><rect x="560" y="458" width="120" height="130"/></g>
+      <path d="M210 250h490M230 305h430" class="ink2"/>
+    </g>
+    <g transform="translate(835 0)">
+      <rect x="0" y="180" width="520" height="650" fill="#eef6ef" class="ink"/>
+      <path d="M0 180 72 45h376l72 135z" fill="#fbfcf9" class="ink"/>
+      <text class="label" x="55" y="160">BOOKSHOP</text>
+      <rect x="0" y="570" width="520" height="130" fill="#3430a4"/>
+      <g fill="#d5f0fb" stroke="#1c1b1a" stroke-width="5"><rect x="72" y="275" width="90" height="125"/><rect x="215" y="275" width="90" height="125"/><rect x="358" y="275" width="90" height="125"/></g>
+      <g fill="#fbdb69" stroke="#1c1b1a" stroke-width="4"><rect x="88" y="735" width="80" height="62"/><rect x="218" y="735" width="80" height="62"/><rect x="348" y="735" width="80" height="62"/></g>
+    </g>
   </g>
-  <g class="building" transform="translate(2170 2240)">
-    <circle class="pin" cx="0" cy="120" r="54"/><text class="pintext" x="-17" y="138">D</text><rect class="blank" x="80" y="72" width="440" height="106"/>
-    <rect x="30" y="260" width="555" height="470" fill="#e6eaed" stroke="#222" stroke-width="8"/>
-    <path d="M30 260h555v100H30z" fill="#f9f9f9"/><g fill="#e9282e"><rect x="52" y="260" width="60" height="100"/><rect x="172" y="260" width="60" height="100"/><rect x="292" y="260" width="60" height="100"/><rect x="412" y="260" width="60" height="100"/></g>
+  <g aria-label="street labels" pointer-events="none">
+    <text class="street" x="1510" y="1070">NORTH STREET</text>
+    <text class="street" x="1510" y="1945">KING STREET</text>
+    <text class="street" x="1455" y="2860">SOUTH STREET</text>
+    <text class="street" transform="translate(1118 1595) rotate(-90)">EAST ROAD</text>
+    <text class="street" transform="translate(2624 1585) rotate(-90)">LONDON ROAD</text>
+    <text class="street" transform="translate(4070 1600) rotate(-90)">SCHOOL ROAD</text>
   </g>
-  <g class="building" transform="translate(2820 2150)">
-    <rect x="0" y="220" width="750" height="530" fill="#c8d8df" stroke="#222" stroke-width="8"/><path d="M160 220 455 20l295 200z" fill="#da7d38" stroke="#222" stroke-width="8"/>
-    <text class="label" x="160" y="190">SUPERMARKET</text><rect x="310" y="300" width="180" height="190" fill="#f7f7f0" stroke="#222" stroke-width="8"/>
-  </g>
-  <g class="building" transform="translate(3630 2190)">
-    <rect x="0" y="170" width="500" height="590" fill="#f0f5f0" stroke="#222" stroke-width="8"/><path d="M0 170 70 30h360l70 140z" fill="#f9faf7" stroke="#222" stroke-width="8"/>
-    <text class="label" x="45" y="150">BOOKSHOP</text><rect x="0" y="520" width="500" height="125" fill="#3430a4"/>
-  </g>
-  <g fill="#1d1d1d" opacity=".9"><path d="M3260 180c28 20 60 20 88 0"/><path d="M3360 145c28 20 60 20 88 0"/><path d="M3470 190c28 20 60 20 88 0"/></g>
 </svg>

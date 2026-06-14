@@ -265,7 +265,7 @@ export const nativeLessons = [
     startPage: 71,
     endPage: 72,
     title: "Practical English 6",
-    url: "public/native/practical-english-6/index.html?v=20260614-photoall1"
+    url: "public/native/practical-english-6/index.html?v=20260614-pe6map1"
   },
   {
     startPage: 73,
