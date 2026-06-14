@@ -1,6 +1,6 @@
 import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-photoassets1";
 import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-photoassets1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260615-phrasesnative2";
+import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260615-commmaps1";
 import { registerShellComponents } from "./src/components/index.js?v=20260614-photoassets1";
 import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-photoassets1";
 import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-photoassets1";
@@ -5988,7 +5988,7 @@ function rewriteNativeAssetUrls(root, baseUrl) {
     const value = node.getAttribute("src");
     if (value && !value.startsWith("data:")) node.setAttribute("src", new URL(value, baseUrl).href);
     if (node.tagName === "IMG") {
-      node.loading = "lazy";
+      if (!node.hasAttribute("loading")) node.loading = "lazy";
       node.decoding = "async";
     }
   });
