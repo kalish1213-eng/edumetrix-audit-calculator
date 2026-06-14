@@ -199,7 +199,7 @@ export const nativeLessons = [
     startPage: 49,
     endPage: 50,
     title: "8A Can I park here?",
-    url: "public/native/8a-can-i-park-here/index.html?v=20260614-pronfix1"
+    url: "public/native/8a-can-i-park-here/index.html?v=20260614-8apronphoto2"
   },
   {
     startPage: 51,
