@@ -421,7 +421,7 @@ export const nativeLessons = [
     startPage: 131,
     endPage: 131,
     title: "Vocabulary Bank: Hotels",
-    url: "public/native/vocabulary-bank-8/index.html?v=20260612-vocab8"
+    url: "public/native/vocabulary-bank-8/index.html?v=20260615-vocab8native1"
   },
   {
     startPage: 132,

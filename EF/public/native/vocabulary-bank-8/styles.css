@@ -8,8 +8,9 @@
   --paper: #ffffff;
   --surface: #eaf5ee;
   --line: #c9dfd0;
-  --accent: #18844c;
-  --accent-dark: #0f6f3e;
+  --accent: #007a45;
+  --accent-dark: #006236;
+  --accent-soft: #e7f5eb;
   --ok: #167a3a;
   --bad: #b42318;
   --warn: #a15c00;
@@ -165,7 +166,7 @@ body {
   gap: 26px;
 }
 
-.grammar-page {
+.vocab-page {
   position: relative;
   width: min(100%, 1120px);
   margin: 0 auto;
@@ -173,48 +174,228 @@ body {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  padding: 42px 48px 56px;
 }
 
-.grammar-page img {
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 34px;
+  border-bottom: 5px solid var(--accent);
+  padding-bottom: 18px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 54px;
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.page-header p {
+  margin: 6px 0 0;
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.bank-section {
+  display: grid;
+  grid-template-columns: minmax(330px, .72fr) minmax(0, 1.28fr);
+  gap: 34px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+.bank-section + .bank-section {
+  padding-top: 32px;
+  border-top: 1px solid #dfe8e2;
+}
+
+.bank-copy {
+  min-width: 0;
+}
+
+.bank-copy h2 {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 0 0 18px;
+  color: var(--accent-dark);
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.bank-copy h2 span {
+  font-size: 31px;
+}
+
+.task {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.task b {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.audio {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.word-list {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.word-list li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-height: 32px;
+  font-size: 16px;
+}
+
+.word-list .num {
+  color: #405266;
+  text-align: right;
+  font-weight: 800;
+}
+
+.word-list label {
+  display: grid;
+  grid-template-columns: minmax(130px, 170px) minmax(80px, 1fr);
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+}
+
+.word-list input {
+  width: 100%;
+  min-width: 0;
+  height: 30px;
+  border: 1.8px solid #a9c3b1;
+  border-radius: 6px;
+  background: #fff;
+  color: #111827;
+  font: 800 15px/1 Arial, Helvetica, sans-serif;
+  padding: 3px 8px;
+}
+
+.word-list input.wide {
+  min-width: 164px;
+}
+
+.word-list label span {
+  min-width: 0;
+  color: #697789;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.photo-map {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #d9e2dd;
+  border-radius: 8px;
+  background: #f6faf7;
+  box-shadow: 0 14px 34px rgba(22, 53, 44, .14);
+}
+
+.photo-map img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.overlay-field {
+.marker {
   position: absolute;
   left: calc(var(--x) * 1%);
   top: calc(var(--y) * 1%);
-  width: calc(var(--w) * 1%);
-  height: calc(var(--h) * 1%);
-  min-width: 0;
-  border: 2px solid rgba(17, 79, 136, .72);
-  border-radius: 5px;
-  background: rgba(255, 255, 255, .9);
-  color: #111827;
-  font: 800 12px/1.1 Arial, Helvetica, sans-serif;
-  padding: 1px 4px;
-  box-shadow: 0 1px 8px rgba(16, 47, 78, .12);
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: clamp(25px, 3.4vw, 34px);
+  height: clamp(25px, 3.4vw, 34px);
+  border: 2px solid rgba(255, 255, 255, .9);
+  border-radius: 50%;
+  background: #cceca4;
+  color: #385f1c;
+  font: 900 15px/1 Arial, Helvetica, sans-serif;
+  box-shadow: 0 3px 12px rgba(18, 51, 27, .28);
 }
 
-.overlay-field.short {
-  text-align: center;
-  padding-left: 1px;
-  padding-right: 1px;
+.speech-row {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+  color: var(--accent);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 800;
 }
 
-.overlay-field.long {
-  font-size: 10px;
+.speech-row p {
+  margin: 0;
 }
 
-.overlay-field.sentence {
-  font-size: 9px;
+.speech-row p:last-child {
+  margin-left: 60px;
+  color: #263143;
 }
 
-.overlay-field.ordinal {
-  font-size: 8px;
-  padding-left: 3px;
-  padding-right: 3px;
+.definition-box {
+  margin: 18px 0 14px;
+  padding: 12px 14px;
+  border: 2px solid #7da88a;
+  background: #fbfffc;
+  color: #263143;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.definition-box strong {
+  display: block;
+  color: var(--accent-dark);
+  font-size: 18px;
+}
+
+.page-ref {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.book-page-number {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  color: var(--accent-dark);
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .state-ok {
@@ -252,7 +433,7 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .grammar-shell {
     padding: 14px 10px 24px;
   }
@@ -266,20 +447,57 @@ body {
     justify-content: flex-start;
   }
 
-  .overlay-field {
-    border-width: 1px;
-    font-size: 9px;
+  .vocab-page {
+    padding: 30px 22px 48px;
   }
 
-  .overlay-field.long {
-    font-size: 8px;
+  .page-header {
+    display: grid;
+    gap: 8px;
   }
 
-  .overlay-field.sentence {
-    font-size: 7px;
+  .page-header h1 {
+    font-size: 42px;
   }
 
-  .overlay-field.ordinal {
-    font-size: 6px;
+  .page-header p {
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .bank-section {
+    grid-template-columns: 1fr;
+  }
+
+  .word-list label {
+    grid-template-columns: minmax(122px, 180px) minmax(70px, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .vocab-page {
+    padding: 24px 14px 44px;
+  }
+
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+  .bank-copy h2 {
+    font-size: 20px;
+  }
+
+  .task {
+    font-size: 16px;
+  }
+
+  .word-list label {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .word-list input {
+    height: 32px;
+    font-size: 14px;
   }
 }
