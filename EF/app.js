@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-pe3nativeclocks1";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-pe3nativeclocks1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-pe3nativeclocks1";
-import { registerShellComponents } from "./src/components/index.js?v=20260614-pe3nativeclocks1";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-pe3nativeclocks1";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-pe3nativeclocks1";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-pe3nativeclocks1";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-pe3nativeclocks1";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-pe3nativeclocks1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-r56nativeclocks1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-r56nativeclocks1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-r56nativeclocks1";
+import { registerShellComponents } from "./src/components/index.js?v=20260614-r56nativeclocks1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-r56nativeclocks1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-r56nativeclocks1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-r56nativeclocks1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-r56nativeclocks1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-r56nativeclocks1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";

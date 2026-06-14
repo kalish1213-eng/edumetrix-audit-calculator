@@ -175,7 +175,7 @@ export const nativeLessons = [
     startPage: 41,
     endPage: 42,
     title: "Revise and Check 5&6",
-    url: "public/native/revise-check-5-6/index.html?v=20260614-photoall1"
+    url: "public/native/revise-check-5-6/index.html?v=20260614-r56nativeclocks1"
   },
   {
     startPage: 43,

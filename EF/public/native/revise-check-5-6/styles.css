@@ -367,6 +367,93 @@ select.answer.mini-select { min-width: 58px; width: 58px; }
   top: auto;
 }
 
+.review-clock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 10px;
+  min-width: 0;
+  margin: 10px 0 16px;
+}
+
+.review-clock-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 12px 10px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.95), rgba(232,241,246,.82)),
+    #fff;
+  box-shadow: 0 8px 18px rgba(44, 66, 78, .11);
+}
+
+.review-clock-card b {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.clock-face {
+  position: relative;
+  display: block;
+  width: min(98px, 72%);
+  aspect-ratio: 1;
+  border: 5px solid #303842;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #20272e 0 5px, transparent 6px),
+    repeating-conic-gradient(from 0deg, #1e2830 0deg 1.5deg, transparent 1.5deg 30deg),
+    radial-gradient(circle at 50% 45%, #fffefa 0 57%, #e4dfd1 58% 63%, #6d7880 64% 70%, #252c34 71% 100%);
+  box-shadow:
+    inset 0 5px 12px rgba(255,255,255,.75),
+    inset 0 -8px 14px rgba(0,0,0,.11),
+    0 6px 12px rgba(0,0,0,.15);
+}
+
+.clock-face::before,
+.clock-face::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  z-index: 2;
+  border-radius: 999px;
+  background: #141a20;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  transform-origin: 50% 100%;
+}
+
+.clock-face::before {
+  width: 6px;
+  height: 29%;
+  margin-left: -3px;
+  transform: rotate(var(--hour));
+}
+
+.clock-face::after {
+  width: 4px;
+  height: 38%;
+  margin-left: -2px;
+  transform: rotate(var(--minute));
+}
+
+.review-clock-card .image-answer {
+  width: 100%;
+  min-height: 32px;
+}
+
 .sound-image { aspect-ratio: auto; }
 .sound-1,
 .sound-2,
@@ -696,6 +783,7 @@ select.answer.mini-select { min-width: 58px; width: 58px; }
   }
   .can-head,
   .can-row { grid-template-columns: minmax(0, 1fr) 70px; }
+  .review-clock-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
