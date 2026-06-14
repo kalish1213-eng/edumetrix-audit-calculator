@@ -253,7 +253,7 @@ export const nativeLessons = [
     startPage: 67,
     endPage: 68,
     title: "11A A new life in the USA",
-    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260614-photoall1"
+    url: "public/native/11a-a-new-life-in-the-usa/index.html?v=20260614-11anative1"
   },
   {
     startPage: 69,
