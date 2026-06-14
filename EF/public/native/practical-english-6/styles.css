@@ -146,6 +146,196 @@
   height: auto;
 }
 
+.photo-map {
+  position: relative;
+  overflow: hidden;
+  background: #f6f1e7;
+}
+
+.photo-map img {
+  filter: saturate(1.04) contrast(1.03);
+}
+
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.map-label,
+.street-label,
+.map-blank,
+.bank-choice,
+.rob-marker {
+  position: absolute;
+  z-index: 2;
+}
+
+.map-label,
+.street-label {
+  padding: 3px 7px;
+  border: 1px solid rgba(33, 28, 20, .28);
+  border-radius: 4px;
+  background: rgba(255, 250, 230, .9);
+  color: #171717;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(8px, 1.45cqw, 14px);
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+  box-shadow: 0 2px 8px rgba(30, 22, 8, .13);
+  white-space: nowrap;
+}
+
+.street-label {
+  border-color: rgba(141, 108, 26, .36);
+  background: rgba(255, 243, 192, .86);
+  color: #261f13;
+  font-size: clamp(7px, 1.25cqw, 12px);
+  letter-spacing: 0;
+}
+
+.map-blank {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.map-blank b,
+.bank-choice b {
+  display: grid;
+  place-items: center;
+  width: clamp(18px, 3.3cqw, 26px);
+  height: clamp(18px, 3.3cqw, 26px);
+  border-radius: 999px;
+  background: var(--gold);
+  color: #fff;
+  font-size: clamp(10px, 1.8cqw, 15px);
+  font-weight: 950;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .22);
+}
+
+.map-blank i {
+  display: block;
+  width: clamp(38px, 12.5cqw, 116px);
+  height: clamp(16px, 3.1cqw, 26px);
+  border: 2px solid rgba(141, 108, 26, .34);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, .12);
+}
+
+.city-map-card {
+  container-type: inline-size;
+}
+
+.city-map-overlay .hospital { left: 8.5%; top: 10.5%; }
+.city-map-overlay .train-station { left: 38.8%; top: 8.5%; }
+.city-map-overlay .hotel { right: 9.4%; top: 11.2%; }
+.city-map-overlay .car-park { left: 6.2%; top: 43.4%; }
+.city-map-overlay .bank { left: 30.8%; top: 54.2%; }
+.city-map-overlay .gym { left: 44.8%; top: 52.8%; }
+.city-map-overlay .factory { left: 6.6%; bottom: 22.4%; }
+.city-map-overlay .italian-restaurant { left: 30.1%; bottom: 13.4%; }
+.city-map-overlay .cinema { left: 50.0%; bottom: 17.4%; }
+.city-map-overlay .supermarket { right: 17.4%; bottom: 14.4%; }
+.city-map-overlay .bookshop { right: 4.2%; bottom: 14.2%; }
+.city-map-overlay .school { right: 5.2%; top: 54.0%; }
+
+.city-map-overlay .north-street { left: 42.2%; top: 31.6%; }
+.city-map-overlay .king-street { left: 42.3%; top: 61.8%; }
+.city-map-overlay .south-street { left: 44.0%; bottom: 3.8%; }
+.city-map-overlay .east-road,
+.city-map-overlay .london-road,
+.city-map-overlay .school-road {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.city-map-overlay .east-road { left: 27.0%; top: 34.2%; }
+.city-map-overlay .london-road { left: 62.3%; top: 35.7%; }
+.city-map-overlay .school-road { right: 1.4%; top: 36.0%; }
+
+.city-map-overlay .city-a { left: 65.2%; top: 25.8%; }
+.city-map-overlay .city-b { left: 34.6%; top: 43.1%; }
+.city-map-overlay .city-c { left: 64.0%; top: 46.4%; }
+.city-map-overlay .city-d { left: 53.2%; bottom: 21.6%; }
+
+.bank-map {
+  container-type: inline-size;
+}
+
+.bank-choice {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+}
+
+.bank-choice em {
+  padding: 4px 8px;
+  border: 1px solid rgba(33, 28, 20, .27);
+  border-radius: 4px;
+  background: rgba(255, 250, 230, .92);
+  color: #171717;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(8px, 2.3cqw, 14px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(30, 22, 8, .12);
+}
+
+.bank-map-overlay .bank-a { left: 31%; top: 56%; }
+.bank-map-overlay .bank-b { left: 49%; top: 42%; }
+.bank-map-overlay .bank-c { right: 12%; top: 13%; }
+
+.rob-marker {
+  left: 45.8%;
+  bottom: 19.5%;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.rob-marker i {
+  width: clamp(8px, 2cqw, 14px);
+  height: clamp(8px, 2cqw, 14px);
+  border-radius: 999px;
+  background: #e51619;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .92), 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.rob-marker::before {
+  content: "";
+  width: 1px;
+  height: clamp(14px, 4cqw, 24px);
+  background: #111;
+}
+
+.rob-marker::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+  transform: rotate(45deg);
+}
+
+.rob-marker em {
+  padding: 3px 6px;
+  border-radius: 4px;
+  background: rgba(255, 250, 230, .92);
+  color: #171717;
+  font-size: clamp(7px, 2cqw, 11px);
+  font-style: normal;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(30, 22, 8, .12);
+}
+
 .map-answer-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
