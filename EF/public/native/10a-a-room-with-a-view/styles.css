@@ -100,7 +100,7 @@
 }
 
 .loch-box {
-  grid-template-columns: minmax(0, 1fr) 170px;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, .45fr);
   background: #eef3f6;
 }
 
@@ -127,6 +127,105 @@
   margin: 0 0 8px;
   font-size: 16px;
   line-height: 1.32;
+}
+
+.loch-map-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  border: 1px solid #c9d7d0;
+  border-radius: 8px;
+  background: #dce8e4;
+  box-shadow: 0 10px 22px rgba(34, 72, 85, .13);
+}
+
+.loch-map-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  filter: saturate(.9) contrast(1.05);
+}
+
+.loch-map-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 48, 55, .18), rgba(8, 48, 55, .48)),
+    radial-gradient(circle at 58% 46%, rgba(255,255,255,.22), transparent 35%);
+  pointer-events: none;
+}
+
+.loch-map-overlay {
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 8px;
+  background: rgba(14, 45, 49, .16);
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.44);
+}
+
+.loch-map-overlay strong {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.map-label {
+  position: absolute;
+  display: inline-grid;
+  place-items: center;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  color: #13363a;
+  font-size: 13px;
+  font-weight: 900;
+  text-shadow: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,.22);
+  white-space: nowrap;
+}
+
+.map-label.inverness {
+  right: 16px;
+  top: 38%;
+}
+
+.map-label.loch-ness {
+  left: 30%;
+  top: 57%;
+}
+
+.loch-line {
+  position: absolute;
+  left: 39%;
+  top: 52%;
+  width: 36%;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(44, 143, 177, .95);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.7), 0 6px 16px rgba(0,0,0,.35);
+  transform: rotate(-18deg);
+}
+
+.map-pin {
+  position: absolute;
+  left: calc(30% - 8px);
+  top: calc(57% + 28px);
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  background: #e23a49;
+  box-shadow: 0 6px 12px rgba(0,0,0,.32);
+  transform: rotate(-45deg);
 }
 
 .accommodation > div img {
@@ -396,6 +495,11 @@
   .sound-sort,
   .sentence-card {
     grid-template-columns: 1fr;
+  }
+
+  .loch-map-card,
+  .loch-map-card > img {
+    min-height: 220px;
   }
 
   .remote-grid {

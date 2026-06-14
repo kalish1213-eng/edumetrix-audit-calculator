@@ -61,7 +61,7 @@ export const nativeLessons = [
     startPage: 3,
     endPage: 4,
     title: "Contents",
-    url: "public/native/contents/index.html?v=20260612-contents1"
+    url: "public/native/contents/index.html?v=20260614-photoassets1"
   },
   {
     startPage: 5,
@@ -133,7 +133,7 @@ export const nativeLessons = [
     startPage: 27,
     endPage: 28,
     title: "4B The perfect car",
-    url: "public/native/4b-the-perfect-car/index.html?v=20260614-photoall1"
+    url: "public/native/4b-the-perfect-car/index.html?v=20260614-4bphotoquiz1"
   },
   {
     startPage: 29,
@@ -181,7 +181,7 @@ export const nativeLessons = [
     startPage: 43,
     endPage: 44,
     title: "7A Have a nice weekend!",
-    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260614-7apronphoto1"
+    url: "public/native/7a-have-a-nice-weekend/index.html?v=20260614-7apronfile1"
   },
   {
     startPage: 45,
@@ -199,13 +199,13 @@ export const nativeLessons = [
     startPage: 49,
     endPage: 50,
     title: "8A Can I park here?",
-    url: "public/native/8a-can-i-park-here/index.html?v=20260614-8apronphoto2"
+    url: "public/native/8a-can-i-park-here/index.html?v=20260614-photoassets1"
   },
   {
     startPage: 51,
     endPage: 52,
     title: "8B I love cooking",
-    url: "public/native/8b-i-love-cooking/index.html?v=20260614-8bpronphoto1"
+    url: "public/native/8b-i-love-cooking/index.html?v=20260614-photoassets1"
   },
   {
     startPage: 53,
@@ -235,7 +235,7 @@ export const nativeLessons = [
     startPage: 61,
     endPage: 62,
     title: "10A A room with a view",
-    url: "public/native/10a-a-room-with-a-view/index.html?v=20260614-photoall1"
+    url: "public/native/10a-a-room-with-a-view/index.html?v=20260614-10anativemap1"
   },
   {
     startPage: 63,
@@ -289,7 +289,7 @@ export const nativeLessons = [
     startPage: 79,
     endPage: 86,
     title: "Communication",
-    url: "public/native/communication/index.html?v=20260614-commphoto4"
+    url: "public/native/communication/index.html?v=20260614-commphoto5"
   },
   {
     startPage: 87,
