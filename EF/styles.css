@@ -714,6 +714,10 @@ body[data-zoom-mode="fit"] .page-card {
   box-shadow: var(--shadow);
 }
 
+body[data-zoom-mode="fit"] .page-surface {
+  max-width: 100%;
+}
+
 .page-surface.native-lesson-surface {
   overflow: visible;
   border: 0;
