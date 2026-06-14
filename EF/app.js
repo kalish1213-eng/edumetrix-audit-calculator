@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-cnyphoto1";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-cnyphoto1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-cnyphoto1";
-import { registerShellComponents } from "./src/components/index.js?v=20260614-cnyphoto1";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-cnyphoto1";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-cnyphoto1";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-cnyphoto1";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-cnyphoto1";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-cnyphoto1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-fitwidth1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-fitwidth1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-fitwidth1";
+import { registerShellComponents } from "./src/components/index.js?v=20260614-fitwidth1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-fitwidth1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-fitwidth1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-fitwidth1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-fitwidth1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-fitwidth1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
@@ -5640,6 +5640,7 @@ function bindAuthorTools() {
 function renderPages({ resetScroll = false } = {}) {
   if (!manifest) return;
 
+  syncZoomMode();
   const pages = visiblePageNumbers();
   pagesHost.innerHTML = "";
   pageInput.value = String(currentPage);
@@ -5834,6 +5835,10 @@ async function loadNativeLessonEmbed(embed, url) {
       loadNativeLessonEmbed(embed, url);
     });
   }
+}
+
+function syncZoomMode() {
+  document.body.dataset.zoomMode = zoomSelect?.value === "fit" ? "fit" : "fixed";
 }
 
 function renderNativeLoading(shadow) {
@@ -7918,19 +7923,32 @@ function pageWidth(meta) {
   const minWidth = meta.minFitWidth || 320;
   if (zoom !== "fit") return Math.max(minWidth, Math.round(meta.width * Number(zoom)));
 
-  const readerWidth = document.querySelector(".reader").clientWidth - 36;
+  const readerWidth = readerPageSlotWidth();
   const columns = spreadMode.checked ? 2 : 1;
   const gaps = spreadMode.checked ? 18 : 0;
   const width = Math.floor((readerWidth - gaps) / columns);
-  return clamp(width, minWidth, meta.width);
+  return clamp(width, 1, meta.width);
 }
 
 function nativePageWidth() {
   const zoom = zoomSelect.value;
   if (zoom !== "fit") return Math.max(360, Math.round(1240 * Number(zoom)));
 
-  const readerWidth = document.querySelector(".reader").clientWidth - 36;
-  return clamp(readerWidth, 360, 1240);
+  return clamp(readerPageSlotWidth(), 1, 1240);
+}
+
+function readerPageSlotWidth() {
+  const reader = document.querySelector(".reader");
+  const notebook = document.querySelector(".notebook");
+  const readerWidth = reader?.clientWidth || window.innerWidth || 360;
+  let horizontalPadding = 0;
+
+  if (notebook) {
+    const style = getComputedStyle(notebook);
+    horizontalPadding = (parseFloat(style.paddingLeft) || 0) + (parseFloat(style.paddingRight) || 0);
+  }
+
+  return Math.max(1, Math.floor(readerWidth - horizontalPadding - 2));
 }
 
 function updateNavState() {

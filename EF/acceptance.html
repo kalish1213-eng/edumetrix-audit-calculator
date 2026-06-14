@@ -145,7 +145,7 @@
     </main>
 
     <script type="module">
-      const APP_VERSION = "20260614-cnyphoto1";
+      const APP_VERSION = "20260614-fitwidth1";
       const APP_URL = `index.html?v=${APP_VERSION}`;
       const STORAGE_PREFIXES = ["ef-"];
       const frame = document.querySelector("#appFrame");
@@ -347,10 +347,14 @@
           });
 
           await test("Test 8: Responsive", async () => {
-            for (const width of [1440, 1280, 768, 390]) {
-              await loadPage(7, width);
-              assert(appDocument().documentElement.scrollWidth <= appDocument().documentElement.clientWidth + 2, `${width}px has page horizontal overflow`);
-              assert(nativeRoot().querySelectorAll("[data-field-id]").length > 0, `${width}px native fields missing`);
+            for (const page of [7, 19]) {
+              for (const width of [1440, 1280, 768, 390]) {
+                await loadPage(page, width);
+                const reader = appDocument().querySelector(".reader");
+                assert(appDocument().documentElement.scrollWidth <= appDocument().documentElement.clientWidth + 2, `${width}px page ${page} has body horizontal overflow`);
+                assert(reader.scrollWidth <= reader.clientWidth + 2, `${width}px page ${page} has reader horizontal overflow in fit-width mode`);
+                assert(nativeRoot().querySelectorAll("[data-field-id]").length > 0, `${width}px page ${page} native fields missing`);
+              }
             }
             frame.style.width = "100%";
           });

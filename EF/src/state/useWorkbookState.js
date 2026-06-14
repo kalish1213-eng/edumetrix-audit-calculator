@@ -1,4 +1,4 @@
-import { getStartPageFromHash } from "../utils/pageNavigation.js?v=20260614-cnyphoto1";
+import { getStartPageFromHash } from "../utils/pageNavigation.js?v=20260614-fitwidth1";
 
 export function createWorkbookState({ hash = location.hash, pageCount = 137 } = {}) {
   return {

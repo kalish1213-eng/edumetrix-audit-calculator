@@ -1,6 +1,6 @@
-@import url("./src/styles/tokens.css?v=20260614-cnyphoto1");
-@import url("./src/styles/layout.css?v=20260614-cnyphoto1");
-@import url("./src/styles/components.css?v=20260614-cnyphoto1");
+@import url("./src/styles/tokens.css?v=20260614-fitwidth1");
+@import url("./src/styles/layout.css?v=20260614-fitwidth1");
+@import url("./src/styles/components.css?v=20260614-fitwidth1");
 
 * {
   box-sizing: border-box;
@@ -606,6 +606,10 @@ textarea:focus-visible {
   box-shadow: var(--small-shadow);
 }
 
+body[data-zoom-mode="fit"] .reader {
+  overflow-x: hidden;
+}
+
 .status-line {
   margin: 12px 14px 0;
   padding: 10px 12px;
@@ -625,6 +629,11 @@ textarea:focus-visible {
   min-width: max-content;
   min-height: 100%;
   padding: 24px 28px 28px 42px;
+}
+
+body[data-zoom-mode="fit"] .notebook {
+  width: 100%;
+  min-width: 0;
 }
 
 .binder {
@@ -655,8 +664,17 @@ textarea:focus-visible {
   min-width: max-content;
 }
 
+body[data-zoom-mode="fit"] .pages-host {
+  width: 100%;
+  min-width: 0;
+}
+
 .page-card {
   flex: 0 0 auto;
+}
+
+body[data-zoom-mode="fit"] .page-card {
+  max-width: 100%;
 }
 
 .page-label {
