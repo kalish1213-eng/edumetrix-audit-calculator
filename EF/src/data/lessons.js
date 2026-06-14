@@ -289,7 +289,7 @@ export const nativeLessons = [
     startPage: 79,
     endPage: 86,
     title: "Communication",
-    url: "public/native/communication/index.html?v=20260614-commphoto2"
+    url: "public/native/communication/index.html?v=20260614-commphoto3"
   },
   {
     startPage: 87,
