@@ -1,12 +1,12 @@
-import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-fitwidth1";
-import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-fitwidth1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-fitwidth1";
-import { registerShellComponents } from "./src/components/index.js?v=20260614-fitwidth1";
-import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-fitwidth1";
-import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-fitwidth1";
-import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-fitwidth1";
-import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-fitwidth1";
-import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-fitwidth1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-navsingle1";
+import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-navsingle1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons.js?v=20260614-navsingle1";
+import { registerShellComponents } from "./src/components/index.js?v=20260614-navsingle1";
+import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-navsingle1";
+import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-navsingle1";
+import { answerForReveal, matchesAnswer, normalizeAnswer as normalize } from "./src/utils/checkAnswer.js?v=20260614-navsingle1";
+import { getStartPageFromHash, clamp } from "./src/utils/pageNavigation.js?v=20260614-navsingle1";
+import { loadJson, saveJson } from "./src/utils/storage.js?v=20260614-navsingle1";
 
 const STORAGE_VALUES = "ef-beginner-fullbook-values";
 const STORAGE_CUSTOM = "ef-beginner-fullbook-custom-fields";
@@ -46,6 +46,7 @@ const lessonCounter = document.querySelector("#lessonCounter");
 const lessonCrumb = document.querySelector("#lessonCrumb");
 const unitCrumb = document.querySelector("#unitCrumb");
 const topProgressText = document.querySelector("#topProgressText");
+const topProgressLabel = document.querySelector(".top-progress span");
 const topProgressBar = document.querySelector("#topProgressBar");
 const sidebarProgressText = document.querySelector("#sidebarProgressText");
 const sidebarProgressBar = document.querySelector("#sidebarProgressBar");
@@ -5501,6 +5502,7 @@ init();
 async function init() {
   try {
     configureAccessMode();
+    configureNavigationCopy();
     installVectorIcons();
     pageInput?.setAttribute("aria-label", "Номер страницы");
 
@@ -5545,6 +5547,14 @@ function configureAccessMode() {
     node.removeAttribute("aria-hidden");
     node.removeAttribute("inert");
   });
+}
+
+function configureNavigationCopy() {
+  setText(topProgressLabel, "Выполнение");
+  const sidebarProgressCaption = sidebarProgressText?.parentElement;
+  if (sidebarProgressCaption) {
+    sidebarProgressCaption.lastChild.textContent = " выполнено";
+  }
 }
 
 function installVectorIcons() {
@@ -6926,7 +6936,6 @@ function highestAnsweredPage() {
 
 function syncLmsUi(pages = visiblePageNumbers()) {
   const lesson = nativeLessonForPage(currentPage) || lessonIndexForPage(currentPage);
-  const nativeIndex = Math.max(0, nativeLessons.findIndex((item) => item.startPage <= currentPage && item.endPage >= currentPage));
   const progress = currentCourseProgress()?.percent || null;
   const lessonStart = lesson.startPage || lesson.page || currentPage;
   const lessonEnd = lesson.endPage || lesson.page || currentPage;
@@ -6937,7 +6946,7 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   setText(currentLessonTitle, lesson.title);
   setText(lessonCrumb, lesson.title);
   setText(unitCrumb, unitNameForLesson(lesson.title));
-  setText(lessonCounter, `Урок ${nativeIndex + 1} из ${nativeLessons.length}`);
+  setText(lessonCounter, pagePositionText(lesson));
   setText(topProgressText, progress ? `${progress}%` : "Начат");
   setText(sidebarProgressText, progress ? `${progress}%` : "Начат");
   setText(lessonProgressText, answerStats.loading ? "..." : answerStats.total ? `${answerStats.percent}%` : `${clampedLessonPercent}%`);
@@ -7116,6 +7125,14 @@ function unitNameForLesson(title) {
   if (/Grammar Bank/i.test(title)) return "Grammar Bank";
   if (/Vocabulary Bank/i.test(title)) return "Vocabulary Bank";
   return "Course";
+}
+
+function pagePositionText(lesson) {
+  const start = Number(lesson.startPage || lesson.page || currentPage);
+  const end = Number(lesson.endPage || lesson.page || currentPage);
+  const pageCount = manifest?.pageCount || DEFAULT_PAGE_COUNT;
+  const range = start === end ? String(start) : `${start}-${end}`;
+  return `Стр. ${range} из ${pageCount}`;
 }
 
 function hintForLesson(title) {

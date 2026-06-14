@@ -1,6 +1,6 @@
-@import url("./src/styles/tokens.css?v=20260614-fitwidth1");
-@import url("./src/styles/layout.css?v=20260614-fitwidth1");
-@import url("./src/styles/components.css?v=20260614-fitwidth1");
+@import url("./src/styles/tokens.css?v=20260614-navsingle1");
+@import url("./src/styles/layout.css?v=20260614-navsingle1");
+@import url("./src/styles/components.css?v=20260614-navsingle1");
 
 * {
   box-sizing: border-box;
@@ -314,6 +314,11 @@ textarea:focus-visible {
   text-overflow: ellipsis;
 }
 
+body.is-student-mode .breadcrumb span:not(:first-of-type),
+body.is-student-mode .breadcrumb strong {
+  display: none;
+}
+
 .topbar-right {
   display: flex;
   align-items: center;
@@ -459,6 +464,11 @@ textarea:focus-visible {
   font-weight: 800;
 }
 
+body.is-student-mode .lesson-picker,
+body.is-student-mode .page-jump {
+  display: none;
+}
+
 .pager,
 .zoom-box,
 .toolbar-actions {
@@ -550,6 +560,11 @@ textarea:focus-visible {
   padding: 10px 14px;
 }
 
+body.is-student-mode .lesson-strip {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 12px 16px;
+}
+
 .lesson-strip span {
   display: block;
   color: var(--muted);
@@ -569,6 +584,10 @@ textarea:focus-visible {
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: thin;
+}
+
+body.is-student-mode .lesson-rail {
+  display: none;
 }
 
 .lesson-pill {

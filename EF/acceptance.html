@@ -145,7 +145,7 @@
     </main>
 
     <script type="module">
-      const APP_VERSION = "20260614-fitwidth1";
+      const APP_VERSION = "20260614-navsingle1";
       const APP_URL = `index.html?v=${APP_VERSION}`;
       const STORAGE_PREFIXES = ["ef-"];
       const frame = document.querySelector("#appFrame");
@@ -290,6 +290,13 @@
             assert(!visible("#addField"), "Добавить поле visible");
             assert(!visible("#editFields"), "Править поля visible");
             assert(!visible("#showAnswers"), "Ответы key button visible");
+            await loadPage(19);
+            assert(!visible(".lesson-picker"), "Lesson dropdown duplicates the current location in student mode");
+            assert(!visible(".page-jump"), "Page jump duplicates the single position counter in student mode");
+            assert(!visible("#lessonRail"), "Lesson rail duplicates the current location in student mode");
+            assert(!visible("#unitCrumb") && !visible("#lessonCrumb"), "Breadcrumb duplicates the current lesson in student mode");
+            assert(appDocument().querySelector("#lessonCounter").textContent.trim() === "Стр. 19-20 из 137", "Single position counter is not honest for page 19");
+            assert(!/Урок\s+\d+\s+из\s+66/.test(appDocument().body.textContent), "Old lesson counter is still present");
           });
 
           await test("Test 3: Answer saving", async () => {
