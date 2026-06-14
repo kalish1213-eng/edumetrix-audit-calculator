@@ -385,6 +385,183 @@ select.answer.tiny { min-width: 58px; width: 58px; }
   top: auto;
 }
 
+.ordinal-question-card,
+.ordinal-quiz-grid {
+  min-width: 0;
+}
+
+.ordinal-question-card {
+  display: grid;
+  overflow: hidden;
+  margin: 0 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf5;
+  box-shadow: 0 10px 24px rgba(70, 54, 28, .1);
+}
+
+.ordinal-quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ordinal-quiz-grid .ordinal-question-card {
+  margin: 0;
+}
+
+.quiz-photo {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  min-height: 116px;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.9), transparent 34%),
+    linear-gradient(145deg, #f6edd4, #e6d4a6);
+}
+
+.quiz-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.street-photo img {
+  filter: saturate(.96) contrast(1.02);
+}
+
+.street-sign {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  display: grid;
+  gap: 4px;
+  min-width: 120px;
+  padding: 8px 10px;
+  border: 2px solid #1d6a43;
+  border-radius: 5px;
+  background: rgba(250, 255, 250, .94);
+  color: #12492e;
+  font-weight: 950;
+  line-height: 1.05;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.street-sign small {
+  display: inline-grid;
+  place-items: center;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: #1d1f23;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+.keyboard-cue {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: center;
+  gap: 6px;
+  padding: 18px;
+  background:
+    linear-gradient(145deg, #202733, #454e5b),
+    #303944;
+}
+
+.keyboard-cue span {
+  display: grid;
+  place-items: center;
+  min-height: 46px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #f5f7fa, #cfd6dd);
+  color: #111820;
+  font-size: 20px;
+  font-weight: 950;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,.13), 0 6px 12px rgba(0,0,0,.2);
+}
+
+.history-cue,
+.calendar-cue {
+  place-items: center;
+  min-height: 140px;
+  color: #fff;
+  text-align: center;
+}
+
+.history-cue {
+  background:
+    linear-gradient(rgba(20, 42, 74, .2), rgba(20, 42, 74, .72)),
+    linear-gradient(135deg, #b4232e 0 18%, #f8f8f8 18% 34%, #233d78 34% 100%);
+}
+
+.calendar-cue {
+  background:
+    linear-gradient(rgba(42, 81, 78, .08), rgba(42, 81, 78, .48)),
+    linear-gradient(145deg, #f7faf5, #3d9b8b);
+}
+
+.history-cue strong,
+.calendar-cue strong {
+  font-size: 56px;
+  font-weight: 950;
+  line-height: .9;
+}
+
+.history-cue span,
+.calendar-cue span {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.28);
+  font-weight: 850;
+}
+
+.ordinal-question-body {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 7px 10px;
+  align-items: start;
+  padding: 12px;
+}
+
+.quiz-num {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.ordinal-question-body p {
+  margin: 1px 0 0;
+  color: #171523;
+  font-size: 16px;
+  font-weight: 850;
+  line-height: 1.22;
+}
+
+.ordinal-question-body ol {
+  grid-column: 2;
+  margin: 0;
+  padding-left: 20px;
+  color: #3e3d47;
+  font-size: 14px;
+  line-height: 1.28;
+}
+
+.ordinal-question-body .quiz-select {
+  grid-column: 2;
+  width: min(100%, 112px);
+  min-height: 32px;
+  justify-self: start;
+  background: #fff;
+}
+
 .sound-row {
   display: grid;
   grid-template-columns: 92px repeat(6, minmax(0, 1fr));
@@ -631,7 +808,8 @@ select.answer.tiny { min-width: 58px; width: 58px; }
 @media (max-width: 920px) {
   .two-col,
   .dad-card,
-  .phone-layout { grid-template-columns: 1fr; }
+  .phone-layout,
+  .ordinal-quiz-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -650,6 +828,9 @@ select.answer.tiny { min-width: 58px; width: 58px; }
   .sound-row,
   .date-rule,
   .date-list { grid-template-columns: 1fr; }
+  .ordinal-question-body { grid-template-columns: 1fr; }
+  .ordinal-question-body ol,
+  .ordinal-question-body .quiz-select { grid-column: 1; }
   .conversation-card b { width: 54px; }
 }
 
