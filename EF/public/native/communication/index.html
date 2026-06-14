@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Communication</title>
-  <link rel="stylesheet" href="styles.css?v=20260612-comm1" />
+  <link rel="stylesheet" href="styles.css?v=20260614-comm79native2" />
 </head>
 <body>
 <script id="lesson-json" type="application/json">
@@ -137,17 +137,148 @@
   </div>
 
   <div class="page-strip" aria-label="Interactive Communication pages">
-    <section class="comm-page" aria-label="Communication page 78">
-      <img src="../../pages/page-079.jpg?v=20260612-comm1" alt="Communication page 78" />
-      <input class="answer board-value" data-field-id="p79-your-ships" type="hidden" />
-      <input class="answer board-value" data-field-id="p79-bs-ships" type="hidden" />
-      <div class="ship-board" data-board-field-id="p79-your-ships" style="--x:18.2;--y:42.2;--w:25.1;--h:21.2"><div class="ship-grid"></div></div>
-      <div class="ship-board" data-board-field-id="p79-bs-ships" style="--x:18.2;--y:65.1;--w:25.1;--h:21.2"><div class="ship-grid"></div></div>
-      <input class="answer overlay-field" data-field-id="p79-nat-1" style="--x:59.1;--y:24.1;--w:7.4;--h:1.8" />
-      <input class="answer overlay-field" data-field-id="p79-nat-2" style="--x:59.0;--y:35.3;--w:7.4;--h:1.8" />
-      <input class="answer overlay-field" data-field-id="p79-nat-3" style="--x:59.0;--y:46.5;--w:7.4;--h:1.8" />
-      <input class="answer overlay-field" data-field-id="p79-nat-4" style="--x:59.0;--y:57.8;--w:7.4;--h:1.8" />
-      <input class="answer overlay-field" data-field-id="p79-nat-5" style="--x:59.0;--y:69.0;--w:7.4;--h:1.8" />
+    <section class="comm-page native-comm-page comm-page-79" aria-label="Communication page 78">
+      <header class="comm-hero">
+        <h1>Communication</h1>
+      </header>
+
+      <div class="native-layout">
+        <div class="left-col">
+          <section class="native-task where-task" aria-label="1B Where is it">
+            <h2><span>1B</span> WHERE IS IT? <em>Student A</em></h2>
+            <p class="task-line"><b>a</b> Ask B questions for your cities.</p>
+            <p class="speech-note">Where's Izmir?</p>
+            <div class="city-grid">
+              <ol>
+                <li><b>Izmir</b> is in Turkey.</li>
+                <li><b>Atlanta</b> is in the United States.</li>
+                <li><b>Basel</b> is in Switzerland.</li>
+                <li><b>Curitiba</b> is in Brazil.</li>
+              </ol>
+              <ol start="5">
+                <li><b>Dortmund</b> is in Germany.</li>
+                <li><b>Gdansk</b> is in Poland.</li>
+                <li><b>Hong Kong</b> is in China.</li>
+                <li><b>Luxor</b> is in Egypt.</li>
+              </ol>
+            </div>
+            <p class="task-line"><b>b</b> Answer B's questions with a country.</p>
+            <div class="phrase-row">
+              <span>It's in...</span>
+              <span>I think it's in...</span>
+              <span>I don't know.</span>
+            </div>
+            <p class="page-ref magenta">p.8</p>
+          </section>
+
+          <section class="native-task ships-task" aria-label="PE1 Hit the ships">
+            <h2><span>PE1</span> HIT THE SHIPS <em>Student A</em></h2>
+            <p class="task-line"><b>a</b> Draw five 'ships' in <strong>Your ships</strong>.</p>
+            <input class="answer board-value" data-field-id="p79-your-ships" type="hidden" />
+            <input class="answer board-value" data-field-id="p79-bs-ships" type="hidden" />
+            <div class="ships-row">
+              <div class="battle-board">
+                <strong>Your ships</strong>
+                <div class="board-shell">
+                  <div class="board-corner"></div>
+                  <div class="board-header">1</div><div class="board-header">2</div><div class="board-header">3</div><div class="board-header">4</div><div class="board-header">5</div><div class="board-header">6</div><div class="board-header">7</div><div class="board-header">8</div><div class="board-header">9</div><div class="board-header">10</div>
+                  <div class="board-side">A</div><div class="ship-board" data-board-field-id="p79-your-ships"><div class="ship-grid"></div></div>
+                  <div class="board-side board-side-list"><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span></div>
+                </div>
+              </div>
+              <div class="ship-example" aria-label="One ship equals three squares">
+                <div class="mini-grid"><i></i><i></i></div>
+                <p>One ship<br />= three<br />squares</p>
+              </div>
+            </div>
+
+            <div class="battle-board b-board">
+              <strong>B's ships</strong>
+              <div class="board-shell">
+                <div class="board-corner blue"></div>
+                <div class="board-header blue">1</div><div class="board-header blue">2</div><div class="board-header blue">3</div><div class="board-header blue">4</div><div class="board-header blue">5</div><div class="board-header blue">6</div><div class="board-header blue">7</div><div class="board-header blue">8</div><div class="board-header blue">9</div><div class="board-header blue">10</div>
+                <div class="board-side blue">A</div><div class="ship-board" data-board-field-id="p79-bs-ships"><div class="ship-grid"></div></div>
+                <div class="board-side board-side-list blue"><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span></div>
+              </div>
+            </div>
+            <p class="task-line"><b>b</b> Try to 'hit' B's ships. Say a square, e.g. H8. If B says <i>Hit</i>, tick the square in B's ships. If B says <i>Nothing</i>, cross the square.</p>
+            <div class="phrase-row ships-phrases">
+              <span>H8?</span>
+              <span>Nothing.</span>
+              <span>B7?</span>
+              <span>Hit!</span>
+            </div>
+            <p class="task-line"><b>c</b> B says a square. Say <i>Hit</i> or <i>Nothing</i>.</p>
+            <p class="page-ref gold">p.10</p>
+          </section>
+        </div>
+
+        <section class="native-task nationality-task" aria-label="2A Is sushi Chinese">
+          <h2><span>2A</span> IS SUSHI CHINESE? <em>Student A</em></h2>
+          <div class="nationality-grid">
+            <article class="nationality-card answer-card">
+              <div class="card-number">1</div>
+              <div class="vector-scene sushi-scene" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+              <label><input class="answer native-inline" data-field-id="p79-nat-1" autocomplete="off" spellcheck="false" /> sushi Chinese?</label>
+            </article>
+            <article class="nationality-card answer-card">
+              <div class="card-number">2</div>
+              <div class="vector-scene band-scene" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+              <label><input class="answer native-inline" data-field-id="p79-nat-2" autocomplete="off" spellcheck="false" /> the Rolling Stones American?</label>
+            </article>
+            <article class="nationality-card answer-card">
+              <div class="card-number">3</div>
+              <div class="vector-scene fashion-scene" aria-hidden="true"><i></i><b></b></div>
+              <label>Giorgio Armani Italian? <input class="answer native-inline yes-field" data-field-id="p79-nat-3" autocomplete="off" spellcheck="false" /></label>
+            </article>
+            <article class="nationality-card answer-card">
+              <div class="card-number">4</div>
+              <div class="vector-scene portrait-scene" aria-hidden="true"><i></i><b></b></div>
+              <label><input class="answer native-inline" data-field-id="p79-nat-4" autocomplete="off" spellcheck="false" /> Victoria Beckham Australian?</label>
+            </article>
+            <article class="nationality-card answer-card">
+              <div class="card-number">5</div>
+              <div class="vector-scene pyramid-scene" aria-hidden="true"><i></i><i></i><b></b></div>
+              <label><input class="answer native-inline" data-field-id="p79-nat-5" autocomplete="off" spellcheck="false" /> the pyramids Egyptian?</label>
+            </article>
+            <article class="nationality-card">
+              <div class="card-number">6</div>
+              <div class="vector-scene model-scene" aria-hidden="true"><i></i><b></b></div>
+              <p>Gisele Bundchen is Brazilian.</p>
+            </article>
+            <article class="nationality-card">
+              <div class="card-number">7</div>
+              <div class="vector-scene car-scene" aria-hidden="true"><i></i><b></b></div>
+              <p>Lada cars are Russian.</p>
+            </article>
+            <article class="nationality-card">
+              <div class="card-number">8</div>
+              <div class="vector-scene tacos-scene" aria-hidden="true"><i></i><i></i><b></b></div>
+              <p>Tacos are Mexican.</p>
+            </article>
+            <article class="nationality-card">
+              <div class="card-number">9</div>
+              <div class="vector-scene actor-scene" aria-hidden="true"><i></i><b></b></div>
+              <p>Antonio Banderas is Spanish.</p>
+            </article>
+            <article class="nationality-card">
+              <div class="card-number">10</div>
+              <div class="vector-scene watches-scene" aria-hidden="true"><i></i><b></b></div>
+              <p>Swatch and Rolex are Swiss.</p>
+            </article>
+          </div>
+          <p class="task-line"><b>a</b> Ask B about 1-5. Use <i>Is...?</i> or <i>Are...?</i> Tick if the answer is yes. If the answer is no, write the nationality.</p>
+          <p class="speech-note green">Is sushi Chinese?</p>
+          <p class="task-line"><b>b</b> Answer B's question about 6-10.</p>
+          <div class="phrase-stack">
+            <span>No, he / she / it isn't. He / She / It's...</span>
+            <span>Yes, they are.</span>
+            <span>No, they aren't. They're...</span>
+          </div>
+          <p class="page-ref green-ref">p.13</p>
+        </section>
+      </div>
+      <span class="book-page-number">78</span>
     </section>
 
     <section class="comm-page" aria-label="Communication page 79">
