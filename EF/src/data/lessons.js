@@ -427,7 +427,7 @@ export const nativeLessons = [
     startPage: 132,
     endPage: 133,
     title: "Words and phrases to learn",
-    url: "public/native/words-phrases/index.html?v=20260612-phrases1"
+    url: "public/native/words-phrases/index.html?v=20260615-phrasesnative2"
   },
   {
     startPage: 134,

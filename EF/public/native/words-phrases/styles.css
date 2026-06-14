@@ -3,17 +3,19 @@
 }
 
 :root {
-  --ink: #102033;
-  --muted: #5e6d7e;
+  --ink: #172033;
+  --muted: #667085;
   --paper: #ffffff;
-  --surface: #eaf5ee;
-  --line: #c9dfd0;
-  --accent: #18844c;
-  --accent-dark: #0f6f3e;
+  --surface: #f1eef7;
+  --line: #ddd5e8;
+  --purple: #8b247b;
+  --green: #70a83b;
+  --red: #d1424d;
+  --teal: #179aa7;
   --ok: #167a3a;
   --bad: #b42318;
   --warn: #a15c00;
-  --shadow: 0 20px 52px rgba(16, 47, 78, .14);
+  --shadow: 0 20px 52px rgba(36, 22, 52, .13);
 }
 
 body {
@@ -38,7 +40,7 @@ body {
   gap: 14px;
   align-items: center;
   padding: 14px 16px;
-  border: 1px solid rgba(17, 79, 136, .14);
+  border: 1px solid rgba(98, 54, 120, .16);
   border-radius: 8px;
   background: rgba(255, 255, 255, .96);
   box-shadow: var(--shadow);
@@ -71,8 +73,8 @@ body {
   padding: 0 14px;
   border: 0;
   border-radius: 8px;
-  background: #f1f6fb;
-  color: #153b5f;
+  background: #f6f2fa;
+  color: #442858;
   font: 800 15px Arial, Helvetica, sans-serif;
   cursor: pointer;
   text-decoration: none;
@@ -88,7 +90,7 @@ body {
 }
 
 .btn.primary {
-  background: var(--accent-dark);
+  background: var(--purple);
   color: #fff;
 }
 
@@ -136,7 +138,7 @@ body {
   height: 12px;
   overflow: hidden;
   border-radius: 999px;
-  background: #d7e4ef;
+  background: #e5ddec;
 }
 
 .progress i {
@@ -144,7 +146,7 @@ body {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent-dark), #1d8fb8);
+  background: linear-gradient(90deg, var(--purple), var(--teal));
 }
 
 .stat b {
@@ -165,65 +167,151 @@ body {
   gap: 26px;
 }
 
-.grammar-page {
+.phrase-page {
   position: relative;
   width: min(100%, 1120px);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
-  background: var(--paper);
+  background:
+    linear-gradient(90deg, #7b2077 0 20px, transparent 20px),
+    var(--paper);
   box-shadow: var(--shadow);
+  padding: 44px 44px 56px 66px;
 }
 
-.grammar-page img {
-  display: block;
+.page-133 {
+  background:
+    linear-gradient(90deg, #7b2077 0 20px, transparent 20px),
+    var(--paper);
+}
+
+.phrase-header {
+  margin-bottom: 34px;
+}
+
+.phrase-header h1 {
+  margin: 0;
+  color: var(--purple);
+  font-size: clamp(42px, 5.3vw, 60px);
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.phrase-grid {
+  column-count: 4;
+  column-gap: 34px;
+}
+
+.phrase-card {
+  display: inline-block;
   width: 100%;
-  height: auto;
+  break-inside: avoid;
+  margin: 0 0 24px;
+  color: var(--ink);
 }
 
-.overlay-field {
-  position: absolute;
-  left: calc(var(--x) * 1%);
-  top: calc(var(--y) * 1%);
-  width: calc(var(--w) * 1%);
-  height: calc(var(--h) * 1%);
-  min-width: 0;
-  border: 2px solid rgba(17, 79, 136, .72);
-  border-radius: 5px;
-  background: rgba(255, 255, 255, .9);
-  color: #111827;
-  font: 800 12px/1.1 Arial, Helvetica, sans-serif;
-  padding: 1px 4px;
-  box-shadow: 0 1px 8px rgba(16, 47, 78, .12);
+.phrase-card header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 8px;
 }
 
-.overlay-field.short {
-  text-align: center;
-  padding-left: 1px;
-  padding-right: 1px;
+.phrase-card h2 {
+  margin: 0;
+  color: var(--unit-color);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
 }
 
-.overlay-field.long {
-  font-size: 10px;
+.audio-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--unit-color) 18%, white);
+  color: var(--unit-color);
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 900;
 }
 
-.overlay-field.sentence {
-  font-size: 9px;
+.audio-chip::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 33% 50%, #fff 0 2px, transparent 2.3px),
+    linear-gradient(90deg, #fff 0 7px, transparent 7px),
+    var(--unit-color);
 }
 
-.overlay-field.ordinal {
-  font-size: 8px;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.overlay-field.phrase-block {
-  resize: none;
-  overflow: auto;
+.phrase-card pre {
+  margin: 0;
+  color: #252d3b;
+  font: 18px/1.27 Arial, Helvetica, sans-serif;
   white-space: pre-wrap;
-  font: 700 7.4px/1.1 Arial, Helvetica, sans-serif;
-  padding: 3px 4px;
-  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.phrase-card label {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--unit-color) 24%, white);
+}
+
+.phrase-card label > span {
+  color: var(--unit-color);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.phrase-card textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 92px;
+  resize: vertical;
+  border: 1.8px solid color-mix(in srgb, var(--unit-color) 46%, white);
+  border-radius: 6px;
+  background: #fff;
+  color: #111827;
+  font: 700 14px/1.25 Arial, Helvetica, sans-serif;
+  padding: 8px;
+}
+
+.c-purple {
+  --unit-color: var(--purple);
+}
+
+.c-green {
+  --unit-color: var(--green);
+}
+
+.c-red {
+  --unit-color: var(--red);
+}
+
+.c-teal {
+  --unit-color: var(--teal);
+}
+
+.book-page-number {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .state-ok {
@@ -261,6 +349,12 @@ body {
   opacity: 1;
 }
 
+@media (max-width: 1120px) {
+  .phrase-grid {
+    column-count: 3;
+  }
+}
+
 @media (max-width: 900px) {
   .grammar-shell {
     padding: 14px 10px 24px;
@@ -275,24 +369,38 @@ body {
     justify-content: flex-start;
   }
 
-  .overlay-field {
-    border-width: 1px;
-    font-size: 9px;
+  .phrase-page {
+    padding: 34px 24px 50px 44px;
   }
 
-  .overlay-field.long {
-    font-size: 8px;
+  .phrase-grid {
+    column-count: 2;
+    column-gap: 24px;
   }
 
-  .overlay-field.sentence {
-    font-size: 7px;
+  .phrase-card pre {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .phrase-page {
+    padding: 28px 14px 46px 34px;
   }
 
-  .overlay-field.ordinal {
-    font-size: 6px;
+  .phrase-header h1 {
+    font-size: 36px;
   }
 
-  .overlay-field.phrase-block {
-    font-size: 5.6px;
+  .phrase-grid {
+    column-count: 1;
+  }
+
+  .phrase-card {
+    margin-bottom: 22px;
+  }
+
+  .phrase-card pre {
+    font-size: 16px;
   }
 }
