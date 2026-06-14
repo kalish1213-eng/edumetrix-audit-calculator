@@ -169,7 +169,7 @@ export const nativeLessons = [
     startPage: 39,
     endPage: 40,
     title: "6B Good morning, goodnight",
-    url: "public/native/6b-good-morning-goodnight/index.html?v=20260614-photoall1"
+    url: "public/native/6b-good-morning-goodnight/index.html?v=20260614-6bpronphoto1"
   },
   {
     startPage: 41,
