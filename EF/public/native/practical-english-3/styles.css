@@ -344,6 +344,178 @@ textarea { font: inherit; }
   margin-bottom: 10px;
 }
 
+.clock-reference-grid,
+.clock-draw-grid,
+.pronunciation-photo-table {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  margin: 12px 0 16px;
+}
+
+.clock-reference-grid {
+  grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+}
+
+.clock-draw-grid {
+  grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
+  margin-bottom: 10px;
+}
+
+.clock-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.92), rgba(239,232,210,.72)),
+    #fffdf4;
+  box-shadow: 0 8px 18px rgba(67, 54, 25, .11);
+}
+
+.clock-card b {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #2f7898;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.clock-face {
+  position: relative;
+  display: block;
+  width: min(86px, 68%);
+  aspect-ratio: 1;
+  margin-top: 4px;
+  border: 5px solid #303842;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #252b31 0 5px, transparent 6px),
+    repeating-conic-gradient(from 0deg, #20272e 0deg 1.6deg, transparent 1.6deg 30deg),
+    radial-gradient(circle at 50% 46%, #fffef8 0 57%, #e5e1d3 58% 63%, #707982 64% 70%, #242a32 71% 100%);
+  box-shadow:
+    inset 0 5px 12px rgba(255,255,255,.75),
+    inset 0 -8px 14px rgba(0,0,0,.1),
+    0 6px 12px rgba(0,0,0,.15);
+}
+
+.clock-face::before {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 35%, rgba(255,255,255,.72), rgba(255,255,255,.14) 45%, transparent 62%);
+  pointer-events: none;
+}
+
+.clock-face::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #151a20;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  transform: translate(-50%, -50%);
+}
+
+.clock-face .hand {
+  position: absolute;
+  left: calc(50% - 2px);
+  bottom: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 38%;
+  border-radius: 999px;
+  background: #161b20;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  transform-origin: 50% 100%;
+}
+
+.clock-face .hour {
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 29%;
+  transform: rotate(var(--hour));
+}
+
+.clock-face .minute {
+  transform: rotate(var(--minute));
+}
+
+.clock-card > span:not(.clock-face) {
+  color: #172027;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.clock-card.blank {
+  min-height: 130px;
+}
+
+.clock-card.blank .clock-face {
+  width: min(104px, 74%);
+}
+
+.pronunciation-photo-table {
+  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  align-items: stretch;
+}
+
+.pron-photo-card,
+.pron-word-card {
+  display: grid;
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf4;
+  box-shadow: 0 8px 18px rgba(67, 54, 25, .08);
+}
+
+.pron-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pron-photo-card strong,
+.pron-word-card strong {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  padding: 8px 6px;
+  color: var(--gold-dark);
+  font-size: 18px;
+  font-weight: 950;
+  text-align: center;
+}
+
+.pron-word-card {
+  min-height: 116px;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.92), transparent 34%),
+    linear-gradient(145deg, #fff9e7, #f1e8cd);
+}
+
 .time-input-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -658,9 +830,18 @@ select.answer { appearance: auto; }
   .photo-grid,
   .time-input-grid,
   .phrases { grid-template-columns: 1fr; }
+  .clock-reference-grid,
+  .clock-draw-grid,
+  .pronunciation-photo-table { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .photo-card.big,
   .photo-card.wide { grid-column: auto; }
   .page-body { padding: 18px; }
   .speech-line { margin-left: 0; }
   .night-times label { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 460px) {
+  .clock-reference-grid,
+  .clock-draw-grid,
+  .pronunciation-photo-table { grid-template-columns: 1fr; }
 }
