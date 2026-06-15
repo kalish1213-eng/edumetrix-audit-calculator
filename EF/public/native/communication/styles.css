@@ -707,6 +707,12 @@ textarea.overlay-field {
   align-items: start;
 }
 
+.left-stack {
+  display: grid;
+  gap: 28px;
+  min-width: 0;
+}
+
 .comm-native-sheet h2 {
   margin-bottom: 12px;
 }
@@ -726,6 +732,21 @@ textarea.overlay-field {
   color: var(--magenta);
 }
 
+.tourist-task h2 span,
+.page-ref.teal-ref {
+  color: var(--teal);
+}
+
+.same-task h2 span {
+  color: var(--magenta);
+}
+
+.room-task h2 span,
+.green-dialogue span,
+.green-dialogue span:last-child {
+  color: #4a9a33;
+}
+
 .dialogue-row,
 .dialogue-mini {
   display: flex;
@@ -742,6 +763,181 @@ textarea.overlay-field {
 .dialogue-row span:last-child,
 .dialogue-mini span:last-child {
   color: #333946;
+}
+
+.tourist-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 16px;
+  margin: 12px 0 18px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #dff3f7;
+  box-shadow: inset 0 0 0 1px rgba(8, 127, 147, .12);
+}
+
+.tourist-card h3 {
+  margin: 0 0 8px;
+  color: var(--teal);
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.tourist-card p {
+  margin: 8px 0 4px;
+  color: #203040;
+  font-size: 17px;
+}
+
+.tourist-card ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  color: #1f2937;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.tourist-card li::marker {
+  color: var(--teal);
+}
+
+.town-photo-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.town-photo-stack img,
+.same-card img,
+.room-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.town-photo-stack img {
+  aspect-ratio: 4 / 3;
+  border: 4px solid #fff;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(13, 66, 82, .18);
+}
+
+.same-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0 16px;
+}
+
+.same-card {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #ead8e4;
+  border-radius: 8px;
+  background: #fff7fb;
+  box-shadow: 0 8px 18px rgba(50, 32, 45, .08);
+}
+
+.same-card > span {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #f4c7e0;
+  color: #8a1459;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.same-card img {
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  background: #f3f4f6;
+}
+
+.same-card b {
+  color: #1f2937;
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.same-select {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 2;
+  width: 46px;
+  height: 28px;
+  border: 2px solid rgba(176, 23, 118, .42);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .94);
+  color: #111827;
+  font: 900 14px Arial, Helvetica, sans-serif;
+}
+
+.word-strip {
+  margin: 12px 0 14px;
+  padding: 10px 12px;
+  border-top: 2px solid #cfd8dc;
+  border-bottom: 2px solid #cfd8dc;
+  color: #555f6f;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.word-strip span {
+  margin: 0 8px;
+}
+
+.room-card {
+  position: relative;
+  margin: 14px 0 20px;
+  padding: 8px;
+  border: 1px solid #e5ddbd;
+  border-radius: 8px;
+  background: #fff9df;
+  box-shadow: 0 10px 24px rgba(68, 52, 23, .12);
+}
+
+.room-card > span {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #dcebcf;
+  color: #546833;
+  font-size: 17px;
+  font-weight: 900;
+  box-shadow: 0 2px 7px rgba(20, 36, 50, .15);
+}
+
+.room-card img {
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  background: #f4f4f2;
+}
+
+.room-card figcaption {
+  margin-top: 6px;
+  color: #7b7280;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .day-table {
@@ -1355,6 +1551,10 @@ textarea.overlay-field {
     grid-template-columns: 1fr;
   }
 
+  .tourist-room-layout {
+    grid-template-columns: 1fr;
+  }
+
   .photo-town-map {
     min-height: 430px;
   }
@@ -1405,6 +1605,18 @@ textarea.overlay-field {
   .price-market,
   .clock-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tourist-card {
+    grid-template-columns: 1fr;
+  }
+
+  .town-photo-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .same-grid {
+    grid-template-columns: 1fr;
   }
 
   .info-form label,
@@ -1459,6 +1671,18 @@ textarea.overlay-field {
 
   .native-task h2 span {
     font-size: 24px;
+  }
+
+  .town-photo-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .tourist-card h3 {
+    font-size: 28px;
+  }
+
+  .word-strip {
+    font-size: 14px;
   }
 }
 
