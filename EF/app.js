@@ -1,6 +1,6 @@
 import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-photoassets1";
 import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-photoassets1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260615-commphoto11";
+import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260615-grammar7native1";
 import { registerShellComponents } from "./src/components/index.js?v=20260614-photoassets1";
 import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-photoassets1";
 import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-photoassets1";
@@ -5795,12 +5795,14 @@ async function loadNativeLessonEmbed(embed, url) {
       ${!isAuthorMode ? `
       .native-shadow-content > .shell > .topbar,
       .native-shadow-content > .comm-shell > .topbar,
+      .native-shadow-content > .grammar-shell > .topbar,
       .native-shadow-content .progress-panel {
         display: none !important;
       }
       .native-shadow-content .shell {
         padding-top: 0 !important;
       }
+      .native-shadow-content .grammar-shell,
       .native-shadow-content .comm-shell {
         max-width: none !important;
         padding: 0 !important;
