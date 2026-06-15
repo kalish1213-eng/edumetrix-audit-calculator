@@ -313,7 +313,7 @@ export const nativeLessons = [
     startPage: 95,
     endPage: 96,
     title: "Grammar Bank 2A-2B",
-    url: "public/native/grammar-bank-2/index.html?v=20260614-photoall1"
+    url: "public/native/grammar-bank-2/index.html?v=20260615-grammar2native1"
   },
   {
     startPage: 97,
