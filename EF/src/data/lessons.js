@@ -289,7 +289,7 @@ export const nativeLessons = [
     startPage: 79,
     endPage: 86,
     title: "Communication",
-    url: "public/native/communication/index.html?v=20260615-commphoto11"
+    url: "public/native/communication/index.html?v=20260615-commphoto12"
   },
   {
     startPage: 87,
@@ -349,7 +349,7 @@ export const nativeLessons = [
     startPage: 107,
     endPage: 108,
     title: "Grammar Bank 8A-8B",
-    url: "public/native/grammar-bank-8/index.html?v=20260615-grammar8native1"
+    url: "public/native/grammar-bank-8/index.html?v=20260615-commphoto12"
   },
   {
     startPage: 109,
