@@ -289,7 +289,7 @@ export const nativeLessons = [
     startPage: 79,
     endPage: 86,
     title: "Communication",
-    url: "public/native/communication/index.html?v=20260615-grammar9native1"
+    url: "public/native/communication/index.html?v=20260615-grammar10native1"
   },
   {
     startPage: 87,
@@ -349,19 +349,19 @@ export const nativeLessons = [
     startPage: 107,
     endPage: 108,
     title: "Grammar Bank 8A-8B",
-    url: "public/native/grammar-bank-8/index.html?v=20260615-grammar9native1"
+    url: "public/native/grammar-bank-8/index.html?v=20260615-grammar10native1"
   },
   {
     startPage: 109,
     endPage: 110,
     title: "Grammar Bank 9A-9B",
-    url: "public/native/grammar-bank-9/index.html?v=20260615-grammar9native1"
+    url: "public/native/grammar-bank-9/index.html?v=20260615-grammar10native1"
   },
   {
     startPage: 111,
     endPage: 112,
     title: "Grammar Bank 10A-10B",
-    url: "public/native/grammar-bank-10/index.html?v=20260612-grammar10"
+    url: "public/native/grammar-bank-10/index.html?v=20260615-grammar10native1"
   },
   {
     startPage: 113,
