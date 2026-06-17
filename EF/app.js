@@ -1,6 +1,6 @@
 import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-photoassets1";
 import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-photoassets1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260617-ghpages-encoding1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260617-ghpages-encoding4";
 import { registerShellComponents } from "./src/components/index.js?v=20260614-photoassets1";
 import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-photoassets1";
 import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-photoassets1";
@@ -7381,9 +7381,9 @@ function defaultLmsWords() {
     { id: "word-fine", term: "fine", translation: "хорошо", lesson: "Lesson 1A" },
     { id: "word-thanks", term: "thanks", translation: "спасибо", lesson: "Lesson 1A" },
     { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" },
-    { id: "word-japan", term: "Japan", translation: "РЇРїРѕРЅРёСЏ", lesson: "Lesson 1B" },
+    { id: "word-japan", term: "Japan", translation: "Япония", lesson: "Lesson 1B" },
     { id: "word-students", term: "students", translation: "студенты", lesson: "Lesson 1B" },
-    { id: "word-book", term: "book", translation: "РєРЅРёРіР°", lesson: "Lesson 3A" },
+    { id: "word-book", term: "book", translation: "книга", lesson: "Lesson 3A" },
     { id: "word-laptop", term: "laptop", translation: "ноутбук", lesson: "Lesson 3A" },
     { id: "word-phone", term: "phone", translation: "телефон", lesson: "Lesson 3A" },
     { id: "word-photo", term: "photo", translation: "фото", lesson: "Lesson 3A" },
@@ -7418,7 +7418,7 @@ function renderWordList() {
     const strong = document.createElement("strong");
     strong.textContent = word.term;
     const translation = document.createElement("span");
-    translation.textContent = `${word.translation} В· ${word.lesson}`;
+    translation.textContent = `${word.translation} ? ${word.lesson}`;
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "small-button";
