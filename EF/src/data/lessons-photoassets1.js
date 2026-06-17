@@ -1,4 +1,4 @@
-// Course lesson metadata used by the LMS shell and workbook navigation.
+﻿// Course lesson metadata used by the LMS shell and workbook navigation.
 export const lessonIndex = [
   { title: "English File Beginner", page: 1 },
   { title: "Contents", page: 3 },
@@ -73,19 +73,19 @@ export const nativeLessons = [
     startPage: 7,
     endPage: 8,
     title: "1A A cappuccino, please",
-    url: "public/native/1a-cappuccino-please/index.html?v=20260614-photoall1"
+    url: "public/native/1a-cappuccino-please/index.html?v=20260617-unit1images1"
   },
   {
     startPage: 9,
     endPage: 10,
     title: "1B World music",
-    url: "public/native/1b-world-music/index.html?v=20260614-photoall1"
+    url: "public/native/1b-world-music/index.html?v=20260617-unit1images1"
   },
   {
     startPage: 11,
     endPage: 12,
     title: "Practical English 1",
-    url: "public/native/practical-english-1/index.html?v=20260614-photoall1"
+    url: "public/native/practical-english-1/index.html?v=20260617-unit1images1"
   },
   {
     startPage: 13,
@@ -103,19 +103,19 @@ export const nativeLessons = [
     startPage: 17,
     endPage: 18,
     title: "Revise and Check 1&2",
-    url: "public/native/revise-check-1-2/index.html?v=20260614-photoall1"
+    url: "public/native/revise-check-1-2/index.html?v=20260617-page17-nativeart1"
   },
   {
     startPage: 19,
     endPage: 20,
     title: "3A Where are my keys?",
-    url: "public/native/3a-where-are-my-keys/index.html?v=20260614-photoall1"
+    url: "public/native/3a-where-are-my-keys/index.html?v=20260617-unit3-forms1"
   },
   {
     startPage: 21,
     endPage: 22,
     title: "3B Souvenirs",
-    url: "public/native/3b-souvenirs/index.html?v=20260614-photoall1"
+    url: "public/native/3b-souvenirs/index.html?v=20260617-3b-image-ratio1"
   },
   {
     startPage: 23,
@@ -307,7 +307,7 @@ export const nativeLessons = [
     startPage: 93,
     endPage: 94,
     title: "Grammar Bank 1A-1B",
-    url: "public/native/grammar-bank-1/index.html?v=20260615-grammar1native1"
+    url: "public/native/grammar-bank-1/index.html?v=20260617-unit1images1"
   },
   {
     startPage: 95,
@@ -391,7 +391,7 @@ export const nativeLessons = [
     startPage: 121,
     endPage: 122,
     title: "Vocabulary Bank: People and family; Adjectives",
-    url: "public/native/vocabulary-bank-3/index.html?v=20260612-vocab3"
+    url: "public/native/vocabulary-bank-3/index.html?v=20260617-native-redraw1"
   },
   {
     startPage: 123,
@@ -409,13 +409,13 @@ export const nativeLessons = [
     startPage: 127,
     endPage: 128,
     title: "Vocabulary Bank: Common verb phrases 2; Months and ordinal numbers",
-    url: "public/native/vocabulary-bank-6/index.html?v=20260612-vocab6"
+    url: "public/native/vocabulary-bank-6/index.html?v=20260617-native-redraw1"
   },
   {
     startPage: 129,
     endPage: 130,
     title: "Vocabulary Bank: Activities; Clothes",
-    url: "public/native/vocabulary-bank-7/index.html?v=20260612-vocab7"
+    url: "public/native/vocabulary-bank-7/index.html?v=20260617-native-redraw1"
   },
   {
     startPage: 131,
@@ -439,7 +439,7 @@ export const nativeLessons = [
     startPage: 135,
     endPage: 136,
     title: "Sound Bank",
-    url: "public/native/sound-bank/index.html?v=20260612-sound1"
+    url: "public/native/sound-bank/index.html?v=20260617-native-redraw1"
   },
   {
     startPage: 137,

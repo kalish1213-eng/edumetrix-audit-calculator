@@ -20,6 +20,10 @@ body {
   letter-spacing: 0;
 }
 
+body.dashboard-mode {
+  background: #f8fafc;
+}
+
 button,
 input,
 select,
@@ -65,11 +69,11 @@ textarea:focus-visible {
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   min-width: 0;
-  padding: 24px 18px;
+  padding: 28px 22px;
   border-right: 1px solid var(--line);
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.9);
   overflow-y: auto;
 }
 
@@ -138,24 +142,24 @@ textarea:focus-visible {
   align-items: center;
   gap: 10px;
   width: 100%;
-  min-height: 44px;
-  padding: 0 12px;
+  min-height: 46px;
+  padding: 0 14px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   background: transparent;
-  color: #2a3450;
+  color: #3f485c;
   text-align: left;
 }
 
 .side-link:hover,
 .side-link.active {
-  border-color: #e6edfb;
-  background: var(--accent-soft);
-  color: var(--accent);
+  border-color: #2f74ff;
+  background: linear-gradient(135deg, #1d6dff, #2f7dff);
+  color: #fff;
 }
 
 .side-link.active {
-  box-shadow: inset 3px 0 0 var(--accent);
+  box-shadow: 0 10px 22px rgba(31, 111, 255, 0.24);
 }
 
 .side-icon {
@@ -300,6 +304,15 @@ textarea:focus-visible {
   backdrop-filter: blur(14px);
 }
 
+body.dashboard-mode .topbar {
+  min-height: 64px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+body.dashboard-mode .breadcrumb {
+  visibility: hidden;
+}
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -417,14 +430,545 @@ body.is-student-mode .breadcrumb strong {
 
 .workspace {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
   gap: 12px;
   height: 100%;
   padding: 18px;
   overflow: hidden;
 }
 
+body.dashboard-mode .workspace {
+  display: block;
+  padding: 28px;
+  overflow: auto;
+}
+
+body.dashboard-mode .study-surface {
+  display: none;
+}
+
+body:not(.dashboard-mode) .dashboard {
+  display: none;
+}
+
+.dashboard {
+  min-height: 100%;
+}
+
+.dashboard-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.dashboard-hero h1 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 26px;
+  line-height: 1.12;
+}
+
+.dashboard-hero p {
+  margin: 0;
+  color: #667085;
+  font-size: 16px;
+}
+
+.dashboard-progress,
+.dashboard-card {
+  border: 1px solid #e5eaf3;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.06);
+}
+
+.dashboard-progress {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.dashboard-progress > span,
+.dashboard-progress b {
+  font-weight: 800;
+}
+
+.dashboard-progress small {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.dashboard-progress small b {
+  order: 2;
+  color: #0f172a;
+}
+
+.dashboard-progress small em {
+  font-style: normal;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.45fr) minmax(260px, 0.85fr) minmax(300px, 0.95fr);
+  grid-template-areas:
+    "current ai calendar"
+    "homework trainer side"
+    "recent recent side";
+  gap: 16px;
+}
+
+.dashboard-card {
+  min-width: 0;
+  padding: 16px;
+}
+
+.dashboard-card h2,
+.dashboard-card h3,
+.dashboard-card strong {
+  color: #111827;
+}
+
+.dashboard-card h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.card-head > strong {
+  font-size: 18px;
+}
+
+.card-head a {
+  color: #1d6dff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.current-lesson-card {
+  grid-area: current;
+}
+
+.current-lesson-body {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.current-lesson-body img {
+  width: 100%;
+  height: 268px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.unit-chip {
+  display: inline-flex;
+  margin: 12px 0 10px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #f1e8ff;
+  color: #8b5cf6;
+  font-weight: 900;
+}
+
+.current-lesson-body h2 {
+  margin: 0 0 14px;
+  font-size: 27px;
+}
+
+.current-lesson-body p {
+  margin: 0 0 26px;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
+.lesson-card-progress {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.lesson-card-progress .mini-progress {
+  grid-column: 1 / -1;
+}
+
+.lesson-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.lesson-meta-row span {
+  padding: 8px 10px;
+  border: 1px solid #e5eaf3;
+  border-radius: 8px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.dashboard-actions.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.dashboard-actions button,
+.dashboard-card > button,
+.homework-footer button {
+  min-height: 44px;
+  border: 1px solid #d9e2f1;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font-weight: 800;
+}
+
+.dashboard-actions .primary,
+.dashboard-card .primary,
+.dashboard-open-lesson {
+  border-color: #1d6dff;
+  background: linear-gradient(135deg, #1d6dff, #2f7dff);
+  color: #fff;
+}
+
+.ai-dashboard-card {
+  grid-area: ai;
+  display: grid;
+  gap: 10px;
+}
+
+.ai-greeting {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 92px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #eef5ff;
+}
+
+.bot-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 42%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 62% 42%, #fff 0 5px, transparent 6px),
+    linear-gradient(160deg, #d8edff, #f8fbff);
+  box-shadow: inset 0 -10px 20px rgba(29, 109, 255, 0.12);
+}
+
+.ai-greeting p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.ai-dashboard-card > button {
+  display: grid;
+  gap: 2px;
+  min-height: 58px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.ai-dashboard-card > button span {
+  color: #667085;
+  font-size: 12px;
+}
+
+.ai-dashboard-card .outline-action {
+  border-color: #8bb4ff;
+  color: #1d6dff;
+  text-align: center;
+}
+
+.calendar-card {
+  grid-area: calendar;
+}
+
+.calendar-card h3 {
+  margin: 4px 0 14px;
+  text-align: center;
+}
+
+.calendar-nav {
+  color: #1f2937;
+  letter-spacing: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 9px 7px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.calendar-grid span,
+.calendar-grid em {
+  color: #9aa4b2;
+  font-style: normal;
+}
+
+.calendar-grid b {
+  display: inline-grid;
+  place-items: center;
+  min-height: 26px;
+  border-radius: 50%;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.calendar-grid .today {
+  background: #1d6dff;
+  color: #fff;
+}
+
+.event-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 12px;
+  border: 1px solid #e5eaf3;
+  border-radius: 12px;
+}
+
+.event-list p {
+  margin: 0;
+  color: #344054;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.dot.purple {
+  background: #8b5cf6;
+}
+
+.homework-card {
+  grid-area: homework;
+}
+
+.deadline {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #fff4e8;
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.homework-sheet {
+  padding: 16px;
+  border: 1px solid #e5eaf3;
+  border-radius: 12px;
+}
+
+.homework-sheet p,
+.homework-sheet li {
+  color: #111827;
+  font-size: 13px;
+}
+
+.homework-sheet ol {
+  display: grid;
+  gap: 7px;
+  margin: 12px 0 18px 20px;
+  padding: 0;
+}
+
+.homework-footer {
+  display: grid;
+  grid-template-columns: auto minmax(130px, 1fr) 120px;
+  align-items: center;
+  gap: 12px;
+  color: #111827;
+  font-size: 13px;
+}
+
+.word-trainer-card {
+  grid-area: trainer;
+  display: grid;
+  gap: 12px;
+}
+
+.word-focus {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 24px 12px 12px;
+  border: 1px solid #e5eaf3;
+  border-radius: 12px;
+}
+
+.word-focus span {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eaf2ff;
+}
+
+.word-focus strong {
+  font-size: 26px;
+}
+
+.word-focus small,
+.word-focus p {
+  margin: 0;
+  color: #667085;
+}
+
+.dashboard-side {
+  grid-area: side;
+  display: grid;
+  gap: 16px;
+}
+
+.achievements-card,
+.notifications-card {
+  display: grid;
+  gap: 12px;
+}
+
+.achievements-card p,
+.notifications-card p {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  gap: 2px 10px;
+  margin: 0;
+}
+
+.achievements-card small,
+.notifications-card small {
+  grid-column: 2 / -1;
+  color: #667085;
+}
+
+.achievements-card em {
+  color: #22c55e;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.achievement {
+  grid-row: 1 / 3;
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.achievement.green {
+  background: #4ade80;
+}
+
+.achievement.violet {
+  background: #8b5cf6;
+}
+
+.achievement.blue {
+  background: #3b82f6;
+}
+
+.recent-lessons-card {
+  grid-area: recent;
+}
+
+.recent-lessons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.recent-lessons button {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e5eaf3;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.recent-lessons button.active {
+  border-color: #1d6dff;
+  box-shadow: 0 0 0 2px rgba(29, 109, 255, 0.14);
+}
+
+.recent-lessons img {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 74px;
+  object-fit: cover;
+}
+
+.recent-lessons span,
+.recent-lessons b,
+.recent-lessons em {
+  margin: 0 10px;
+}
+
+.recent-lessons span {
+  margin-top: 8px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.recent-lessons b {
+  margin-bottom: 10px;
+  color: #111827;
+  font-size: 13px;
+}
+
+.recent-lessons em {
+  align-self: end;
+  margin-bottom: 10px;
+  color: #1d6dff;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .lesson-toolbar,
+.course-map,
 .lesson-strip,
 .bottom-actions {
   border: 1px solid var(--line);
@@ -550,6 +1094,143 @@ body.is-student-mode .page-jump {
 .action-button.primary:hover,
 .bottom-actions .primary:hover {
   background: var(--accent-dark);
+}
+
+.course-map {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  min-height: 118px;
+  padding: 12px;
+}
+
+.level-overview {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.level-overview span,
+.level-overview small,
+.unit-card-header span,
+.unit-card-header small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.level-overview strong {
+  color: var(--accent);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.unit-grid {
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.unit-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  flex: 0 0 230px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.unit-card.active {
+  border-color: var(--accent);
+  box-shadow: inset 0 3px 0 var(--accent);
+}
+
+.unit-card-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 10px;
+  width: 100%;
+  min-height: 78px;
+  padding: 12px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+
+.unit-card-header strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unit-card-header b {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  align-self: center;
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.unit-card-header .mini-progress {
+  grid-column: 1 / -1;
+}
+
+.mini-progress i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.unit-lessons {
+  display: grid;
+  gap: 4px;
+  max-height: 96px;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.unit-lesson {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.unit-lesson span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unit-lesson b {
+  color: #64748b;
+}
+
+.unit-lesson:hover,
+.unit-lesson.active {
+  border-color: #dbe6ff;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .lesson-strip {
@@ -1293,6 +1974,19 @@ body:not(.is-author-mode) .author-only {
     --right-width: 320px;
   }
 
+  .dashboard-grid {
+    grid-template-columns: minmax(420px, 1.35fr) minmax(260px, 0.9fr);
+    grid-template-areas:
+      "current ai"
+      "homework calendar"
+      "trainer side"
+      "recent recent";
+  }
+
+  .recent-lessons {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .top-progress {
     display: none;
   }
@@ -1356,6 +2050,19 @@ body:not(.is-author-mode) .author-only {
     padding-bottom: 112px;
   }
 
+  .course-map {
+    grid-template-columns: 1fr;
+  }
+
+  .level-overview {
+    grid-template-columns: auto auto minmax(120px, 1fr);
+    align-items: center;
+  }
+
+  .level-overview .mini-progress {
+    grid-column: 1 / -1;
+  }
+
   .content-row {
     grid-template-columns: 1fr;
   }
@@ -1376,6 +2083,26 @@ body:not(.is-author-mode) .author-only {
     z-index: 70;
     grid-template-columns: minmax(0, 1fr) auto auto auto;
     border-radius: 18px;
+  }
+
+  .dashboard-hero,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+
+  .current-lesson-card,
+  .ai-dashboard-card,
+  .calendar-card,
+  .homework-card,
+  .word-trainer-card,
+  .dashboard-side,
+  .recent-lessons-card {
+    grid-area: auto;
+  }
+
+  .recent-lessons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1414,6 +2141,19 @@ body:not(.is-author-mode) .author-only {
     grid-template-columns: 1fr;
   }
 
+  .course-map {
+    border-radius: 16px;
+    padding: 10px;
+  }
+
+  .level-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-card {
+    flex-basis: 210px;
+  }
+
   .sidebar-nav {
     grid-template-columns: 1fr;
   }
@@ -1447,6 +2187,37 @@ body:not(.is-author-mode) .author-only {
 
   .notebook {
     padding: 14px 12px;
+  }
+
+  body.dashboard-mode .workspace {
+    padding: 16px;
+  }
+
+  .dashboard-hero {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 22px;
+  }
+
+  .current-lesson-body,
+  .homework-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .current-lesson-body img {
+    height: 190px;
+  }
+
+  .dashboard-actions,
+  .dashboard-actions.two {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-lessons {
+    grid-template-columns: 1fr 1fr;
   }
 
   .binder {

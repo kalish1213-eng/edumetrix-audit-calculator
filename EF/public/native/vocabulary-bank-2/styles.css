@@ -261,6 +261,7 @@ body {
   }
 
   .overlay-field {
+    height: calc(var(--h) * 1%);
     border-width: 1px;
     font-size: 9px;
   }

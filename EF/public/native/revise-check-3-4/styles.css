@@ -259,6 +259,14 @@ select.answer { min-width: 132px; }
   grid-template-columns: auto minmax(0, 1fr);
 }
 
+.stress-grid label {
+  grid-template-columns: auto minmax(104px, 150px);
+}
+
+.stress-grid .answer {
+  width: 100%;
+}
+
 .family-chart {
   display: grid;
   grid-template-columns: 30px 1fr 1.05fr 1.2fr .9fr 1.08fr 1.35fr;
@@ -315,7 +323,7 @@ select.answer { min-width: 132px; }
 }
 
 .opposite-grid label {
-  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-columns: minmax(76px, .72fr) minmax(96px, 1fr);
 }
 
 .profile-card {
@@ -329,9 +337,9 @@ select.answer { min-width: 132px; }
 
 .photo-name {
   position: absolute;
-  width: 18.5%;
-  min-width: 86px;
-  height: 7.4%;
+  width: 15.5%;
+  min-width: 68px;
+  height: 6.8%;
   min-height: 28px;
   border: 1px solid #bfd5de;
   background: rgba(255, 255, 255, .95);
@@ -339,11 +347,11 @@ select.answer { min-width: 132px; }
 }
 
 .photo-name.j1 { left: 11.4%; top: 22.7%; }
-.photo-name.j2 { left: 31.8%; top: 33.1%; }
+.photo-name.j2 { left: 30.8%; top: 42.0%; }
 .photo-name.j3 { left: 43.0%; top: 22.7%; }
-.photo-name.j4 { left: 69.3%; top: 33.1%; }
+.photo-name.j4 { left: 69.3%; top: 36.2%; }
 .photo-name.c1 { left: 11.0%; top: 43.2%; }
-.photo-name.c2 { left: 42.0%; top: 43.2%; }
+.photo-name.c2 { left: 42.0%; top: 45.8%; }
 .photo-name.c3 { left: 75.5%; top: 43.2%; }
 
 .listening-list {

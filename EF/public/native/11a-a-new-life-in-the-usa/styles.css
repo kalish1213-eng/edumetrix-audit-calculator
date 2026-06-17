@@ -718,6 +718,10 @@ textarea.answer {
   white-space: nowrap;
 }
 
+.native-runtime * {
+  display: none !important;
+}
+
 .toast {
   position: fixed;
   left: 50%;
