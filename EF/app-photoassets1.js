@@ -1,6 +1,6 @@
-﻿import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-photoassets1";
+import { createAnswerRecord } from "./src/data/answerKeys.js?v=20260614-photoassets1";
 import { BOOK_TITLE, DEFAULT_PAGE_COUNT, MANIFEST_URL } from "./src/data/pages.js?v=20260614-photoassets1";
-import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260617-3b-image-ratio1";
+import { lessonIndex, nativeLessons } from "./src/data/lessons-photoassets1.js?v=20260617-ghpages-encoding1";
 import { registerShellComponents } from "./src/components/index.js?v=20260614-photoassets1";
 import { createAnswersState } from "./src/state/useAnswersState.js?v=20260614-photoassets1";
 import { formatSaveTime } from "./src/state/useAutosave.js?v=20260614-photoassets1";
@@ -111,7 +111,7 @@ const builtInWidgets = {
   7: [
     {
       id: "p7-dialogue-1",
-      label: "Р”РёР°Р»РѕРі 1",
+      label: "Диалог 1",
       type: "select",
       x: 6,
       y: 62,
@@ -121,7 +121,7 @@ const builtInWidgets = {
     },
     {
       id: "p7-dialogue-2",
-      label: "Р”РёР°Р»РѕРі 2",
+      label: "Диалог 2",
       type: "select",
       x: 29,
       y: 62,
@@ -131,7 +131,7 @@ const builtInWidgets = {
     },
     {
       id: "p7-dialogue-3",
-      label: "Р”РёР°Р»РѕРі 3",
+      label: "Диалог 3",
       type: "select",
       x: 6,
       y: 69,
@@ -141,7 +141,7 @@ const builtInWidgets = {
     },
     {
       id: "p7-dialogue-4",
-      label: "Р”РёР°Р»РѕРі 4",
+      label: "Диалог 4",
       type: "select",
       x: 29,
       y: 69,
@@ -274,7 +274,7 @@ const builtInWidgets = {
     },
     {
       id: "p8-speaking",
-      label: "Speaking: РґРёР°Р»РѕРі РІ РєР°С„Рµ",
+      label: "Speaking: диалог в кафе",
       type: "textarea",
       x: 55,
       y: 82,
@@ -1592,7 +1592,7 @@ const builtInWidgets = {
     })),
     ...[
       ["newspaper", "$2.50", "$2.15", 24.7, 87.6],
-      ["umbrella", "в‚¬15", "в‚¬50", 24.7, 89.6],
+      ["umbrella", "€15", "€50", 24.7, 89.6],
       ["memory-card", "$4.99", "$9.49", 24.7, 91.7],
       ["train-ticket", "ВЈ13.20", "ВЈ30.20", 24.7, 92.8]
     ].map(([label, first, second, x, y], index) => ({
@@ -4531,7 +4531,7 @@ const builtInWidgets = {
       ["5", "Black Horse", 68.8, 37.4, 18],
       ["6", "Street", 51.5, 40.6, 10],
       ["7", "wife", 63.2, 44.2, 10],
-      ["8", "Jason's wife|JasonвЂ™s wife", 76.0, 44.2, 15]
+      ["8", "Jason's wife|Jason's wife", 76.0, 44.2, 15]
     ].map(([number, answer, x, y, w]) => ({
       id: `p63-kevin-info-${number}`,
       label: `2a ${number}`,
@@ -5510,7 +5510,7 @@ async function init() {
     configureAccessMode();
     configureNavigationCopy();
     installVectorIcons();
-    pageInput?.setAttribute("aria-label", "РќРѕРјРµСЂ СЃС‚СЂР°РЅРёС†С‹");
+    pageInput?.setAttribute("aria-label", "Номер страницы");
 
     const response = await fetch(MANIFEST_URL, { cache: "no-store" });
     if (!response.ok) {
@@ -5519,7 +5519,7 @@ async function init() {
     manifest = await response.json();
     pageInput.max = String(manifest.pageCount);
     pageTotal.textContent = `/ ${manifest.pageCount}`;
-    pageTotal.setAttribute("aria-label", `Р’СЃРµРіРѕ СЃС‚СЂР°РЅРёС†: ${manifest.pageCount}`);
+    pageTotal.setAttribute("aria-label", `Всего страниц: ${manifest.pageCount}`);
     populateLessonSelect();
     populateLessonRail();
     populateUnitGrid();
@@ -5527,7 +5527,7 @@ async function init() {
     bindEvents();
     renderPages({ resetScroll: true });
   } catch (error) {
-    statusLine.textContent = "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ СѓС‡РµР±РЅРёРє. РџСЂРѕРІРµСЂСЊ, Р·Р°РїСѓС‰РµРЅ Р»Рё Р»РѕРєР°Р»СЊРЅС‹Р№ СЃРµСЂРІРµСЂ.";
+    statusLine.textContent = "Не удалось загрузить учебник. Проверь, запущен ли локальный сервер.";
     console.error(error);
   }
 }
@@ -5557,10 +5557,10 @@ function configureAccessMode() {
 }
 
 function configureNavigationCopy() {
-  setText(topProgressLabel, "Р’С‹РїРѕР»РЅРµРЅРёРµ");
+  setText(topProgressLabel, "Выполнение");
   const sidebarProgressCaption = sidebarProgressText?.parentElement;
   if (sidebarProgressCaption) {
-    sidebarProgressCaption.lastChild.textContent = " РІС‹РїРѕР»РЅРµРЅРѕ";
+    sidebarProgressCaption.lastChild.textContent = " выполнено";
   }
 }
 
@@ -5636,7 +5636,7 @@ function bindAuthorTools() {
     if (addMode) templateMode = false;
     addField.classList.toggle("primary", addMode);
     addTemplate?.classList.remove("primary");
-    setStatus(addMode ? "РљР»РёРєРЅРё РїРѕ СЃС‚СЂР°РЅРёС†Рµ, РіРґРµ РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ РїРѕР»Рµ РѕС‚РІРµС‚Р°." : "");
+    setStatus(addMode ? "Кликни по странице, где нужно добавить поле ответа." : "");
     document.querySelectorAll(".answer-layer").forEach((layer) => {
       layer.classList.toggle("armed", addMode || templateMode);
     });
@@ -5647,7 +5647,7 @@ function bindAuthorTools() {
     if (templateMode) addMode = false;
     addTemplate.classList.toggle("primary", templateMode);
     addField?.classList.remove("primary");
-    setStatus(templateMode ? "РљР»РёРєРЅРё РІ РЅР°С‡Р°Р»Рµ Р·Р°РґР°РЅРёСЏ: Р·РґРµСЃСЊ РїРѕСЏРІРёС‚СЃСЏ РІС‹Р±СЂР°РЅРЅС‹Р№ РЅР°Р±РѕСЂ РїРѕР»РµР№." : "");
+    setStatus(templateMode ? "Кликни в начале задания: здесь появится выбранный набор полей." : "");
     document.querySelectorAll(".answer-layer").forEach((layer) => {
       layer.classList.toggle("armed", addMode || templateMode);
     });
@@ -5656,7 +5656,7 @@ function bindAuthorTools() {
   editFields?.addEventListener("click", () => {
     editMode = !editMode;
     editFields.classList.toggle("primary", editMode);
-    setStatus(editMode ? "Р РµР¶РёРј РїСЂР°РІРєРё: РїРµСЂРµС‚Р°СЃРєРёРІР°Р№ Р»РёС‡РЅС‹Рµ РїРѕР»СЏ Р·Р° Р·Р°РіРѕР»РѕРІРѕРє, РјРµРЅСЏР№ С€РёСЂРёРЅСѓ РєСЂСѓРіР»РѕР№ СЂСѓС‡РєРѕР№." : "");
+    setStatus(editMode ? "Режим правки: перетаскивай личные поля за заголовок, меняй ширину круглой ручкой." : "");
     renderPages();
   });
 }
@@ -5669,7 +5669,7 @@ function renderPages({ resetScroll = false } = {}) {
   pagesHost.innerHTML = "";
   pageInput.value = String(currentPage);
   pageInput.setAttribute("value", String(currentPage));
-  pageInput.setAttribute("aria-label", `РўРµРєСѓС‰Р°СЏ СЃС‚СЂР°РЅРёС†Р° ${currentPage} РёР· ${manifest.pageCount}`);
+  pageInput.setAttribute("aria-label", `Текущая страница ${currentPage} из ${manifest.pageCount}`);
   syncLessonSelect();
   updateNavState();
   syncLmsUi(pages);
@@ -5683,7 +5683,7 @@ function renderPages({ resetScroll = false } = {}) {
     const layer = node.querySelector(".answer-layer");
 
     node.dataset.page = String(pageNumber);
-    node.querySelector(".page-label").textContent = nativeLesson ? nativeLesson.title : `РЎС‚СЂР°РЅРёС†Р° ${pageNumber}`;
+    node.querySelector(".page-label").textContent = nativeLesson ? nativeLesson.title : `Страница ${pageNumber}`;
     if (nativeLesson) {
       renderNativeLessonPage({ surface, image, layer, pageNumber, nativeLesson });
       pagesHost.appendChild(node);
@@ -5692,7 +5692,7 @@ function renderPages({ resetScroll = false } = {}) {
 
     surface.style.setProperty("--page-width", `${pageWidth(meta)}px`);
     image.src = `public/${meta.file}`;
-    image.alt = `${manifest.title}, СЃС‚СЂР°РЅРёС†Р° ${pageNumber}`;
+    image.alt = `${manifest.title}, страница ${pageNumber}`;
     layer.dataset.page = String(pageNumber);
     layer.classList.toggle("armed", addMode || templateMode);
     layer.addEventListener("click", handleLayerClick);
@@ -5715,10 +5715,10 @@ function renderPages({ resetScroll = false } = {}) {
   const checkedBuiltIns = builtIns.filter((widget) => !widget.free && widget.answer);
   const freeBuiltIns = builtIns.filter((widget) => widget.free || !widget.answer);
   const customCount = pages.reduce((total, page) => total + (customFields[page] || []).length, 0);
-  const parts = [`РџРѕРєР°Р·Р°РЅС‹ СЃС‚СЂР°РЅРёС†С‹ ${pages.join(" Рё ")} РёР· ${manifest.pageCount}`];
-  if (checkedBuiltIns.length) parts.push(`РїСЂРѕРІРµСЂСЏРµРјС‹С… РїРѕР»РµР№: ${checkedBuiltIns.length}`);
-  if (freeBuiltIns.length) parts.push(`СЃРІРѕР±РѕРґРЅС‹С… РїРѕР»РµР№: ${freeBuiltIns.length}`);
-  if (customCount) parts.push(`Р»РёС‡РЅС‹С… РїРѕР»РµР№: ${customCount}`);
+  const parts = [`Показаны страницы ${pages.join(" и ")} из ${manifest.pageCount}`];
+  if (checkedBuiltIns.length) parts.push(`проверяемых полей: ${checkedBuiltIns.length}`);
+  if (freeBuiltIns.length) parts.push(`свободных полей: ${freeBuiltIns.length}`);
+  if (customCount) parts.push(`личных полей: ${customCount}`);
   setStatus(parts.join("; "));
   if (resetScroll) resetReaderScroll();
 }
@@ -5884,7 +5884,7 @@ function renderNativeLoading(shadow) {
         <span class="native-loader-line w80"></span>
         <span class="native-loader-line w50"></span>
       </div>
-      <p>Р—Р°РіСЂСѓР¶Р°РµРј СЃС‚СЂР°РЅРёС†Сѓ СѓС‡РµР±РЅРёРєР°...</p>
+      <p>Загружаем страницу учебника...</p>
     </div>
   `;
 }
@@ -5893,9 +5893,9 @@ function renderNativeError(shadow, onRetry) {
   shadow.innerHTML = `
     <style>${nativeLoaderStyles()}</style>
     <div class="native-error-card" role="alert">
-      <strong>РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ СѓС‡РµР±РЅРёРєР°</strong>
-      <p>РџСЂРѕРІРµСЂСЊС‚Рµ СЃРѕРµРґРёРЅРµРЅРёРµ Рё РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·.</p>
-      <button type="button">РџРѕРІС‚РѕСЂРёС‚СЊ Р·Р°РіСЂСѓР·РєСѓ</button>
+      <strong>Не удалось загрузить страницу учебника</strong>
+      <p>Проверьте соединение и попробуйте ещё раз.</p>
+      <button type="button">Повторить загрузку</button>
     </div>
   `;
   shadow.querySelector("button")?.addEventListener("click", onRetry);
@@ -6031,7 +6031,7 @@ function initEmbeddedNativeLesson(root, lesson) {
     String(value || "")
       .trim()
       .toLowerCase()
-      .replace(/[вЂ™`Вґ]/g, "'")
+      .replace(/['`´]/g, "'")
       .replace(/\s+/g, " ")
       .replace(/[^a-z0-9']/g, "")
       .replace(/'/g, "");
@@ -6359,9 +6359,9 @@ function initEmbeddedNativeLesson(root, lesson) {
     if (!result.total) {
       if (byId("scoreStat")) byId("scoreStat").textContent = "-";
       if (byId("percentStat")) byId("percentStat").textContent = "-";
-      if (byId("resultBox")) byId("resultBox").textContent = "Р”Р»СЏ СЌС‚РѕРіРѕ Р·Р°РґР°РЅРёСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ РїСЂРѕРІРµСЂРєР° РїРѕРєР° РЅРµ РЅР°СЃС‚СЂРѕРµРЅР°. РћС‚РІРµС‚ СЃРѕС…СЂР°РЅРµРЅ.";
+      if (byId("resultBox")) byId("resultBox").textContent = "Для этого задания автоматическая проверка пока не настроена. Ответ сохранен.";
       saveValues("checked");
-      showToast("РћС‚РІРµС‚ СЃРѕС…СЂР°РЅРµРЅ.");
+      showToast("Ответ сохранен.");
       return;
     }
     scorable().forEach((field) => {
@@ -6375,9 +6375,9 @@ function initEmbeddedNativeLesson(root, lesson) {
     });
     if (byId("scoreStat")) byId("scoreStat").textContent = String(result.correct);
     if (byId("percentStat")) byId("percentStat").textContent = `${result.percent}%`;
-    if (byId("resultBox")) byId("resultBox").textContent = `РџСЂРѕРІРµСЂРµРЅРѕ: ${result.correct}/${result.total} РІРµСЂРЅРѕ (${result.percent}%). РћС€РёР±РєРё РїРѕРґСЃРІРµС‡РµРЅС‹, РїРѕРїСЂРѕР±СѓР№С‚Рµ РёСЃРїСЂР°РІРёС‚СЊ С„РѕСЂРјСѓ.`;
+    if (byId("resultBox")) byId("resultBox").textContent = `Проверено: ${result.correct}/${result.total} верно (${result.percent}%). Ошибки подсвечены, попробуйте исправить форму.`;
     saveValues("checked");
-    showToast(`РџСЂРѕРІРµСЂРµРЅРѕ: ${result.correct}/${result.total}`);
+    showToast(`Проверено: ${result.correct}/${result.total}`);
   };
 
   const showAnswers = () => {
@@ -6407,7 +6407,7 @@ function initEmbeddedNativeLesson(root, lesson) {
   };
 
   const reset = () => {
-    if (!confirm("РЎР±СЂРѕСЃРёС‚СЊ РѕС‚РІРµС‚С‹ РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ?")) return;
+    if (!confirm("Сбросить ответы на этой странице?")) return;
     removeRevealButtons();
     clearAnswerHints();
     fillable().forEach((field) => {
@@ -6748,7 +6748,7 @@ function bindLmsEvents() {
       if (!runNativeLessonAction("check")) checkVisiblePages();
     } else if (action === "answers") {
       if (!isAuthorMode) {
-        setStatus("РљР»СЋС‡Рё РѕС‚РІРµС‚РѕРІ РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РІ СЂРµР¶РёРјРµ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ.");
+        setStatus("Ключи ответов доступны только в режиме преподавателя.");
       } else if (!runNativeLessonAction("answers")) {
         revealVisibleAnswers();
       }
@@ -6806,7 +6806,7 @@ function bindLmsEvents() {
       if (section === "dictionary") activatePanel("words");
       if (section === "support" || section === "messages") activatePanel("ai");
       if (targetPages[section] && targetPages[section] !== currentPage) goToPage(targetPages[section]);
-      setStatus(`LMS: РѕС‚РєСЂС‹С‚ СЂР°Р·РґРµР» В«${button.textContent.trim().replace(/\s+/g, " ")}В».`);
+      setStatus(`LMS: открыт раздел «${button.textContent.trim().replace(/\s+/g, " ")}».`);
     });
   });
 
@@ -6874,11 +6874,11 @@ function bindLmsEvents() {
     event.preventDefault();
     const value = wordInput.value.trim();
     if (!value) return;
-    const [term, translation] = value.split(/\s[-вЂ“вЂ”]\s/);
+    const [term, translation] = value.split(/\s[-–—]\s/);
     lmsWords.unshift({
       id: `word-${Date.now()}`,
       term: term.trim(),
-      translation: (translation || "РґРѕР±Р°РІР»РµРЅРѕ РІ СЃР»РѕРІР°СЂСЊ").trim(),
+      translation: (translation || "добавлено в словарь").trim(),
       lesson: currentLessonLabel()
     });
     wordInput.value = "";
@@ -7018,8 +7018,8 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   setText(lessonCrumb, lesson.title);
   setText(unitCrumb, unitNameForLesson(lesson.title));
   setText(lessonCounter, pagePositionText(lesson));
-  setText(topProgressText, progress ? `${progress}%` : "РќР°С‡Р°С‚");
-  setText(sidebarProgressText, progress ? `${progress}%` : "РќР°С‡Р°С‚");
+  setText(topProgressText, progress ? `${progress}%` : "Начат");
+  setText(sidebarProgressText, progress ? `${progress}%` : "Начат");
   setText(dashboardProgressText, progress ? `${progress}%` : "0%");
   setText(lessonProgressText, answerStats.loading ? "..." : answerStats.total ? `${answerStats.percent}%` : `${clampedLessonPercent}%`);
   setText(completedLessons, answerStats.loading ? "..." : answerStats.total == null ? "0" : String(answerStats.total));
@@ -7032,7 +7032,7 @@ function syncLmsUi(pages = visiblePageNumbers()) {
   const hasNoInteractiveFields = !answerStats.loading && !answerStats.total;
   if (progressEmpty) {
     progressEmpty.hidden = !hasNoInteractiveFields;
-    progressEmpty.innerHTML = "<strong>Р—Р°РґР°РЅРёР№ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РЅРµС‚</strong>Р­С‚Рѕ СЃРїСЂР°РІРѕС‡РЅР°СЏ РёР»Рё С‚РµРєСЃС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р°. Р•Рµ РјРѕР¶РЅРѕ С‡РёС‚Р°С‚СЊ Рё РёСЃРєР°С‚СЊ РїРѕ С‚РµРєСЃС‚Сѓ; РїСЂРѕРіСЂРµСЃСЃ РєСѓСЂСЃР° СЃС‡РёС‚Р°РµС‚СЃСЏ РїРѕ РѕС‚РєСЂС‹С‚С‹Рј СЃС‚СЂР°РЅРёС†Р°Рј.";
+    progressEmpty.innerHTML = "<strong>Заданий для заполнения нет</strong>Это справочная или текстовая страница. Ее можно читать и искать по тексту; прогресс курса считается по открытым страницам.";
   }
   if (statsGrid) {
     statsGrid.hidden = hasNoInteractiveFields;
@@ -7134,7 +7134,7 @@ function runNativeLessonAction(action) {
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
   if (!nativeLesson) return false;
   if (action === "answers" && !isAuthorMode) {
-    setStatus("РљР»СЋС‡Рё РѕС‚РІРµС‚РѕРІ РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РІ СЂРµР¶РёРјРµ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ.");
+    setStatus("Ключи ответов доступны только в режиме преподавателя.");
     return true;
   }
 
@@ -7148,9 +7148,9 @@ function runNativeLessonAction(action) {
 
   button.click();
   const labels = {
-    check: "РѕС‚РІРµС‚С‹ РїСЂРѕРІРµСЂРµРЅС‹",
-    answers: "РѕС‚РІРµС‚С‹ РїРѕРєР°Р·Р°РЅС‹",
-    reset: "РѕС‚РІРµС‚С‹ СЃР±СЂРѕС€РµРЅС‹"
+    check: "ответы проверены",
+    answers: "ответы показаны",
+    reset: "ответы сброшены"
   };
   setStatus(`${nativeLesson.title}: ${labels[action]}.`);
   updateLmsSaveTime();
@@ -7328,67 +7328,67 @@ function pagePositionText(lesson) {
   const end = Number(lesson.endPage || lesson.page || currentPage);
   const pageCount = manifest?.pageCount || DEFAULT_PAGE_COUNT;
   const range = start === end ? String(start) : `${start}-${end}`;
-  return `РЎС‚СЂ. ${range} РёР· ${pageCount}`;
+  return `Стр. ${range} из ${pageCount}`;
 }
 
 function hintForLesson(title) {
   if (/1A|cappuccino|Nice to meet/i.test(title)) {
     return {
-      title: "Р“Р»Р°РіРѕР» be (I / you)",
-      grammar: "I am, you are. Р’ РєРѕСЂРѕС‚РєРёС… СЂРµРїР»РёРєР°С… РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ I'm. РџРѕСЃР»Рµ you С„РѕСЂРјР° РІСЃРµРіРґР° are.",
-      task: "РЎРЅР°С‡Р°Р»Р° РЅР°Р№РґРёС‚Рµ РїРѕРґР»РµР¶Р°С‰РµРµ РІ С„СЂР°Р·Рµ, РїРѕС‚РѕРј РІС‹Р±РµСЂРёС‚Рµ С„РѕСЂРјСѓ be."
+      title: "Глагол be (I / you)",
+      grammar: "I am, you are. В коротких репликах можно использовать I'm. После you форма всегда are.",
+      task: "Сначала найдите подлежащее в фразе, потом выберите форму be."
     };
   }
   if (/3A|Where are my keys|small things/i.test(title)) {
     return {
       title: "Singular / plural nouns, a / an",
-      grammar: "Р”Р»СЏ РѕРґРЅРѕРіРѕ РїСЂРµРґРјРµС‚Р° РёСЃРїРѕР»СЊР·СѓР№С‚Рµ a РёР»Рё an: a book, an umbrella. Р’Рѕ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРј С‡РёСЃР»Рµ С‡Р°С‰Рµ РґРѕР±Р°РІР»СЏРµС‚СЃСЏ -s: books, keys, phones.",
-      task: "РќР° СЃС‚СЂР°РЅРёС†Рµ 19 СЃРЅР°С‡Р°Р»Р° РЅР°Р·РѕРІРёС‚Рµ small things, Р·Р°С‚РµРј Р·Р°РїРѕР»РЅРёС‚Рµ С‚Р°Р±Р»РёС†Сѓ: РѕРґРёРЅ РїСЂРµРґРјРµС‚ СЃР»РµРІР°, РЅРµСЃРєРѕР»СЊРєРѕ РїСЂРµРґРјРµС‚РѕРІ СЃРїСЂР°РІР°."
+      grammar: "Для одного предмета используйте a или an: a book, an umbrella. Во множественном числе чаще добавляется -s: books, keys, phones.",
+      task: "На странице 19 сначала назовите small things, затем заполните таблицу: один предмет слева, несколько предметов справа."
     };
   }
   if (/World music|countries|holiday|bus|family|car/i.test(title)) {
     return {
       title: "be: countries and people",
-      grammar: "He is, she is, they are. Р”Р»СЏ СЃС‚СЂР°РЅС‹ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ from: She is from Japan.",
-      task: "РџРѕСЃРјРѕС‚СЂРёС‚Рµ РЅР° С„РѕС‚Рѕ РёР»Рё РїРѕРґРїРёСЃСЊ, Р·Р°С‚РµРј Р·Р°РїРѕР»РЅРёС‚Рµ РїСЂРѕРїСѓСЃРє РѕРґРЅРёРј РєРѕСЂРѕС‚РєРёРј СЃР»РѕРІРѕРј."
+      grammar: "He is, she is, they are. Для страны используйте from: She is from Japan.",
+      task: "Посмотрите на фото или подпись, затем заполните пропуск одним коротким словом."
     };
   }
   if (/breakfast|flight|cooking|food/i.test(title)) {
     return {
       title: "a / an / some",
-      grammar: "РџРµСЂРµРґ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј РїСЂРµРґРјРµС‚РѕРј РёСЃРїРѕР»СЊР·СѓР№С‚Рµ a РёР»Рё an. Р”Р»СЏ РµРґС‹ Рё РЅР°РїРёС‚РєРѕРІ С‡Р°СЃС‚Рѕ РЅСѓР¶РµРЅ some.",
-      task: "РџСЂРѕРІРµСЂСЊС‚Рµ, РёСЃС‡РёСЃР»СЏРµРјРѕРµ Р»Рё СЃР»РѕРІРѕ Рё РЅР°С‡РёРЅР°РµС‚СЃСЏ Р»Рё РѕРЅРѕ СЃ РіР»Р°СЃРЅРѕРіРѕ Р·РІСѓРєР°."
+      grammar: "Перед единственным предметом используйте a или an. Для еды и напитков часто нужен some.",
+      task: "Проверьте, исчисляемое ли слово и начинается ли оно с гласного звука."
     };
   }
   if (/past|were|was|train|fine|weekend/i.test(title)) {
     return {
       title: "Past simple",
-      grammar: "Was / were РѕРїРёСЃС‹РІР°СЋС‚ РїСЂРѕС€Р»РѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ. Р”Р»СЏ РґРµР№СЃС‚РІРёР№ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ С„РѕСЂРјСѓ РїСЂРѕС€РµРґС€РµРіРѕ РІСЂРµРјРµРЅРё.",
-      task: "РќР°Р№РґРёС‚Рµ РјР°СЂРєРµСЂ РІСЂРµРјРµРЅРё Рё РІС‹Р±РµСЂРёС‚Рµ С„РѕСЂРјСѓ РЅР°СЃС‚РѕСЏС‰РµРіРѕ РёР»Рё РїСЂРѕС€Р»РѕРіРѕ РІСЂРµРјРµРЅРё."
+      grammar: "Was / were описывают прошлое состояние. Для действий используйте форму прошедшего времени.",
+      task: "Найдите маркер времени и выберите форму настоящего или прошлого времени."
     };
   }
   return {
-    title: "РџРѕРґСЃРєР°Р·РєР° РїРѕ СѓСЂРѕРєСѓ",
-    grammar: "Р§РёС‚Р°Р№С‚Рµ РёРЅСЃС‚СЂСѓРєС†РёСЋ, Р·Р°РїРѕР»РЅСЏР№С‚Рµ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ РїРѕР»СЏ Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРѕРІРµСЂРєСѓ РїРѕСЃР»Рµ РїРѕРїС‹С‚РєРё.",
-    task: "Р•СЃР»Рё Р·Р°РґР°РЅРёРµ РєР°Р¶РµС‚СЃСЏ СЃР»РѕР¶РЅС‹Рј, РІС‹РїРѕР»РЅРёС‚Рµ СЃРЅР°С‡Р°Р»Р° РїСЂРёРјРµСЂС‹ СЃ РѕС‡РµРІРёРґРЅС‹Рј РѕС‚РІРµС‚РѕРј."
+    title: "Подсказка по уроку",
+    grammar: "Читайте инструкцию, заполняйте интерактивные поля и используйте проверку после попытки.",
+    task: "Если задание кажется сложным, выполните сначала примеры с очевидным ответом."
   };
 }
 
 function defaultLmsWords() {
   return [
-    { id: "word-hello", term: "hello", translation: "РїСЂРёРІРµС‚", lesson: "Lesson 1A" },
-    { id: "word-meet", term: "meet", translation: "Р·РЅР°РєРѕРјРёС‚СЊСЃСЏ", lesson: "Lesson 1A" },
-    { id: "word-fine", term: "fine", translation: "С…РѕСЂРѕС€Рѕ", lesson: "Lesson 1A" },
-    { id: "word-thanks", term: "thanks", translation: "СЃРїР°СЃРёР±Рѕ", lesson: "Lesson 1A" },
-    { id: "word-from", term: "from", translation: "РёР·, РѕС‚РєСѓРґР°", lesson: "Lesson 1B" },
+    { id: "word-hello", term: "hello", translation: "привет", lesson: "Lesson 1A" },
+    { id: "word-meet", term: "meet", translation: "знакомиться", lesson: "Lesson 1A" },
+    { id: "word-fine", term: "fine", translation: "хорошо", lesson: "Lesson 1A" },
+    { id: "word-thanks", term: "thanks", translation: "спасибо", lesson: "Lesson 1A" },
+    { id: "word-from", term: "from", translation: "из, откуда", lesson: "Lesson 1B" },
     { id: "word-japan", term: "Japan", translation: "РЇРїРѕРЅРёСЏ", lesson: "Lesson 1B" },
-    { id: "word-students", term: "students", translation: "СЃС‚СѓРґРµРЅС‚С‹", lesson: "Lesson 1B" },
+    { id: "word-students", term: "students", translation: "студенты", lesson: "Lesson 1B" },
     { id: "word-book", term: "book", translation: "РєРЅРёРіР°", lesson: "Lesson 3A" },
-    { id: "word-laptop", term: "laptop", translation: "РЅРѕСѓС‚Р±СѓРє", lesson: "Lesson 3A" },
-    { id: "word-phone", term: "phone", translation: "С‚РµР»РµС„РѕРЅ", lesson: "Lesson 3A" },
-    { id: "word-photo", term: "photo", translation: "С„РѕС‚Рѕ", lesson: "Lesson 3A" },
-    { id: "word-keys", term: "keys", translation: "РєР»СЋС‡Рё", lesson: "Lesson 3A" },
-    { id: "word-umbrella", term: "umbrella", translation: "Р·РѕРЅС‚", lesson: "Lesson 3A" }
+    { id: "word-laptop", term: "laptop", translation: "ноутбук", lesson: "Lesson 3A" },
+    { id: "word-phone", term: "phone", translation: "телефон", lesson: "Lesson 3A" },
+    { id: "word-photo", term: "photo", translation: "фото", lesson: "Lesson 3A" },
+    { id: "word-keys", term: "keys", translation: "ключи", lesson: "Lesson 3A" },
+    { id: "word-umbrella", term: "umbrella", translation: "Р·РѕРЅС'", lesson: "Lesson 3A" }
   ];
 }
 
@@ -7422,7 +7422,7 @@ function renderWordList() {
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "small-button";
-    remove.textContent = lmsWords.some((entry) => String(entry.term).toLowerCase() === String(word.term).toLowerCase()) ? "Р’ СЃР»РѕРІР°СЂРµ" : "Р”РѕР±Р°РІРёС‚СЊ";
+    remove.textContent = lmsWords.some((entry) => String(entry.term).toLowerCase() === String(word.term).toLowerCase()) ? "В словаре" : "Добавить";
     remove.addEventListener("click", () => {
       const exists = lmsWords.some((entry) => String(entry.term).toLowerCase() === String(word.term).toLowerCase());
       if (!exists) lmsWords = [{ ...word, id: `word-${Date.now()}` }, ...lmsWords];
@@ -7447,20 +7447,20 @@ function appendAiMessage(text, kind) {
 function aiReply(question) {
   const lesson = currentLessonLabel();
   const hint = hintForLesson(lesson);
-  if (/РїСЂРёРјРµСЂ/i.test(question)) return `${lesson}: РїСЂРёРјРµСЂ РїРѕ РјРѕРґРµР»Рё СѓСЂРѕРєР° - ${hint.grammar}`;
-  if (/РѕС‚РІРµС‚/i.test(question)) return `РЇ РЅРµ РЅР°Р·С‹РІР°СЋ РіРѕС‚РѕРІС‹Р№ РѕС‚РІРµС‚: ${hint.task}`;
-  return `РџРѕРґСЃРєР°Р·РєР° РїРѕ В«${lesson}В»: ${hint.task}`;
+  if (/пример/i.test(question)) return `${lesson}: пример по модели урока - ${hint.grammar}`;
+  if (/ответ/i.test(question)) return `Я не называю готовый ответ: ${hint.task}`;
+  return `Подсказка по «${lesson}»: ${hint.task}`;
 }
 
 function updateLmsSaveTime() {
   const time = formatSaveTime();
-  setText(saveStatus, `РЎРѕС…СЂР°РЅРµРЅРѕ РІ ${time}`);
-  setText(autosaveTime, `РЎРѕС…СЂР°РЅРµРЅРѕ РІ ${time}`);
+  setText(saveStatus, `Сохранено в ${time}`);
+  setText(autosaveTime, `Сохранено в ${time}`);
 }
 
 function saveCurrentWork() {
-  setText(saveStatus, "РЎРѕС…СЂР°РЅСЏРµРј...");
-  setText(autosaveTime, "РЎРѕС…СЂР°РЅСЏРµРј...");
+  setText(saveStatus, "Сохраняем...");
+  setText(autosaveTime, "Сохраняем...");
   saveJson(STORAGE_LMS_LAST_SAVE, {
     page: currentPage,
     lessonId: currentLessonLabel(),
@@ -7468,7 +7468,7 @@ function saveCurrentWork() {
   });
   window.setTimeout(() => {
     updateLmsSaveTime();
-    setStatus("РћС‚РІРµС‚С‹ СЃРѕС…СЂР°РЅРµРЅС‹ РЅР° СЌС‚РѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ.");
+    setStatus("Ответы сохранены на этом устройстве.");
   }, 180);
 }
 
@@ -7520,7 +7520,7 @@ function renderWidget(pageNumber, widget) {
   label.className = "label";
   const labelText = document.createElement("span");
   labelText.className = "label-text";
-  labelText.textContent = widget.label || "РћС‚РІРµС‚";
+  labelText.textContent = widget.label || "Ответ";
   label.appendChild(labelText);
 
   if (widget.custom) {
@@ -7530,7 +7530,7 @@ function renderWidget(pageNumber, widget) {
     const remove = document.createElement("button");
     remove.type = "button";
     remove.className = "remove";
-    remove.title = "РЈРґР°Р»РёС‚СЊ РїРѕР»Рµ";
+    remove.title = "Удалить поле";
     remove.textContent = "x";
     remove.addEventListener("click", () => removeCustomField(pageNumber, widget.id));
     tools.appendChild(remove);
@@ -7554,7 +7554,7 @@ function renderWidget(pageNumber, widget) {
     labelText.addEventListener("pointerdown", (event) => startDragCustomField(event, pageNumber, widget, box));
     const resize = document.createElement("div");
     resize.className = "resize-handle";
-    resize.title = "РР·РјРµРЅРёС‚СЊ С€РёСЂРёРЅСѓ";
+    resize.title = "Изменить ширину";
     resize.addEventListener("pointerdown", (event) => startResizeCustomField(event, pageNumber, widget, box));
     box.appendChild(resize);
   }
@@ -7575,21 +7575,21 @@ function createControl(widget) {
   if (widget.type === "textarea") {
     const textarea = document.createElement("textarea");
     textarea.rows = 3;
-    textarea.placeholder = "РќР°РїРёС€Рё РѕС‚РІРµС‚ Р·РґРµСЃСЊ";
+    textarea.placeholder = "Напиши ответ здесь";
     return textarea;
   }
 
   if (widget.type === "checkbox") {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.title = widget.label || "РћС‚РјРµС‚РёС‚СЊ";
+    checkbox.title = widget.label || "Отметить";
     return checkbox;
   }
 
   const input = document.createElement("input");
   input.type = "text";
   input.autocomplete = "off";
-  input.placeholder = "РћС‚РІРµС‚";
+  input.placeholder = "Ответ";
   return input;
 }
 
@@ -7611,24 +7611,24 @@ function renderCustomFieldEditor(pageNumber, widget, labelText) {
   editor.className = "field-editor";
 
   const titleLabel = document.createElement("label");
-  titleLabel.textContent = "РќР°Р·РІР°РЅРёРµ";
+  titleLabel.textContent = "Название";
   const titleInput = document.createElement("input");
   titleInput.type = "text";
   titleInput.value = widget.label || "";
-  titleInput.placeholder = "РќР°РїСЂРёРјРµСЂ: Exercise 3a";
+  titleInput.placeholder = "Например: Exercise 3a";
   titleInput.addEventListener("pointerdown", (event) => event.stopPropagation());
   titleInput.addEventListener("input", () => {
-    labelText.textContent = titleInput.value || "РћС‚РІРµС‚";
-    updateCustomField(pageNumber, widget.id, { label: titleInput.value || "РћС‚РІРµС‚" });
+    labelText.textContent = titleInput.value || "Ответ";
+    updateCustomField(pageNumber, widget.id, { label: titleInput.value || "Ответ" });
   });
   titleLabel.appendChild(titleInput);
 
   const answerLabel = document.createElement("label");
-  answerLabel.textContent = "РџСЂР°РІРёР»СЊРЅС‹Р№ РѕС‚РІРµС‚";
+  answerLabel.textContent = "Правильный ответ";
   const answerInput = document.createElement("input");
   answerInput.type = "text";
   answerInput.value = widget.answer || "";
-  answerInput.placeholder = "РћСЃС‚Р°РІСЊ РїСѓСЃС‚С‹Рј РґР»СЏ СЃРІРѕР±РѕРґРЅРѕРіРѕ РѕС‚РІРµС‚Р°";
+  answerInput.placeholder = "Оставь пустым для свободного ответа";
   answerInput.addEventListener("pointerdown", (event) => event.stopPropagation());
   answerInput.addEventListener("input", () => {
     const answer = answerInput.value;
@@ -7638,7 +7638,7 @@ function renderCustomFieldEditor(pageNumber, widget, labelText) {
     box.dataset.free = answer ? "false" : "true";
     box.classList.toggle("has-key", Boolean(answer));
     box.classList.remove("correct", "incorrect", "unchecked");
-    box.querySelector(".feedback").textContent = answer ? "РљР»СЋС‡ СЃРѕС…СЂР°РЅРµРЅ" : "РЎРІРѕР±РѕРґРЅС‹Р№ РѕС‚РІРµС‚";
+    box.querySelector(".feedback").textContent = answer ? "Ключ сохранен" : "Свободный ответ";
   });
   answerLabel.appendChild(answerInput);
 
@@ -7685,7 +7685,7 @@ function addSingleCustomField(pageNumber, point) {
   const type = fieldType.value === "textarea" ? "textarea" : "text";
   const field = {
     id: `custom-${Date.now()}`,
-    label: type === "textarea" ? "Р Р°Р·РІРµСЂРЅСѓС‚С‹Р№ РѕС‚РІРµС‚" : "РњРѕР№ РѕС‚РІРµС‚",
+    label: type === "textarea" ? "Развернутый ответ" : "Мой ответ",
     type,
     x: point.x,
     y: point.y,
@@ -7717,7 +7717,7 @@ function addTemplateFields(pageNumber, point) {
   if (template === "writing") {
     addFieldFromTemplate(
       {
-        label: "Р Р°Р·РІРµСЂРЅСѓС‚С‹Р№ РѕС‚РІРµС‚",
+        label: "Развернутый ответ",
         type: "textarea",
         x: point.x,
         y: point.y,
@@ -7729,7 +7729,7 @@ function addTemplateFields(pageNumber, point) {
     Array.from({ length: 6 }).forEach((_, index) => {
       addFieldFromTemplate(
         {
-          label: `Р“РѕС‚РѕРІРѕ ${index + 1}`,
+          label: `Готово ${index + 1}`,
           type: "checkbox",
           x: point.x,
           y: point.y + index * 4.3,
@@ -7744,7 +7744,7 @@ function addTemplateFields(pageNumber, point) {
       const row = Math.floor(index / 2);
       addFieldFromTemplate(
         {
-          label: `РћС‚РІРµС‚ ${index + 1}`,
+          label: `Ответ ${index + 1}`,
           type: "text",
           x: point.x + col * 21,
           y: point.y + row * 5.2,
@@ -7758,7 +7758,7 @@ function addTemplateFields(pageNumber, point) {
     Array.from({ length: count }).forEach((_, index) => {
       addFieldFromTemplate(
         {
-          label: `РћС‚РІРµС‚ ${index + 1}`,
+          label: `Ответ ${index + 1}`,
           type: "text",
           x: point.x,
           y: point.y + index * 5.1,
@@ -7887,11 +7887,11 @@ function checkVisiblePages() {
     const button = activeNativeRoot()?.getElementById("checkBtn");
     if (button) {
       button.click();
-      setStatus(`${nativeLesson.title}: РѕС‚РІРµС‚С‹ РїСЂРѕРІРµСЂРµРЅС‹ РІ РЅР°С‚РёРІРЅРѕРј СѓСЂРѕРєРµ.`);
+      setStatus(`${nativeLesson.title}: ответы проверены в нативном уроке.`);
       updateLmsSaveTime();
       return;
     }
-    setStatus(`${nativeLesson.title}: РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРЅРѕРїРєРё РїСЂРѕРІРµСЂРєРё РІРЅСѓС‚СЂРё РЅР°С‚РёРІРЅРѕРіРѕ СѓСЂРѕРєР°.`);
+    setStatus(`${nativeLesson.title}: используйте кнопки проверки внутри нативного урока.`);
     return;
   }
 
@@ -7899,7 +7899,7 @@ function checkVisiblePages() {
   let checked = 0;
   let correct = 0;
   let free = 0;
-  setStatus("РџСЂРѕРІРµСЂСЏРµРј РѕС‚РІРµС‚С‹...");
+  setStatus("Проверяем ответы...");
 
   widgets.forEach((box) => {
     const control = box.querySelector("input, select, textarea");
@@ -7916,9 +7916,9 @@ function checkVisiblePages() {
       free += 1;
       box.classList.add("unchecked");
       if (widget?.type === "checkbox") {
-        feedback.textContent = value ? "РћС‚РјРµС‡РµРЅРѕ" : "РЎРІРѕР±РѕРґРЅРѕ";
+        feedback.textContent = value ? "Отмечено" : "Свободно";
       } else {
-        feedback.textContent = value ? "РђРІС‚РѕРїСЂРѕРІРµСЂРєР° РїРѕРєР° РЅРµ РЅР°СЃС‚СЂРѕРµРЅР°" : "Р”Р»СЏ СЌС‚РѕРіРѕ Р·Р°РґР°РЅРёСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ РїСЂРѕРІРµСЂРєР° РїРѕРєР° РЅРµ РЅР°СЃС‚СЂРѕРµРЅР°";
+        feedback.textContent = value ? "Автопроверка пока не настроена" : "Для этого задания автоматическая проверка пока не настроена";
       }
       return;
     }
@@ -7926,33 +7926,33 @@ function checkVisiblePages() {
     checked += 1;
     if (!value) {
       box.classList.add("unchecked");
-      feedback.textContent = "Р—Р°РїРѕР»РЅРё РїРѕР»Рµ";
+      feedback.textContent = "Заполни поле";
       return;
     }
 
     if (matchesAnswer(value, answer)) {
       correct += 1;
       box.classList.add("correct");
-      feedback.textContent = "Р’РµСЂРЅРѕ";
+      feedback.textContent = "Верно";
     } else {
       box.classList.add("incorrect");
-      feedback.textContent = "РџСЂРѕРІРµСЂСЊ РµС‰Рµ СЂР°Р·";
+      feedback.textContent = "Проверь еще раз";
     }
   });
 
   if (!checked && free) {
-    setStatus(`РЎРІРѕР±РѕРґРЅС‹С… РїРѕР»РµР№ РЅР° СЃС‚СЂР°РЅРёС†Рµ: ${free}.`);
+    setStatus(`Свободных полей на странице: ${free}.`);
     syncLmsUi(visiblePageNumbers());
     return;
   }
 
-  setStatus(`РџСЂРѕРІРµСЂРєР°: ${correct} / ${checked} РІРµСЂРЅРѕ${free ? `; СЃРІРѕР±РѕРґРЅС‹С… РїРѕР»РµР№: ${free}` : ""}.`);
+  setStatus(`Проверка: ${correct} / ${checked} верно${free ? `; свободных полей: ${free}` : ""}.`);
   syncLmsUi(visiblePageNumbers());
 }
 
 function revealVisibleAnswers() {
   if (!isAuthorMode) {
-    setStatus("РљР»СЋС‡Рё РѕС‚РІРµС‚РѕРІ РґРѕСЃС‚СѓРїРЅС‹ С‚РѕР»СЊРєРѕ РІ СЂРµР¶РёРјРµ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ.");
+    setStatus("Ключи ответов доступны только в режиме преподавателя.");
     return;
   }
   const nativeLesson = nativeLessonForVisiblePages(visiblePageNumbers());
@@ -7960,11 +7960,11 @@ function revealVisibleAnswers() {
     const button = activeNativeRoot()?.getElementById("answersBtn");
     if (button) {
       button.click();
-      setStatus(`${nativeLesson.title}: РѕС‚РІРµС‚С‹ РїРѕРєР°Р·Р°РЅС‹ РІ РЅР°С‚РёРІРЅРѕРј СѓСЂРѕРєРµ.`);
+      setStatus(`${nativeLesson.title}: ответы показаны в нативном уроке.`);
       updateLmsSaveTime();
       return;
     }
-    setStatus(`${nativeLesson.title}: РѕС‚РІРµС‚С‹ РѕС‚РєСЂС‹РІР°СЋС‚СЃСЏ РєРЅРѕРїРєРѕР№ РІРЅСѓС‚СЂРё РЅР°С‚РёРІРЅРѕРіРѕ СѓСЂРѕРєР°.`);
+    setStatus(`${nativeLesson.title}: ответы открываются кнопкой внутри нативного урока.`);
     return;
   }
 
@@ -7988,15 +7988,15 @@ function clearVisiblePages() {
     const button = activeNativeRoot()?.getElementById("resetBtn");
     if (button) {
       button.click();
-      setStatus(`${nativeLesson.title}: РѕС‚РІРµС‚С‹ СЃР±СЂРѕС€РµРЅС‹ РІ РЅР°С‚РёРІРЅРѕРј СѓСЂРѕРєРµ.`);
+      setStatus(`${nativeLesson.title}: ответы сброшены в нативном уроке.`);
       updateLmsSaveTime();
       return;
     }
-    setStatus(`${nativeLesson.title}: РѕС‡РёСЃС‚РєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РєРЅРѕРїРєРѕР№ РІРЅСѓС‚СЂРё РЅР°С‚РёРІРЅРѕРіРѕ СѓСЂРѕРєР°.`);
+    setStatus(`${nativeLesson.title}: очистка выполняется кнопкой внутри нативного урока.`);
     return;
   }
 
-  if (!confirm("РЎР±СЂРѕСЃРёС‚СЊ РѕС‚РІРµС‚С‹ РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ?")) return;
+  if (!confirm("Сбросить ответы на этой странице?")) return;
   const pages = visiblePageNumbers();
   document.querySelectorAll(".answer-widget").forEach((box) => {
     const control = box.querySelector("input, select, textarea");
@@ -8011,7 +8011,7 @@ function clearVisiblePages() {
     if (widget) saveWidgetValue(Number(box.dataset.page), widget, "");
   });
   clearAnswerModelForPages(pages);
-  setStatus("РџРѕР»СЏ РЅР° РѕС‚РєСЂС‹С‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ РѕС‡РёС‰РµРЅС‹.");
+  setStatus("Поля на открытой странице очищены.");
   syncLmsUi(pages);
 }
 
@@ -8026,7 +8026,7 @@ function exportAllAnswers() {
     const button = activeNativeRoot()?.getElementById("exportBtn");
     if (button) {
       button.click();
-      setStatus(`${nativeLesson.title}: РїРѕРїС‹С‚РєР° СЃРѕС…СЂР°РЅРµРЅР° РёР· РЅР°С‚РёРІРЅРѕРіРѕ СѓСЂРѕРєР°.`);
+      setStatus(`${nativeLesson.title}: попытка сохранена из нативного урока.`);
       updateLmsSaveTime();
       return;
     }
@@ -8062,7 +8062,7 @@ function exportAllAnswers() {
   link.click();
   link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
-  setStatus("РћС‚РІРµС‚С‹ Рё Р»РёС‡РЅС‹Рµ РїРѕР»СЏ РїРѕРґРіРѕС‚РѕРІР»РµРЅС‹ РґР»СЏ СЃРєР°С‡РёРІР°РЅРёСЏ.");
+  setStatus("Ответы и личные поля подготовлены для скачивания.");
 }
 
 function importSavedAnswers() {
@@ -8091,10 +8091,10 @@ function importSavedAnswers() {
       }
 
       renderPages();
-      setStatus("РћС‚РІРµС‚С‹ Рё Р»РёС‡РЅС‹Рµ РїРѕР»СЏ Р·Р°РіСЂСѓР¶РµРЅС‹ РёР· С„Р°Р№Р»Р°.");
+      setStatus("Ответы и личные поля загружены из файла.");
     } catch (error) {
       console.error(error);
-      setStatus("РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р» РѕС‚РІРµС‚РѕРІ. РќСѓР¶РµРЅ JSON, СЃРєР°С‡Р°РЅРЅС‹Р№ РёР· СЌС‚РѕР№ РІРµСЂСЃРёРё СѓС‡РµР±РЅРёРєР°.");
+      setStatus("Не удалось загрузить файл ответов. Нужен JSON, скачанный из этой версии учебника.");
     }
   });
   reader.readAsText(file, "utf-8");

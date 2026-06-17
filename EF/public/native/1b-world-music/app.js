@@ -12,7 +12,7 @@
   let toastTimer;
 
   const normalize = (value) => (value || '').toString().trim().toLowerCase()
-    .replace(/[’`´]/g,"'")
+    .replace(/['`´]/g,"'")
     .replace(/\s+/g,' ')
     .replace(/[^a-z']/g,'')
     .replace(/'/g,'');
